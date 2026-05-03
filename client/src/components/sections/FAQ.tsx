@@ -43,15 +43,15 @@ const FAQS = [
 
 export function FAQ() {
   return (
-    <section id="faq" className="relative py-28 lg:py-36">
+    <section id="faq" className="relative py-20 sm:py-28 lg:py-36">
       <div className="container">
-        <div className="grid gap-12 lg:grid-cols-12">
+        <div className="grid gap-10 sm:gap-12 lg:grid-cols-12">
           <div className="lg:col-span-5">
             <SectionLabel num="05" label="Questions, answered" />
-            <h2 className="mt-5 font-display text-4xl font-bold leading-[1.05] tracking-tight sm:text-5xl lg:text-[56px]">
+            <h2 className="mt-5 font-display text-[32px] font-bold leading-[1.05] tracking-tight sm:text-5xl lg:text-[56px]">
               The questions everyone asks. <span className="text-gradient">Answered honestly.</span>
             </h2>
-            <p className="mt-6 max-w-md text-[16px] leading-relaxed text-white/65">
+            <p className="mt-5 max-w-md text-[15px] leading-relaxed text-white/65 sm:mt-6 sm:text-[16px]">
               Anything missing? Send it on WhatsApp — we usually answer faster than the FAQ loads.
             </p>
           </div>
@@ -70,15 +70,15 @@ export function FAQ() {
                   value={`item-${i}`}
                   className="border-b border-white/10"
                 >
-                  <AccordionTrigger className="py-6 text-left text-[18px] font-display font-semibold tracking-tight text-white hover:no-underline sm:text-[20px]">
-                    <span className="flex items-center gap-4">
+                  <AccordionTrigger className="py-5 text-left text-[16px] font-display font-semibold tracking-tight text-white hover:no-underline sm:py-6 sm:text-[20px]">
+                    <span className="flex items-center gap-3 sm:gap-4">
                       <span className="font-mono-acc text-xs text-white/35">
                         0{i + 1}
                       </span>
                       {f.q}
                     </span>
                   </AccordionTrigger>
-                  <AccordionContent className="pb-7 text-[15px] leading-relaxed text-white/65">
+                  <AccordionContent className="pb-6 text-[14.5px] leading-relaxed text-white/65 sm:pb-7 sm:text-[15px]">
                     {f.a}
                   </AccordionContent>
                 </AccordionItem>

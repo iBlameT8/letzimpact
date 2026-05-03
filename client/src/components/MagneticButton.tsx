@@ -54,7 +54,7 @@ export function MagneticButton({
   };
 
   const base =
-    "group relative inline-flex items-center justify-center gap-2 rounded-full px-7 py-3.5 font-display text-[15px] font-semibold tracking-tight select-none transition-colors";
+    "group relative inline-flex items-center justify-center gap-2 rounded-full px-6 py-3 font-display text-[14px] font-semibold tracking-tight select-none transition-colors sm:px-7 sm:py-3.5 sm:text-[15px]";
   const visual =
     variant === "solid"
       ? "text-white"

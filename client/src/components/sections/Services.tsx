@@ -61,18 +61,18 @@ const SERVICES: Svc[] = [
 
 export function Services() {
   return (
-    <section id="services" className="relative py-28 lg:py-36">
+    <section id="services" className="relative py-20 sm:py-28 lg:py-36">
       <div className="container">
         {/* Section header */}
         <div className="grid gap-10 lg:grid-cols-12 lg:items-end">
           <div className="lg:col-span-7">
             <SectionLabel num="01" label="What we actually do" />
-            <h2 className="mt-5 font-display text-4xl font-bold leading-[1.05] tracking-tight sm:text-5xl lg:text-6xl">
+            <h2 className="mt-5 font-display text-[34px] font-bold leading-[1.05] tracking-tight sm:text-5xl lg:text-6xl">
               Six things, done <span className="text-gradient">properly</span>.
               Not sixty things, done loosely.
             </h2>
           </div>
-          <p className="text-[16px] leading-relaxed text-white/65 lg:col-span-5">
+          <p className="text-[15px] leading-relaxed text-white/65 sm:text-[16px] lg:col-span-5">
             We're a small team on purpose. Strategy, filming, editing and management
             all come from the same two people — so nothing falls between cracks,
             and your brand actually sounds like one voice instead of a Slack channel.
@@ -80,7 +80,7 @@ export function Services() {
         </div>
 
         {/* Service cards */}
-        <div className="mt-16 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="mt-12 grid gap-4 sm:mt-16 sm:gap-5 sm:grid-cols-2 lg:grid-cols-3">
           {SERVICES.map((s, i) => (
             <ServiceCard key={s.num} svc={s} index={i} />
           ))}
@@ -102,7 +102,7 @@ function ServiceCard({ svc, index }: { svc: Svc; index: number }) {
         delay: (index % 3) * 0.08 + Math.floor(index / 3) * 0.04,
         ease: [0.22, 1, 0.36, 1],
       }}
-      className="group relative overflow-hidden rounded-2xl bg-white/[0.03] p-7 ring-1 ring-white/10 transition-colors hover:bg-white/[0.05]"
+      className="group relative overflow-hidden rounded-2xl bg-white/[0.03] p-6 ring-1 ring-white/10 transition-colors hover:bg-white/[0.05] sm:p-7"
     >
       {/* hover accent */}
       <div
@@ -138,9 +138,9 @@ function ServiceCard({ svc, index }: { svc: Svc; index: number }) {
 
 export function SectionLabel({ num, label }: { num: string; label: string }) {
   return (
-    <div className="inline-flex items-center gap-3 font-mono-acc text-[11px] uppercase tracking-[0.22em] text-white/55">
+    <div className="inline-flex items-center gap-2.5 font-mono-acc text-[10px] uppercase tracking-[0.18em] text-white/55 sm:gap-3 sm:text-[11px] sm:tracking-[0.22em]">
       <span className="text-[#EC12D8]">/{num}</span>
-      <span className="h-px w-10 bg-white/20" />
+      <span className="h-px w-7 bg-white/20 sm:w-10" />
       {label}
     </div>
   );

@@ -87,7 +87,7 @@ const PACKAGES_BG =
 
 export function Packages() {
   return (
-    <section id="packages" className="relative isolate overflow-hidden py-28 lg:py-36">
+    <section id="packages" className="relative isolate overflow-hidden py-20 sm:py-28 lg:py-36">
       {/* ambient backdrop */}
       <div
         aria-hidden
@@ -107,24 +107,24 @@ export function Packages() {
         <div className="grid gap-8 lg:grid-cols-12 lg:items-end">
           <div className="lg:col-span-7">
             <SectionLabel num="03" label="Packages" />
-            <h2 className="mt-5 font-display text-4xl font-bold leading-[1.05] tracking-tight sm:text-5xl lg:text-6xl">
+            <h2 className="mt-5 font-display text-[34px] font-bold leading-[1.05] tracking-tight sm:text-5xl lg:text-6xl">
               Three ways to work with us. <span className="text-gradient">Pick one.</span>
             </h2>
           </div>
-          <p className="text-[16px] leading-relaxed text-white/65 lg:col-span-5">
+          <p className="text-[15px] leading-relaxed text-white/65 sm:text-[16px] lg:col-span-5">
             Every package is monthly, no hidden tiers, no surprise upsells. Pricing is
             tailored on the call because brands aren't all built the same — but the
             scope is exactly what you see here.
           </p>
         </div>
 
-        <div className="mt-16 grid gap-6 lg:grid-cols-3">
+        <div className="mt-12 grid gap-5 sm:mt-16 sm:gap-6 lg:grid-cols-3">
           {PKGS.map((p, i) => (
             <PackageCard key={p.id} pkg={p} index={i} />
           ))}
         </div>
 
-        <p className="mt-10 text-center font-mono-acc text-[11px] uppercase tracking-[0.18em] text-white/40">
+        <p className="mt-8 text-center font-mono-acc text-[10px] uppercase tracking-[0.16em] text-white/40 sm:mt-10 sm:text-[11px] sm:tracking-[0.18em]">
           Not sure which one fits? Talk to us — five minutes is enough.
         </p>
       </div>
@@ -147,6 +147,7 @@ function PackageCard({ pkg, index }: { pkg: Pkg; index: number }) {
       }}
       whileHover={{ y: -6 }}
       className={`group relative ${pkg.best ? "lg:-translate-y-4" : ""}`}
+      style={{ willChange: "transform" }}
     >
       {/* gradient border for best */}
       {pkg.best && (
@@ -161,7 +162,7 @@ function PackageCard({ pkg, index }: { pkg: Pkg; index: number }) {
         />
       )}
       <Wrapper
-        className={`relative flex h-full flex-col overflow-hidden rounded-[24px] p-7 sm:p-8 ${
+        className={`relative flex h-full flex-col overflow-hidden rounded-[22px] p-6 sm:rounded-[24px] sm:p-7 lg:p-8 ${
           pkg.best
             ? "bg-[#0B0913]"
             : "bg-white/[0.03] ring-1 ring-white/10"
@@ -188,15 +189,15 @@ function PackageCard({ pkg, index }: { pkg: Pkg; index: number }) {
           )}
         </div>
 
-        <h3 className="relative mt-6 font-display text-[44px] font-bold leading-[1] tracking-tight">
+        <h3 className="relative mt-5 font-display text-[38px] font-bold leading-[1] tracking-tight sm:mt-6 sm:text-[44px]">
           {pkg.name}
         </h3>
         <p className="relative mt-3 text-[14.5px] leading-relaxed text-white/65">
           {pkg.pitch}
         </p>
 
-        <div className="relative mt-7 rounded-2xl bg-white/[0.04] p-5 ring-1 ring-white/10">
-          <div className="font-display text-2xl font-semibold tracking-tight">
+        <div className="relative mt-6 rounded-2xl bg-white/[0.04] p-5 ring-1 ring-white/10 sm:mt-7">
+          <div className="font-display text-[22px] font-semibold tracking-tight sm:text-2xl">
             {pkg.videos}
           </div>
           <div className="mt-1 font-mono-acc text-xs uppercase tracking-[0.18em] text-white/55">

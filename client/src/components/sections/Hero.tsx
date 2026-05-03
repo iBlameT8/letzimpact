@@ -37,7 +37,7 @@ export function Hero() {
   return (
     <section
       id="top"
-      className="relative isolate overflow-hidden pt-36 pb-20 sm:pt-44 lg:pt-52 lg:pb-32"
+      className="relative isolate overflow-hidden pt-28 pb-14 sm:pt-40 sm:pb-20 lg:pt-52 lg:pb-32"
     >
       {/* ambient backdrop */}
       <div
@@ -51,7 +51,7 @@ export function Hero() {
       <GridLines />
 
       <div className="container">
-        <div className="grid items-center gap-10 lg:grid-cols-12">
+        <div className="grid items-center gap-8 sm:gap-10 lg:grid-cols-12">
           {/* LEFT — text */}
           <div className="relative z-10 lg:col-span-7">
             {/* eyebrow */}
@@ -71,7 +71,7 @@ export function Hero() {
             </motion.div>
 
             {/* headline */}
-            <h1 className="font-display text-[44px] font-bold leading-[0.95] tracking-tight sm:text-6xl lg:text-[80px]">
+            <h1 className="font-display text-[34px] font-bold leading-[0.98] tracking-tight xs:text-[40px] sm:text-6xl sm:leading-[0.95] lg:text-[80px]">
               <span className="block overflow-hidden">
                 <HeadlineWord delay={0.05}>Social media</HeadlineWord>
               </span>
@@ -90,7 +90,7 @@ export function Hero() {
               initial={{ opacity: 0, y: 16 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.6 }}
-              className="mt-7 max-w-xl text-[17px] leading-relaxed text-white/70"
+              className="mt-5 max-w-xl text-[15px] leading-relaxed text-white/70 sm:mt-7 sm:text-[17px]"
             >
               We're <span className="text-white">Letzimpact</span> — a Luxembourg-based duo
               that plans, films and runs short-form content for brands who'd rather
@@ -102,7 +102,7 @@ export function Hero() {
               initial={{ opacity: 0, y: 16 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.75 }}
-              className="mt-9 flex flex-wrap items-center gap-3.5"
+              className="mt-7 flex flex-wrap items-center gap-3 sm:mt-9 sm:gap-3.5"
             >
               <MagneticButton
                 href={waLink()}
@@ -135,22 +135,22 @@ export function Hero() {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 0.9, delay: 0.95 }}
-              className="mt-12 grid max-w-md grid-cols-3 gap-6 border-t border-white/10 pt-6 font-mono-acc text-[11px] uppercase tracking-[0.18em] text-white/45"
+              className="mt-10 grid max-w-md grid-cols-3 gap-4 border-t border-white/10 pt-5 font-mono-acc text-[10px] uppercase tracking-[0.16em] text-white/45 sm:mt-12 sm:gap-6 sm:pt-6 sm:text-[11px] sm:tracking-[0.18em]"
             >
               <div>
-                <div className="text-[22px] font-display font-semibold tracking-tight text-white">
+                <div className="text-[18px] font-display font-semibold tracking-tight text-white sm:text-[22px]">
                   IG · TT
                 </div>
                 native short-form
               </div>
               <div>
-                <div className="text-[22px] font-display font-semibold tracking-tight text-white">
+                <div className="text-[18px] font-display font-semibold tracking-tight text-white sm:text-[22px]">
                   2&nbsp;founders
                 </div>
                 no agency overhead
               </div>
               <div>
-                <div className="text-[22px] font-display font-semibold tracking-tight text-white">
+                <div className="text-[18px] font-display font-semibold tracking-tight text-white sm:text-[22px]">
                   +352
                 </div>
                 based in {BRAND.location}
@@ -164,7 +164,7 @@ export function Hero() {
               initial={{ opacity: 0, scale: 0.85 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 1.2, ease: [0.22, 1, 0.36, 1], delay: 0.2 }}
-              className="relative mx-auto aspect-square w-full max-w-[520px]"
+              className="relative mx-auto aspect-square w-full max-w-[340px] sm:max-w-[440px] lg:max-w-[520px]"
             >
               {/* soft halo */}
               <div
@@ -208,15 +208,15 @@ export function Hero() {
       </div>
 
       {/* MARQUEE */}
-      <div className="relative mt-20 border-y border-white/10 bg-white/[0.02] py-5">
+      <div className="relative mt-14 border-y border-white/10 bg-white/[0.02] py-3.5 sm:mt-20 sm:py-5">
         <div className="marquee">
           <div className="marquee-track">
             {[...Array(2)].map((_, k) => (
-              <div key={k} className="flex shrink-0 items-center gap-12 pr-12">
+              <div key={k} className="flex shrink-0 items-center gap-7 pr-7 sm:gap-12 sm:pr-12">
                 {TICKER_ITEMS.map((t, i) => (
                   <div
                     key={`${k}-${i}`}
-                    className="flex items-center gap-3 font-display text-2xl font-medium tracking-tight text-white/55"
+                    className="flex items-center gap-2 font-display text-base font-medium tracking-tight text-white/55 sm:gap-3 sm:text-2xl"
                   >
                     <span className="text-[#EC12D8]">✦</span>
                     {t}

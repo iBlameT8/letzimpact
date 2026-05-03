@@ -42,16 +42,16 @@ export function Process() {
   const lineHeight = useTransform(scrollYProgress, [0, 1], ["0%", "100%"]);
 
   return (
-    <section id="process" className="relative py-28 lg:py-36">
+    <section id="process" className="relative py-20 sm:py-28 lg:py-36">
       <div className="container">
-        <div className="grid gap-12 lg:grid-cols-12">
+        <div className="grid gap-10 sm:gap-12 lg:grid-cols-12">
           <div className="lg:col-span-5">
             <div className="lg:sticky lg:top-32">
               <SectionLabel num="02" label="How we work" />
-              <h2 className="mt-5 font-display text-4xl font-bold leading-[1.05] tracking-tight sm:text-5xl lg:text-6xl">
+              <h2 className="mt-5 font-display text-[34px] font-bold leading-[1.05] tracking-tight sm:text-5xl lg:text-6xl">
                 A clean, boring process — for very <span className="text-gradient">un-boring</span> content.
               </h2>
-              <p className="mt-6 max-w-md text-[16px] leading-relaxed text-white/65">
+              <p className="mt-5 max-w-md text-[15px] leading-relaxed text-white/65 sm:mt-6 sm:text-[16px]">
                 You shouldn't have to babysit your agency. Five steps, repeated every month.
                 You always know where we are, where we're going, and why.
               </p>
@@ -76,7 +76,7 @@ export function Process() {
               />
             </motion.div>
 
-            <ul className="space-y-10">
+            <ul className="space-y-8 sm:space-y-10">
               {STEPS.map((s, i) => (
                 <motion.li
                   key={s.n}
@@ -103,10 +103,10 @@ export function Process() {
                       STEP {s.n}
                     </span>
                   </div>
-                  <h3 className="mt-2 font-display text-2xl font-semibold leading-tight tracking-tight sm:text-3xl">
+                  <h3 className="mt-2 font-display text-[22px] font-semibold leading-tight tracking-tight sm:text-3xl">
                     {s.title}
                   </h3>
-                  <p className="mt-2 max-w-lg text-[15px] leading-relaxed text-white/65">
+                  <p className="mt-2 max-w-lg text-[14.5px] leading-relaxed text-white/65 sm:text-[15px]">
                     {s.body}
                   </p>
                 </motion.li>

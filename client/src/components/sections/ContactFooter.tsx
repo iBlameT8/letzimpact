@@ -11,7 +11,7 @@ export function ContactFooter() {
   return (
     <footer
       id="contact"
-      className="relative isolate overflow-hidden border-t border-white/10 pt-24 pb-10 lg:pt-32"
+      className="relative isolate overflow-hidden border-t border-white/10 pt-20 pb-[max(2.5rem,env(safe-area-inset-bottom))] sm:pt-24 lg:pt-32"
     >
       {/* big ambient glow */}
       <div
@@ -30,7 +30,7 @@ export function ContactFooter() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 0.85, ease: [0.22, 1, 0.36, 1] }}
-          className="relative overflow-hidden rounded-[28px] bg-[#0B0913] p-10 ring-1 ring-white/10 sm:p-14 lg:p-20"
+          className="relative overflow-hidden rounded-[24px] bg-[#0B0913] p-7 ring-1 ring-white/10 sm:rounded-[28px] sm:p-12 lg:p-20"
         >
           {/* gradient border */}
           <div
@@ -46,7 +46,7 @@ export function ContactFooter() {
               maskComposite: "exclude",
             }}
           />
-          <div className="relative grid gap-12 lg:grid-cols-12 lg:items-end">
+          <div className="relative grid gap-9 sm:gap-12 lg:grid-cols-12 lg:items-end">
             <div className="lg:col-span-7">
               <div className="inline-flex items-center gap-2 rounded-full bg-white/[0.05] px-3 py-1 ring-1 ring-white/10 backdrop-blur">
                 <span className="relative flex h-2 w-2">
@@ -57,10 +57,10 @@ export function ContactFooter() {
                   Open for new brands
                 </span>
               </div>
-              <h2 className="mt-6 font-display text-4xl font-bold leading-[1.02] tracking-tight sm:text-5xl lg:text-[64px]">
+              <h2 className="mt-5 font-display text-[34px] font-bold leading-[1.02] tracking-tight sm:mt-6 sm:text-5xl lg:text-[64px]">
                 Let's turn your <span className="text-gradient">attention</span> into actual customers.
               </h2>
-              <p className="mt-5 max-w-xl text-[16px] leading-relaxed text-white/65">
+              <p className="mt-4 max-w-xl text-[15px] leading-relaxed text-white/65 sm:mt-5 sm:text-[16px]">
                 Fifteen minutes on WhatsApp, a few honest questions, a clear next step.
                 No pitch deck, no pressure — and no salesperson named Bryan.
               </p>
@@ -71,7 +71,7 @@ export function ContactFooter() {
                 href={waLink()}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="!px-8 !py-4 !text-[16px]"
+                className="w-full justify-center !px-7 !py-3.5 !text-[15px] sm:w-auto sm:justify-start sm:!px-8 sm:!py-4 sm:!text-[16px]"
                 ariaLabel="Open WhatsApp chat with Letzimpact"
               >
                 <WhatsAppGlyph className="h-5 w-5" />
@@ -79,35 +79,38 @@ export function ContactFooter() {
                 <ArrowUpRight className="h-4 w-4" />
               </MagneticButton>
               <a
-                href={`mailto:${BRAND.email}`}
-                className="font-mono-acc text-[12px] uppercase tracking-[0.2em] text-white/50 hover:text-white"
-              >
-                or {BRAND.email}
-              </a>
-              <a
                 href={`tel:+${BRAND.whatsappNumber}`}
-                className="font-display text-2xl font-semibold tracking-tight text-white/90 hover:text-white"
+                className="font-display text-xl font-semibold tracking-tight text-white/90 hover:text-white sm:text-2xl"
               >
                 {BRAND.phoneDisplay}
+              </a>
+              <a
+                href={`mailto:${BRAND.email}`}
+                className="font-mono-acc text-[12px] uppercase tracking-[0.18em] text-white/50 hover:text-white sm:tracking-[0.2em]"
+              >
+                or {BRAND.email}
               </a>
             </div>
           </div>
         </motion.div>
 
         {/* footer meta */}
-        <div className="mt-20 grid gap-12 lg:grid-cols-12">
+        <div className="mt-16 grid gap-10 sm:mt-20 sm:gap-12 lg:grid-cols-12">
           <div className="lg:col-span-5">
-            <div className="font-display text-3xl font-bold tracking-tight">
-              {BRAND.name}
-              <span className="text-[#EC12D8]">.</span>
-            </div>
+            <img
+              src="/manus-storage/letzimpact-logo_f96e1d8b.png"
+              alt="Letzimpact — social media marketing"
+              className="h-9 w-auto sm:h-11"
+              draggable={false}
+            />
             <p className="mt-4 max-w-sm text-[14.5px] leading-relaxed text-white/55">
               Digital strategies. Real impact. We help brands grow through focused
               social media, content and strategy — out of {BRAND.location}.
             </p>
           </div>
 
-          <div className="lg:col-span-3">
+          <div className="grid grid-cols-2 gap-10 sm:grid-cols-2 lg:col-span-7 lg:grid-cols-[1fr_1.3fr]">
+          <div>
             <div className="font-mono-acc text-[11px] uppercase tracking-[0.22em] text-white/40">
               Sitemap
             </div>
@@ -134,7 +137,7 @@ export function ContactFooter() {
             </ul>
           </div>
 
-          <div className="lg:col-span-4">
+          <div>
             <div className="font-mono-acc text-[11px] uppercase tracking-[0.22em] text-white/40">
               Reach us
             </div>
@@ -160,6 +163,7 @@ export function ContactFooter() {
               </li>
               <li className="text-white/55">{BRAND.location}, EU</li>
             </ul>
+          </div>
           </div>
         </div>
 

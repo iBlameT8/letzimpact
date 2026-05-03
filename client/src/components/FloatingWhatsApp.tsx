@@ -29,7 +29,8 @@ export function FloatingWhatsApp() {
       target="_blank"
       rel="noopener noreferrer"
       aria-label="Talk to Letzimpact on WhatsApp"
-      className="group fixed bottom-5 right-5 z-40 inline-flex items-center gap-3 rounded-full bg-[#0E0C18] px-4 py-3 ring-1 ring-white/15 backdrop-blur-xl sm:bottom-7 sm:right-7"
+      className="group fixed right-4 z-40 inline-flex items-center gap-3 rounded-full bg-[#0E0C18] px-3 py-3 ring-1 ring-white/15 backdrop-blur-xl sm:bottom-7 sm:right-7 sm:gap-3 sm:px-4"
+      style={{ bottom: "max(1.25rem, env(safe-area-inset-bottom))" }}
     >
       <span
         aria-hidden
@@ -54,7 +55,7 @@ export function FloatingWhatsApp() {
       <span className="relative grid h-8 w-8 place-items-center rounded-full bg-[#25D366]">
         <WhatsAppGlyph className="h-4 w-4 text-white" />
       </span>
-      <span className="relative pr-1 font-display text-[14px] font-semibold tracking-tight text-white">
+      <span className="relative hidden pr-1 font-display text-[14px] font-semibold tracking-tight text-white sm:inline">
         Talk on WhatsApp
       </span>
     </motion.a>

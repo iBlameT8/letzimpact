@@ -15,7 +15,10 @@ function smoothScrollTo(id: string) {
   window.scrollTo({ top: y, behavior: "smooth" });
 }
 
-function Logo() {
+const LOGO_SRC = "/manus-storage/letzimpact-logo_f96e1d8b.png";
+
+function Logo({ size = "md" }: { size?: "sm" | "md" }) {
+  const h = size === "sm" ? "h-8" : "h-10 sm:h-11";
   return (
     <a
       href="#top"
@@ -23,49 +26,15 @@ function Logo() {
         e.preventDefault();
         window.scrollTo({ top: 0, behavior: "smooth" });
       }}
-      className="group flex items-center gap-2.5"
+      aria-label={`${BRAND.name} — home`}
+      className="group flex items-center"
     >
-      {/* mini rocket-glyph mark */}
-      <span className="relative grid h-9 w-9 place-items-center rounded-xl bg-white/[0.04] ring-1 ring-white/10">
-        <span
-          aria-hidden
-          className="absolute inset-0 rounded-xl opacity-0 blur-md transition-opacity duration-500 group-hover:opacity-90"
-          style={{
-            background:
-              "linear-gradient(130deg, #EC12D8, #A250E3 55%, #4CC9F0)",
-          }}
-        />
-        <svg
-          viewBox="0 0 24 24"
-          className="relative h-4 w-4"
-          fill="none"
-          stroke="currentColor"
-          strokeWidth="1.8"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-        >
-          <defs>
-            <linearGradient id="lg" x1="0" y1="0" x2="24" y2="24">
-              <stop offset="0%" stopColor="#EC12D8" />
-              <stop offset="55%" stopColor="#A250E3" />
-              <stop offset="100%" stopColor="#4CC9F0" />
-            </linearGradient>
-          </defs>
-          <path
-            d="M5 15c0-3.5 2-7 7-11 5 4 7 7.5 7 11l-3 2-2-1-2 1-2-1-2 1-3-2Z"
-            stroke="url(#lg)"
-          />
-          <circle cx="12" cy="9" r="1.4" stroke="url(#lg)" />
-        </svg>
-      </span>
-      <div className="flex flex-col leading-none">
-        <span className="font-display text-[15px] font-bold tracking-tight">
-          {BRAND.name}
-        </span>
-        <span className="font-mono-acc text-[10px] uppercase text-white/45">
-          social media · LU
-        </span>
-      </div>
+      <img
+        src={LOGO_SRC}
+        alt={`${BRAND.name} — social media marketing`}
+        className={`${h} w-auto select-none transition-transform duration-500 group-hover:scale-[1.03]`}
+        draggable={false}
+      />
     </a>
   );
 }
@@ -97,7 +66,7 @@ export function SiteNav() {
         className="fixed left-0 right-0 top-3 z-50 px-3 sm:px-5"
       >
         <div
-          className={`mx-auto flex max-w-6xl items-center justify-between rounded-full px-3 py-2 transition-all duration-500 sm:px-4 ${
+          className={`mx-auto flex max-w-6xl items-center justify-between rounded-full pl-3 pr-2 py-1.5 transition-all duration-500 sm:pl-4 sm:pr-3 sm:py-2 ${
             scrolled
               ? "bg-black/55 ring-1 ring-white/10 backdrop-blur-2xl"
               : "bg-white/[0.03] ring-1 ring-white/5 backdrop-blur-md"
@@ -128,10 +97,23 @@ export function SiteNav() {
               <WhatsAppGlyph className="h-4 w-4" />
               Talk on WhatsApp
             </MagneticButton>
+            <a
+              href={waLink()}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Talk on WhatsApp"
+              className="relative grid h-9 w-9 place-items-center overflow-hidden rounded-full md:hidden"
+              style={{
+                background:
+                  "linear-gradient(135deg, #EC12D8 0%, #A250E3 50%, #4CC9F0 100%)",
+              }}
+            >
+              <WhatsAppGlyph className="h-[14px] w-[14px] text-white" />
+            </a>
             <button
               onClick={() => setOpen(true)}
               aria-label="Open menu"
-              className="grid h-10 w-10 place-items-center rounded-full bg-white/[0.05] ring-1 ring-white/10 md:hidden"
+              className="grid h-9 w-9 place-items-center rounded-full bg-white/[0.05] ring-1 ring-white/10 md:hidden"
             >
               <Menu className="h-4 w-4" />
             </button>
@@ -152,7 +134,7 @@ export function SiteNav() {
               animate={{ y: 0, opacity: 1 }}
               exit={{ y: -20, opacity: 0 }}
               transition={{ duration: 0.45, ease: [0.22, 1, 0.36, 1] }}
-              className="flex h-full flex-col px-6 pb-10 pt-6"
+              className="flex h-full flex-col px-5 pb-[max(2.5rem,env(safe-area-inset-bottom))] pt-5 sm:px-6 sm:pt-6"
             >
               <div className="flex items-center justify-between">
                 <Logo />
@@ -164,7 +146,7 @@ export function SiteNav() {
                   <X className="h-4 w-4" />
                 </button>
               </div>
-              <div className="mt-12 flex flex-col gap-2">
+              <div className="mt-10 flex flex-col gap-1 sm:mt-12 sm:gap-2">
                 {NAV_LINKS.map((l, i) => (
                   <motion.button
                     key={l.id}
@@ -178,7 +160,7 @@ export function SiteNav() {
                       smoothScrollTo(l.id);
                       setOpen(false);
                     }}
-                    className="flex items-center justify-between border-b border-white/10 py-5 text-left font-display text-3xl font-semibold tracking-tight"
+                    className="flex items-center justify-between border-b border-white/10 py-4 text-left font-display text-2xl font-semibold tracking-tight sm:py-5 sm:text-3xl"
                   >
                     {l.label}
                     <span className="font-mono-acc text-xs text-white/35">

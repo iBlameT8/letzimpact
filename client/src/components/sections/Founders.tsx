@@ -22,7 +22,7 @@ const VALUES = [
 
 export function Founders() {
   return (
-    <section id="founders" className="relative isolate overflow-hidden py-28 lg:py-36">
+    <section id="founders" className="relative isolate overflow-hidden py-20 sm:py-28 lg:py-36">
       {/* texture backdrop */}
       <div
         aria-hidden
@@ -42,11 +42,11 @@ export function Founders() {
         <div className="grid gap-10 lg:grid-cols-12 lg:items-end">
           <div className="lg:col-span-7">
             <SectionLabel num="04" label="The two of us" />
-            <h2 className="mt-5 font-display text-4xl font-bold leading-[1.05] tracking-tight sm:text-5xl lg:text-6xl">
+            <h2 className="mt-5 font-display text-[34px] font-bold leading-[1.05] tracking-tight sm:text-5xl lg:text-6xl">
               Two nineteen-year-olds running social media like a <span className="text-gradient">real business</span>.
             </h2>
           </div>
-          <p className="text-[16px] leading-relaxed text-white/65 lg:col-span-5">
+          <p className="text-[15px] leading-relaxed text-white/65 sm:text-[16px] lg:col-span-5">
             We started Letzimpact because most agencies in Luxembourg either treat
             social like an afterthought or like a circus. We do neither. We talk like
             we mean it, we ship on time, and we treat your account like our reputation
@@ -55,7 +55,7 @@ export function Founders() {
         </div>
 
         {/* Founder pair */}
-        <div className="mt-16 grid gap-6 md:grid-cols-2">
+        <div className="mt-12 grid gap-5 sm:mt-16 sm:gap-6 md:grid-cols-2">
           <FounderCard
             img={ANAS}
             name="Anas Ourabi"
@@ -77,12 +77,12 @@ export function Founders() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-80px" }}
           transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
-          className="mt-16 grid grid-cols-1 gap-px overflow-hidden rounded-2xl bg-white/10 ring-1 ring-white/10 sm:grid-cols-2 lg:grid-cols-4"
+          className="mt-12 grid grid-cols-2 gap-px overflow-hidden rounded-2xl bg-white/10 ring-1 ring-white/10 sm:mt-16 lg:grid-cols-4"
         >
           {VALUES.map((v) => (
             <div
               key={v.k}
-              className="bg-[#0A0911] p-6 transition-colors hover:bg-[#0E0C18]"
+              className="bg-[#0A0911] p-5 transition-colors hover:bg-[#0E0C18] sm:p-6"
             >
               <div className="font-display text-lg font-semibold tracking-tight">
                 {v.k}
@@ -119,8 +119,8 @@ function FounderCard({
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: "-100px" }}
       transition={{ duration: 0.85, ease: [0.22, 1, 0.36, 1] }}
-      className={`group relative overflow-hidden rounded-3xl bg-white/[0.03] ring-1 ring-white/10 ${
-        offset ? "md:translate-y-8" : ""
+          className={`group relative overflow-hidden rounded-3xl bg-white/[0.03] ring-1 ring-white/10 ${
+        offset ? "lg:translate-y-8" : ""
       }`}
     >
       <div className="relative aspect-[4/5] w-full overflow-hidden">
@@ -145,9 +145,9 @@ function FounderCard({
           {role.split("·")[0].trim()}
         </div>
       </div>
-      <div className="p-6 sm:p-7">
+      <div className="p-5 sm:p-7">
         <div className="flex items-baseline justify-between gap-4">
-          <h3 className="font-display text-3xl font-semibold tracking-tight">
+          <h3 className="font-display text-2xl font-semibold tracking-tight sm:text-3xl">
             {name}
           </h3>
           <span className="font-mono-acc text-[11px] uppercase tracking-[0.18em] text-white/40">
