@@ -147,9 +147,8 @@ export function ContactFooter() {
                   href={waLink()}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 text-white/80 hover:text-white"
+                  className="text-white/80 hover:text-white"
                 >
-                  <WhatsAppGlyph className="h-4 w-4" />
                   {BRAND.phoneDisplay}
                 </a>
               </li>
