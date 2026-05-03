@@ -95,7 +95,7 @@ export function Hero() {
               We're <span className="text-white">Letzimpact</span> — a Luxembourg-based duo
               that plans, films and runs short-form content for brands who'd rather
               build attention than rent it. Strategy, shoots and management — under one roof,
-              dressed sharp, kept honest.
+              run honestly, shipped on time.
             </motion.p>
 
             <motion.div

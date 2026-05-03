@@ -1,7 +1,7 @@
 // Letzimpact — Neon Atelier
 // Founders section: editorial double-portrait spread.
 // Note: portrait images are AI-generated stylized placeholders matching the
-// brand's lighting/wardrobe and should be swapped for real photos.
+// brand's tone and should be swapped for real founder photos when ready.
 
 import { motion } from "framer-motion";
 import { SectionLabel } from "@/components/sections/Services";
@@ -43,15 +43,14 @@ export function Founders() {
           <div className="lg:col-span-7">
             <SectionLabel num="04" label="The two of us" />
             <h2 className="mt-5 font-display text-4xl font-bold leading-[1.05] tracking-tight sm:text-5xl lg:text-6xl">
-              Two nineteen-year-olds in <span className="text-gradient">blazers</span>,
-              running social media like a real business.
+              Two nineteen-year-olds running social media like a <span className="text-gradient">real business</span>.
             </h2>
           </div>
           <p className="text-[16px] leading-relaxed text-white/65 lg:col-span-5">
             We started Letzimpact because most agencies in Luxembourg either treat
-            social like an afterthought or like a circus. We do neither. We dress like we
-            mean it, we talk like we like it, and we ship like our reputation depends on it —
-            because at this size, it does.
+            social like an afterthought or like a circus. We do neither. We talk like
+            we mean it, we ship on time, and we treat your account like our reputation
+            depends on it — because at this size, it does.
           </p>
         </div>
 

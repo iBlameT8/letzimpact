@@ -19,7 +19,7 @@ const STEPS = [
   {
     n: "03",
     title: "We shoot it.",
-    body: "Filming days where we actually show up — gear, lighting, outfits sorted. You don't direct, you just turn up and be yourself.",
+    body: "Filming days where we actually show up — gear, lighting and direction sorted. You don't have to direct anything, you just turn up and be yourself.",
   },
   {
     n: "04",
