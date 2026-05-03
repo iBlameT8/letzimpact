@@ -150,7 +150,7 @@ export function ContactFooter() {
                   className="inline-flex items-center gap-2 text-white/80 hover:text-white"
                 >
                   <WhatsAppGlyph className="h-4 w-4" />
-                  WhatsApp · {BRAND.phoneDisplay}
+                  {BRAND.phoneDisplay}
                 </a>
               </li>
               <li>
