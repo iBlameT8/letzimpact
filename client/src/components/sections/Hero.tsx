@@ -12,12 +12,13 @@ import { WhatsAppGlyph } from "@/components/SiteNav";
 const HERO_ORB =
   "https://d2xsxph8kpxj0f.cloudfront.net/310519663425995922/GCvcXy9rLoydAuyh5uZw78/hero-orb-PCjnA7jMozUDMU7uYod6Vx.webp";
 
-const TICKER_ITEMS = [
-  "Short-form that stops the scroll",
-  "Built in Luxembourg · made for the world",
-  "Strategy + filming + editing under one roof",
-  "Posts your competitors will quietly study",
-  "We don't chase trends · we engineer them",
+const CLIENT_LOGOS: { src: string; alt: string }[] = [
+  { src: "/manus-storage/client-neteco_d4bbb304.png", alt: "neteco" },
+  { src: "/manus-storage/client-amhome_37e23df0.png", alt: "amhome" },
+  { src: "/manus-storage/client-sananny-color_27aabd08.png", alt: "Sananny" },
+  { src: "/manus-storage/client-emesa_c354eb08.png", alt: "EMESA Construction" },
+  { src: "/manus-storage/client-ar-secherheet_679769ae.png", alt: "ÄR Secherheet Security" },
+  { src: "/manus-storage/client-asad-gym-color_2c3e5695.png", alt: "ASAD Gym" },
 ];
 
 function HeadlineWord({ children, delay = 0 }: { children: React.ReactNode; delay?: number }) {
@@ -207,19 +208,43 @@ export function Hero() {
         </div>
       </div>
 
-      {/* MARQUEE */}
-      <div className="relative mt-14 border-y border-white/10 bg-white/[0.02] py-3.5 sm:mt-20 sm:py-5">
-        <div className="marquee">
-          <div className="marquee-track">
+      {/* SOCIAL PROOF — client logo strip */}
+      <div className="relative mt-14 border-y border-white/10 bg-white/[0.02] py-6 sm:mt-20 sm:py-8">
+        <div className="container mb-4 flex items-center gap-3 sm:mb-5">
+          <span className="h-px w-7 bg-white/20 sm:w-10" />
+          <span className="font-mono-acc text-[10px] uppercase tracking-[0.18em] text-white/55 sm:text-[11px] sm:tracking-[0.22em]">
+            Trusted by ambitious brands
+          </span>
+        </div>
+        <div
+          className="marquee"
+          style={{
+            WebkitMaskImage:
+              "linear-gradient(90deg, transparent 0, #000 8%, #000 92%, transparent 100%)",
+            maskImage:
+              "linear-gradient(90deg, transparent 0, #000 8%, #000 92%, transparent 100%)",
+          }}
+        >
+          <div className="marquee-track items-center">
             {[...Array(2)].map((_, k) => (
-              <div key={k} className="flex shrink-0 items-center gap-7 pr-7 sm:gap-12 sm:pr-12">
-                {TICKER_ITEMS.map((t, i) => (
+              <div
+                key={k}
+                className="flex shrink-0 items-center gap-10 pr-10 sm:gap-16 sm:pr-16"
+                aria-hidden={k === 1}
+              >
+                {CLIENT_LOGOS.map((logo, i) => (
                   <div
                     key={`${k}-${i}`}
-                    className="flex items-center gap-2 font-display text-base font-medium tracking-tight text-white/55 sm:gap-3 sm:text-2xl"
+                    className="group flex h-10 shrink-0 items-center sm:h-12 lg:h-14"
                   >
-                    <span className="text-[#EC12D8]">✦</span>
-                    {t}
+                    <img
+                      src={logo.src}
+                      alt={logo.alt}
+                      loading="lazy"
+                      draggable={false}
+                      className="h-full w-auto select-none object-contain opacity-55 transition-opacity duration-300 group-hover:opacity-100"
+                      style={{ maxWidth: "180px" }}
+                    />
                   </div>
                 ))}
               </div>
