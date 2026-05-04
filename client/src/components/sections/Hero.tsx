@@ -12,13 +12,17 @@ import { WhatsAppGlyph } from "@/components/SiteNav";
 const HERO_ORB =
   "https://d2xsxph8kpxj0f.cloudfront.net/310519663425995922/GCvcXy9rLoydAuyh5uZw78/hero-orb-PCjnA7jMozUDMU7uYod6Vx.webp";
 
-const CLIENT_LOGOS: { src: string; alt: string }[] = [
-  { src: "/manus-storage/client-neteco_d4bbb304.png", alt: "neteco" },
-  { src: "/manus-storage/client-amhome_37e23df0.png", alt: "amhome" },
-  { src: "/manus-storage/client-sananny-color_27aabd08.png", alt: "Sananny" },
-  { src: "/manus-storage/client-emesa_c354eb08.png", alt: "EMESA Construction" },
-  { src: "/manus-storage/client-ar-secherheet_679769ae.png", alt: "ÄR Secherheet Security" },
-  { src: "/manus-storage/client-asad-gym-color_2c3e5695.png", alt: "ASAD Gym" },
+type ClientLogo = { src: string; alt: string; widthPct?: number };
+const CLIENT_LOGOS: ClientLogo[] = [
+  // widthPct controls how wide the logo is allowed to render inside its slot.
+  // Lowering neteco from the default 78% to 62% gives it the same visible breathing
+  // room as amhome, evening out the gap between them.
+  { src: "/manus-storage/client-neteco_d4bbb304.png", alt: "neteco", widthPct: 62 },
+  { src: "/manus-storage/client-amhome_37e23df0.png", alt: "amhome", widthPct: 78 },
+  { src: "/manus-storage/client-sananny-color_27aabd08.png", alt: "Sananny", widthPct: 78 },
+  { src: "/manus-storage/client-emesa_c354eb08.png", alt: "EMESA Construction", widthPct: 78 },
+  { src: "/manus-storage/client-ar-secherheet_679769ae.png", alt: "ÄR Secherheet Security", widthPct: 78 },
+  { src: "/manus-storage/client-asad-gym-color_2c3e5695.png", alt: "ASAD Gym", widthPct: 78 },
 ];
 
 function HeadlineWord({ children, delay = 0 }: { children: React.ReactNode; delay?: number }) {
@@ -243,7 +247,8 @@ export function Hero() {
                       alt={logo.alt}
                       loading="lazy"
                       draggable={false}
-                      className="max-h-full w-auto max-w-[78%] select-none object-contain opacity-55 transition-opacity duration-300 group-hover:opacity-100"
+                      className="max-h-full w-auto select-none object-contain opacity-55 transition-opacity duration-300 group-hover:opacity-100"
+                      style={{ maxWidth: `${logo.widthPct ?? 78}%` }}
                     />
                   </div>
                 ))}
