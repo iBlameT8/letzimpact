@@ -4,13 +4,10 @@
 // brand gradient (#EC12D8 → #A250E3 → #4CC9F0), magenta primary CTA.
 
 import { motion } from "framer-motion";
-import { ArrowDownRight, Sparkles } from "lucide-react";
+import { ArrowDownRight } from "lucide-react";
 import { BRAND, waLink } from "@/lib/brand";
 import { MagneticButton } from "@/components/MagneticButton";
 import { WhatsAppGlyph } from "@/components/SiteNav";
-
-const HERO_ORB =
-  "https://d2xsxph8kpxj0f.cloudfront.net/310519663425995922/GCvcXy9rLoydAuyh5uZw78/hero-orb-PCjnA7jMozUDMU7uYod6Vx.webp";
 
 type ClientLogo = { src: string; alt: string; widthPct?: number };
 const CLIENT_LOGOS: ClientLogo[] = [
@@ -56,9 +53,7 @@ export function Hero() {
       <GridLines />
 
       <div className="container">
-        <div className="grid items-center gap-8 sm:gap-10 lg:grid-cols-12">
-          {/* LEFT — text */}
-          <div className="relative z-10 lg:col-span-7">
+        <div className="max-w-5xl">
             {/* eyebrow */}
             <motion.div
               initial={{ opacity: 0, y: 12 }}
@@ -161,54 +156,6 @@ export function Hero() {
                 based in {BRAND.location}
               </div>
             </motion.div>
-          </div>
-
-          {/* RIGHT — orb */}
-          <div className="relative lg:col-span-5">
-            <motion.div
-              initial={{ opacity: 0, scale: 0.85 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 1.2, ease: [0.22, 1, 0.36, 1], delay: 0.2 }}
-              className="relative mx-auto aspect-square w-full max-w-[340px] sm:max-w-[440px] lg:max-w-[520px]"
-            >
-              {/* soft halo */}
-              <div
-                aria-hidden
-                className="absolute inset-[-20%] rounded-full opacity-70 blur-3xl"
-                style={{
-                  background:
-                    "radial-gradient(closest-side, rgba(236,18,216,0.45), rgba(162,80,227,0.30) 45%, rgba(76,201,240,0.20) 70%, transparent 80%)",
-                }}
-              />
-              <motion.img
-                src={HERO_ORB}
-                alt=""
-                className="floaty relative z-10 h-full w-full select-none object-contain"
-                draggable={false}
-                animate={{ rotate: [0, 4, -3, 0] }}
-                transition={{ repeat: Infinity, duration: 24, ease: "easeInOut" }}
-              />
-              {/* tiny floating chips */}
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.9, duration: 0.8 }}
-                className="glass absolute -left-4 top-10 hidden items-center gap-2 rounded-full px-3 py-1.5 text-[12px] sm:flex"
-              >
-                <Sparkles className="h-3.5 w-3.5 text-[#EC12D8]" />
-                Hooks · cuts · captions
-              </motion.div>
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 1.05, duration: 0.8 }}
-                className="glass absolute bottom-12 -right-2 hidden items-center gap-2 rounded-full px-3 py-1.5 text-[12px] sm:flex"
-              >
-                <span className="h-2 w-2 rounded-full bg-[#4CC9F0]" />
-                Posting · DMs · reports
-              </motion.div>
-            </motion.div>
-          </div>
         </div>
       </div>
 
