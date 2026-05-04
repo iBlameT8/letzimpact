@@ -217,7 +217,7 @@ export function Hero() {
         <div className="container mb-4 flex items-center gap-3 sm:mb-5">
           <span className="h-px w-7 bg-white/20 sm:w-10" />
           <span className="font-mono-acc text-[10px] uppercase tracking-[0.18em] text-white/55 sm:text-[11px] sm:tracking-[0.22em]">
-            Trusted by ambitious brands
+            Our Partners:
           </span>
         </div>
         <div
