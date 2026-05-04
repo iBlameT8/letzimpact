@@ -159,52 +159,57 @@ export function Hero() {
         </div>
       </div>
 
-      {/* SOCIAL PROOF — client logo strip */}
-      <div className="relative mt-14 border-y border-white/10 bg-white/[0.02] py-6 sm:mt-20 sm:py-8">
-        <div className="container mb-4 flex items-center gap-3 sm:mb-5">
-          <span className="h-px w-7 bg-white/20 sm:w-10" />
-          <span className="font-mono-acc text-[10px] uppercase tracking-[0.18em] text-white/55 sm:text-[11px] sm:tracking-[0.22em]">
-            Our Partners:
-          </span>
-        </div>
-        <div
-          className="marquee"
-          style={{
-            WebkitMaskImage:
-              "linear-gradient(90deg, transparent 0, #000 8%, #000 92%, transparent 100%)",
-            maskImage:
-              "linear-gradient(90deg, transparent 0, #000 8%, #000 92%, transparent 100%)",
-          }}
-        >
-          <div className="marquee-track items-center">
-            {[...Array(2)].map((_, k) => (
-              <div
-                key={k}
-                className="flex shrink-0 items-center"
-                aria-hidden={k === 1}
-              >
-                {CLIENT_LOGOS.map((logo, i) => (
-                  <div
-                    key={`${k}-${i}`}
-                    className="group flex h-10 shrink-0 items-center justify-center sm:h-12 lg:h-14"
-                    style={{ width: "clamp(160px, 22vw, 240px)" }}
-                  >
-                    <img
-                      src={logo.src}
-                      alt={logo.alt}
-                      loading="lazy"
-                      draggable={false}
-                      className="max-h-full w-auto select-none object-contain opacity-55 transition-opacity duration-300 group-hover:opacity-100"
-                      style={{ maxWidth: `${logo.widthPct ?? 78}%` }}
-                    />
-                  </div>
-                ))}
-              </div>
-            ))}
-          </div>
+    </section>
+  );
+}
+
+// Partner strip moved out of <Hero> so the page can place it after RecentWork.
+export function PartnerStrip() {
+  return (
+    <div className="relative mt-14 border-y border-white/10 bg-white/[0.02] py-6 sm:mt-20 sm:py-8">
+      <div className="container mb-4 flex items-center gap-3 sm:mb-5">
+        <span className="h-px w-7 bg-white/20 sm:w-10" />
+        <span className="font-mono-acc text-[10px] uppercase tracking-[0.18em] text-white/55 sm:text-[11px] sm:tracking-[0.22em]">
+          Our Partners:
+        </span>
+      </div>
+      <div
+        className="marquee"
+        style={{
+          WebkitMaskImage:
+            "linear-gradient(90deg, transparent 0, #000 8%, #000 92%, transparent 100%)",
+          maskImage:
+            "linear-gradient(90deg, transparent 0, #000 8%, #000 92%, transparent 100%)",
+        }}
+      >
+        <div className="marquee-track items-center">
+          {[...Array(2)].map((_, k) => (
+            <div
+              key={k}
+              className="flex shrink-0 items-center"
+              aria-hidden={k === 1}
+            >
+              {CLIENT_LOGOS.map((logo, i) => (
+                <div
+                  key={`${k}-${i}`}
+                  className="group flex h-10 shrink-0 items-center justify-center sm:h-12 lg:h-14"
+                  style={{ width: "clamp(160px, 22vw, 240px)" }}
+                >
+                  <img
+                    src={logo.src}
+                    alt={logo.alt}
+                    loading="lazy"
+                    draggable={false}
+                    className="max-h-full w-auto select-none object-contain opacity-55 transition-opacity duration-300 group-hover:opacity-100"
+                    style={{ maxWidth: `${logo.widthPct ?? 78}%` }}
+                  />
+                </div>
+              ))}
+            </div>
+          ))}
         </div>
       </div>
-    </section>
+    </div>
   );
 }
 

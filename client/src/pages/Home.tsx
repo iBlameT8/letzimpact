@@ -12,9 +12,10 @@ import { SiteNav } from "@/components/SiteNav";
 import { ContactFooter } from "@/components/sections/ContactFooter";
 import { FAQ } from "@/components/sections/FAQ";
 import { Founders } from "@/components/sections/Founders";
-import { Hero } from "@/components/sections/Hero";
+import { Hero, PartnerStrip } from "@/components/sections/Hero";
 import { Packages } from "@/components/sections/Packages";
 import { Process } from "@/components/sections/Process";
+import { RecentWork } from "@/components/sections/RecentWork";
 import { Services } from "@/components/sections/Services";
 
 export default function Home() {
@@ -25,6 +26,8 @@ export default function Home() {
 
       <main className="relative">
         <Hero />
+        <RecentWork />
+        <PartnerStrip />
         <Services />
         <Process />
         <Packages />
