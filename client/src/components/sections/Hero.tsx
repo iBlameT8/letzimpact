@@ -229,21 +229,21 @@ export function Hero() {
             {[...Array(2)].map((_, k) => (
               <div
                 key={k}
-                className="flex shrink-0 items-center gap-10 pr-10 sm:gap-16 sm:pr-16"
+                className="flex shrink-0 items-center"
                 aria-hidden={k === 1}
               >
                 {CLIENT_LOGOS.map((logo, i) => (
                   <div
                     key={`${k}-${i}`}
-                    className="group flex h-10 shrink-0 items-center sm:h-12 lg:h-14"
+                    className="group flex h-10 shrink-0 items-center justify-center sm:h-12 lg:h-14"
+                    style={{ width: "clamp(160px, 22vw, 240px)" }}
                   >
                     <img
                       src={logo.src}
                       alt={logo.alt}
                       loading="lazy"
                       draggable={false}
-                      className="h-full w-auto select-none object-contain opacity-55 transition-opacity duration-300 group-hover:opacity-100"
-                      style={{ maxWidth: "180px" }}
+                      className="max-h-full w-auto max-w-[78%] select-none object-contain opacity-55 transition-opacity duration-300 group-hover:opacity-100"
                     />
                   </div>
                 ))}
