@@ -7,8 +7,7 @@
 // tile lifts; on tap (mobile) sound can be toggled with the speaker pill.
 
 import { motion, useInView } from "framer-motion";
-import { useEffect, useRef, useState } from "react";
-import { Volume2, VolumeX } from "lucide-react";
+import { useEffect, useRef } from "react";
 
 type Reel = {
   brand: string;
@@ -51,7 +50,6 @@ function ReelCard({ reel, index }: { reel: Reel; index: number }) {
   const containerRef = useRef<HTMLDivElement | null>(null);
   const videoRef = useRef<HTMLVideoElement | null>(null);
   const inView = useInView(containerRef, { amount: 0.35, margin: "0px 0px -10% 0px" });
-  const [muted, setMuted] = useState(true);
 
   // Autoplay/pause based on viewport visibility — saves CPU + data on mobile.
   useEffect(() => {
@@ -96,7 +94,7 @@ function ReelCard({ reel, index }: { reel: Reel; index: number }) {
             ref={videoRef}
             src={reel.src}
             poster={reel.poster}
-            muted={muted}
+            muted
             loop
             playsInline
             preload="metadata"
@@ -112,26 +110,6 @@ function ReelCard({ reel, index }: { reel: Reel; index: number }) {
                 "inset 0 0 0 1px rgba(255,255,255,0.08), inset 0 0 60px rgba(236,18,216,0.06)",
             }}
           />
-
-          {/* mute toggle — top right, glass pill, tap target sized for thumbs */}
-          <button
-            type="button"
-            onClick={() => {
-              const v = videoRef.current;
-              if (!v) return;
-              const next = !muted;
-              setMuted(next);
-              v.muted = next;
-              if (!next) {
-                const p = v.play();
-                if (p && typeof p.catch === "function") p.catch(() => {});
-              }
-            }}
-            aria-label={muted ? "Unmute reel" : "Mute reel"}
-            className="absolute right-3 top-3 inline-flex h-9 w-9 items-center justify-center rounded-full bg-black/45 text-white/90 ring-1 ring-white/15 backdrop-blur-md transition-colors hover:bg-black/65"
-          >
-            {muted ? <VolumeX className="h-4 w-4" /> : <Volume2 className="h-4 w-4" />}
-          </button>
 
           {/* bottom caption strip with brand */}
           <div className="pointer-events-none absolute inset-x-0 bottom-0 flex items-end justify-between gap-3 bg-gradient-to-t from-black/80 via-black/30 to-transparent p-4">
@@ -176,7 +154,7 @@ export function RecentWork() {
             <span className="text-gradient">actually shipped.</span>
           </h2>
           <p className="max-w-md text-[14px] leading-relaxed text-white/65 sm:text-[15px]">
-            Three real cuts from recent shoots — product, real estate, live event. Tap a tile to unmute.
+            Three real cuts from recent shoots — product, real estate, live event.
           </p>
         </div>
 

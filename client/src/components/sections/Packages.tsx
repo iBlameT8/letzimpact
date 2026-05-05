@@ -7,7 +7,6 @@ import { motion } from "framer-motion";
 import { Check, ArrowUpRight } from "lucide-react";
 import { waLink } from "@/lib/brand";
 import { SectionLabel } from "@/components/sections/Services";
-import { WhatsAppGlyph } from "@/components/SiteNav";
 
 type Pkg = {
   id: string;
@@ -243,7 +242,6 @@ function PackageCard({ pkg, index }: { pkg: Pkg; index: number }) {
             }
           >
             <span className="flex items-center gap-2.5">
-              <WhatsAppGlyph className="h-4 w-4" />
               Let's grow
             </span>
             <ArrowUpRight className="h-4 w-4 transition-transform duration-500 group-hover/btn:rotate-45" />

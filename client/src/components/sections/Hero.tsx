@@ -14,12 +14,12 @@ const CLIENT_LOGOS: ClientLogo[] = [
   // widthPct controls how wide the logo is allowed to render inside its slot.
   // Lowering neteco from the default 78% to 62% gives it the same visible breathing
   // room as amhome, evening out the gap between them.
-  { src: "/manus-storage/client-neteco_d4bbb304.png", alt: "neteco", widthPct: 62 },
-  { src: "/manus-storage/client-amhome_37e23df0.png", alt: "amhome", widthPct: 78 },
-  { src: "/manus-storage/client-sananny-color_27aabd08.png", alt: "Sananny", widthPct: 78 },
-  { src: "/manus-storage/client-emesa_c354eb08.png", alt: "EMESA Construction", widthPct: 78 },
-  { src: "/manus-storage/client-ar-secherheet_679769ae.png", alt: "ÄR Secherheet Security", widthPct: 78 },
-  { src: "/manus-storage/client-asad-gym-color_2c3e5695.png", alt: "ASAD Gym", widthPct: 78 },
+  { src: "/manus-storage/neteco_3d840054.png", alt: "neteco", widthPct: 62 },
+  { src: "/manus-storage/amhome_e212773c.png", alt: "amhome", widthPct: 78 },
+  { src: "/manus-storage/sananny_22077c56.png", alt: "Sananny", widthPct: 78 },
+  { src: "/manus-storage/emesa_0413f571.png", alt: "EMESA Construction", widthPct: 78 },
+  { src: "/manus-storage/ar-security_39900dbd.png", alt: "ÄR Secherheet Security", widthPct: 78 },
+  { src: "/manus-storage/asad-gym_6a3a42a1.png", alt: "ASAD Gym", widthPct: 78 },
 ];
 
 function HeadlineWord({ children, delay = 0 }: { children: React.ReactNode; delay?: number }) {
@@ -200,7 +200,7 @@ export function PartnerStrip() {
                     alt={logo.alt}
                     loading="lazy"
                     draggable={false}
-                    className="max-h-full w-auto select-none object-contain opacity-55 transition-opacity duration-300 group-hover:opacity-100"
+                    className="max-h-full w-auto select-none object-contain opacity-90 transition-opacity duration-300 group-hover:opacity-100"
                     style={{ maxWidth: `${logo.widthPct ?? 78}%` }}
                   />
                 </div>
