@@ -75,7 +75,7 @@ export function ContactFooter() {
                 ariaLabel="Open WhatsApp chat with Letzimpact"
               >
                 <WhatsAppGlyph className="h-5 w-5" />
-                Talk on WhatsApp
+                Let's talk
                 <ArrowUpRight className="h-4 w-4" />
               </MagneticButton>
               <a

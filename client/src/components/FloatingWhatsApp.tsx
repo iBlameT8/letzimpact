@@ -56,7 +56,7 @@ export function FloatingWhatsApp() {
         <WhatsAppGlyph className="h-4 w-4 text-white" />
       </span>
       <span className="relative hidden pr-1 font-display text-[14px] font-semibold tracking-tight text-white sm:inline">
-        Talk on WhatsApp
+        WhatsApp
       </span>
     </motion.a>
   );

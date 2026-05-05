@@ -95,13 +95,13 @@ export function SiteNav() {
               ariaLabel="Contact us on WhatsApp"
             >
               <WhatsAppGlyph className="h-4 w-4" />
-              Talk on WhatsApp
+              Let's talk
             </MagneticButton>
             <a
               href={waLink()}
               target="_blank"
               rel="noopener noreferrer"
-              aria-label="Talk on WhatsApp"
+              aria-label="Let's talk on WhatsApp"
               className="relative grid h-9 w-9 place-items-center overflow-hidden rounded-full md:hidden"
               style={{
                 background:
@@ -178,7 +178,7 @@ export function SiteNav() {
                   ariaLabel="Contact us on WhatsApp"
                 >
                   <WhatsAppGlyph className="h-4 w-4" />
-                  Talk on WhatsApp
+                  Let's talk
                 </MagneticButton>
                 <p className="text-center font-mono-acc text-xs text-white/45">
                   {BRAND.phoneDisplay} · {BRAND.email}

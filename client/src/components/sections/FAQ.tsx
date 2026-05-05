@@ -52,7 +52,7 @@ export function FAQ() {
               The questions everyone asks. <span className="text-gradient">Answered honestly.</span>
             </h2>
             <p className="mt-5 max-w-md text-[15px] leading-relaxed text-white/65 sm:mt-6 sm:text-[16px]">
-              Anything missing? Send it on WhatsApp — we usually answer faster than the FAQ loads.
+              Anything missing? Text us — we usually answer faster than the FAQ loads.
             </p>
           </div>
 

@@ -244,7 +244,7 @@ function PackageCard({ pkg, index }: { pkg: Pkg; index: number }) {
           >
             <span className="flex items-center gap-2.5">
               <WhatsAppGlyph className="h-4 w-4" />
-              Let's grow → WhatsApp
+              Let's grow
             </span>
             <ArrowUpRight className="h-4 w-4 transition-transform duration-500 group-hover/btn:rotate-45" />
             {!pkg.best && (
