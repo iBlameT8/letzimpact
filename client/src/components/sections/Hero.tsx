@@ -111,7 +111,7 @@ export function Hero() {
                 ariaLabel="Open WhatsApp chat with Letzimpact"
               >
                 <WhatsAppGlyph className="h-4 w-4" />
-                Start on WhatsApp
+                Let's talk
               </MagneticButton>
               <MagneticButton
                 variant="ghost"
