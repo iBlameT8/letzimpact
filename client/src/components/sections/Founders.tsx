@@ -1,15 +1,11 @@
 // Letzimpact — Neon Atelier
 // Founders section: editorial double-portrait spread.
-// Note: portrait images are AI-generated stylized placeholders matching the
-// brand's tone and should be swapped for real founder photos when ready.
 
 import { motion } from "framer-motion";
 import { SectionLabel } from "@/components/sections/Services";
 
-const ANAS =
-  "https://d2xsxph8kpxj0f.cloudfront.net/310519663425995922/GCvcXy9rLoydAuyh5uZw78/founder-anas-3eX2qEQ2itycsfFamax5Lj.webp";
-const DZENAN =
-  "https://d2xsxph8kpxj0f.cloudfront.net/310519663425995922/GCvcXy9rLoydAuyh5uZw78/founder-dzenan-f6x7VsTyLWnwKNTthLLNed.webp";
+const ANAS = "/manus-storage/founder-anas-real_7a9f1921.png";
+const DZENAN = "/manus-storage/founder-dzenan-real_b10a003a.png";
 const TEXTURE =
   "https://d2xsxph8kpxj0f.cloudfront.net/310519663425995922/GCvcXy9rLoydAuyh5uZw78/about-texture-nRohwr4hwRVcrNgUFS6cvu.webp";
 
@@ -92,9 +88,6 @@ export function Founders() {
           ))}
         </motion.div>
 
-        <p className="mt-6 font-mono-acc text-[10px] uppercase tracking-[0.22em] text-white/30">
-          * Founder portraits shown above are stylized placeholders pending the next photoshoot.
-        </p>
       </div>
     </section>
   );
