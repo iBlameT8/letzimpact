@@ -98,7 +98,7 @@ export function ContactFooter() {
         <div className="mt-16 grid gap-10 sm:mt-20 sm:gap-12 lg:grid-cols-12">
           <div className="lg:col-span-5">
             <img
-              src="/manus-storage/letzimpact-logo_f96e1d8b.png"
+              src="/brand/letzimpact-logo.png"
               alt="Letzimpact — social media marketing"
               className="h-9 w-auto sm:h-11"
               draggable={false}

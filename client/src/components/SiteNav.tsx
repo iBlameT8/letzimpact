@@ -15,7 +15,7 @@ function smoothScrollTo(id: string) {
   window.scrollTo({ top: y, behavior: "smooth" });
 }
 
-const LOGO_SRC = "/manus-storage/letzimpact-logo_f96e1d8b.png";
+const LOGO_SRC = "/brand/letzimpact-logo.png";
 
 function Logo({ size = "md" }: { size?: "sm" | "md" }) {
   const h = size === "sm" ? "h-8" : "h-10 sm:h-11";
