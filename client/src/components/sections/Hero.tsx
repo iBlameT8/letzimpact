@@ -9,17 +9,14 @@ import { BRAND, waLink } from "@/lib/brand";
 import { MagneticButton } from "@/components/MagneticButton";
 import { WhatsAppGlyph } from "@/components/SiteNav";
 
-type ClientLogo = { src: string; alt: string; widthPct?: number };
+type ClientLogo = { src: string; alt: string };
 const CLIENT_LOGOS: ClientLogo[] = [
-  // widthPct controls how wide the logo is allowed to render inside its slot.
-  // Lowering neteco from the default 78% to 62% gives it the same visible breathing
-  // room as amhome, evening out the gap between them.
-  { src: "/manus-storage/neteco_3d840054.png", alt: "neteco", widthPct: 62 },
-  { src: "/manus-storage/amhome_e212773c.png", alt: "amhome", widthPct: 78 },
-  { src: "/manus-storage/sananny_22077c56.png", alt: "Sananny", widthPct: 78 },
-  { src: "/manus-storage/emesa_0413f571.png", alt: "EMESA Construction", widthPct: 78 },
-  { src: "/manus-storage/ar-security_39900dbd.png", alt: "ÄR Secherheet Security", widthPct: 78 },
-  { src: "/manus-storage/asad-gym_6a3a42a1.png", alt: "ASAD Gym", widthPct: 78 },
+  { src: "/partners/neteco.png", alt: "neteco" },
+  { src: "/partners/amhome.png", alt: "amhome" },
+  { src: "/partners/sananny.png", alt: "Sananny" },
+  { src: "/partners/emesa-construction.png", alt: "EMESA Construction" },
+  { src: "/partners/ar-secherheet-security.png", alt: "ÄR Secherheet Security" },
+  { src: "/partners/asad-gym.png", alt: "ASAD Gym" },
 ];
 
 function HeadlineWord({ children, delay = 0 }: { children: React.ReactNode; delay?: number }) {
@@ -192,16 +189,16 @@ export function PartnerStrip() {
               {CLIENT_LOGOS.map((logo, i) => (
                 <div
                   key={`${k}-${i}`}
-                  className="group flex h-10 shrink-0 items-center justify-center sm:h-12 lg:h-14"
-                  style={{ width: "clamp(160px, 22vw, 240px)" }}
+                  className="group flex h-10 shrink-0 items-center justify-center px-6 sm:h-12 sm:px-8 lg:h-14"
+                  style={{ width: "clamp(160px, 20vw, 240px)" }}
                 >
                   <img
                     src={logo.src}
                     alt={logo.alt}
                     loading="lazy"
                     draggable={false}
-                    className="max-h-full w-auto select-none object-contain opacity-90 transition-opacity duration-300 group-hover:opacity-100"
-                    style={{ maxWidth: `${logo.widthPct ?? 78}%` }}
+                    className="max-h-full max-w-full select-none object-contain"
+                    style={{ width: "auto" }}
                   />
                 </div>
               ))}
