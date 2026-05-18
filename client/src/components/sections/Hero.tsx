@@ -51,22 +51,6 @@ export function Hero() {
 
       <div className="container">
         <div className="max-w-5xl">
-            {/* eyebrow */}
-            <motion.div
-              initial={{ opacity: 0, y: 12 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.7, delay: 0.05 }}
-              className="mb-7 inline-flex items-center gap-2.5 rounded-full bg-white/[0.04] px-3.5 py-1.5 ring-1 ring-white/10 backdrop-blur-md"
-            >
-              <span className="relative flex h-2 w-2">
-                <span className="absolute inset-0 rounded-full bg-[#EC12D8] ping-soft" />
-                <span className="relative h-2 w-2 rounded-full bg-[#EC12D8]" />
-              </span>
-              <span className="font-mono-acc text-[11px] uppercase tracking-[0.18em] text-white/70">
-                Live · Booking Q3 2026
-              </span>
-            </motion.div>
-
             {/* headline */}
             <h1 className="font-display text-[34px] font-bold leading-[0.98] tracking-tight xs:text-[40px] sm:text-6xl sm:leading-[0.95] lg:text-[80px]">
               <span className="block overflow-hidden">
