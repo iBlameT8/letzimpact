@@ -174,7 +174,7 @@ export function PartnerStrip() {
                 <div
                   key={`${k}-${i}`}
                   className="group flex h-10 shrink-0 items-center justify-center px-6 sm:h-12 sm:px-8 lg:h-14"
-                  style={{ width: "clamp(160px, 20vw, 240px)" }}
+                  style={{ flexBasis: "clamp(160px, 20vw, 240px)" }}
                 >
                   <img
                     src={logo.src}
