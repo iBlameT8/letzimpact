@@ -2,12 +2,12 @@
 // brand gradient (#EC12D8 → #A250E3 → #4CC9F0), magenta primary CTA.
 //
 // RecentWork: three floating, vertical reel tiles between the hero copy and
-// the partner strip. Reels autoplay muted, loop, and are inert until in view —
-// they pause when offscreen to save bandwidth on mobile. On hover (desktop) the
-// tile lifts; on tap (mobile) sound can be toggled with the speaker pill.
+// the partner strip. Reels stay poster-only until visitors choose to play them,
+// keeping the initial page load light. Playback remains muted and pauses when
+// offscreen to save CPU and mobile data.
 
 import { motion, useInView } from "framer-motion";
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 
 type Reel = {
   brand: string;
@@ -51,18 +51,32 @@ function ReelCard({ reel, index }: { reel: Reel; index: number }) {
   const videoRef = useRef<HTMLVideoElement | null>(null);
   const inView = useInView(containerRef, { amount: 0.35, margin: "0px 0px -10% 0px" });
 
-  // Autoplay/pause based on viewport visibility — saves CPU + data on mobile.
+  const [isPlaying, setIsPlaying] = useState(false);
+
+  // Pause videos when offscreen so a manually started reel does not keep running.
   useEffect(() => {
     const v = videoRef.current;
+    if (!v || inView) return;
+    v.pause();
+    setIsPlaying(false);
+  }, [inView]);
+
+  const togglePlayback = () => {
+    const v = videoRef.current;
     if (!v) return;
-    if (inView) {
-      // Some browsers reject play() if the user hasn't interacted; muted autoplay is allowed.
-      const p = v.play();
-      if (p && typeof p.catch === "function") p.catch(() => {});
+
+    if (v.paused) {
+      v.muted = true;
+      const playPromise = v.play();
+      if (playPromise && typeof playPromise.catch === "function") {
+        playPromise.catch(() => setIsPlaying(false));
+      }
+      setIsPlaying(true);
     } else {
       v.pause();
+      setIsPlaying(false);
     }
-  }, [inView]);
+  };
 
   return (
     <motion.div
@@ -97,9 +111,32 @@ function ReelCard({ reel, index }: { reel: Reel; index: number }) {
             muted
             loop
             playsInline
-            preload="auto"
+            preload="none"
+            onPlay={() => setIsPlaying(true)}
+            onPause={() => setIsPlaying(false)}
             className="h-full w-full object-cover"
           />
+
+          <button
+            type="button"
+            aria-label={`${isPlaying ? "Pause" : "Play"} ${reel.brand} video`}
+            onClick={togglePlayback}
+            className={`absolute left-1/2 top-1/2 z-10 flex h-16 w-16 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full border border-white/25 bg-black/55 text-white shadow-[0_0_30px_rgba(236,18,216,0.25)] backdrop-blur-md transition duration-300 hover:scale-105 hover:bg-black/70 focus:outline-none focus:ring-2 focus:ring-[#EC12D8] focus:ring-offset-2 focus:ring-offset-black ${
+              isPlaying ? "opacity-0 group-hover:opacity-100 group-focus-within:opacity-100" : "opacity-100"
+            }`}
+          >
+            {isPlaying ? (
+              <span className="flex gap-1" aria-hidden="true">
+                <span className="h-5 w-1.5 rounded-full bg-white" />
+                <span className="h-5 w-1.5 rounded-full bg-white" />
+              </span>
+            ) : (
+              <span
+                aria-hidden="true"
+                className="ml-1 h-0 w-0 border-y-[12px] border-l-[18px] border-y-transparent border-l-white"
+              />
+            )}
+          </button>
 
           {/* gradient frame — subtle brand outline that brightens on hover */}
           <div
