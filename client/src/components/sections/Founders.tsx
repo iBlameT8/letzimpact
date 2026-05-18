@@ -55,15 +55,13 @@ export function Founders() {
           <FounderCard
             img={ANAS}
             name="Anas Ourabi"
-            role="Founder · Strategy & Direction"
-            quote="“If a video doesn't earn the second second, it doesn't deserve the first.”"
+            role="Founder"
             offset
           />
           <FounderCard
             img={DZENAN}
             name="Dzenan Skoko"
-            role="Co-founder · Production & Editing"
-            quote="“We're young, we're sharp, and we're not pretending to be your uncle's marketing guy.”"
+            role="Co-founder"
           />
         </div>
 
@@ -97,13 +95,11 @@ function FounderCard({
   img,
   name,
   role,
-  quote,
   offset = false,
 }: {
   img: string;
   name: string;
   role: string;
-  quote: string;
   offset?: boolean;
 }) {
   return (
@@ -147,10 +143,7 @@ function FounderCard({
             LU
           </span>
         </div>
-        <div className="mt-1 text-[13px] text-white/55">{role}</div>
-        <p className="mt-5 font-display text-[17px] italic leading-snug text-white/85">
-          {quote}
-        </p>
+
       </div>
     </motion.article>
   );
