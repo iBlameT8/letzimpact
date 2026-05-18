@@ -23,7 +23,7 @@ const REELS: Reel[] = [
   {
     brand: "Oasis",
     label: "Product · short-form",
-    src: "/manus-storage/oasis_d7cc521d.mp4",
+    src: "/videos/oasis.mp4",
     poster: "/manus-storage/oasis_c0b506da.jpg",
     offsetClass: "lg:-translate-y-6",
     rotateClass: "lg:-rotate-[1.4deg]",
@@ -31,7 +31,7 @@ const REELS: Reel[] = [
   {
     brand: "AmHome",
     label: "Real estate · villa tour",
-    src: "/manus-storage/amhome_1a62a4cc.mp4",
+    src: "/videos/amhome.mp4",
     poster: "/manus-storage/amhome_0ea282de.jpg",
     offsetClass: "lg:translate-y-2",
     rotateClass: "lg:rotate-[0.6deg]",
@@ -39,7 +39,7 @@ const REELS: Reel[] = [
   {
     brand: "Boxing event",
     label: "Live event · recap",
-    src: "/manus-storage/boxing_0c7ede7d.mp4",
+    src: "/videos/boxing-event.mp4",
     poster: "/manus-storage/boxing_12584a1f.jpg",
     offsetClass: "lg:-translate-y-4",
     rotateClass: "lg:rotate-[1.2deg]",
@@ -97,7 +97,7 @@ function ReelCard({ reel, index }: { reel: Reel; index: number }) {
             muted
             loop
             playsInline
-            preload="metadata"
+            preload="auto"
             className="h-full w-full object-cover"
           />
 
