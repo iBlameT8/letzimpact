@@ -314,8 +314,6 @@
   .marquee-track {
     display: flex;
     flex-shrink: 0;
-    gap: 3rem;
-    padding-right: 3rem;
     animation: marquee 38s linear infinite;
   }
   @keyframes marquee {
