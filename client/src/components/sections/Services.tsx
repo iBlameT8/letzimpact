@@ -32,7 +32,7 @@ const SERVICES: Svc[] = [
   {
     num: "03",
     title: "Strategy & positioning",
-    body: "A clear angle for your brand on Instagram and TikTok — what to say, who to say it to, and why anyone should care.",
+    body: "A clear angle for your brand across every social media platform — what to say, who to say it to, and why anyone should care.",
     icon: Sparkles,
     hue: "#4CC9F0",
   },
