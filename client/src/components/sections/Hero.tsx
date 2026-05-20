@@ -148,17 +148,18 @@ export function PartnerStrip() {
               {CLIENT_LOGOS.map((logo, i) => (
                 <div
                   key={`${k}-${i}`}
-                  className="group flex h-10 shrink-0 items-center justify-center px-6 sm:h-12 sm:px-8 lg:h-14"
+                  className="group flex h-14 shrink-0 items-center justify-center px-4 sm:h-16 sm:px-6 lg:h-20"
                   style={{ flexBasis: "clamp(160px, 20vw, 240px)" }}
                 >
-                  <img
-                    src={logo.src}
-                    alt={logo.alt}
-                    loading="lazy"
-                    draggable={false}
-                    className="max-h-full max-w-full select-none object-contain"
-                    style={{ width: "auto" }}
-                  />
+                  <div className="flex h-full w-full items-center justify-center rounded-2xl border border-white/10 bg-white/[0.96] px-4 py-2 shadow-[0_12px_30px_rgba(0,0,0,0.18)] sm:px-5 sm:py-2.5">
+                    <img
+                      src={logo.src}
+                      alt={logo.alt}
+                      loading="lazy"
+                      draggable={false}
+                      className="h-full w-full select-none object-contain"
+                    />
+                  </div>
                 </div>
               ))}
             </div>
