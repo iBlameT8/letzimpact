@@ -4,8 +4,8 @@
 import { motion } from "framer-motion";
 import { SectionLabel } from "@/components/sections/Services";
 
-const ANAS = "/manus-storage/founder-anas-real_7a9f1921.png";
-const DZENAN = "/manus-storage/founder-dzenan-real_b10a003a.png";
+const ANAS = "/founders/anas-ourabi.jpg";
+const DZENAN = "/founders/dzenan-skoko.png";
 const VALUES = [
   { k: "Clear strategy", v: "We say no to the wrong angle, even if it's loud." },
   { k: "Clean execution", v: "Files delivered, posts scheduled, comments answered." },
@@ -33,7 +33,7 @@ export function Founders() {
         </div>
 
         {/* Founder pair */}
-        <div className="mt-12 grid gap-5 sm:mt-16 sm:gap-6 md:grid-cols-2">
+        <div className="mt-12 grid items-stretch gap-5 sm:mt-16 sm:gap-6 md:grid-cols-2">
           <FounderCard
             img={ANAS}
             name="Anas Ourabi"
@@ -90,7 +90,7 @@ function FounderCard({
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: "-100px" }}
       transition={{ duration: 0.85, ease: [0.22, 1, 0.36, 1] }}
-          className={`group relative overflow-hidden rounded-3xl bg-white/[0.03] ring-1 ring-white/10 ${
+      className={`group relative flex h-full flex-col overflow-hidden rounded-3xl bg-white/[0.03] ring-1 ring-white/10 ${
         offset ? "lg:translate-y-8" : ""
       }`}
     >
@@ -116,7 +116,7 @@ function FounderCard({
           {role.split("·")[0].trim()}
         </div>
       </div>
-      <div className="p-5 sm:p-7">
+      <div className="flex flex-1 flex-col p-5 sm:p-7">
         <div className="flex items-baseline justify-between gap-4">
           <h3 className="font-display text-2xl font-semibold tracking-tight sm:text-3xl">
             {name}
