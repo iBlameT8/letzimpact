@@ -72,11 +72,6 @@ export function Services() {
               Not sixty things, done loosely.
             </h2>
           </div>
-          <p className="text-[15px] leading-relaxed text-white/65 sm:text-[16px] lg:col-span-5">
-            We're a small team on purpose. Strategy, filming, editing and management
-            all come from the same two people — so nothing falls between cracks,
-            and your brand actually sounds like one voice instead of a Slack channel.
-          </p>
         </div>
 
         {/* Service cards */}
