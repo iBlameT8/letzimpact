@@ -209,30 +209,50 @@
   }
   .rocket-smoke-field {
     position: absolute;
-    inset: -8vh -8vw;
-    width: 116vw;
-    height: 116vh;
-    opacity: 0.56;
-    filter: blur(0.6px) drop-shadow(0 0 18px rgba(162,80,227,0.35));
+    inset: 0;
+    width: 100vw;
+    height: 118vh;
+    opacity: 0.72;
+    filter: blur(0.35px) drop-shadow(0 0 18px rgba(162,80,227,0.38));
   }
-  .rocket-smoke {
+  .rocket-fume-core,
+  .rocket-fume,
+  .rocket-fume-spark {
     fill: none;
     stroke-linecap: round;
     stroke-linejoin: round;
-    stroke-width: 0.52;
-    stroke-dasharray: 10 18;
-    animation: rocket-smoke-flow 10s linear infinite, rocket-smoke-drift 16s ease-in-out infinite alternate;
+    transform-origin: 82% 20%;
+    animation: rocket-fume-rise 11s linear infinite, rocket-fume-breathe 9s ease-in-out infinite alternate;
   }
-  .rocket-smoke--one { stroke: rgba(236,18,216,0.72); animation-duration: 12s, 18s; }
-  .rocket-smoke--two { stroke: rgba(162,80,227,0.74); stroke-width: 0.42; stroke-dasharray: 8 16; animation-duration: 9s, 20s; }
-  .rocket-smoke--three { stroke: rgba(76,201,240,0.70); stroke-width: 0.34; stroke-dasharray: 6 14; animation-duration: 14s, 22s; }
+  .rocket-fume-core {
+    stroke: rgba(237,234,241,0.24);
+    stroke-width: 3.8;
+    stroke-dasharray: 18 18;
+    filter: blur(2.8px);
+  }
+  .rocket-fume {
+    stroke-width: 1.05;
+    stroke-dasharray: 14 22;
+    filter: blur(0.4px);
+  }
+  .rocket-fume-spark {
+    stroke-width: 0.42;
+    stroke-dasharray: 3 13;
+    opacity: 0.9;
+    filter: blur(0.15px);
+  }
+  .rocket-fume--magenta { stroke: rgba(236,18,216,0.76); animation-duration: 10s, 8s; }
+  .rocket-fume--purple { stroke: rgba(162,80,227,0.80); animation-duration: 12s, 10s; }
+  .rocket-fume--cyan { stroke: rgba(76,201,240,0.76); animation-duration: 14s, 11s; }
+  .rocket-fume-spark--one { stroke: rgba(236,18,216,0.78); animation-duration: 7s, 8s; }
+  .rocket-fume-spark--two { stroke: rgba(76,201,240,0.76); animation-duration: 8s, 9s; }
   .logo-rocket-flight {
     position: absolute;
     top: clamp(88px, 15vh, 150px);
     right: clamp(18px, 8vw, 126px);
-    width: clamp(48px, 6vw, 86px);
-    opacity: 0.92;
-    filter: drop-shadow(0 0 14px rgba(162,80,227,0.55)) drop-shadow(0 0 22px rgba(76,201,240,0.22));
+    width: clamp(56px, 6.8vw, 98px);
+    opacity: 0.94;
+    filter: drop-shadow(0 0 16px rgba(162,80,227,0.62)) drop-shadow(0 0 26px rgba(76,201,240,0.26));
     animation: rocket-vertical-flight 7s ease-in-out infinite;
   }
   .logo-rocket {
@@ -257,25 +277,27 @@
     45% { transform: translate3d(-10px, -34px, 0) rotate(3deg); }
     70% { transform: translate3d(7px, -12px, 0) rotate(-1deg); }
   }
-  @keyframes rocket-smoke-flow {
+  @keyframes rocket-fume-rise {
     from { stroke-dashoffset: 0; }
-    to { stroke-dashoffset: -56; }
+    to { stroke-dashoffset: -72; }
   }
-  @keyframes rocket-smoke-drift {
-    from { transform: translate3d(-1.5vw, 0.5vh, 0) scale(1); }
-    to { transform: translate3d(2.2vw, -2.4vh, 0) scale(1.025); }
+  @keyframes rocket-fume-breathe {
+    from { transform: translate3d(-0.8vw, 0.4vh, 0) scaleX(0.98); opacity: 0.62; }
+    to { transform: translate3d(1.1vw, -1.8vh, 0) scaleX(1.06); opacity: 0.9; }
   }
   @keyframes rocket-ambient {
     from { transform: translate3d(-2vw, -1vh, 0) scale(1); opacity: 0.62; }
     to { transform: translate3d(3vw, 3vh, 0) scale(1.04); opacity: 0.86; }
   }
   @media (max-width: 640px) {
-    .rocket-smoke-field { inset: -6vh -36vw; width: 172vw; opacity: 0.46; }
-    .logo-rocket-flight { right: 18px; width: 48px; opacity: 0.82; }
+    .rocket-smoke-field { width: 126vw; height: 116vh; transform: translateX(-18vw); opacity: 0.58; }
+    .logo-rocket-flight { right: 18px; width: 56px; opacity: 0.86; }
   }
   @media (prefers-reduced-motion: reduce) {
     .rocket-trail-layer::before,
-    .rocket-smoke,
+    .rocket-fume-core,
+    .rocket-fume,
+    .rocket-fume-spark,
     .logo-rocket-flight { animation: none; }
   }
 
