@@ -217,7 +217,8 @@
   }
   .rocket-fume-core,
   .rocket-fume,
-  .rocket-fume-spark {
+  .rocket-fume-spark,
+  .rocket-logo-plume {
     fill: none;
     stroke-linecap: round;
     stroke-linejoin: round;
@@ -241,9 +242,18 @@
     opacity: 0.9;
     filter: blur(0.15px);
   }
+  .rocket-logo-plume {
+    stroke-width: 1.25;
+    stroke-dasharray: 18 24;
+    opacity: 0.82;
+    filter: blur(0.25px) drop-shadow(0 0 10px rgba(162,80,227,0.36));
+  }
   .rocket-fume--magenta { stroke: rgba(236,18,216,0.76); animation-duration: 10s, 8s; }
   .rocket-fume--purple { stroke: rgba(162,80,227,0.80); animation-duration: 12s, 10s; }
   .rocket-fume--cyan { stroke: rgba(76,201,240,0.76); animation-duration: 14s, 11s; }
+  .rocket-logo-plume--upper { stroke: rgba(162,80,227,0.86); animation-duration: 9s, 8s; }
+  .rocket-logo-plume--middle { stroke: rgba(76,201,240,0.78); animation-duration: 11s, 9s; }
+  .rocket-logo-plume--lower { stroke: rgba(236,18,216,0.80); stroke-width: 1.45; animation-duration: 13s, 10s; }
   .rocket-fume-spark--one { stroke: rgba(236,18,216,0.78); animation-duration: 7s, 8s; }
   .rocket-fume-spark--two { stroke: rgba(76,201,240,0.76); animation-duration: 8s, 9s; }
   .logo-rocket-flight {
@@ -298,6 +308,7 @@
     .rocket-fume-core,
     .rocket-fume,
     .rocket-fume-spark,
+    .rocket-logo-plume,
     .logo-rocket-flight { animation: none; }
   }
 

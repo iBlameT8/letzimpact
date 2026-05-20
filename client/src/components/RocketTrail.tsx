@@ -7,27 +7,39 @@ export function RocketTrail() {
       <svg className="rocket-smoke-field" viewBox="0 0 100 130" preserveAspectRatio="none">
         <path
           className="rocket-fume-core rocket-fume-core--wide"
-          d="M 82 20 C 80 32, 78 43, 75 55 C 72 70, 67 83, 60 96 C 54 108, 48 119, 43 132"
-        />
-        <path
-          className="rocket-fume rocket-fume--magenta"
-          d="M 82 20 C 79 31, 75 42, 70 53 C 64 66, 57 78, 49 91 C 42 103, 37 117, 32 132"
-        />
-        <path
-          className="rocket-fume rocket-fume--purple"
-          d="M 82 20 C 83 33, 81 46, 78 59 C 75 74, 70 87, 63 101 C 57 113, 54 123, 50 132"
+          d="M82 20 C82 31 82 42 81 53 C80 68 77 82 72 95 C66 111 56 123 47 132"
         />
         <path
           className="rocket-fume rocket-fume--cyan"
-          d="M 82 20 C 86 31, 88 44, 87 57 C 86 72, 81 85, 73 98 C 66 110, 61 121, 57 132"
+          d="M82 20 C78 35 75 49 70 63 C63 82 54 101 43 132"
+        />
+        <path
+          className="rocket-fume rocket-fume--purple"
+          d="M82 20 C83 36 83 51 80 66 C77 86 70 107 62 132"
+        />
+        <path
+          className="rocket-fume rocket-fume--magenta"
+          d="M82 20 C87 36 90 51 88 67 C85 88 76 109 67 132"
+        />
+        <path
+          className="rocket-logo-plume rocket-logo-plume--upper"
+          d="M70 59 C70 50 76 44 82 44 C88 44 94 50 94 59"
+        />
+        <path
+          className="rocket-logo-plume rocket-logo-plume--middle"
+          d="M58 82 C58 70 68 62 80 62 C92 62 101 70 101 82"
+        />
+        <path
+          className="rocket-logo-plume rocket-logo-plume--lower"
+          d="M29 132 C31 114 45 101 62 101 C72 101 80 106 86 114 C89 106 94 102 100 101"
         />
         <path
           className="rocket-fume-spark rocket-fume-spark--one"
-          d="M 82 24 C 76 38, 73 49, 66 62 C 58 77, 54 92, 47 106"
+          d="M77 44 C72 55 67 64 61 74 C53 88 48 101 44 116"
         />
         <path
           className="rocket-fume-spark rocket-fume-spark--two"
-          d="M 83 25 C 87 39, 84 52, 80 66 C 76 82, 70 96, 65 111"
+          d="M88 45 C93 57 96 70 94 84 C92 98 86 111 80 124"
         />
       </svg>
 
