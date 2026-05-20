@@ -187,7 +187,7 @@
     border: 1px solid rgba(255, 255, 255, 0.12);
   }
 
-  /* Static neon rocket with animated light and full-page fumes */
+  /* Static neon rocket artwork with full-page fumes extended to the footer */
   .rocket-trail-layer {
     position: fixed;
     inset: 0;
@@ -209,11 +209,12 @@
   }
   .rocket-smoke-field {
     position: absolute;
-    inset: -8vh -5vw;
-    width: 110vw;
-    height: 116vh;
-    opacity: 0.82;
-    filter: drop-shadow(0 0 22px rgba(162,80,227,0.32));
+    top: clamp(280px, 34vh, 420px);
+    right: clamp(-180px, -8vw, -36px);
+    width: clamp(360px, 42vw, 700px);
+    height: calc(100vh - clamp(190px, 24vh, 300px));
+    opacity: 0.88;
+    filter: drop-shadow(0 0 22px rgba(162,80,227,0.34));
   }
   .rocket-fume-ribbon,
   .rocket-fume-stream {
@@ -256,58 +257,34 @@
   .rocket-fume-ribbon--right { opacity: 0.4; }
   .logo-rocket-flight {
     position: absolute;
-    top: clamp(72px, 12vh, 132px);
-    right: clamp(26px, 9vw, 138px);
-    width: clamp(96px, 11vw, 168px);
+    top: clamp(58px, 7vh, 112px);
+    right: clamp(18px, 7vw, 116px);
+    width: clamp(170px, 22vw, 330px);
     opacity: 0.96;
     filter:
-      drop-shadow(0 0 16px rgba(76,201,240,0.62))
-      drop-shadow(0 0 32px rgba(162,80,227,0.45))
-      drop-shadow(0 0 44px rgba(236,18,216,0.28));
+      drop-shadow(0 0 16px rgba(76,201,240,0.6))
+      drop-shadow(0 0 34px rgba(162,80,227,0.42))
+      drop-shadow(0 0 46px rgba(236,18,216,0.28));
   }
-  .logo-rocket {
+  .logo-rocket-image {
+    display: block;
     width: 100%;
     height: auto;
-    overflow: visible;
-  }
-  .logo-rocket-outline,
-  .logo-rocket-window {
-    fill: none;
-    stroke: url(#rocketStroke);
-    stroke-linecap: round;
-    stroke-linejoin: round;
-  }
-  .logo-rocket-outline {
-    stroke-width: 9;
-    filter: drop-shadow(0 0 12px rgba(76,201,240,0.82)) drop-shadow(0 0 18px rgba(236,18,216,0.56));
-  }
-  .logo-rocket-outline--halo {
-    stroke-width: 18;
-    opacity: 0.22;
-    filter: blur(3px);
-  }
-  .logo-rocket-window {
-    stroke-width: 8;
-    filter: drop-shadow(0 0 12px rgba(122,231,255,0.8));
-  }
-  .logo-rocket-window--halo {
-    stroke-width: 12;
-    opacity: 0.24;
-    filter: blur(4px);
-  }
-  .logo-rocket-window-core {
-    fill: rgba(20,10,36,0.86);
-    stroke: url(#rocketWindowGlow);
-    stroke-width: 2;
-  }
-  .logo-rocket-beam {
-    fill: url(#rocketBeam);
-    opacity: 0.76;
-    filter: blur(0.25px) drop-shadow(0 0 18px rgba(187,249,255,0.62));
+    user-select: none;
+    -webkit-user-drag: none;
+    border-radius: clamp(18px, 2vw, 32px);
+    mask-image: linear-gradient(180deg, #000 0%, #000 72%, transparent 100%);
+    -webkit-mask-image: linear-gradient(180deg, #000 0%, #000 72%, transparent 100%);
   }
   @media (max-width: 640px) {
-    .rocket-smoke-field { inset: -8vh -22vw; width: 138vw; opacity: 0.62; }
-    .logo-rocket-flight { right: 18px; top: 86px; width: 82px; opacity: 0.88; }
+    .rocket-smoke-field {
+      top: 240px;
+      right: -170px;
+      width: 430px;
+      height: calc(100vh - 170px);
+      opacity: 0.62;
+    }
+    .logo-rocket-flight { right: -18px; top: 86px; width: 180px; opacity: 0.88; }
     .rocket-fume-ribbon { stroke-width: 32px; }
   }
   /* Animated noise overlay (very subtle) */
