@@ -6,7 +6,7 @@
 // - Glass surfaces, magnetic buttons, ease [0.22, 1, 0.36, 1]
 // - Asymmetric layout, no purple-gradient spam, no Inter as display.
 
-import { AnimatedSiteLines } from "@/components/AnimatedSiteLines";
+import { RocketTrail } from "@/components/RocketTrail";
 import { CursorGlow } from "@/components/CursorGlow";
 import { FloatingWhatsApp } from "@/components/FloatingWhatsApp";
 import { SiteNav } from "@/components/SiteNav";
@@ -22,7 +22,7 @@ import { Services } from "@/components/sections/Services";
 export default function Home() {
   return (
     <div className="relative isolate min-h-screen overflow-x-clip bg-[#07060B] text-[#EDEAF1] selection:bg-[#EC12D8]/40">
-      <AnimatedSiteLines />
+      <RocketTrail />
       <CursorGlow />
       <SiteNav />
 

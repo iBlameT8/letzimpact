@@ -187,72 +187,96 @@
     border: 1px solid rgba(255, 255, 255, 0.12);
   }
 
-  /* Site-wide animated neon lines */
-  .animated-site-lines {
+  /* Logo rocket flight with dynamic brand smoke */
+  .rocket-trail-layer {
     position: fixed;
     inset: 0;
     z-index: 0;
     pointer-events: none;
     overflow: hidden;
-    opacity: 0.62;
     mix-blend-mode: screen;
   }
-  .animated-site-lines::before {
+  .rocket-trail-layer::before {
     content: "";
     position: absolute;
     inset: -20% -10%;
     background:
-      radial-gradient(650px 260px at 18% 18%, rgba(236,18,216,0.16), transparent 68%),
-      radial-gradient(620px 260px at 82% 30%, rgba(76,201,240,0.12), transparent 72%),
-      radial-gradient(780px 320px at 48% 72%, rgba(162,80,227,0.11), transparent 76%);
-    filter: blur(18px);
-    animation: site-line-glow 18s ease-in-out infinite alternate;
+      radial-gradient(540px 260px at 78% 18%, rgba(236,18,216,0.12), transparent 68%),
+      radial-gradient(560px 260px at 70% 34%, rgba(76,201,240,0.10), transparent 72%);
+    filter: blur(16px);
+    opacity: 0.78;
+    animation: rocket-ambient 12s ease-in-out infinite alternate;
   }
-  .animated-site-line {
+  .rocket-smoke-field {
     position: absolute;
-    left: -18vw;
-    width: 136vw;
-    height: clamp(120px, 18vw, 260px);
-    border-radius: 999px;
-    opacity: 0.46;
-    filter: blur(1px) drop-shadow(0 0 18px rgba(162,80,227,0.32));
-    transform-origin: center;
-    background: linear-gradient(100deg, transparent 3%, rgba(236,18,216,0.05) 16%, rgba(236,18,216,0.50) 29%, rgba(162,80,227,0.56) 47%, rgba(76,201,240,0.48) 68%, transparent 94%);
-    clip-path: polygon(0 50%, 9% 43%, 18% 51%, 29% 37%, 41% 48%, 53% 39%, 64% 51%, 76% 41%, 88% 48%, 100% 40%, 100% 52%, 88% 60%, 76% 55%, 64% 65%, 53% 53%, 41% 63%, 29% 51%, 18% 66%, 9% 56%, 0 64%);
+    inset: -8vh -8vw;
+    width: 116vw;
+    height: 116vh;
+    opacity: 0.56;
+    filter: blur(0.6px) drop-shadow(0 0 18px rgba(162,80,227,0.35));
   }
-  .animated-site-line::after {
-    content: "";
+  .rocket-smoke {
+    fill: none;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-width: 0.52;
+    stroke-dasharray: 10 18;
+    animation: rocket-smoke-flow 10s linear infinite, rocket-smoke-drift 16s ease-in-out infinite alternate;
+  }
+  .rocket-smoke--one { stroke: rgba(236,18,216,0.72); animation-duration: 12s, 18s; }
+  .rocket-smoke--two { stroke: rgba(162,80,227,0.74); stroke-width: 0.42; stroke-dasharray: 8 16; animation-duration: 9s, 20s; }
+  .rocket-smoke--three { stroke: rgba(76,201,240,0.70); stroke-width: 0.34; stroke-dasharray: 6 14; animation-duration: 14s, 22s; }
+  .logo-rocket-flight {
     position: absolute;
-    inset: 42% 0 46%;
-    background: linear-gradient(100deg, transparent 4%, rgba(76,201,240,0.18) 14%, rgba(236,18,216,0.62) 33%, rgba(162,80,227,0.78) 52%, rgba(76,201,240,0.62) 72%, transparent 96%);
-    filter: blur(7px);
+    top: clamp(88px, 15vh, 150px);
+    right: clamp(18px, 8vw, 126px);
+    width: clamp(48px, 6vw, 86px);
+    opacity: 0.92;
+    filter: drop-shadow(0 0 14px rgba(162,80,227,0.55)) drop-shadow(0 0 22px rgba(76,201,240,0.22));
+    animation: rocket-vertical-flight 7s ease-in-out infinite;
   }
-  .animated-site-line--one { top: 7vh; animation: site-line-drift-one 26s ease-in-out infinite alternate; }
-  .animated-site-line--two { top: 42vh; opacity: 0.32; transform: rotate(-11deg) translate3d(-10vw, 0, 0) scaleY(0.72); animation: site-line-drift-two 32s ease-in-out infinite alternate; }
-  .animated-site-line--three { top: 78vh; opacity: 0.28; transform: rotate(8deg) translate3d(6vw, 0, 0) scaleY(0.58); animation: site-line-drift-three 38s ease-in-out infinite alternate; }
-  @keyframes site-line-drift-one {
-    from { transform: rotate(10deg) translate3d(-12vw, -2vh, 0) scaleY(0.82); }
-    to { transform: rotate(6deg) translate3d(9vw, 7vh, 0) scaleY(1); }
+  .logo-rocket {
+    width: 100%;
+    height: auto;
+    overflow: visible;
   }
-  @keyframes site-line-drift-two {
-    from { transform: rotate(-13deg) translate3d(8vw, -3vh, 0) scaleY(0.72); }
-    to { transform: rotate(-8deg) translate3d(-12vw, 6vh, 0) scaleY(0.88); }
+  .logo-rocket-outline {
+    fill: none;
+    stroke: url(#rocketStroke);
+    stroke-width: 9;
+    stroke-linecap: round;
+    stroke-linejoin: round;
   }
-  @keyframes site-line-drift-three {
-    from { transform: rotate(7deg) translate3d(-8vw, 0, 0) scaleY(0.58); }
-    to { transform: rotate(11deg) translate3d(12vw, -7vh, 0) scaleY(0.74); }
+  .logo-rocket-window {
+    fill: none;
+    stroke: url(#rocketStroke);
+    stroke-width: 9;
   }
-  @keyframes site-line-glow {
-    from { transform: translate3d(-3vw, -2vh, 0) scale(1); opacity: 0.85; }
-    to { transform: translate3d(3vw, 4vh, 0) scale(1.05); opacity: 1; }
+  @keyframes rocket-vertical-flight {
+    0%, 100% { transform: translate3d(0, 18px, 0) rotate(-2deg); }
+    45% { transform: translate3d(-10px, -34px, 0) rotate(3deg); }
+    70% { transform: translate3d(7px, -12px, 0) rotate(-1deg); }
+  }
+  @keyframes rocket-smoke-flow {
+    from { stroke-dashoffset: 0; }
+    to { stroke-dashoffset: -56; }
+  }
+  @keyframes rocket-smoke-drift {
+    from { transform: translate3d(-1.5vw, 0.5vh, 0) scale(1); }
+    to { transform: translate3d(2.2vw, -2.4vh, 0) scale(1.025); }
+  }
+  @keyframes rocket-ambient {
+    from { transform: translate3d(-2vw, -1vh, 0) scale(1); opacity: 0.62; }
+    to { transform: translate3d(3vw, 3vh, 0) scale(1.04); opacity: 0.86; }
   }
   @media (max-width: 640px) {
-    .animated-site-lines { opacity: 0.48; }
-    .animated-site-line { left: -42vw; width: 184vw; height: 150px; }
+    .rocket-smoke-field { inset: -6vh -36vw; width: 172vw; opacity: 0.46; }
+    .logo-rocket-flight { right: 18px; width: 48px; opacity: 0.82; }
   }
   @media (prefers-reduced-motion: reduce) {
-    .animated-site-lines::before,
-    .animated-site-line { animation: none; }
+    .rocket-trail-layer::before,
+    .rocket-smoke,
+    .logo-rocket-flight { animation: none; }
   }
 
   /* Animated noise overlay (very subtle) */
