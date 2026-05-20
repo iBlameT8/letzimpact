@@ -189,7 +189,7 @@
 
   /* Static neon rocket artwork with full-page fumes extended to the footer */
   .rocket-trail-layer {
-    position: fixed;
+    position: absolute;
     inset: 0;
     z-index: 0;
     pointer-events: none;
@@ -207,64 +207,71 @@
     filter: blur(18px);
     opacity: 0.82;
   }
+  .rocket-trail-layer::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background:
+      radial-gradient(220px 360px at 86% 18%, rgba(76,201,240,0.16), transparent 72%),
+      radial-gradient(250px 420px at 96% 29%, rgba(236,18,216,0.15), transparent 74%),
+      radial-gradient(230px 390px at 82% 43%, rgba(76,201,240,0.11), transparent 74%),
+      radial-gradient(280px 470px at 94% 58%, rgba(162,80,227,0.14), transparent 76%),
+      radial-gradient(250px 430px at 78% 74%, rgba(76,201,240,0.1), transparent 75%),
+      radial-gradient(300px 500px at 91% 91%, rgba(236,18,216,0.11), transparent 78%);
+    filter: blur(24px);
+    opacity: 0.86;
+  }
   .rocket-smoke-field {
     position: absolute;
-    top: clamp(280px, 34vh, 420px);
-    right: clamp(-180px, -8vw, -36px);
-    width: clamp(360px, 42vw, 700px);
-    height: calc(100vh - clamp(190px, 24vh, 300px));
-    opacity: 0.88;
-    filter: drop-shadow(0 0 22px rgba(162,80,227,0.34));
+    top: clamp(220px, 28vh, 360px);
+    right: clamp(-290px, -16vw, -96px);
+    width: clamp(430px, 46vw, 740px);
+    height: calc(100% - clamp(180px, 22vh, 300px));
+    opacity: 0.72;
+    filter: drop-shadow(0 0 24px rgba(162,80,227,0.28));
   }
-  .rocket-fume-ribbon,
-  .rocket-fume-stream {
+  .rocket-fume-ribbon {
     fill: none;
     stroke-linecap: round;
     stroke-linejoin: round;
+    stroke-width: clamp(28px, 4.8vw, 70px);
     vector-effect: non-scaling-stroke;
+    filter: blur(14px) drop-shadow(0 0 26px currentColor);
   }
-  .rocket-fume-ribbon {
-    stroke-width: clamp(22px, 5vw, 58px);
-    opacity: 0.34;
-    filter: blur(13px) drop-shadow(0 0 28px currentColor);
-  }
-  .rocket-fume-stream {
-    stroke-width: clamp(3px, 0.7vw, 8px);
-    stroke-dasharray: 22 18;
-    opacity: 0.54;
-    filter: blur(0.5px) drop-shadow(0 0 16px currentColor);
-  }
-  .rocket-fume-ribbon--cyan,
-  .rocket-fume-stream--diagonal-two {
+  .rocket-fume-ribbon--cyan {
     stroke: url(#fumeCyan);
-    color: rgba(76,201,240,0.62);
+    color: rgba(76,201,240,0.52);
   }
-  .rocket-fume-ribbon--magenta,
-  .rocket-fume-stream--diagonal-one {
+  .rocket-fume-ribbon--magenta {
     stroke: url(#fumeMagenta);
-    color: rgba(236,18,216,0.62);
+    color: rgba(236,18,216,0.52);
   }
-  .rocket-fume-stream--vertical {
-    stroke: rgba(244,253,255,0.58);
-    color: rgba(244,253,255,0.52);
-    stroke-width: clamp(5px, 1vw, 12px);
-    opacity: 0.5;
-    filter: blur(1.2px) drop-shadow(0 0 22px rgba(244,253,255,0.45));
-  }
-  .rocket-fume-ribbon--left { opacity: 0.38; }
-  .rocket-fume-ribbon--center-left { opacity: 0.24; }
-  .rocket-fume-ribbon--center-right { opacity: 0.22; }
+  .rocket-fume-ribbon--left { opacity: 0.42; }
+  .rocket-fume-ribbon--center-left { opacity: 0.28; }
+  .rocket-fume-ribbon--center-right { opacity: 0.28; }
   .rocket-fume-ribbon--right { opacity: 0.4; }
+  .rocket-fume-core {
+    fill: url(#fumeWhite);
+    opacity: 0.1;
+    filter: blur(18px) drop-shadow(0 0 18px rgba(187,249,255,0.1));
+  }
+  .rocket-fume-puff {
+    filter: url(#softSmoke);
+    opacity: 0.3;
+    mix-blend-mode: screen;
+  }
+  .rocket-fume-puff--cyan { fill: url(#fumeCyan); }
+  .rocket-fume-puff--magenta { fill: url(#fumeMagenta); }
   .logo-rocket-flight {
     position: absolute;
     top: clamp(58px, 7vh, 112px);
-    right: clamp(18px, 7vw, 116px);
-    width: clamp(170px, 22vw, 330px);
-    opacity: 0.96;
+    right: clamp(-92px, -3vw, 20px);
+    width: clamp(132px, 16vw, 235px);
+    opacity: 0.95;
     filter:
-      drop-shadow(0 0 16px rgba(76,201,240,0.6))
+      drop-shadow(0 0 16px rgba(76,201,240,0.58))
       drop-shadow(0 0 34px rgba(162,80,227,0.42))
-      drop-shadow(0 0 46px rgba(236,18,216,0.28));
+      drop-shadow(0 0 46px rgba(236,18,216,0.26));
   }
   .logo-rocket-image {
     display: block;
@@ -272,20 +279,20 @@
     height: auto;
     user-select: none;
     -webkit-user-drag: none;
-    border-radius: clamp(18px, 2vw, 32px);
-    mask-image: linear-gradient(180deg, #000 0%, #000 72%, transparent 100%);
-    -webkit-mask-image: linear-gradient(180deg, #000 0%, #000 72%, transparent 100%);
+    object-fit: contain;
+    mask-image: linear-gradient(180deg, #000 0%, #000 64%, rgba(0,0,0,0.74) 78%, transparent 100%);
+    -webkit-mask-image: linear-gradient(180deg, #000 0%, #000 64%, rgba(0,0,0,0.74) 78%, transparent 100%);
   }
   @media (max-width: 640px) {
     .rocket-smoke-field {
-      top: 240px;
-      right: -170px;
-      width: 430px;
-      height: calc(100vh - 170px);
-      opacity: 0.62;
+      top: 220px;
+      right: -280px;
+      width: 500px;
+      height: calc(100% - 175px);
+      opacity: 0.56;
     }
-    .logo-rocket-flight { right: -18px; top: 86px; width: 180px; opacity: 0.88; }
-    .rocket-fume-ribbon { stroke-width: 32px; }
+    .logo-rocket-flight { right: -54px; top: 88px; width: 148px; opacity: 0.9; }
+    .rocket-fume-ribbon { stroke-width: 36px; }
   }
   /* Animated noise overlay (very subtle) */
   .noise::after {
