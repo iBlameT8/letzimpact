@@ -134,7 +134,7 @@ export function Hero() {
                 <div className="text-[18px] font-display font-semibold tracking-tight text-white sm:text-[22px]">
                   +352
                 </div>
-                based in {BRAND.location}
+                Made in {BRAND.location}
               </div>
             </motion.div>
         </div>
