@@ -52,18 +52,20 @@ export function Hero() {
       <div className="container">
         <div className="max-w-5xl">
             {/* headline */}
-            <h1 className="font-display text-[34px] font-bold leading-[0.98] tracking-tight xs:text-[40px] sm:text-6xl sm:leading-[0.95] lg:text-[80px]">
-              <span className="block overflow-hidden">
+            <h1 className="max-w-5xl text-justify font-display text-[34px] font-bold leading-[0.98] tracking-tight [text-align-last:left] xs:text-[40px] sm:text-6xl sm:leading-[0.95] lg:text-[80px]">
+              <span className="inline-block overflow-hidden">
                 <HeadlineWord delay={0.05}>Social media</HeadlineWord>
-              </span>
-              <span className="block overflow-hidden">
-                <HeadlineWord delay={0.18}>that&nbsp;</HeadlineWord>
+              </span>{" "}
+              <span className="inline-block overflow-hidden">
+                <HeadlineWord delay={0.18}>that</HeadlineWord>
+              </span>{" "}
+              <span className="inline-block overflow-hidden">
                 <HeadlineWord delay={0.28}>
                   <span className="text-gradient">actually</span>
                 </HeadlineWord>
-              </span>
-              <span className="block overflow-hidden">
-                <HeadlineWord delay={0.42}>does the work.</HeadlineWord>
+              </span>{" "}
+              <span className="inline-block overflow-hidden">
+                <HeadlineWord delay={0.42}>works</HeadlineWord>
               </span>
             </h1>
 
@@ -71,7 +73,7 @@ export function Hero() {
               initial={{ opacity: 0, y: 16 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.6 }}
-              className="mt-5 max-w-xl text-[15px] leading-relaxed text-white/70 sm:mt-7 sm:text-[17px]"
+              className="mt-5 max-w-xl text-justify text-[15px] leading-relaxed text-white/70 [text-align-last:left] sm:mt-7 sm:text-[17px]"
             >
               We're <span className="text-white">Letzimpact</span> — a Luxembourg-based duo
               that plans, films and runs short-form content for brands who'd rather

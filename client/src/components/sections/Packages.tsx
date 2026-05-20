@@ -81,22 +81,9 @@ const PKGS: Pkg[] = [
   },
 ];
 
-const PACKAGES_BG =
-  "https://d2xsxph8kpxj0f.cloudfront.net/310519663425995922/GCvcXy9rLoydAuyh5uZw78/packages-bg-8Es6JTNzk9xWjuAFAsPLg4.webp";
-
 export function Packages() {
   return (
     <section id="packages" className="relative isolate overflow-hidden py-20 sm:py-28 lg:py-36">
-      {/* ambient backdrop */}
-      <div
-        aria-hidden
-        className="absolute inset-0 -z-10 opacity-90"
-        style={{
-          backgroundImage: `url(${PACKAGES_BG})`,
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-        }}
-      />
       <div
         aria-hidden
         className="absolute inset-0 -z-10 bg-[#07060B]/70"
@@ -222,7 +209,6 @@ function PackageCard({ pkg, index }: { pkg: Pkg; index: number }) {
         </ul>
 
         <div className="relative mt-8 pt-7">
-          <div className="hairline mb-7" />
           <a
             href={waLink(pkg.waMessage)}
             target="_blank"

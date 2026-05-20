@@ -6,9 +6,6 @@ import { SectionLabel } from "@/components/sections/Services";
 
 const ANAS = "/manus-storage/founder-anas-real_7a9f1921.png";
 const DZENAN = "/manus-storage/founder-dzenan-real_b10a003a.png";
-const TEXTURE =
-  "https://d2xsxph8kpxj0f.cloudfront.net/310519663425995922/GCvcXy9rLoydAuyh5uZw78/about-texture-nRohwr4hwRVcrNgUFS6cvu.webp";
-
 const VALUES = [
   { k: "Clear strategy", v: "We say no to the wrong angle, even if it's loud." },
   { k: "Clean execution", v: "Files delivered, posts scheduled, comments answered." },
@@ -19,21 +16,6 @@ const VALUES = [
 export function Founders() {
   return (
     <section id="founders" className="relative isolate overflow-hidden py-20 sm:py-28 lg:py-36">
-      {/* texture backdrop */}
-      <div
-        aria-hidden
-        className="pointer-events-none absolute inset-x-0 top-0 -z-10 h-[420px] opacity-50"
-        style={{
-          backgroundImage: `url(${TEXTURE})`,
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-          maskImage:
-            "linear-gradient(180deg, #000 30%, transparent 100%)",
-          WebkitMaskImage:
-            "linear-gradient(180deg, #000 30%, transparent 100%)",
-        }}
-      />
-
       <div className="container">
         <div className="grid gap-10 lg:grid-cols-12 lg:items-end">
           <div className="lg:col-span-7">
