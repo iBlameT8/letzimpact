@@ -5,7 +5,7 @@
 
 import { motion } from "framer-motion";
 import { ArrowDownRight } from "lucide-react";
-import { BRAND, waLink } from "@/lib/brand";
+import { waLink } from "@/lib/brand";
 import { MagneticButton } from "@/components/MagneticButton";
 import { WhatsAppGlyph } from "@/components/SiteNav";
 
@@ -109,33 +109,6 @@ export function Hero() {
                 See the packages
                 <ArrowDownRight className="h-4 w-4" />
               </MagneticButton>
-            </motion.div>
-
-            {/* meta strip */}
-            <motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ duration: 0.9, delay: 0.95 }}
-              className="mt-10 grid max-w-md grid-cols-3 gap-4 border-t border-white/10 pt-5 font-mono-acc text-[10px] uppercase tracking-[0.16em] text-white/45 sm:mt-12 sm:gap-6 sm:pt-6 sm:text-[11px] sm:tracking-[0.18em]"
-            >
-              <div>
-                <div className="text-[18px] font-display font-semibold tracking-tight text-white sm:text-[22px]">
-                  IG · TT
-                </div>
-                native short-form
-              </div>
-              <div>
-                <div className="text-[18px] font-display font-semibold tracking-tight text-white sm:text-[22px]">
-                  2&nbsp;founders
-                </div>
-                no agency overhead
-              </div>
-              <div>
-                <div className="text-[18px] font-display font-semibold tracking-tight text-white sm:text-[22px]">
-                  +352
-                </div>
-                Made in {BRAND.location}
-              </div>
             </motion.div>
         </div>
       </div>
