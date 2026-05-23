@@ -52,7 +52,7 @@ export function Hero() {
       <div className="container">
         <div className="max-w-5xl">
             {/* headline */}
-            <h1 className="max-w-5xl text-justify font-display text-[34px] font-bold leading-[0.98] tracking-tight [text-align-last:left] xs:text-[40px] sm:text-6xl sm:leading-[0.95] lg:text-[80px]">
+            <h1 className="max-w-5xl text-justify font-display text-[34px] font-bold leading-[0.98] tracking-tight [text-align-last:justify] xs:text-[40px] sm:text-6xl sm:leading-[0.95] lg:text-[80px]">
               <span className="inline-block overflow-hidden">
                 <HeadlineWord delay={0.05}>Social media</HeadlineWord>
               </span>{" "}
