@@ -54,7 +54,10 @@ export function Hero() {
             {/* headline */}
             <h1 className="max-w-5xl text-justify font-display text-[34px] font-bold leading-[0.98] tracking-tight [text-align-last:justify] xs:text-[40px] sm:text-6xl sm:leading-[0.95] lg:text-[80px]">
               <span className="inline-block overflow-hidden">
-                <HeadlineWord delay={0.05}>Social media</HeadlineWord>
+                <HeadlineWord delay={0.05}>Social</HeadlineWord>
+              </span>{" "}
+              <span className="inline-block overflow-hidden">
+                <HeadlineWord delay={0.05}>media</HeadlineWord>
               </span>{" "}
               <span className="inline-block overflow-hidden">
                 <HeadlineWord delay={0.18}>that</HeadlineWord>
