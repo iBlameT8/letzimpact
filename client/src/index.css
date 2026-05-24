@@ -290,7 +290,7 @@
   .rocket-smoke-field {
     position: absolute;
     top: clamp(240px, 30vh, 390px);
-    right: clamp(-330px, -18vw, -120px);
+    right: clamp(-160px, -8vw, -50px);
     width: clamp(430px, 46vw, 740px);
     height: calc(100% - clamp(190px, 23vh, 310px));
     opacity: 0.54;
@@ -343,7 +343,7 @@
   .logo-rocket-flight {
     position: absolute;
     top: clamp(72px, 9vh, 130px);
-    right: clamp(-122px, -5vw, -10px);
+    right: clamp(-18px, 1vw, 32px);
     width: clamp(126px, 14vw, 210px);
     opacity: 0.78;
     filter: drop-shadow(0 0 12px rgba(76, 201, 240, 0.38))
@@ -378,13 +378,13 @@
   @media (max-width: 640px) {
     .rocket-smoke-field {
       top: 255px;
-      right: -315px;
+      right: -95px;
       width: 500px;
       height: calc(100% - 190px);
       opacity: 0.42;
     }
     .logo-rocket-flight {
-      right: -82px;
+      right: 12px;
       top: 112px;
       width: 132px;
       opacity: 0.62;
