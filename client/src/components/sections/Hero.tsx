@@ -22,6 +22,8 @@ const CLIENT_LOGOS: ClientLogo[] = [
   { src: "/partners/asad-gym.png", alt: "ASAD Gym" },
 ];
 
+const PARTNER_MARQUEE_COPIES = 5;
+
 function HeadlineWord({
   children,
   delay = 0,
@@ -152,31 +154,26 @@ export function PartnerStrip() {
         }}
       >
         <div className="marquee-track items-center">
-          {[...Array(2)].map((_, k) => (
-            <div
-              key={k}
-              className="flex shrink-0 items-center"
-              aria-hidden={k === 1}
-            >
-              {CLIENT_LOGOS.map((logo, i) => (
-                <div
-                  key={`${k}-${i}`}
-                  className="group flex h-16 shrink-0 items-center justify-center px-5 sm:h-[4.5rem] sm:px-7 lg:h-[5.5rem]"
-                  style={{ flexBasis: "clamp(160px, 20vw, 240px)" }}
-                >
-                  <div className="flex h-full w-full items-center justify-center px-3 py-2 sm:px-4 sm:py-2.5">
-                    <img
-                      src={logo.src}
-                      alt={logo.alt}
-                      loading="lazy"
-                      draggable={false}
-                      className="h-full w-full select-none object-contain drop-shadow-[0_10px_20px_rgba(0,0,0,0.28)] transition duration-300 group-hover:scale-[1.03] group-hover:drop-shadow-[0_0_18px_rgba(76,201,240,0.22)]"
-                    />
-                  </div>
+          {Array.from({ length: PARTNER_MARQUEE_COPIES }).flatMap((_, copyIndex) =>
+            CLIENT_LOGOS.map((logo, logoIndex) => (
+              <div
+                key={`${copyIndex}-${logoIndex}`}
+                className="group flex h-16 w-[clamp(160px,20vw,240px)] shrink-0 grow-0 basis-[clamp(160px,20vw,240px)] items-center justify-center px-5 sm:h-[4.5rem] sm:px-7 lg:h-[5.5rem]"
+                aria-hidden={copyIndex > 0}
+              >
+                <div className="flex h-full w-full items-center justify-center px-3 py-2 sm:px-4 sm:py-2.5">
+                  <img
+                    src={logo.src}
+                    alt={copyIndex === 0 ? logo.alt : ""}
+                    loading="eager"
+                    decoding="async"
+                    draggable={false}
+                    className="block h-full w-full select-none object-contain opacity-100 drop-shadow-[0_10px_20px_rgba(0,0,0,0.28)] transition duration-300 group-hover:scale-[1.03] group-hover:drop-shadow-[0_0_18px_rgba(76,201,240,0.22)]"
+                  />
                 </div>
-              ))}
-            </div>
-          ))}
+              </div>
+            )),
+          )}
         </div>
       </div>
     </div>

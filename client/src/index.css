@@ -426,14 +426,16 @@
   .marquee-track {
     display: flex;
     flex-shrink: 0;
+    min-width: max-content;
     animation: marquee 38s linear infinite;
+    will-change: transform;
   }
   @keyframes marquee {
     from {
       transform: translateX(0);
     }
     to {
-      transform: translateX(-50%);
+      transform: translateX(-20%);
     }
   }
 
