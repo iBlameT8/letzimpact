@@ -135,10 +135,10 @@ export function Hero() {
 // Partner strip moved out of <Hero> so the page can place it after RecentWork.
 export function PartnerStrip() {
   return (
-    <div className="relative mt-14 border-y border-white/10 bg-white/[0.02] py-6 sm:mt-20 sm:py-8">
+    <div className="relative mt-14 overflow-hidden border-y border-white/20 bg-[radial-gradient(circle_at_20%_50%,rgba(76,201,240,0.24),transparent_34%),radial-gradient(circle_at_80%_50%,rgba(236,18,216,0.22),transparent_36%),linear-gradient(90deg,rgba(255,255,255,0.19),rgba(255,255,255,0.13),rgba(255,255,255,0.19))] py-7 shadow-[inset_0_1px_0_rgba(255,255,255,0.12),inset_0_-1px_0_rgba(255,255,255,0.1)] backdrop-blur-sm sm:mt-20 sm:py-9">
       <div className="container mb-4 flex items-center gap-3 sm:mb-5">
-        <span className="h-px w-7 bg-white/20 sm:w-10" />
-        <span className="font-mono-acc text-[10px] uppercase tracking-[0.18em] text-white/55 sm:text-[11px] sm:tracking-[0.22em]">
+        <span className="h-px w-7 bg-white/35 sm:w-10" />
+        <span className="font-mono-acc text-[10px] uppercase tracking-[0.18em] text-white/75 sm:text-[11px] sm:tracking-[0.22em]">
           Our Partners:
         </span>
       </div>
@@ -161,16 +161,16 @@ export function PartnerStrip() {
               {CLIENT_LOGOS.map((logo, i) => (
                 <div
                   key={`${k}-${i}`}
-                  className="group flex h-14 shrink-0 items-center justify-center px-4 sm:h-16 sm:px-6 lg:h-20"
+                  className="group flex h-16 shrink-0 items-center justify-center px-5 sm:h-[4.5rem] sm:px-7 lg:h-[5.5rem]"
                   style={{ flexBasis: "clamp(160px, 20vw, 240px)" }}
                 >
-                  <div className="flex h-full w-full items-center justify-center rounded-2xl border border-white/10 bg-white/[0.96] px-4 py-2 shadow-[0_12px_30px_rgba(0,0,0,0.18)] sm:px-5 sm:py-2.5">
+                  <div className="flex h-full w-full items-center justify-center px-3 py-2 sm:px-4 sm:py-2.5">
                     <img
                       src={logo.src}
                       alt={logo.alt}
                       loading="lazy"
                       draggable={false}
-                      className="h-full w-full select-none object-contain"
+                      className="h-full w-full select-none object-contain drop-shadow-[0_10px_20px_rgba(0,0,0,0.28)] transition duration-300 group-hover:scale-[1.03] group-hover:drop-shadow-[0_0_18px_rgba(76,201,240,0.22)]"
                     />
                   </div>
                 </div>
