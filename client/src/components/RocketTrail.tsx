@@ -4,7 +4,11 @@
 export function RocketTrail() {
   return (
     <div className="rocket-trail-layer" aria-hidden>
-      <svg className="rocket-smoke-field" viewBox="0 0 120 1000" preserveAspectRatio="none">
+      <svg
+        className="rocket-smoke-field"
+        viewBox="0 0 120 1000"
+        preserveAspectRatio="none"
+      >
         <defs>
           <linearGradient id="fumeCyan" x1="0" y1="0" x2="1" y2="1">
             <stop offset="0" stopColor="#A9FFF5" stopOpacity="0.18" />
@@ -48,16 +52,57 @@ export function RocketTrail() {
           className="rocket-fume-core"
           d="M61 0 C52 54 67 111 57 174 C47 237 65 302 55 369 C46 430 62 490 53 555 C44 623 61 681 51 749 C42 819 60 882 50 950 C47 973 45 993 43 1012 L86 1012 C76 957 88 902 77 841 C66 776 85 714 73 651 C62 590 80 531 69 467 C58 403 76 339 66 275 C56 209 72 148 62 88 C60 55 61 26 61 0 Z"
         />
-        <ellipse className="rocket-fume-puff rocket-fume-puff--cyan" cx="39" cy="265" rx="30" ry="55" />
-        <ellipse className="rocket-fume-puff rocket-fume-puff--magenta" cx="91" cy="330" rx="34" ry="66" />
-        <ellipse className="rocket-fume-puff rocket-fume-puff--cyan" cx="34" cy="535" rx="27" ry="70" />
-        <ellipse className="rocket-fume-puff rocket-fume-puff--magenta" cx="87" cy="610" rx="31" ry="74" />
-        <ellipse className="rocket-fume-puff rocket-fume-puff--cyan" cx="43" cy="815" rx="29" ry="82" />
-        <ellipse className="rocket-fume-puff rocket-fume-puff--magenta" cx="83" cy="875" rx="32" ry="88" />
+        <ellipse
+          className="rocket-fume-puff rocket-fume-puff--cyan"
+          cx="39"
+          cy="265"
+          rx="30"
+          ry="55"
+        />
+        <ellipse
+          className="rocket-fume-puff rocket-fume-puff--magenta"
+          cx="91"
+          cy="330"
+          rx="34"
+          ry="66"
+        />
+        <ellipse
+          className="rocket-fume-puff rocket-fume-puff--cyan"
+          cx="34"
+          cy="535"
+          rx="27"
+          ry="70"
+        />
+        <ellipse
+          className="rocket-fume-puff rocket-fume-puff--magenta"
+          cx="87"
+          cy="610"
+          rx="31"
+          ry="74"
+        />
+        <ellipse
+          className="rocket-fume-puff rocket-fume-puff--cyan"
+          cx="43"
+          cy="815"
+          rx="29"
+          ry="82"
+        />
+        <ellipse
+          className="rocket-fume-puff rocket-fume-puff--magenta"
+          cx="83"
+          cy="875"
+          rx="32"
+          ry="88"
+        />
       </svg>
 
       <div className="logo-rocket-flight">
-        <img className="logo-rocket-image" src="/brand/neon-rocket-fumes-transparent.png" alt="" draggable="false" />
+        <img
+          className="logo-rocket-image"
+          src="/brand/letzimpact-rocket-blended.png"
+          alt=""
+          draggable="false"
+        />
       </div>
     </div>
   );

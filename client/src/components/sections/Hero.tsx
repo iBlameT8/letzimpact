@@ -15,11 +15,20 @@ const CLIENT_LOGOS: ClientLogo[] = [
   { src: "/partners/amhome.png", alt: "amhome" },
   { src: "/partners/sananny.png", alt: "Sananny" },
   { src: "/partners/emesa-construction.png", alt: "EMESA Construction" },
-  { src: "/partners/ar-secherheet-security.png", alt: "ÄR Secherheet Security" },
+  {
+    src: "/partners/ar-secherheet-security.png",
+    alt: "ÄR Secherheet Security",
+  },
   { src: "/partners/asad-gym.png", alt: "ASAD Gym" },
 ];
 
-function HeadlineWord({ children, delay = 0 }: { children: React.ReactNode; delay?: number }) {
+function HeadlineWord({
+  children,
+  delay = 0,
+}: {
+  children: React.ReactNode;
+  delay?: number;
+}) {
   return (
     <motion.span
       initial={{ y: "110%", opacity: 0 }}
@@ -50,74 +59,75 @@ export function Hero() {
       <GridLines />
 
       <div className="container">
-        <div className="max-w-5xl">
-            {/* headline */}
-            <h1 className="max-w-5xl text-justify font-display text-[34px] font-bold leading-[0.98] tracking-tight [text-align-last:justify] xs:text-[40px] sm:text-6xl sm:leading-[0.95] lg:text-[80px]">
-              <span className="inline-block overflow-hidden">
-                <HeadlineWord delay={0.05}>Social</HeadlineWord>
-              </span>{" "}
-              <span className="inline-block overflow-hidden">
-                <HeadlineWord delay={0.05}>media</HeadlineWord>
-              </span>{" "}
-              <span className="inline-block overflow-hidden">
-                <HeadlineWord delay={0.18}>that</HeadlineWord>
-              </span>{" "}
-              <span className="inline-block overflow-hidden">
-                <HeadlineWord delay={0.28}>
-                  <span className="text-gradient">actually</span>
-                </HeadlineWord>
-              </span>{" "}
-              <span className="inline-block overflow-hidden">
-                <HeadlineWord delay={0.42}>works</HeadlineWord>
-              </span>
-            </h1>
+        <div className="mx-auto max-w-5xl text-center">
+          {/* headline */}
+          <h1 className="mx-auto max-w-5xl text-center font-display text-[34px] font-bold leading-[0.98] tracking-tight xs:text-[40px] sm:text-6xl sm:leading-[0.95] lg:text-[80px]">
+            <span className="inline-block overflow-hidden">
+              <HeadlineWord delay={0.05}>Social</HeadlineWord>
+            </span>{" "}
+            <span className="inline-block overflow-hidden">
+              <HeadlineWord delay={0.05}>media</HeadlineWord>
+            </span>{" "}
+            <span className="inline-block overflow-hidden">
+              <HeadlineWord delay={0.18}>that</HeadlineWord>
+            </span>{" "}
+            <span className="inline-block overflow-hidden">
+              <HeadlineWord delay={0.28}>
+                <span className="text-gradient">actually</span>
+              </HeadlineWord>
+            </span>{" "}
+            <span className="inline-block overflow-hidden">
+              <HeadlineWord delay={0.42}>works</HeadlineWord>
+            </span>
+          </h1>
 
-            <motion.p
-              initial={{ opacity: 0, y: 16 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.6 }}
-              className="mt-5 max-w-xl text-justify text-[15px] leading-relaxed text-white/70 [text-align-last:left] sm:mt-7 sm:text-[17px]"
-            >
-              We're <span className="text-white">Letzimpact</span> — a Luxembourg-based duo
-              that plans, films and runs short-form content for brands who'd rather
-              build attention than rent it. Strategy, shoots and management — under one roof,
-              run honestly, shipped on time.
-            </motion.p>
+          <motion.p
+            initial={{ opacity: 0, y: 16 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.6 }}
+            className="mx-auto mt-5 max-w-xl text-center text-[15px] leading-relaxed text-white/70 sm:mt-7 sm:text-[17px]"
+          >
+            We're <span className="text-white">Letzimpact</span> — a
+            Luxembourg-based duo that plans, films and runs short-form content
+            for brands who'd rather build attention than rent it. Strategy,
+            shoots and management — under one roof, run honestly, shipped on
+            time.
+          </motion.p>
 
-            <motion.div
-              initial={{ opacity: 0, y: 16 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.75 }}
-              className="mt-7 flex flex-wrap items-center gap-3 sm:mt-9 sm:gap-3.5"
+          <motion.div
+            initial={{ opacity: 0, y: 16 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.75 }}
+            className="mt-7 flex flex-wrap items-center justify-center gap-3 sm:mt-9 sm:gap-3.5"
+          >
+            <MagneticButton
+              href={waLink()}
+              target="_blank"
+              rel="noopener noreferrer"
+              ariaLabel="Open WhatsApp chat with Letzimpact"
             >
-              <MagneticButton
-                href={waLink()}
-                target="_blank"
-                rel="noopener noreferrer"
-                ariaLabel="Open WhatsApp chat with Letzimpact"
-              >
-                <WhatsAppGlyph className="h-4 w-4" />
-                Let's talk
-              </MagneticButton>
-              <MagneticButton
-                variant="ghost"
-                href="#packages"
-                onClick={() => {
-                  const el = document.getElementById("packages");
-                  if (el) {
-                    const y = el.getBoundingClientRect().top + window.scrollY - 80;
-                    window.scrollTo({ top: y, behavior: "smooth" });
-                  }
-                }}
-                strength={0.25}
-              >
-                See the packages
-                <ArrowDownRight className="h-4 w-4" />
-              </MagneticButton>
-            </motion.div>
+              <WhatsAppGlyph className="h-4 w-4" />
+              Let's talk
+            </MagneticButton>
+            <MagneticButton
+              variant="ghost"
+              href="#packages"
+              onClick={() => {
+                const el = document.getElementById("packages");
+                if (el) {
+                  const y =
+                    el.getBoundingClientRect().top + window.scrollY - 80;
+                  window.scrollTo({ top: y, behavior: "smooth" });
+                }
+              }}
+              strength={0.25}
+            >
+              See the packages
+              <ArrowDownRight className="h-4 w-4" />
+            </MagneticButton>
+          </motion.div>
         </div>
       </div>
-
     </section>
   );
 }
