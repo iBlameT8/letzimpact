@@ -127,7 +127,7 @@ export function RocketTrail() {
       <div className="logo-rocket-flight">
         <img
           className="logo-rocket-image"
-          src="/brand/letzimpact-rocket-blended.png"
+          src="/brand/letzimpact-rocket-new.png"
           alt=""
           draggable="false"
         />
