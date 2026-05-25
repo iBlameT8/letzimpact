@@ -232,17 +232,17 @@
     inset: -18% -12%;
     background:
       radial-gradient(
-        620px 380px at 76% 18%,
+        760px 470px at 84% 18%,
         rgba(236, 18, 216, 0.16),
         transparent 68%
       ),
       radial-gradient(
-        680px 420px at 66% 34%,
+        820px 510px at 76% 34%,
         rgba(76, 201, 240, 0.14),
         transparent 72%
       ),
       radial-gradient(
-        420px 300px at 90% 76%,
+        540px 390px at 98% 76%,
         rgba(162, 80, 227, 0.12),
         transparent 70%
       );
@@ -255,32 +255,32 @@
     inset: 0;
     background:
       radial-gradient(
-        220px 360px at 86% 18%,
+        300px 470px at 94% 18%,
         rgba(76, 201, 240, 0.16),
         transparent 72%
       ),
       radial-gradient(
-        250px 420px at 96% 29%,
+        340px 540px at 104% 29%,
         rgba(236, 18, 216, 0.15),
         transparent 74%
       ),
       radial-gradient(
-        230px 390px at 82% 43%,
+        310px 500px at 90% 43%,
         rgba(76, 201, 240, 0.11),
         transparent 74%
       ),
       radial-gradient(
-        280px 470px at 94% 58%,
+        370px 610px at 102% 58%,
         rgba(162, 80, 227, 0.14),
         transparent 76%
       ),
       radial-gradient(
-        250px 430px at 78% 74%,
+        330px 560px at 88% 74%,
         rgba(76, 201, 240, 0.1),
         transparent 75%
       ),
       radial-gradient(
-        300px 500px at 91% 91%,
+        390px 650px at 99% 91%,
         rgba(236, 18, 216, 0.11),
         transparent 78%
       );
@@ -290,8 +290,8 @@
   .logo-rocket-flight {
     position: absolute;
     top: clamp(64px, 8vh, 112px);
-    right: clamp(18px, 3.6vw, 64px);
-    width: clamp(170px, 17vw, 280px);
+    right: clamp(-96px, -3vw, -28px);
+    width: clamp(220px, 24vw, 390px);
     opacity: 0.74;
     filter: drop-shadow(0 0 16px rgba(76, 201, 240, 0.42))
       drop-shadow(0 0 34px rgba(162, 80, 227, 0.34))
@@ -308,9 +308,9 @@
   }
   @media (max-width: 640px) {
     .logo-rocket-flight {
-      right: 120px;
+      right: 42px;
       top: 86px;
-      width: min(28vw, 108px);
+      width: min(40vw, 154px);
       opacity: 0.48;
     }
   }
