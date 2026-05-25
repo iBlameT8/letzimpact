@@ -158,10 +158,10 @@ export function PartnerStrip() {
             CLIENT_LOGOS.map((logo, logoIndex) => (
               <div
                 key={`${copyIndex}-${logoIndex}`}
-                className="group flex h-16 w-[clamp(160px,20vw,240px)] shrink-0 grow-0 basis-[clamp(160px,20vw,240px)] items-center justify-center px-5 sm:h-[4.5rem] sm:px-7 lg:h-[5.5rem]"
+                className="group flex h-20 w-[clamp(190px,23vw,280px)] shrink-0 grow-0 basis-[clamp(190px,23vw,280px)] items-center justify-center px-4 sm:h-24 sm:px-5 lg:h-28"
                 aria-hidden={copyIndex > 0}
               >
-                <div className="flex h-full w-full items-center justify-center px-3 py-2 sm:px-4 sm:py-2.5">
+                <div className="flex h-full w-full items-center justify-center px-2 py-1.5 sm:px-3 sm:py-2">
                   <img
                     src={logo.src}
                     alt={copyIndex === 0 ? logo.alt : ""}
