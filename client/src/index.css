@@ -289,12 +289,12 @@
   }
   .rocket-smoke-field {
     position: absolute;
-    top: clamp(240px, 30vh, 390px);
-    right: clamp(-160px, -8vw, -50px);
-    width: clamp(430px, 46vw, 740px);
-    height: calc(100% - clamp(190px, 23vh, 310px));
-    opacity: 0.54;
-    filter: drop-shadow(0 0 24px rgba(162, 80, 227, 0.22));
+    top: clamp(260px, 34vh, 430px);
+    right: clamp(-112px, -4.5vw, -24px);
+    width: clamp(500px, 50vw, 800px);
+    height: calc(100% - clamp(90px, 12vh, 170px));
+    opacity: 0.6;
+    filter: drop-shadow(0 0 28px rgba(162, 80, 227, 0.24));
   }
   .rocket-fume-ribbon {
     fill: none;
@@ -343,9 +343,9 @@
   .logo-rocket-flight {
     position: absolute;
     top: clamp(72px, 9vh, 130px);
-    right: clamp(-18px, 1vw, 32px);
+    right: clamp(28px, 4.2vw, 72px);
     width: clamp(142px, 15.5vw, 230px);
-    opacity: 0.76;
+    opacity: 0.78;
     filter: drop-shadow(0 0 14px rgba(76, 201, 240, 0.4))
       drop-shadow(0 0 30px rgba(162, 80, 227, 0.32))
       drop-shadow(0 0 42px rgba(236, 18, 216, 0.2));
@@ -377,17 +377,17 @@
   }
   @media (max-width: 640px) {
     .rocket-smoke-field {
-      top: 255px;
-      right: -95px;
-      width: 500px;
-      height: calc(100% - 190px);
-      opacity: 0.42;
+      top: 430px;
+      right: -34px;
+      width: 520px;
+      height: calc(100% - 80px);
+      opacity: 0.54;
     }
     .logo-rocket-flight {
-      right: -58px;
+      right: -4px;
       top: 128px;
       width: 154px;
-      opacity: 0.34;
+      opacity: 0.5;
     }
     .rocket-fume-ribbon {
       stroke-width: 36px;
