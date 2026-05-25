@@ -344,11 +344,11 @@
     position: absolute;
     top: clamp(72px, 9vh, 130px);
     right: clamp(-18px, 1vw, 32px);
-    width: clamp(126px, 14vw, 210px);
-    opacity: 0.78;
-    filter: drop-shadow(0 0 12px rgba(76, 201, 240, 0.38))
-      drop-shadow(0 0 28px rgba(162, 80, 227, 0.32))
-      drop-shadow(0 0 38px rgba(236, 18, 216, 0.2));
+    width: clamp(142px, 15.5vw, 230px);
+    opacity: 0.76;
+    filter: drop-shadow(0 0 14px rgba(76, 201, 240, 0.4))
+      drop-shadow(0 0 30px rgba(162, 80, 227, 0.32))
+      drop-shadow(0 0 42px rgba(236, 18, 216, 0.2));
   }
   .logo-rocket-image {
     display: block;
@@ -384,10 +384,10 @@
       opacity: 0.42;
     }
     .logo-rocket-flight {
-      right: 12px;
-      top: 112px;
-      width: 132px;
-      opacity: 0.62;
+      right: -58px;
+      top: 128px;
+      width: 154px;
+      opacity: 0.34;
     }
     .rocket-fume-ribbon {
       stroke-width: 36px;
