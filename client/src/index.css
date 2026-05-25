@@ -287,60 +287,6 @@
     filter: blur(24px);
     opacity: 0.86;
   }
-  .rocket-smoke-field {
-    position: absolute;
-    top: clamp(260px, 34vh, 430px);
-    right: clamp(-112px, -4.5vw, -24px);
-    width: clamp(500px, 50vw, 800px);
-    height: calc(100% - clamp(90px, 12vh, 170px));
-    opacity: 0.6;
-    overflow: visible;
-    filter: drop-shadow(0 0 28px rgba(162, 80, 227, 0.24));
-  }
-  .rocket-fume-ribbon {
-    fill: none;
-    stroke-linecap: round;
-    stroke-linejoin: round;
-    stroke-width: clamp(28px, 4.8vw, 70px);
-    vector-effect: non-scaling-stroke;
-    filter: blur(14px) drop-shadow(0 0 26px currentColor);
-  }
-  .rocket-fume-ribbon--cyan {
-    stroke: url(#fumeCyan);
-    color: rgba(76, 201, 240, 0.52);
-  }
-  .rocket-fume-ribbon--magenta {
-    stroke: url(#fumeMagenta);
-    color: rgba(236, 18, 216, 0.52);
-  }
-  .rocket-fume-ribbon--left {
-    opacity: 0.42;
-  }
-  .rocket-fume-ribbon--center-left {
-    opacity: 0.28;
-  }
-  .rocket-fume-ribbon--center-right {
-    opacity: 0.28;
-  }
-  .rocket-fume-ribbon--right {
-    opacity: 0.4;
-  }
-  .rocket-fume-core {
-    fill: url(#fumeWhite);
-    opacity: 0.1;
-    filter: blur(18px) drop-shadow(0 0 18px rgba(187, 249, 255, 0.1));
-  }
-  .rocket-fume-puff {
-    filter: url(#softSmoke);
-    opacity: 0.3;
-    mix-blend-mode: screen;
-  }
-  .rocket-fume-puff--cyan {
-    fill: url(#fumeCyan);
-  }
-  .rocket-fume-puff--magenta {
-    fill: url(#fumeMagenta);
-  }
   .logo-rocket-flight {
     position: absolute;
     top: clamp(64px, 8vh, 112px);
@@ -361,21 +307,11 @@
     mix-blend-mode: screen;
   }
   @media (max-width: 640px) {
-    .rocket-smoke-field {
-      top: 270px;
-      right: -34px;
-      width: 520px;
-      height: calc(100% - 80px);
-      opacity: 0.54;
-    }
     .logo-rocket-flight {
       right: 92px;
       top: 86px;
       width: min(30vw, 116px);
       opacity: 0.48;
-    }
-    .rocket-fume-ribbon {
-      stroke-width: 36px;
     }
   }
   /* Animated noise overlay (very subtle) */
