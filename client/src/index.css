@@ -294,6 +294,7 @@
     width: clamp(500px, 50vw, 800px);
     height: calc(100% - clamp(90px, 12vh, 170px));
     opacity: 0.6;
+    overflow: visible;
     filter: drop-shadow(0 0 28px rgba(162, 80, 227, 0.24));
   }
   .rocket-fume-ribbon {

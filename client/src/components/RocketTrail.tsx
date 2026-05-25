@@ -54,6 +54,34 @@ export function RocketTrail() {
         />
         <ellipse
           className="rocket-fume-puff rocket-fume-puff--cyan"
+          cx="42"
+          cy="78"
+          rx="26"
+          ry="46"
+        />
+        <ellipse
+          className="rocket-fume-puff rocket-fume-puff--magenta"
+          cx="84"
+          cy="104"
+          rx="28"
+          ry="52"
+        />
+        <ellipse
+          className="rocket-fume-puff rocket-fume-puff--cyan"
+          cx="37"
+          cy="158"
+          rx="29"
+          ry="58"
+        />
+        <ellipse
+          className="rocket-fume-puff rocket-fume-puff--magenta"
+          cx="88"
+          cy="194"
+          rx="31"
+          ry="62"
+        />
+        <ellipse
+          className="rocket-fume-puff rocket-fume-puff--cyan"
           cx="39"
           cy="265"
           rx="30"
