@@ -308,9 +308,9 @@
   }
   @media (max-width: 640px) {
     .logo-rocket-flight {
-      right: 92px;
+      right: 120px;
       top: 86px;
-      width: min(30vw, 116px);
+      width: min(28vw, 108px);
       opacity: 0.48;
     }
   }
