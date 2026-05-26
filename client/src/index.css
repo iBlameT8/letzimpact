@@ -297,20 +297,24 @@
     right: calc(var(--rocket-right) - var(--rocket-width) * 0.08);
     bottom: -2px;
     width: calc(var(--rocket-width) * 1.18);
-    opacity: 0.68;
-    filter: blur(5px) saturate(122%);
+    opacity: 0.76;
+    filter: blur(7px) saturate(108%);
     mask-image: linear-gradient(
       to bottom,
-      transparent 0,
-      black 7%,
-      black 94%,
+      black 0%,
+      rgba(0, 0, 0, 0.92) 12%,
+      rgba(0, 0, 0, 0.68) 38%,
+      rgba(0, 0, 0, 0.32) 68%,
+      rgba(0, 0, 0, 0.08) 88%,
       transparent 100%
     );
     -webkit-mask-image: linear-gradient(
       to bottom,
-      transparent 0,
-      black 7%,
-      black 94%,
+      black 0%,
+      rgba(0, 0, 0, 0.92) 12%,
+      rgba(0, 0, 0, 0.68) 38%,
+      rgba(0, 0, 0, 0.32) 68%,
+      rgba(0, 0, 0, 0.08) 88%,
       transparent 100%
     );
   }
@@ -326,50 +330,54 @@
   .rocket-steam-core::before {
     content: "";
     position: absolute;
-    inset: -520px 0 0;
-    background-repeat: repeat-y;
-    transform: translate3d(0, -180px, 0);
+    inset: 0;
+    background-repeat: no-repeat;
   }
   .rocket-steam-column-left {
     left: 0;
-    width: 56%;
+    width: 58%;
+    opacity: 0.82;
   }
   .rocket-steam-column-left::before {
     background-image:
-      radial-gradient(circle at 42% 6%, rgba(133, 247, 255, 0.44) 0 11%, transparent 24%),
-      radial-gradient(circle at 32% 18%, rgba(76, 201, 240, 0.36) 0 13%, transparent 28%),
-      radial-gradient(circle at 52% 31%, rgba(104, 221, 255, 0.32) 0 14%, transparent 30%),
-      radial-gradient(circle at 28% 47%, rgba(129, 244, 255, 0.35) 0 16%, transparent 32%),
-      radial-gradient(circle at 58% 63%, rgba(62, 163, 255, 0.27) 0 15%, transparent 32%),
-      radial-gradient(circle at 38% 81%, rgba(139, 251, 255, 0.32) 0 18%, transparent 36%);
-    background-size: 100% 520px;
+      radial-gradient(ellipse 42% 10% at 58% 4%, rgba(232, 253, 255, 0.72) 0 36%, transparent 78%),
+      radial-gradient(ellipse 34% 13% at 38% 14%, rgba(151, 239, 255, 0.44) 0 34%, transparent 76%),
+      radial-gradient(ellipse 50% 18% at 54% 26%, rgba(121, 222, 250, 0.31) 0 30%, transparent 78%),
+      radial-gradient(ellipse 39% 20% at 30% 43%, rgba(169, 246, 255, 0.22) 0 28%, transparent 76%),
+      radial-gradient(ellipse 46% 25% at 55% 63%, rgba(90, 184, 239, 0.13) 0 26%, transparent 78%),
+      radial-gradient(ellipse 42% 28% at 34% 83%, rgba(122, 229, 255, 0.07) 0 24%, transparent 80%),
+      linear-gradient(176deg, transparent 0%, rgba(208, 252, 255, 0.34) 4%, rgba(104, 219, 252, 0.27) 18%, rgba(85, 178, 237, 0.14) 46%, rgba(65, 132, 214, 0.05) 78%, transparent 100%);
+    background-size: 100% 100%;
   }
   .rocket-steam-column-right {
     right: 0;
-    width: 58%;
+    width: 60%;
+    opacity: 0.76;
   }
   .rocket-steam-column-right::before {
     background-image:
-      radial-gradient(circle at 58% 8%, rgba(236, 18, 216, 0.38) 0 12%, transparent 25%),
-      radial-gradient(circle at 70% 21%, rgba(162, 80, 227, 0.34) 0 13%, transparent 29%),
-      radial-gradient(circle at 46% 36%, rgba(204, 49, 240, 0.36) 0 15%, transparent 31%),
-      radial-gradient(circle at 73% 52%, rgba(236, 18, 216, 0.31) 0 16%, transparent 33%),
-      radial-gradient(circle at 44% 69%, rgba(105, 89, 255, 0.27) 0 15%, transparent 32%),
-      radial-gradient(circle at 65% 87%, rgba(236, 18, 216, 0.33) 0 18%, transparent 37%);
-    background-size: 100% 520px;
+      radial-gradient(ellipse 41% 11% at 43% 5%, rgba(250, 231, 255, 0.58) 0 34%, transparent 78%),
+      radial-gradient(ellipse 33% 14% at 68% 16%, rgba(223, 116, 245, 0.34) 0 32%, transparent 76%),
+      radial-gradient(ellipse 49% 18% at 46% 29%, rgba(186, 86, 236, 0.24) 0 30%, transparent 78%),
+      radial-gradient(ellipse 39% 20% at 71% 47%, rgba(236, 18, 216, 0.18) 0 27%, transparent 76%),
+      radial-gradient(ellipse 47% 25% at 47% 66%, rgba(107, 92, 245, 0.11) 0 25%, transparent 78%),
+      radial-gradient(ellipse 42% 29% at 66% 86%, rgba(212, 62, 238, 0.06) 0 23%, transparent 80%),
+      linear-gradient(184deg, transparent 0%, rgba(251, 235, 255, 0.28) 4%, rgba(218, 88, 242, 0.23) 18%, rgba(151, 88, 229, 0.12) 46%, rgba(92, 81, 202, 0.05) 78%, transparent 100%);
+    background-size: 100% 100%;
   }
   .rocket-steam-core {
-    left: 29%;
-    width: 42%;
-    opacity: 0.62;
+    left: 27%;
+    width: 46%;
+    opacity: 0.7;
   }
   .rocket-steam-core::before {
     background-image:
-      radial-gradient(ellipse at 50% 7%, rgba(76, 201, 240, 0.2) 0 10%, transparent 28%),
-      radial-gradient(ellipse at 45% 26%, rgba(162, 80, 227, 0.23) 0 12%, transparent 30%),
-      radial-gradient(ellipse at 54% 48%, rgba(236, 18, 216, 0.2) 0 13%, transparent 31%),
-      radial-gradient(ellipse at 47% 72%, rgba(76, 201, 240, 0.18) 0 14%, transparent 34%);
-    background-size: 100% 440px;
+      radial-gradient(ellipse 24% 8% at 50% 3%, rgba(255, 255, 255, 0.62) 0 36%, transparent 78%),
+      radial-gradient(ellipse 30% 18% at 47% 18%, rgba(220, 249, 255, 0.27) 0 30%, transparent 78%),
+      radial-gradient(ellipse 34% 24% at 54% 39%, rgba(189, 227, 255, 0.16) 0 28%, transparent 80%),
+      radial-gradient(ellipse 38% 31% at 48% 65%, rgba(173, 216, 255, 0.08) 0 24%, transparent 82%),
+      linear-gradient(180deg, rgba(255, 255, 255, 0.38) 0%, rgba(217, 251, 255, 0.24) 19%, rgba(162, 218, 246, 0.12) 45%, rgba(125, 166, 225, 0.05) 75%, transparent 100%);
+    background-size: 100% 100%;
   }
   .logo-rocket-flight {
     position: absolute;
@@ -400,8 +408,8 @@
     .rocket-steam-extension {
       right: calc(var(--rocket-right) - var(--rocket-width) * 0.06);
       width: calc(var(--rocket-width) * 1.08);
-      opacity: 0.46;
-      filter: blur(4px) saturate(116%);
+      opacity: 0.52;
+      filter: blur(5px) saturate(106%);
     }
     .logo-rocket-flight {
       opacity: 0.48;
