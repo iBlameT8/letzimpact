@@ -294,90 +294,39 @@
     position: absolute;
     z-index: 1;
     top: calc(var(--rocket-top) + var(--rocket-width) * 0.82);
-    right: calc(var(--rocket-right) - var(--rocket-width) * 0.08);
+    right: var(--rocket-right);
     bottom: -2px;
-    width: calc(var(--rocket-width) * 1.18);
-    opacity: 0.76;
-    filter: blur(7px) saturate(108%);
+    width: var(--rocket-width);
+    opacity: 0.64;
+    background-image: url("/brand/letzimpact-rocket-steam-extension.png");
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    mix-blend-mode: screen;
     mask-image: linear-gradient(
       to bottom,
-      black 0%,
-      rgba(0, 0, 0, 0.92) 12%,
-      rgba(0, 0, 0, 0.68) 38%,
-      rgba(0, 0, 0, 0.32) 68%,
-      rgba(0, 0, 0, 0.08) 88%,
+      rgba(0, 0, 0, 0.18) 0,
+      rgba(0, 0, 0, 0.88) 42px,
+      black 108px,
+      rgba(0, 0, 0, 0.76) 38%,
+      rgba(0, 0, 0, 0.46) 62%,
+      rgba(0, 0, 0, 0.18) 84%,
       transparent 100%
     );
     -webkit-mask-image: linear-gradient(
       to bottom,
-      black 0%,
-      rgba(0, 0, 0, 0.92) 12%,
-      rgba(0, 0, 0, 0.68) 38%,
-      rgba(0, 0, 0, 0.32) 68%,
-      rgba(0, 0, 0, 0.08) 88%,
+      rgba(0, 0, 0, 0.18) 0,
+      rgba(0, 0, 0, 0.88) 42px,
+      black 108px,
+      rgba(0, 0, 0, 0.76) 38%,
+      rgba(0, 0, 0, 0.46) 62%,
+      rgba(0, 0, 0, 0.18) 84%,
       transparent 100%
     );
   }
   .rocket-steam-column,
   .rocket-steam-core {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    display: block;
-    overflow: hidden;
-  }
-  .rocket-steam-column::before,
-  .rocket-steam-core::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background-repeat: no-repeat;
-  }
-  .rocket-steam-column-left {
-    left: 0;
-    width: 58%;
-    opacity: 0.82;
-  }
-  .rocket-steam-column-left::before {
-    background-image:
-      radial-gradient(ellipse 42% 10% at 58% 4%, rgba(232, 253, 255, 0.72) 0 36%, transparent 78%),
-      radial-gradient(ellipse 34% 13% at 38% 14%, rgba(151, 239, 255, 0.44) 0 34%, transparent 76%),
-      radial-gradient(ellipse 50% 18% at 54% 26%, rgba(121, 222, 250, 0.31) 0 30%, transparent 78%),
-      radial-gradient(ellipse 39% 20% at 30% 43%, rgba(169, 246, 255, 0.22) 0 28%, transparent 76%),
-      radial-gradient(ellipse 46% 25% at 55% 63%, rgba(90, 184, 239, 0.13) 0 26%, transparent 78%),
-      radial-gradient(ellipse 42% 28% at 34% 83%, rgba(122, 229, 255, 0.07) 0 24%, transparent 80%),
-      linear-gradient(176deg, transparent 0%, rgba(208, 252, 255, 0.34) 4%, rgba(104, 219, 252, 0.27) 18%, rgba(85, 178, 237, 0.14) 46%, rgba(65, 132, 214, 0.05) 78%, transparent 100%);
-    background-size: 100% 100%;
-  }
-  .rocket-steam-column-right {
-    right: 0;
-    width: 60%;
-    opacity: 0.76;
-  }
-  .rocket-steam-column-right::before {
-    background-image:
-      radial-gradient(ellipse 41% 11% at 43% 5%, rgba(250, 231, 255, 0.58) 0 34%, transparent 78%),
-      radial-gradient(ellipse 33% 14% at 68% 16%, rgba(223, 116, 245, 0.34) 0 32%, transparent 76%),
-      radial-gradient(ellipse 49% 18% at 46% 29%, rgba(186, 86, 236, 0.24) 0 30%, transparent 78%),
-      radial-gradient(ellipse 39% 20% at 71% 47%, rgba(236, 18, 216, 0.18) 0 27%, transparent 76%),
-      radial-gradient(ellipse 47% 25% at 47% 66%, rgba(107, 92, 245, 0.11) 0 25%, transparent 78%),
-      radial-gradient(ellipse 42% 29% at 66% 86%, rgba(212, 62, 238, 0.06) 0 23%, transparent 80%),
-      linear-gradient(184deg, transparent 0%, rgba(251, 235, 255, 0.28) 4%, rgba(218, 88, 242, 0.23) 18%, rgba(151, 88, 229, 0.12) 46%, rgba(92, 81, 202, 0.05) 78%, transparent 100%);
-    background-size: 100% 100%;
-  }
-  .rocket-steam-core {
-    left: 27%;
-    width: 46%;
-    opacity: 0.7;
-  }
-  .rocket-steam-core::before {
-    background-image:
-      radial-gradient(ellipse 24% 8% at 50% 3%, rgba(255, 255, 255, 0.62) 0 36%, transparent 78%),
-      radial-gradient(ellipse 30% 18% at 47% 18%, rgba(220, 249, 255, 0.27) 0 30%, transparent 78%),
-      radial-gradient(ellipse 34% 24% at 54% 39%, rgba(189, 227, 255, 0.16) 0 28%, transparent 80%),
-      radial-gradient(ellipse 38% 31% at 48% 65%, rgba(173, 216, 255, 0.08) 0 24%, transparent 82%),
-      linear-gradient(180deg, rgba(255, 255, 255, 0.38) 0%, rgba(217, 251, 255, 0.24) 19%, rgba(162, 218, 246, 0.12) 45%, rgba(125, 166, 225, 0.05) 75%, transparent 100%);
-    background-size: 100% 100%;
+    display: none;
   }
   .logo-rocket-flight {
     position: absolute;
@@ -406,10 +355,9 @@
       --rocket-width: min(40vw, 154px);
     }
     .rocket-steam-extension {
-      right: calc(var(--rocket-right) - var(--rocket-width) * 0.06);
-      width: calc(var(--rocket-width) * 1.08);
-      opacity: 0.52;
-      filter: blur(5px) saturate(106%);
+      right: var(--rocket-right);
+      width: var(--rocket-width);
+      opacity: 0.46;
     }
     .logo-rocket-flight {
       opacity: 0.48;
