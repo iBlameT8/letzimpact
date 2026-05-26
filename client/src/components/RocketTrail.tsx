@@ -12,6 +12,11 @@ export function RocketTrail() {
           draggable="false"
         />
       </div>
+      <div className="rocket-steam-extension">
+        <span className="rocket-steam-column rocket-steam-column-left" />
+        <span className="rocket-steam-column rocket-steam-column-right" />
+        <span className="rocket-steam-core" />
+      </div>
     </div>
   );
 }
