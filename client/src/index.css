@@ -328,8 +328,7 @@
     position: absolute;
     inset: -520px 0 0;
     background-repeat: repeat-y;
-    will-change: transform;
-    animation: rocketSteamFlow 22s linear infinite;
+    transform: translate3d(0, -180px, 0);
   }
   .rocket-steam-column-left {
     left: 0;
@@ -350,8 +349,6 @@
     width: 58%;
   }
   .rocket-steam-column-right::before {
-    animation-duration: 26s;
-    animation-delay: -9s;
     background-image:
       radial-gradient(circle at 58% 8%, rgba(236, 18, 216, 0.38) 0 12%, transparent 25%),
       radial-gradient(circle at 70% 21%, rgba(162, 80, 227, 0.34) 0 13%, transparent 29%),
@@ -367,8 +364,6 @@
     opacity: 0.62;
   }
   .rocket-steam-core::before {
-    animation-duration: 18s;
-    animation-delay: -5s;
     background-image:
       radial-gradient(ellipse at 50% 7%, rgba(76, 201, 240, 0.2) 0 10%, transparent 28%),
       radial-gradient(ellipse at 45% 26%, rgba(162, 80, 227, 0.23) 0 12%, transparent 30%),
@@ -395,21 +390,6 @@
     -webkit-user-drag: none;
     object-fit: contain;
     mix-blend-mode: screen;
-  }
-  @keyframes rocketSteamFlow {
-    from {
-      transform: translate3d(0, -520px, 0);
-    }
-    to {
-      transform: translate3d(0, 0, 0);
-    }
-  }
-  @media (prefers-reduced-motion: reduce) {
-    .rocket-steam-column::before,
-    .rocket-steam-core::before {
-      animation: none;
-      transform: translate3d(0, -180px, 0);
-    }
   }
   @media (max-width: 640px) {
     .rocket-trail-layer {
