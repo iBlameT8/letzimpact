@@ -236,7 +236,7 @@
     position: absolute;
     left: -18vmin;
     top: 72vh;
-    width: clamp(70px, 9vmin, 118px);
+    width: clamp(74px, 9.5vmin, 126px);
     height: auto;
     opacity: 0;
     user-select: none;
@@ -245,10 +245,25 @@
     mix-blend-mode: screen;
     transform: translate3d(0, 0, 0) rotate(53deg) scale(0.55);
     transform-origin: 50% 36%;
-    filter: drop-shadow(0 0 12px rgba(76, 201, 240, 0.48))
-      drop-shadow(0 0 22px rgba(162, 80, 227, 0.38))
-      drop-shadow(0 0 34px rgba(236, 18, 216, 0.24));
-    will-change: transform, opacity;
+    filter: brightness(1.08) saturate(1.18) contrast(1.05)
+      drop-shadow(0 0 10px rgba(76, 201, 240, 0.34))
+      drop-shadow(0 0 18px rgba(162, 80, 227, 0.32))
+      drop-shadow(0 0 28px rgba(236, 18, 216, 0.18));
+    -webkit-mask-image: radial-gradient(
+      ellipse 62% 78% at 50% 58%,
+      #000 0%,
+      #000 58%,
+      rgba(0, 0, 0, 0.72) 73%,
+      transparent 96%
+    );
+    mask-image: radial-gradient(
+      ellipse 62% 78% at 50% 58%,
+      #000 0%,
+      #000 58%,
+      rgba(0, 0, 0, 0.72) 73%,
+      transparent 96%
+    );
+    will-change: transform, opacity, filter;
   }
 
   .rocket-flyby-layer.is-launched .rocket-flyby-image {
@@ -261,10 +276,10 @@
       transform: translate3d(0, 0, 0) rotate(53deg) scale(0.48);
     }
     12% {
-      opacity: 0.92;
+      opacity: 0.82;
     }
     62% {
-      opacity: 0.92;
+      opacity: 0.82;
       transform: translate3d(92vmin, -69vmin, 0) rotate(53deg) scale(0.72);
     }
     100% {
@@ -277,7 +292,7 @@
     .rocket-flyby-image {
       left: -22vmin;
       top: 70vh;
-      width: clamp(64px, 16vmin, 92px);
+      width: clamp(66px, 16.5vmin, 96px);
     }
   }
 
@@ -293,7 +308,7 @@
       transform: translate3d(35vmin, -26vmin, 0) rotate(53deg) scale(0.58);
     }
     35% {
-      opacity: 0.72;
+      opacity: 0.68;
     }
     100% {
       opacity: 0;

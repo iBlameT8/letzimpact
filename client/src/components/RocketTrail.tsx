@@ -32,7 +32,7 @@ export function RocketTrail() {
     >
       <img
         className="rocket-flyby-image"
-        src="/brand/letzimpact-scroll-rocket.jpeg"
+        src="/brand/letzimpact-scroll-rocket-integrated.png"
         alt=""
         draggable="false"
       />
