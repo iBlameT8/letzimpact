@@ -293,39 +293,47 @@
   .rocket-steam-extension {
     position: absolute;
     z-index: 1;
-    top: calc(var(--rocket-top) + var(--rocket-width) * 0.82);
-    right: var(--rocket-right);
-    bottom: -2px;
-    width: var(--rocket-width);
-    opacity: 0.64;
-    background-image: url("/brand/letzimpact-rocket-steam-extension.png");
-    background-position: center top;
-    background-repeat: no-repeat;
-    background-size: 100% auto;
+    top: calc(var(--rocket-top) + var(--rocket-width) * 0.72);
+    right: calc(var(--rocket-right) - var(--rocket-width) * 0.12);
+    bottom: auto;
+    height: clamp(560px, 78vh, 820px);
+    width: calc(var(--rocket-width) * 1.24);
+    opacity: 0.86;
+    pointer-events: none;
     mix-blend-mode: screen;
+    transform-origin: 50% 0;
+    clip-path: polygon(48% 0, 52% 0, 72% 20%, 90% 68%, 100% 100%, 0 100%, 10% 68%, 28% 20%);
+    background:
+      radial-gradient(ellipse at 50% 0%, rgba(234, 255, 255, 0.58) 0%, rgba(76, 201, 240, 0.24) 16%, transparent 34%),
+      linear-gradient(102deg, rgba(76, 201, 240, 0.62) 0%, rgba(118, 229, 255, 0.36) 30%, rgba(162, 80, 227, 0.22) 52%, rgba(236, 18, 216, 0.58) 100%),
+      url("/brand/steam-triangle-plume.svg") center top / 100% 100% no-repeat;
+    background-blend-mode: screen;
+    filter: blur(2px) saturate(1.2) drop-shadow(0 0 20px rgba(76, 201, 240, 0.32))
+      drop-shadow(0 0 34px rgba(236, 18, 216, 0.2));
+    animation: rocketPlumeSway 8s ease-in-out infinite alternate;
     mask-image: linear-gradient(
       to bottom,
-      rgba(0, 0, 0, 0.18) 0,
-      rgba(0, 0, 0, 0.88) 42px,
-      black 108px,
-      rgba(0, 0, 0, 0.76) 38%,
-      rgba(0, 0, 0, 0.46) 62%,
-      rgba(0, 0, 0, 0.18) 84%,
+      transparent 0,
+      rgba(0, 0, 0, 0.82) 14px,
+      black 6%,
+      black 76%,
+      rgba(0, 0, 0, 0.48) 90%,
       transparent 100%
     );
     -webkit-mask-image: linear-gradient(
       to bottom,
-      rgba(0, 0, 0, 0.18) 0,
-      rgba(0, 0, 0, 0.88) 42px,
-      black 108px,
-      rgba(0, 0, 0, 0.76) 38%,
-      rgba(0, 0, 0, 0.46) 62%,
-      rgba(0, 0, 0, 0.18) 84%,
+      transparent 0,
+      rgba(0, 0, 0, 0.82) 14px,
+      black 6%,
+      black 76%,
+      rgba(0, 0, 0, 0.48) 90%,
       transparent 100%
     );
   }
-  .rocket-steam-column,
-  .rocket-steam-core {
+  .rocket-steam-extension::before,
+  .rocket-steam-extension::after,
+  .rocket-steam-core,
+  .rocket-steam-column {
     display: none;
   }
   .logo-rocket-flight {
@@ -334,10 +342,10 @@
     top: var(--rocket-top);
     right: var(--rocket-right);
     width: var(--rocket-width);
-    opacity: 0.74;
-    filter: drop-shadow(0 0 16px rgba(76, 201, 240, 0.42))
-      drop-shadow(0 0 34px rgba(162, 80, 227, 0.34))
-      drop-shadow(0 0 48px rgba(236, 18, 216, 0.22));
+    opacity: 0.82;
+    filter: drop-shadow(0 0 16px rgba(76, 201, 240, 0.46))
+      drop-shadow(0 0 34px rgba(162, 80, 227, 0.38))
+      drop-shadow(0 0 48px rgba(236, 18, 216, 0.26));
   }
   .logo-rocket-image {
     display: block;
@@ -347,20 +355,84 @@
     -webkit-user-drag: none;
     object-fit: contain;
     mix-blend-mode: screen;
+    mask-image: linear-gradient(
+      to bottom,
+      black 0%,
+      black 39%,
+      rgba(0, 0, 0, 0.78) 41%,
+      rgba(0, 0, 0, 0.14) 44%,
+      transparent 47%
+    );
+    -webkit-mask-image: linear-gradient(
+      to bottom,
+      black 0%,
+      black 39%,
+      rgba(0, 0, 0, 0.78) 41%,
+      rgba(0, 0, 0, 0.14) 44%,
+      transparent 47%
+    );
+  }
+  @keyframes rocketPlumeFlow {
+    0% {
+      background-position: 50% 0, 50% 0, 50% 0;
+      transform: translateX(-1.5%) scaleX(0.97);
+    }
+    50% {
+      transform: translateX(1.5%) scaleX(1.04);
+    }
+    100% {
+      background-position: 50% 0, 50% 150%, 50% 160%;
+      transform: translateX(-1.5%) scaleX(0.97);
+    }
+  }
+  @keyframes rocketPlumeSway {
+    0% {
+      transform: translateX(-2%) skewX(-1.2deg);
+    }
+    100% {
+      transform: translateX(2%) skewX(1.2deg);
+    }
+  }
+  @keyframes rocketPlumePulse {
+    0% {
+      opacity: 0.58;
+      transform: scaleX(0.88);
+    }
+    100% {
+      opacity: 0.88;
+      transform: scaleX(1.08);
+    }
+  }
+  @keyframes rocketPlumeEdgeLeft {
+    0% {
+      transform: translateX(0) scaleX(0.92);
+    }
+    100% {
+      transform: translateX(-8%) scaleX(1.1);
+    }
+  }
+  @keyframes rocketPlumeEdgeRight {
+    0% {
+      transform: translateX(0) scaleX(0.94);
+    }
+    100% {
+      transform: translateX(8%) scaleX(1.08);
+    }
   }
   @media (max-width: 640px) {
     .rocket-trail-layer {
-      --rocket-top: 86px;
-      --rocket-right: 42px;
-      --rocket-width: min(40vw, 154px);
+      --rocket-top: 104px;
+      --rocket-right: 36px;
+      --rocket-width: min(33vw, 125px);
     }
     .rocket-steam-extension {
-      right: var(--rocket-right);
-      width: var(--rocket-width);
-      opacity: 0.46;
+      top: calc(var(--rocket-top) + var(--rocket-width) * 0.7);
+      right: calc(var(--rocket-right) - var(--rocket-width) * 0.38);
+      width: calc(var(--rocket-width) * 1.9);
+      opacity: 0.88;
     }
     .logo-rocket-flight {
-      opacity: 0.48;
+      opacity: 0.82;
     }
   }
   /* Animated noise overlay (very subtle) */

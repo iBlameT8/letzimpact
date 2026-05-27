@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 1200" preserveAspectRatio="none">
+  <defs>
+    <linearGradient id="coneColor" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#4cc9f0" stop-opacity="0.95"/>
+      <stop offset="0.22" stop-color="#74e5ff" stop-opacity="0.62"/>
+      <stop offset="0.50" stop-color="#a250e3" stop-opacity="0.28"/>
+      <stop offset="0.78" stop-color="#d02df0" stop-opacity="0.56"/>
+      <stop offset="1" stop-color="#ec12d8" stop-opacity="0.92"/>
+    </linearGradient>
+    <linearGradient id="heightFade" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#ffffff" stop-opacity="0.76"/>
+      <stop offset="0.18" stop-color="#ffffff" stop-opacity="0.86"/>
+      <stop offset="0.58" stop-color="#ffffff" stop-opacity="0.74"/>
+      <stop offset="0.86" stop-color="#ffffff" stop-opacity="0.36"/>
+      <stop offset="1" stop-color="#ffffff" stop-opacity="0"/>
+    </linearGradient>
+    <filter id="softCone" x="-40%" y="-10%" width="180%" height="125%" color-interpolation-filters="sRGB">
+      <feGaussianBlur stdDeviation="10"/>
+    </filter>
+    <filter id="edgeGlow" x="-45%" y="-10%" width="190%" height="125%" color-interpolation-filters="sRGB">
+      <feGaussianBlur stdDeviation="7"/>
+    </filter>
+    <mask id="fadeMask">
+      <linearGradient id="fadeY" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0" stop-color="white" stop-opacity="0"/>
+        <stop offset="0.025" stop-color="white" stop-opacity="0.88"/>
+        <stop offset="0.72" stop-color="white" stop-opacity="1"/>
+        <stop offset="0.94" stop-color="white" stop-opacity="0.34"/>
+        <stop offset="1" stop-color="white" stop-opacity="0"/>
+      </linearGradient>
+      <rect width="320" height="1200" fill="url(#fadeY)"/>
+    </mask>
+  </defs>
+
+  <g mask="url(#fadeMask)">
+    <path filter="url(#softCone)" fill="url(#coneColor)" opacity="0.96"
+      d="M160 0
+         C128 132 104 260 82 420
+         C52 638 30 850 4 1200
+         L316 1200
+         C290 850 268 638 238 420
+         C216 260 192 132 160 0 Z"/>
+    <path filter="url(#softCone)" fill="url(#heightFade)" opacity="0.25"
+      d="M160 0
+         C136 145 118 296 101 470
+         C80 690 63 890 44 1200
+         L276 1200
+         C257 890 240 690 219 470
+         C202 296 184 145 160 0 Z"/>
+
+    <g filter="url(#edgeGlow)" fill="none" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M132 18 C99 162 78 302 62 462 C41 668 34 892 18 1184"
+        stroke="#4cc9f0" stroke-width="28" opacity="0.24"/>
+      <path d="M188 18 C221 162 242 302 258 462 C279 668 286 892 302 1184"
+        stroke="#ec12d8" stroke-width="28" opacity="0.24"/>
+      <path d="M112 210 C148 340 105 492 143 646 C178 786 128 948 174 1160"
+        stroke="#7ee9ff" stroke-width="18" opacity="0.13"/>
+      <path d="M208 210 C170 344 216 500 177 650 C142 786 194 952 148 1160"
+        stroke="#d02df0" stroke-width="18" opacity="0.13"/>
+    </g>
+  </g>
+</svg>
