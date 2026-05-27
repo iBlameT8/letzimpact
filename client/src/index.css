@@ -266,8 +266,19 @@
     will-change: transform, opacity, filter;
   }
 
-  .rocket-flyby-layer.is-launched .rocket-flyby-image {
+  .rocket-flyby-image--lower {
+    left: auto;
+    right: -18vmin;
+    top: 74vh;
+    transform: translate3d(0, 0, 0) rotate(-53deg) scale(0.55);
+  }
+
+  .rocket-flyby-layer--upper.is-launched .rocket-flyby-image--upper {
     animation: rocketFlyby 2.35s cubic-bezier(0.22, 1, 0.36, 1) both;
+  }
+
+  .rocket-flyby-layer--lower.is-launched .rocket-flyby-image--lower {
+    animation: rocketFlybyReverse 2.35s cubic-bezier(0.22, 1, 0.36, 1) both;
   }
 
   @keyframes rocketFlyby {
@@ -288,17 +299,45 @@
     }
   }
 
+  @keyframes rocketFlybyReverse {
+    0% {
+      opacity: 0;
+      transform: translate3d(0, 0, 0) rotate(-53deg) scale(0.48);
+    }
+    12% {
+      opacity: 0.82;
+    }
+    62% {
+      opacity: 0.82;
+      transform: translate3d(-92vmin, -69vmin, 0) rotate(-53deg) scale(0.72);
+    }
+    100% {
+      opacity: 0;
+      transform: translate3d(-110vmin, -82vmin, 0) rotate(-53deg) scale(0.58);
+    }
+  }
+
   @media (max-width: 640px) {
     .rocket-flyby-image {
       left: -22vmin;
       top: 70vh;
       width: clamp(66px, 16.5vmin, 96px);
     }
+
+    .rocket-flyby-image--lower {
+      left: auto;
+      right: -22vmin;
+      top: 72vh;
+    }
   }
 
   @media (prefers-reduced-motion: reduce) {
-    .rocket-flyby-layer.is-launched .rocket-flyby-image {
+    .rocket-flyby-layer--upper.is-launched .rocket-flyby-image--upper {
       animation: rocketFlybyReduced 1s ease-out both;
+    }
+
+    .rocket-flyby-layer--lower.is-launched .rocket-flyby-image--lower {
+      animation: rocketFlybyReverseReduced 1s ease-out both;
     }
   }
 
@@ -313,6 +352,20 @@
     100% {
       opacity: 0;
       transform: translate3d(52vmin, -39vmin, 0) rotate(53deg) scale(0.58);
+    }
+  }
+
+  @keyframes rocketFlybyReverseReduced {
+    0% {
+      opacity: 0;
+      transform: translate3d(-35vmin, -26vmin, 0) rotate(-53deg) scale(0.58);
+    }
+    35% {
+      opacity: 0.68;
+    }
+    100% {
+      opacity: 0;
+      transform: translate3d(-52vmin, -39vmin, 0) rotate(-53deg) scale(0.58);
     }
   }
   /* Animated noise overlay (very subtle) */
