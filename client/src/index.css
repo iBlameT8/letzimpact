@@ -217,222 +217,87 @@
     border: 1px solid rgba(255, 255, 255, 0.12);
   }
 
-  /* Static neon rocket artwork with full-page fumes extended to the footer */
-  .rocket-trail-layer {
-    --rocket-top: clamp(64px, 8vh, 112px);
-    --rocket-right: clamp(-96px, -3vw, -28px);
-    --rocket-width: clamp(220px, 24vw, 390px);
-    position: absolute;
+  /* Scroll-triggered rocket fly-by */
+  .rocket-flyby-layer {
+    position: fixed;
     inset: 0;
-    z-index: 0;
+    z-index: 5;
     pointer-events: none;
     overflow: hidden;
-    mix-blend-mode: screen;
+    visibility: hidden;
+    contain: layout paint style;
   }
-  .rocket-trail-layer::before {
-    content: "";
+
+  .rocket-flyby-layer.is-launched {
+    visibility: visible;
+  }
+
+  .rocket-flyby-image {
     position: absolute;
-    inset: -18% -12%;
-    background:
-      radial-gradient(
-        760px 470px at 84% 18%,
-        rgba(236, 18, 216, 0.16),
-        transparent 68%
-      ),
-      radial-gradient(
-        820px 510px at 76% 34%,
-        rgba(76, 201, 240, 0.14),
-        transparent 72%
-      ),
-      radial-gradient(
-        540px 390px at 98% 76%,
-        rgba(162, 80, 227, 0.12),
-        transparent 70%
-      );
-    filter: blur(18px);
-    opacity: 0.82;
-  }
-  .rocket-trail-layer::after {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background:
-      radial-gradient(
-        300px 470px at 94% 18%,
-        rgba(76, 201, 240, 0.16),
-        transparent 72%
-      ),
-      radial-gradient(
-        340px 540px at 104% 29%,
-        rgba(236, 18, 216, 0.15),
-        transparent 74%
-      ),
-      radial-gradient(
-        310px 500px at 90% 43%,
-        rgba(76, 201, 240, 0.11),
-        transparent 74%
-      ),
-      radial-gradient(
-        370px 610px at 102% 58%,
-        rgba(162, 80, 227, 0.14),
-        transparent 76%
-      ),
-      radial-gradient(
-        330px 560px at 88% 74%,
-        rgba(76, 201, 240, 0.1),
-        transparent 75%
-      ),
-      radial-gradient(
-        390px 650px at 99% 91%,
-        rgba(236, 18, 216, 0.11),
-        transparent 78%
-      );
-    filter: blur(24px);
-    opacity: 0.86;
-  }
-  .rocket-steam-extension {
-    position: absolute;
-    z-index: 1;
-    top: calc(var(--rocket-top) + var(--rocket-width) * 0.72);
-    right: calc(var(--rocket-right) - var(--rocket-width) * 0.12);
-    bottom: auto;
-    height: clamp(560px, 78vh, 820px);
-    width: calc(var(--rocket-width) * 1.24);
-    opacity: 0.86;
-    pointer-events: none;
-    mix-blend-mode: screen;
-    transform-origin: 50% 0;
-    clip-path: polygon(48% 0, 52% 0, 72% 20%, 90% 68%, 100% 100%, 0 100%, 10% 68%, 28% 20%);
-    background:
-      radial-gradient(ellipse at 50% 0%, rgba(234, 255, 255, 0.58) 0%, rgba(76, 201, 240, 0.24) 16%, transparent 34%),
-      linear-gradient(102deg, rgba(76, 201, 240, 0.62) 0%, rgba(118, 229, 255, 0.36) 30%, rgba(162, 80, 227, 0.22) 52%, rgba(236, 18, 216, 0.58) 100%),
-      url("/brand/steam-triangle-plume.svg") center top / 100% 100% no-repeat;
-    background-blend-mode: screen;
-    filter: blur(2px) saturate(1.2) drop-shadow(0 0 20px rgba(76, 201, 240, 0.32))
-      drop-shadow(0 0 34px rgba(236, 18, 216, 0.2));
-    animation: rocketPlumeSway 8s ease-in-out infinite alternate;
-    mask-image: linear-gradient(
-      to bottom,
-      transparent 0,
-      rgba(0, 0, 0, 0.82) 14px,
-      black 6%,
-      black 76%,
-      rgba(0, 0, 0, 0.48) 90%,
-      transparent 100%
-    );
-    -webkit-mask-image: linear-gradient(
-      to bottom,
-      transparent 0,
-      rgba(0, 0, 0, 0.82) 14px,
-      black 6%,
-      black 76%,
-      rgba(0, 0, 0, 0.48) 90%,
-      transparent 100%
-    );
-  }
-  .rocket-steam-extension::before,
-  .rocket-steam-extension::after,
-  .rocket-steam-core,
-  .rocket-steam-column {
-    display: none;
-  }
-  .logo-rocket-flight {
-    position: absolute;
-    z-index: 2;
-    top: var(--rocket-top);
-    right: var(--rocket-right);
-    width: var(--rocket-width);
-    opacity: 0.82;
-    filter: drop-shadow(0 0 16px rgba(76, 201, 240, 0.46))
-      drop-shadow(0 0 34px rgba(162, 80, 227, 0.38))
-      drop-shadow(0 0 48px rgba(236, 18, 216, 0.26));
-  }
-  .logo-rocket-image {
-    display: block;
-    width: 100%;
+    left: -18vmin;
+    top: 72vh;
+    width: clamp(70px, 9vmin, 118px);
     height: auto;
+    opacity: 0;
     user-select: none;
     -webkit-user-drag: none;
     object-fit: contain;
     mix-blend-mode: screen;
-    mask-image: linear-gradient(
-      to bottom,
-      black 0%,
-      black 39%,
-      rgba(0, 0, 0, 0.78) 41%,
-      rgba(0, 0, 0, 0.14) 44%,
-      transparent 47%
-    );
-    -webkit-mask-image: linear-gradient(
-      to bottom,
-      black 0%,
-      black 39%,
-      rgba(0, 0, 0, 0.78) 41%,
-      rgba(0, 0, 0, 0.14) 44%,
-      transparent 47%
-    );
+    transform: translate3d(0, 0, 0) rotate(53deg) scale(0.55);
+    transform-origin: 50% 36%;
+    filter: drop-shadow(0 0 12px rgba(76, 201, 240, 0.48))
+      drop-shadow(0 0 22px rgba(162, 80, 227, 0.38))
+      drop-shadow(0 0 34px rgba(236, 18, 216, 0.24));
+    will-change: transform, opacity;
   }
-  @keyframes rocketPlumeFlow {
+
+  .rocket-flyby-layer.is-launched .rocket-flyby-image {
+    animation: rocketFlyby 2.35s cubic-bezier(0.22, 1, 0.36, 1) both;
+  }
+
+  @keyframes rocketFlyby {
     0% {
-      background-position: 50% 0, 50% 0, 50% 0;
-      transform: translateX(-1.5%) scaleX(0.97);
+      opacity: 0;
+      transform: translate3d(0, 0, 0) rotate(53deg) scale(0.48);
     }
-    50% {
-      transform: translateX(1.5%) scaleX(1.04);
+    12% {
+      opacity: 0.92;
+    }
+    62% {
+      opacity: 0.92;
+      transform: translate3d(92vmin, -69vmin, 0) rotate(53deg) scale(0.72);
     }
     100% {
-      background-position: 50% 0, 50% 150%, 50% 160%;
-      transform: translateX(-1.5%) scaleX(0.97);
+      opacity: 0;
+      transform: translate3d(110vmin, -82vmin, 0) rotate(53deg) scale(0.58);
     }
   }
-  @keyframes rocketPlumeSway {
-    0% {
-      transform: translateX(-2%) skewX(-1.2deg);
-    }
-    100% {
-      transform: translateX(2%) skewX(1.2deg);
-    }
-  }
-  @keyframes rocketPlumePulse {
-    0% {
-      opacity: 0.58;
-      transform: scaleX(0.88);
-    }
-    100% {
-      opacity: 0.88;
-      transform: scaleX(1.08);
-    }
-  }
-  @keyframes rocketPlumeEdgeLeft {
-    0% {
-      transform: translateX(0) scaleX(0.92);
-    }
-    100% {
-      transform: translateX(-8%) scaleX(1.1);
-    }
-  }
-  @keyframes rocketPlumeEdgeRight {
-    0% {
-      transform: translateX(0) scaleX(0.94);
-    }
-    100% {
-      transform: translateX(8%) scaleX(1.08);
-    }
-  }
+
   @media (max-width: 640px) {
-    .rocket-trail-layer {
-      --rocket-top: 104px;
-      --rocket-right: 36px;
-      --rocket-width: min(33vw, 125px);
+    .rocket-flyby-image {
+      left: -22vmin;
+      top: 70vh;
+      width: clamp(64px, 16vmin, 92px);
     }
-    .rocket-steam-extension {
-      top: calc(var(--rocket-top) + var(--rocket-width) * 0.7);
-      right: calc(var(--rocket-right) - var(--rocket-width) * 0.38);
-      width: calc(var(--rocket-width) * 1.9);
-      opacity: 0.88;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .rocket-flyby-layer.is-launched .rocket-flyby-image {
+      animation: rocketFlybyReduced 1s ease-out both;
     }
-    .logo-rocket-flight {
-      opacity: 0.82;
+  }
+
+  @keyframes rocketFlybyReduced {
+    0% {
+      opacity: 0;
+      transform: translate3d(35vmin, -26vmin, 0) rotate(53deg) scale(0.58);
+    }
+    35% {
+      opacity: 0.72;
+    }
+    100% {
+      opacity: 0;
+      transform: translate3d(52vmin, -39vmin, 0) rotate(53deg) scale(0.58);
     }
   }
   /* Animated noise overlay (very subtle) */

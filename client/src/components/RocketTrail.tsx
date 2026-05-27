@@ -1,22 +1,41 @@
-// Letzimpact — integrated neon rocket layer.
-// The rocket artwork has a transparent background and carries its own plume.
+import { useEffect, useState } from "react";
 
 export function RocketTrail() {
+  const [hasLaunched, setHasLaunched] = useState(false);
+
+  useEffect(() => {
+    if (hasLaunched) {
+      return;
+    }
+
+    const launchOffset = Math.max(
+      360,
+      Math.min(760, window.innerHeight * 0.62)
+    );
+
+    const handleScroll = () => {
+      if (window.scrollY >= launchOffset) {
+        setHasLaunched(true);
+      }
+    };
+
+    handleScroll();
+    window.addEventListener("scroll", handleScroll, { passive: true });
+
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, [hasLaunched]);
+
   return (
-    <div className="rocket-trail-layer" aria-hidden>
-      <div className="logo-rocket-flight">
-        <img
-          className="logo-rocket-image"
-          src="/brand/letzimpact-rocket-new.png"
-          alt=""
-          draggable="false"
-        />
-      </div>
-      <div className="rocket-steam-extension">
-        <span className="rocket-steam-column rocket-steam-column-left" />
-        <span className="rocket-steam-column rocket-steam-column-right" />
-        <span className="rocket-steam-core" />
-      </div>
+    <div
+      className={`rocket-flyby-layer${hasLaunched ? " is-launched" : ""}`}
+      aria-hidden="true"
+    >
+      <img
+        className="rocket-flyby-image"
+        src="/brand/letzimpact-scroll-rocket.jpeg"
+        alt=""
+        draggable="false"
+      />
     </div>
   );
 }
