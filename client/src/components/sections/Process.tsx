@@ -4,36 +4,10 @@
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
 import { SectionLabel } from "@/components/sections/Services";
-
-const STEPS = [
-  {
-    n: "01",
-    title: "We listen first.",
-    body: "A short call to understand the brand, the audience and what good actually looks like for you. No templates, no speedruns.",
-  },
-  {
-    n: "02",
-    title: "We build the plan.",
-    body: "A monthly content roadmap: hooks, angles, formats, posting cadence. You see exactly what's coming before we shoot a single frame.",
-  },
-  {
-    n: "03",
-    title: "We shoot it.",
-    body: "Filming days where we actually show up — gear, lighting and direction sorted. You don't have to direct anything, you just turn up and be yourself.",
-  },
-  {
-    n: "04",
-    title: "We run it.",
-    body: "Edits, captions, scheduling, comments, DMs. The account is treated like ours: replied to in hours, not when we feel like it.",
-  },
-  {
-    n: "05",
-    title: "We tune it.",
-    body: "Each month we look at what hit and what flopped, and we change the next month accordingly. Honest reports, no vanity metrics.",
-  },
-];
+import { useI18n } from "@/lib/i18n";
 
 export function Process() {
+  const { copy } = useI18n();
   const wrapRef = useRef<HTMLDivElement | null>(null);
   const { scrollYProgress } = useScroll({
     target: wrapRef,
@@ -47,20 +21,21 @@ export function Process() {
         <div className="grid gap-10 sm:gap-12 lg:grid-cols-12">
           <div className="lg:col-span-5">
             <div className="lg:sticky lg:top-32">
-              <SectionLabel num="02" label="How we work" />
+              <SectionLabel num="02" label={copy.process.label} />
               <h2 className="mt-5 font-display text-[34px] font-bold leading-[1.05] tracking-tight sm:text-5xl lg:text-6xl">
-                A clean, boring process — for very <span className="text-gradient">un-boring</span> content.
+                {copy.process.heading}{" "}
+                <span className="text-gradient">{copy.process.highlight}</span>{" "}
+                {copy.process.ending}
               </h2>
               <p className="mt-5 max-w-md text-[15px] leading-relaxed text-white/65 sm:mt-6 sm:text-[16px]">
-                You shouldn't have to babysit your agency. Five steps, repeated every month.
-                You always know where we are, where we're going, and why.
+                {copy.process.intro}
               </p>
             </div>
           </div>
 
           <div ref={wrapRef} className="relative lg:col-span-7">
             {/* base line */}
-            <div className="absolute left-[19px] top-2 bottom-2 w-px bg-white/10" />
+            <div className="absolute bottom-2 left-[19px] top-2 w-px bg-white/10" />
             {/* gradient progress line */}
             <motion.div
               style={{ height: lineHeight }}
@@ -77,13 +52,17 @@ export function Process() {
             </motion.div>
 
             <ul className="space-y-8 sm:space-y-10">
-              {STEPS.map((s, i) => (
+              {copy.process.steps.map((s, i) => (
                 <motion.li
-                  key={s.n}
+                  key={s.title}
                   initial={{ opacity: 0, x: 24 }}
                   whileInView={{ opacity: 1, x: 0 }}
                   viewport={{ once: true, margin: "-100px" }}
-                  transition={{ duration: 0.7, delay: i * 0.05, ease: [0.22, 1, 0.36, 1] }}
+                  transition={{
+                    duration: 0.7,
+                    delay: i * 0.05,
+                    ease: [0.22, 1, 0.36, 1],
+                  }}
                   className="relative pl-14"
                 >
                   <span
@@ -100,7 +79,7 @@ export function Process() {
                   </span>
                   <div className="flex items-baseline gap-3">
                     <span className="font-mono-acc text-xs text-white/40">
-                      STEP {s.n}
+                      {copy.process.stepLabel} {String(i + 1).padStart(2, "0")}
                     </span>
                   </div>
                   <h3 className="mt-2 font-display text-[22px] font-semibold leading-tight tracking-tight sm:text-3xl">

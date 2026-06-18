@@ -1,13 +1,15 @@
 // Letzimpact — Neon Atelier
-// Persistent WhatsApp action button bottom-right, with gradient halo + ping ring.
+// Persistent WhatsApp action button bottom right, with gradient halo and ping ring.
 
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
-import { waLink } from "@/lib/brand";
 import { WhatsAppGlyph } from "@/components/SiteNav";
+import { waLink } from "@/lib/brand";
+import { useI18n } from "@/lib/i18n";
 
 export function FloatingWhatsApp() {
   const [show, setShow] = useState(false);
+  const { copy } = useI18n();
 
   useEffect(() => {
     const onScroll = () => setShow(window.scrollY > 600);
@@ -25,10 +27,10 @@ export function FloatingWhatsApp() {
         pointerEvents: show ? "auto" : "none",
       }}
       transition={{ duration: 0.4, ease: [0.22, 1, 0.36, 1] }}
-      href={waLink()}
+      href={waLink(copy.nav.whatsappMessage)}
       target="_blank"
       rel="noopener noreferrer"
-      aria-label="Talk to Letzimpact on WhatsApp"
+      aria-label={copy.nav.whatsapp}
       className="group fixed right-4 z-40 inline-flex items-center gap-3 rounded-full bg-[#0E0C18] px-3 py-3 ring-1 ring-white/15 backdrop-blur-xl sm:bottom-7 sm:right-7 sm:gap-3 sm:px-4"
       style={{ bottom: "max(1.25rem, env(safe-area-inset-bottom))" }}
     >

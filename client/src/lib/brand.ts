@@ -15,15 +15,13 @@ export const BRAND = {
   founded: 2025,
 } as const;
 
-export const waLink = (
-  message: string = BRAND.whatsappMessage
-): string =>
+export const waLink = (message: string = BRAND.whatsappMessage): string =>
   `https://wa.me/${BRAND.whatsappNumber}?text=${encodeURIComponent(message)}`;
 
 export const NAV_LINKS = [
-  { id: "services", label: "Services" },
-  { id: "process", label: "How we work" },
-  { id: "packages", label: "Packages" },
-  { id: "founders", label: "About" },
-  { id: "faq", label: "FAQ" },
+  { id: "services", key: "services" },
+  { id: "process", key: "process" },
+  { id: "packages", key: "packages" },
+  { id: "founders", key: "founders" },
+  { id: "faq", key: "faq" },
 ] as const;

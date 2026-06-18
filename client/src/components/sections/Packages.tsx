@@ -1,124 +1,91 @@
 // Letzimpact — Neon Atelier
-// THE centerpiece: 3 social-media packages on a horizontal-feel rail.
-// Middle card is the "most picked" with a full gradient border.
-// Each Let's-grow CTA opens WhatsApp with a tailored prefilled message.
+// THE centerpiece: 3 social media packages on a horizontal feel rail.
+// Middle card is the most picked option with a full gradient border.
+// Each CTA opens WhatsApp with a tailored prefilled message.
 
 import { motion } from "framer-motion";
-import { Check, ArrowUpRight } from "lucide-react";
-import { waLink } from "@/lib/brand";
+import { ArrowUpRight, Check } from "lucide-react";
 import { SectionLabel } from "@/components/sections/Services";
+import { waLink } from "@/lib/brand";
+import { useI18n } from "@/lib/i18n";
 
 type Pkg = {
-  id: string;
   tag: string;
   name: string;
   pitch: string;
   videos: string;
   promos: string;
-  features: string[];
+  features: readonly string[];
+  waMessage: string;
   best: boolean;
   accent: string;
-  waMessage: string;
 };
 
-const PKGS: Pkg[] = [
-  {
-    id: "starter",
-    tag: "Managed presence",
-    name: "Starter",
-    pitch:
-      "For brands that want to look alive online without losing their evenings.",
-    videos: "8 videos / month",
-    promos: "+ 3 promo posts",
-    features: [
-      "Instagram & TikTok",
-      "Content planning & posting",
-      "Light community management",
-      "Monthly performance report",
-    ],
-    best: false,
-    accent: "#4CC9F0",
-    waMessage:
-      "Hey Letzimpact, I'm interested in the Starter package — let's talk.",
-  },
-  {
-    id: "growth",
-    tag: "Performance growth",
-    name: "Growth",
-    pitch:
-      "For brands ready to actually grow — more output, sharper strategy, real momentum.",
-    videos: "12–14 videos / month",
-    promos: "+ 5 promo posts",
-    features: [
-      "Instagram & TikTok",
-      "Content strategy & optimisation",
-      "Active community management",
-      "Monthly analysis & growth insights",
-    ],
-    best: true,
-    accent: "#EC12D8",
-    waMessage:
-      "Hey Letzimpact, I'm looking at the Growth package — when can we chat?",
-  },
-  {
-    id: "authority",
-    tag: "Full brand management",
-    name: "Authority",
-    pitch:
-      "For brands done playing — full management, multi-platform, weekly tuning.",
-    videos: "16–18 videos / month",
-    promos: "+ 8 promo posts",
-    features: [
-      "Multi-platform content distribution",
-      "Brand & campaign strategy",
-      "Full community & DM management",
-      "Weekly analysis & optimisation",
-    ],
-    best: false,
-    accent: "#A250E3",
-    waMessage:
-      "Hey Letzimpact, the Authority package looks like us — let's set up a call.",
-  },
+const PACKAGE_STYLE = [
+  { best: false, accent: "#4CC9F0" },
+  { best: true, accent: "#EC12D8" },
+  { best: false, accent: "#A250E3" },
 ];
 
 export function Packages() {
+  const { copy } = useI18n();
+  const packages = PACKAGE_STYLE.map((style, index) => ({
+    ...style,
+    ...copy.packages.items[index],
+  }));
+
   return (
-    <section id="packages" className="relative isolate overflow-hidden py-20 sm:py-28 lg:py-36">
-      <div
-        aria-hidden
-        className="absolute inset-0 -z-10 bg-[#07060B]/70"
-      />
+    <section
+      id="packages"
+      className="relative isolate overflow-hidden py-20 sm:py-28 lg:py-36"
+    >
+      <div aria-hidden className="absolute inset-0 -z-10 bg-[#07060B]/70" />
 
       <div className="container">
         <div className="grid gap-8 lg:grid-cols-12 lg:items-end">
           <div className="lg:col-span-7">
-            <SectionLabel num="03" label="Packages" />
+            <SectionLabel num="03" label={copy.packages.label} />
             <h2 className="mt-5 font-display text-[34px] font-bold leading-[1.05] tracking-tight sm:text-5xl lg:text-6xl">
-              Three ways to work with us. <span className="text-gradient">Pick one.</span>
+              {copy.packages.heading}{" "}
+              <span className="text-gradient">{copy.packages.highlight}</span>
             </h2>
           </div>
           <p className="text-[15px] leading-relaxed text-white/65 sm:text-[16px] lg:col-span-5">
-            Every package is monthly, no hidden tiers, no surprise upsells. Pricing is
-            tailored on the call because brands aren't all built the same — but the
-            scope is exactly what you see here.
+            {copy.packages.intro}
           </p>
         </div>
 
         <div className="mt-12 grid gap-5 sm:mt-16 sm:gap-6 lg:grid-cols-3">
-          {PKGS.map((p, i) => (
-            <PackageCard key={p.id} pkg={p} index={i} />
+          {packages.map((p, i) => (
+            <PackageCard
+              key={p.name}
+              pkg={p}
+              index={i}
+              mostPicked={copy.packages.mostPicked}
+              cta={copy.packages.cta}
+            />
           ))}
         </div>
 
         <p className="mt-8 text-center font-mono-acc text-[10px] uppercase tracking-[0.16em] text-white/40 sm:mt-10 sm:text-[11px] sm:tracking-[0.18em]">
-          Not sure which one fits? Talk to us — five minutes is enough.
+          {copy.packages.note}
         </p>
       </div>
     </section>
   );
 }
 
-function PackageCard({ pkg, index }: { pkg: Pkg; index: number }) {
+function PackageCard({
+  pkg,
+  index,
+  mostPicked,
+  cta,
+}: {
+  pkg: Pkg;
+  index: number;
+  mostPicked: string;
+  cta: string;
+}) {
   const Wrapper = pkg.best ? "div" : "div";
 
   return (
@@ -149,9 +116,7 @@ function PackageCard({ pkg, index }: { pkg: Pkg; index: number }) {
       )}
       <Wrapper
         className={`relative flex h-full flex-col overflow-hidden rounded-[22px] p-6 sm:rounded-[24px] sm:p-7 lg:p-8 ${
-          pkg.best
-            ? "bg-[#0B0913]"
-            : "bg-white/[0.03] ring-1 ring-white/10"
+          pkg.best ? "bg-[#0B0913]" : "bg-white/[0.03] ring-1 ring-white/10"
         }`}
       >
         {/* accent corner */}
@@ -161,7 +126,7 @@ function PackageCard({ pkg, index }: { pkg: Pkg; index: number }) {
           style={{ background: pkg.accent }}
         />
 
-        <div className="relative flex items-center justify-between">
+        <div className="relative flex items-center justify-between gap-3">
           <span
             className="font-mono-acc text-[11px] uppercase tracking-[0.18em]"
             style={{ color: pkg.accent }}
@@ -170,7 +135,7 @@ function PackageCard({ pkg, index }: { pkg: Pkg; index: number }) {
           </span>
           {pkg.best && (
             <span className="rounded-full bg-white/10 px-3 py-1 font-mono-acc text-[10px] uppercase tracking-[0.18em] text-white/85 ring-1 ring-white/15 backdrop-blur">
-              Most picked
+              {mostPicked}
             </span>
           )}
         </div>
@@ -192,8 +157,11 @@ function PackageCard({ pkg, index }: { pkg: Pkg; index: number }) {
         </div>
 
         <ul className="relative mt-6 space-y-3">
-          {pkg.features.map((f) => (
-            <li key={f} className="flex items-start gap-3 text-[14.5px] text-white/80">
+          {pkg.features.map(f => (
+            <li
+              key={f}
+              className="flex items-start gap-3 text-[14.5px] text-white/80"
+            >
               <span
                 className="mt-[3px] grid h-5 w-5 flex-shrink-0 place-items-center rounded-full"
                 style={{
@@ -214,9 +182,7 @@ function PackageCard({ pkg, index }: { pkg: Pkg; index: number }) {
             target="_blank"
             rel="noopener noreferrer"
             className={`group/btn relative flex items-center justify-between overflow-hidden rounded-2xl px-5 py-4 text-left font-display text-[15px] font-semibold tracking-tight transition-all ${
-              pkg.best
-                ? "text-white"
-                : "text-white/90 hover:text-white"
+              pkg.best ? "text-white" : "text-white/90 hover:text-white"
             }`}
             style={
               pkg.best
@@ -227,9 +193,7 @@ function PackageCard({ pkg, index }: { pkg: Pkg; index: number }) {
                 : { background: "rgba(255,255,255,0.06)" }
             }
           >
-            <span className="flex items-center gap-2.5">
-              Let's grow
-            </span>
+            <span className="flex items-center gap-2.5">{cta}</span>
             <ArrowUpRight className="h-4 w-4 transition-transform duration-500 group-hover/btn:rotate-45" />
             {!pkg.best && (
               <span

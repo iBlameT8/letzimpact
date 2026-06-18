@@ -1,82 +1,61 @@
 // Letzimpact — Neon Atelier
-// "What we actually do" — services grid using glass cards on a dark canvas.
+// Services grid using glass cards on a dark canvas.
 // Tone: confident, slightly cocky, never corporate.
 
 import { motion } from "framer-motion";
-import { Camera, Megaphone, BarChart3, Calendar, Sparkles, Rocket } from "lucide-react";
+import {
+  BarChart3,
+  Calendar,
+  Camera,
+  Megaphone,
+  Rocket,
+  Sparkles,
+} from "lucide-react";
 import type { LucideIcon } from "lucide-react";
+import { useI18n } from "@/lib/i18n";
 
 type Svc = {
   num: string;
   title: string;
   body: string;
   icon: LucideIcon;
-  hue: string; // accent color
+  hue: string;
 };
 
-const SERVICES: Svc[] = [
-  {
-    num: "01",
-    title: "Short-form content",
-    body: "Reels and TikToks built around a hook, a story and a reason to stop scrolling. Filmed by us, edited by us, posted by us.",
-    icon: Camera,
-    hue: "#EC12D8",
-  },
-  {
-    num: "02",
-    title: "Account management",
-    body: "We handle the calendar, the captions, the comments and the DMs. You handle running your business.",
-    icon: Megaphone,
-    hue: "#A250E3",
-  },
-  {
-    num: "03",
-    title: "Strategy & positioning",
-    body: "A clear angle for your brand across every social media platform — what to say, who to say it to, and why anyone should care.",
-    icon: Sparkles,
-    hue: "#4CC9F0",
-  },
-  {
-    num: "04",
-    title: "Performance & reporting",
-    body: "Monthly numbers without the buzzwords. What worked, what didn't, what we're changing next month.",
-    icon: BarChart3,
-    hue: "#EC12D8",
-  },
-  {
-    num: "05",
-    title: "Launches & campaigns",
-    body: "Product drops, openings, promos. Timed content sprints designed to make a moment, not just a post.",
-    icon: Rocket,
-    hue: "#A250E3",
-  },
-  {
-    num: "06",
-    title: "Weekly check-ins",
-    body: "Fifteen-minute calls. Real updates, real feedback, no slide decks pretending to be insights.",
-    icon: Calendar,
-    hue: "#4CC9F0",
-  },
+const SERVICE_STYLE: { num: string; icon: LucideIcon; hue: string }[] = [
+  { num: "01", icon: Camera, hue: "#EC12D8" },
+  { num: "02", icon: Megaphone, hue: "#A250E3" },
+  { num: "03", icon: Sparkles, hue: "#4CC9F0" },
+  { num: "04", icon: BarChart3, hue: "#EC12D8" },
+  { num: "05", icon: Rocket, hue: "#A250E3" },
+  { num: "06", icon: Calendar, hue: "#4CC9F0" },
 ];
 
 export function Services() {
+  const { copy } = useI18n();
+  const services = SERVICE_STYLE.map((style, index) => ({
+    ...style,
+    ...copy.services.items[index],
+  }));
+
   return (
     <section id="services" className="relative py-20 sm:py-28 lg:py-36">
       <div className="container">
         {/* Section header */}
         <div className="grid gap-10 lg:grid-cols-12 lg:items-end">
           <div className="lg:col-span-7">
-            <SectionLabel num="01" label="What we actually do" />
+            <SectionLabel num="01" label={copy.services.label} />
             <h2 className="mt-5 font-display text-[34px] font-bold leading-[1.05] tracking-tight sm:text-5xl lg:text-6xl">
-              Six things, done <span className="text-gradient">properly</span>.
-              Not sixty things, done loosely.
+              {copy.services.heading}{" "}
+              <span className="text-gradient">{copy.services.highlight}</span>.{" "}
+              {copy.services.ending}
             </h2>
           </div>
         </div>
 
         {/* Service cards */}
-        <div className="mt-12 grid gap-4 sm:mt-16 sm:gap-5 sm:grid-cols-2 lg:grid-cols-3">
-          {SERVICES.map((s, i) => (
+        <div className="mt-12 grid gap-4 sm:mt-16 sm:grid-cols-2 sm:gap-5 lg:grid-cols-3">
+          {services.map((s, i) => (
             <ServiceCard key={s.num} svc={s} index={i} />
           ))}
         </div>

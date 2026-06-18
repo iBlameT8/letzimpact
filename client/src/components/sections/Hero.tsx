@@ -5,9 +5,10 @@
 
 import { motion } from "framer-motion";
 import { ArrowDownRight } from "lucide-react";
-import { waLink } from "@/lib/brand";
 import { MagneticButton } from "@/components/MagneticButton";
 import { WhatsAppGlyph } from "@/components/SiteNav";
+import { waLink } from "@/lib/brand";
+import { useI18n } from "@/lib/i18n";
 
 type ClientLogo = { src: string; alt: string };
 const CLIENT_LOGOS: ClientLogo[] = [
@@ -44,10 +45,13 @@ function HeadlineWord({
 }
 
 export function Hero() {
+  const { copy } = useI18n();
+  const delays = [0.05, 0.05, 0.18, 0.28, 0.42];
+
   return (
     <section
       id="top"
-      className="relative isolate overflow-hidden pt-28 pb-14 sm:pt-40 sm:pb-20 lg:pt-52 lg:pb-32"
+      className="relative isolate overflow-hidden pb-14 pt-28 sm:pb-20 sm:pt-40 lg:pb-32 lg:pt-52"
     >
       {/* ambient backdrop */}
       <div
@@ -64,23 +68,19 @@ export function Hero() {
         <div className="mx-auto max-w-5xl text-center">
           {/* headline */}
           <h1 className="mx-auto max-w-5xl text-center font-display text-[34px] font-bold leading-[0.98] tracking-tight xs:text-[40px] sm:text-6xl sm:leading-[0.95] lg:text-[80px]">
-            <span className="inline-block overflow-hidden">
-              <HeadlineWord delay={0.05}>Social</HeadlineWord>
-            </span>{" "}
-            <span className="inline-block overflow-hidden">
-              <HeadlineWord delay={0.05}>media</HeadlineWord>
-            </span>{" "}
-            <span className="inline-block overflow-hidden">
-              <HeadlineWord delay={0.18}>that</HeadlineWord>
-            </span>{" "}
-            <span className="inline-block overflow-hidden">
-              <HeadlineWord delay={0.28}>
-                <span className="text-gradient">actually</span>
-              </HeadlineWord>
-            </span>{" "}
-            <span className="inline-block overflow-hidden">
-              <HeadlineWord delay={0.42}>works</HeadlineWord>
-            </span>
+            {copy.hero.words.map((word, index) => (
+              <span key={`${word}-${index}`}>
+                <span className="inline-block overflow-hidden">
+                  <HeadlineWord delay={delays[index] ?? 0.05}>
+                    {index === 3 ? (
+                      <span className="text-gradient">{word}</span>
+                    ) : (
+                      word
+                    )}
+                  </HeadlineWord>
+                </span>{" "}
+              </span>
+            ))}
           </h1>
 
           <motion.p
@@ -89,11 +89,8 @@ export function Hero() {
             transition={{ duration: 0.8, delay: 0.6 }}
             className="mx-auto mt-5 max-w-xl text-center text-[15px] leading-relaxed text-white/70 sm:mt-7 sm:text-[17px]"
           >
-            We're <span className="text-white">Letzimpact</span> — a
-            Luxembourg-based duo that plans, films and runs short-form content
-            for brands who'd rather build attention than rent it. Strategy,
-            shoots and management — under one roof, run honestly, shipped on
-            time.
+            {copy.hero.bodyPrefix}{" "}
+            <span className="text-white">Letzimpact</span>, {copy.hero.body}
           </motion.p>
 
           <motion.div
@@ -106,10 +103,10 @@ export function Hero() {
               href={waLink()}
               target="_blank"
               rel="noopener noreferrer"
-              ariaLabel="Open WhatsApp chat with Letzimpact"
+              ariaLabel={copy.nav.whatsapp}
             >
               <WhatsAppGlyph className="h-4 w-4" />
-              Let's talk
+              {copy.nav.talk}
             </MagneticButton>
             <MagneticButton
               variant="ghost"
@@ -124,7 +121,7 @@ export function Hero() {
               }}
               strength={0.25}
             >
-              See the packages
+              {copy.hero.packagesCta}
               <ArrowDownRight className="h-4 w-4" />
             </MagneticButton>
           </motion.div>
@@ -136,12 +133,14 @@ export function Hero() {
 
 // Partner strip moved out of <Hero> so the page can place it after RecentWork.
 export function PartnerStrip() {
+  const { copy } = useI18n();
+
   return (
     <div className="relative mt-14 overflow-hidden border-y border-white/20 bg-[radial-gradient(circle_at_20%_50%,rgba(76,201,240,0.24),transparent_34%),radial-gradient(circle_at_80%_50%,rgba(236,18,216,0.22),transparent_36%),linear-gradient(90deg,rgba(255,255,255,0.19),rgba(255,255,255,0.13),rgba(255,255,255,0.19))] py-7 shadow-[inset_0_1px_0_rgba(255,255,255,0.12),inset_0_-1px_0_rgba(255,255,255,0.1)] backdrop-blur-sm sm:mt-20 sm:py-9">
       <div className="container mb-4 flex items-center gap-3 sm:mb-5">
         <span className="h-px w-7 bg-white/35 sm:w-10" />
         <span className="font-mono-acc text-[10px] uppercase tracking-[0.18em] text-white/75 sm:text-[11px] sm:tracking-[0.22em]">
-          Our Partners:
+          {copy.hero.partners}
         </span>
       </div>
       <div
@@ -154,25 +153,26 @@ export function PartnerStrip() {
         }}
       >
         <div className="marquee-track items-center">
-          {Array.from({ length: PARTNER_MARQUEE_COPIES }).flatMap((_, copyIndex) =>
-            CLIENT_LOGOS.map((logo, logoIndex) => (
-              <div
-                key={`${copyIndex}-${logoIndex}`}
-                className="group flex h-20 w-[clamp(190px,23vw,280px)] shrink-0 grow-0 basis-[clamp(190px,23vw,280px)] items-center justify-center px-4 sm:h-24 sm:px-5 lg:h-28"
-                aria-hidden={copyIndex > 0}
-              >
-                <div className="flex h-full w-full items-center justify-center px-2 py-1.5 sm:px-3 sm:py-2">
-                  <img
-                    src={logo.src}
-                    alt={copyIndex === 0 ? logo.alt : ""}
-                    loading="eager"
-                    decoding="async"
-                    draggable={false}
-                    className="block h-full w-full select-none object-contain opacity-100 drop-shadow-[0_10px_20px_rgba(0,0,0,0.28)] transition duration-300 group-hover:scale-[1.03] group-hover:drop-shadow-[0_0_18px_rgba(76,201,240,0.22)]"
-                  />
+          {Array.from({ length: PARTNER_MARQUEE_COPIES }).flatMap(
+            (_, copyIndex) =>
+              CLIENT_LOGOS.map((logo, logoIndex) => (
+                <div
+                  key={`${copyIndex}-${logoIndex}`}
+                  className="group flex h-20 w-[clamp(190px,23vw,280px)] shrink-0 grow-0 basis-[clamp(190px,23vw,280px)] items-center justify-center px-4 sm:h-24 sm:px-5 lg:h-28"
+                  aria-hidden={copyIndex > 0}
+                >
+                  <div className="flex h-full w-full items-center justify-center px-2 py-1.5 sm:px-3 sm:py-2">
+                    <img
+                      src={logo.src}
+                      alt={copyIndex === 0 ? logo.alt : ""}
+                      loading="eager"
+                      decoding="async"
+                      draggable={false}
+                      className="block h-full w-full select-none object-contain opacity-100 drop-shadow-[0_10px_20px_rgba(0,0,0,0.28)] transition duration-300 group-hover:scale-[1.03] group-hover:drop-shadow-[0_0_18px_rgba(76,201,240,0.22)]"
+                    />
+                  </div>
                 </div>
-              </div>
-            )),
+              ))
           )}
         </div>
       </div>

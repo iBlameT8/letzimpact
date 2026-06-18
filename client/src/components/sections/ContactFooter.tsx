@@ -1,17 +1,20 @@
 // Letzimpact — Neon Atelier
-// Final CTA + footer block. Big WhatsApp call-to-action, clean meta strip below.
+// Final CTA and footer block. Big WhatsApp call to action, clean meta strip below.
 
 import { motion } from "framer-motion";
 import { ArrowUpRight } from "lucide-react";
-import { BRAND, NAV_LINKS, waLink } from "@/lib/brand";
 import { MagneticButton } from "@/components/MagneticButton";
 import { WhatsAppGlyph } from "@/components/SiteNav";
+import { BRAND, NAV_LINKS, waLink } from "@/lib/brand";
+import { useI18n } from "@/lib/i18n";
 
 export function ContactFooter() {
+  const { copy } = useI18n();
+
   return (
     <footer
       id="contact"
-      className="relative isolate overflow-hidden border-t border-white/10 pt-20 pb-[max(2.5rem,env(safe-area-inset-bottom))] sm:pt-24 lg:pt-32"
+      className="relative isolate overflow-hidden border-t border-white/10 pb-[max(2.5rem,env(safe-area-inset-bottom))] pt-20 sm:pt-24 lg:pt-32"
     >
       {/* big ambient glow */}
       <div
@@ -50,19 +53,20 @@ export function ContactFooter() {
             <div className="lg:col-span-7">
               <div className="inline-flex items-center gap-2 rounded-full bg-white/[0.05] px-3 py-1 ring-1 ring-white/10 backdrop-blur">
                 <span className="relative flex h-2 w-2">
-                  <span className="absolute inset-0 rounded-full bg-[#4CC9F0] ping-soft" />
+                  <span className="absolute inset-0 animate-ping rounded-full bg-[#4CC9F0]" />
                   <span className="relative h-2 w-2 rounded-full bg-[#4CC9F0]" />
                 </span>
                 <span className="font-mono-acc text-[11px] uppercase tracking-[0.2em] text-white/70">
-                  Open for new brands
+                  {copy.footer.status}
                 </span>
               </div>
               <h2 className="mt-5 font-display text-[34px] font-bold leading-[1.02] tracking-tight sm:mt-6 sm:text-5xl lg:text-[64px]">
-                Let's turn your <span className="text-gradient">attention</span> into actual customers.
+                {copy.footer.heading}{" "}
+                <span className="text-gradient">{copy.footer.highlight}</span>{" "}
+                {copy.footer.ending}
               </h2>
               <p className="mt-4 max-w-xl text-[15px] leading-relaxed text-white/65 sm:mt-5 sm:text-[16px]">
-                Fifteen minutes on WhatsApp, a few honest questions, a clear next step.
-                No pitch deck, no pressure — and no salesperson named Bryan.
+                {copy.footer.intro}
               </p>
             </div>
 
@@ -72,10 +76,10 @@ export function ContactFooter() {
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-full justify-center !px-7 !py-3.5 !text-[15px] sm:w-auto sm:justify-start sm:!px-8 sm:!py-4 sm:!text-[16px]"
-                ariaLabel="Open WhatsApp chat with Letzimpact"
+                ariaLabel={copy.nav.whatsapp}
               >
                 <WhatsAppGlyph className="h-5 w-5" />
-                Let's talk
+                {copy.nav.talk}
                 <ArrowUpRight className="h-4 w-4" />
               </MagneticButton>
               <a
@@ -88,7 +92,7 @@ export function ContactFooter() {
                 href={`mailto:${BRAND.email}`}
                 className="font-mono-acc text-[12px] uppercase tracking-[0.18em] text-white/50 hover:text-white sm:tracking-[0.2em]"
               >
-                or {BRAND.email}
+                {copy.footer.emailPrefix} {BRAND.email}
               </a>
             </div>
           </div>
@@ -99,76 +103,79 @@ export function ContactFooter() {
           <div className="lg:col-span-5">
             <img
               src="/brand/letzimpact-logo.png"
-              alt="Letzimpact — social media marketing"
+              alt={copy.nav.logoAlt}
               className="h-9 w-auto sm:h-11"
               draggable={false}
             />
             <p className="mt-4 max-w-sm text-[14.5px] leading-relaxed text-white/55">
-              Digital strategies. Real impact. We help brands grow through focused
-              social media, content and strategy — out of {BRAND.location}.
+              {copy.footer.blurb}
             </p>
           </div>
 
           <div className="grid grid-cols-2 gap-10 sm:grid-cols-2 lg:col-span-7 lg:grid-cols-[1fr_1.3fr]">
-          <div>
-            <div className="font-mono-acc text-[11px] uppercase tracking-[0.22em] text-white/40">
-              Sitemap
+            <div>
+              <div className="font-mono-acc text-[11px] uppercase tracking-[0.22em] text-white/40">
+                {copy.footer.sitemap}
+              </div>
+              <ul className="mt-4 space-y-2 text-[14.5px]">
+                {NAV_LINKS.map(l => (
+                  <li key={l.id}>
+                    <a
+                      href={`#${l.id}`}
+                      onClick={e => {
+                        e.preventDefault();
+                        const el = document.getElementById(l.id);
+                        if (el) {
+                          const y =
+                            el.getBoundingClientRect().top +
+                            window.scrollY -
+                            80;
+                          window.scrollTo({ top: y, behavior: "smooth" });
+                        }
+                      }}
+                      className="text-white/70 transition-colors hover:text-white"
+                    >
+                      {copy.nav[l.id]}
+                    </a>
+                  </li>
+                ))}
+              </ul>
             </div>
-            <ul className="mt-4 space-y-2 text-[14.5px]">
-              {NAV_LINKS.map((l) => (
-                <li key={l.id}>
+
+            <div>
+              <div className="font-mono-acc text-[11px] uppercase tracking-[0.22em] text-white/40">
+                {copy.footer.reach}
+              </div>
+              <ul className="mt-4 space-y-2 text-[14.5px]">
+                <li>
                   <a
-                    href={`#${l.id}`}
-                    onClick={(e) => {
-                      e.preventDefault();
-                      const el = document.getElementById(l.id);
-                      if (el) {
-                        const y =
-                          el.getBoundingClientRect().top + window.scrollY - 80;
-                        window.scrollTo({ top: y, behavior: "smooth" });
-                      }
-                    }}
-                    className="text-white/70 transition-colors hover:text-white"
+                    href={waLink()}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-white/80 hover:text-white"
                   >
-                    {l.label}
+                    {BRAND.phoneDisplay}
                   </a>
                 </li>
-              ))}
-            </ul>
-          </div>
-
-          <div>
-            <div className="font-mono-acc text-[11px] uppercase tracking-[0.22em] text-white/40">
-              Reach us
+                <li>
+                  <a
+                    href={`mailto:${BRAND.email}`}
+                    className="text-white/80 hover:text-white"
+                  >
+                    {BRAND.email}
+                  </a>
+                </li>
+                <li className="text-white/55">{BRAND.location}, EU</li>
+              </ul>
             </div>
-            <ul className="mt-4 space-y-2 text-[14.5px]">
-              <li>
-                <a
-                  href={waLink()}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-white/80 hover:text-white"
-                >
-                  {BRAND.phoneDisplay}
-                </a>
-              </li>
-              <li>
-                <a
-                  href={`mailto:${BRAND.email}`}
-                  className="text-white/80 hover:text-white"
-                >
-                  {BRAND.email}
-                </a>
-              </li>
-              <li className="text-white/55">{BRAND.location}, EU</li>
-            </ul>
-          </div>
           </div>
         </div>
 
         <div className="mt-14 flex flex-col items-start justify-between gap-3 border-t border-white/10 pt-6 font-mono-acc text-[11px] uppercase tracking-[0.18em] text-white/35 sm:flex-row sm:items-center">
-          <div>© {new Date().getFullYear()} Letzimpact · Made in Luxembourg</div>
-          <div>v 2.0 · Neon Atelier</div>
+          <div>
+            © {new Date().getFullYear()} Letzimpact · {copy.footer.made}
+          </div>
+          <div>{copy.footer.version}</div>
         </div>
       </div>
     </footer>
