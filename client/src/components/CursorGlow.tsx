@@ -1,4 +1,4 @@
-// Letzimpact — Neon Atelier
+// LëtzImpact — Neon Atelier
 // A subtle gradient bloom that follows the user's cursor across the page.
 // Adds depth + motion personality without being a real cursor replacement.
 

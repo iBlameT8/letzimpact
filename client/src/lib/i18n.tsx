@@ -31,17 +31,17 @@ export const COPY = {
       faq: "FAQ",
       openMenu: "Open menu",
       closeMenu: "Close menu",
-      home: "Letzimpact home",
-      logoAlt: "Letzimpact social media marketing",
+      home: "LëtzImpact home",
+      logoAlt: "LëtzImpact social media marketing",
       whatsapp: "Contact us on WhatsApp",
       whatsappMessage:
-        "Hey Letzimpact, I came from your website and I would love to talk about social media for my brand.",
+        "Hey LëtzImpact, I came from your website and I would love to talk about social media for my brand.",
       talk: "Let's talk",
     },
     hero: {
       words: ["Social", "media", "that", "actually", "works"],
-      bodyPrefix: "We're",
-      body: "a duo from Luxembourg that plans, films and manages short form content for brands that prefer building attention over renting it. Strategy, shoots and management under one roof, handled honestly and delivered on time.",
+      bodyPrefix: "We are",
+      body: "a Luxembourg company built by young talent that understands how social media and marketing work today. We plan, film and manage short form content with a clear strategy, a professional look and the discipline to turn attention into serious business.",
       packagesCta: "See the packages",
       partners: "Our partners:",
     },
@@ -180,7 +180,7 @@ export const COPY = {
             "Monthly performance report",
           ],
           waMessage:
-            "Hey Letzimpact, I am interested in the Starter package. Let's talk.",
+            "Hey LëtzImpact, I am interested in the Starter package. Let's talk.",
         },
         {
           tag: "Performance growth",
@@ -196,7 +196,7 @@ export const COPY = {
             "Monthly analysis and growth insights",
           ],
           waMessage:
-            "Hey Letzimpact, I am looking at the Growth package. When can we chat?",
+            "Hey LëtzImpact, I am looking at the Growth package. When can we chat?",
         },
         {
           tag: "Full brand management",
@@ -212,16 +212,16 @@ export const COPY = {
             "Weekly analysis and optimisation",
           ],
           waMessage:
-            "Hey Letzimpact, the Authority package looks like us. Let's set up a call.",
+            "Hey LëtzImpact, the Authority package looks like us. Let's set up a call.",
         },
       ],
     },
     founders: {
-      label: "The two of us",
-      heading: "Two nineteen year olds running social media like a",
-      highlight: "real business",
+      label: "About the founders",
+      heading: "Young founders treating social media like a",
+      highlight: "serious business",
       intro:
-        "We started Letzimpact because most agencies in Luxembourg either treat social like an afterthought or like a circus. We do neither. We talk like we mean it, we ship on time, and we treat your account like our reputation depends on it because at this size, it does.",
+        "We built LëtzImpact because too many agencies still work in an old fashioned way. Some sell beautiful videos that do not perform, while others chase performance with content that looks unprofessional. Our work is built to do both, create content that looks sharp, stays professional and is made to perform.",
       founderRole: "Founder",
       coFounderRole: "Co founder",
       values: [
@@ -272,11 +272,11 @@ export const COPY = {
         },
         {
           q: "What makes you actually different?",
-          a: "We are two founders, not a chain of account managers. The person planning your content is the same person filming, editing and replying to comments. That is why your account ends up sounding like a brand, not a bot.",
+          a: "We are a founder led team, not a chain of account managers. The person planning your content stays close to the person filming, editing and replying to comments. That is why your account ends up sounding like a brand, not a bot.",
         },
         {
           q: "Do you also build websites?",
-          a: "Yes. That is what you are looking at. Websites, social media and content shoots all sit under the same roof, which is the whole point of Letzimpact.",
+          a: "Yes. That is what you are looking at. Websites, social media and content shoots all sit under the same roof, which is the whole point of LëtzImpact.",
         },
       ],
     },
@@ -315,17 +315,17 @@ export const COPY = {
       faq: "FAQ",
       openMenu: "Ouvrir le menu",
       closeMenu: "Fermer le menu",
-      home: "Accueil Letzimpact",
-      logoAlt: "Letzimpact marketing social media",
+      home: "Accueil LëtzImpact",
+      logoAlt: "LëtzImpact marketing social media",
       whatsapp: "Contactez nous sur WhatsApp",
       whatsappMessage:
-        "Salut Letzimpact, je viens de votre site et j'aimerais parler du social media pour ma marque.",
+        "Salut LëtzImpact, je viens de votre site et j'aimerais parler du social media pour ma marque.",
       talk: "Discutons",
     },
     hero: {
       words: ["Social", "media", "qui", "fonctionne", "vraiment"],
       bodyPrefix: "Nous sommes",
-      body: "un duo au Luxembourg qui planifie, filme et gère du contenu court pour les marques qui préfèrent créer de l'attention plutôt que la louer. Stratégie, tournages et gestion sous le même toit, avec une approche honnête et des livraisons à temps.",
+      body: "une entreprise luxembourgeoise portée par de jeunes talents qui comprennent le social media et le marketing d'aujourd'hui. Nous planifions, filmons et gérons du contenu court avec une stratégie claire, une image professionnelle et la rigueur nécessaire pour transformer l'attention en vrais résultats.",
       packagesCta: "Voir les offres",
       partners: "Nos partenaires:",
     },
@@ -464,7 +464,7 @@ export const COPY = {
             "Rapport de performance mensuel",
           ],
           waMessage:
-            "Salut Letzimpact, je suis intéressé par l'offre Starter. Parlons en.",
+            "Salut LëtzImpact, je suis intéressé par l'offre Starter. Parlons en.",
         },
         {
           tag: "Croissance performance",
@@ -480,7 +480,7 @@ export const COPY = {
             "Analyse mensuelle et insights de croissance",
           ],
           waMessage:
-            "Salut Letzimpact, je regarde l'offre Growth. Quand pouvons nous discuter?",
+            "Salut LëtzImpact, je regarde l'offre Growth. Quand pouvons nous discuter?",
         },
         {
           tag: "Gestion de marque complète",
@@ -496,17 +496,17 @@ export const COPY = {
             "Analyse et optimisation hebdomadaire",
           ],
           waMessage:
-            "Salut Letzimpact, l'offre Authority nous correspond. Fixons un appel.",
+            "Salut LëtzImpact, l'offre Authority nous correspond. Fixons un appel.",
         },
       ],
     },
     founders: {
-      label: "Nous deux",
+      label: "À propos des fondateurs",
       heading:
-        "Deux jeunes de dix neuf ans qui gèrent le social media comme une",
-      highlight: "vraie entreprise",
+        "De jeunes fondateurs qui traitent le social media comme une",
+      highlight: "entreprise sérieuse",
       intro:
-        "Nous avons lancé Letzimpact parce que beaucoup d'agences au Luxembourg traitent le social comme une pensée secondaire ou comme un spectacle. Nous ne faisons ni l'un ni l'autre. Nous parlons franchement, nous livrons à temps, et nous traitons votre compte comme si notre réputation en dépendait, parce qu'à notre taille, c'est le cas.",
+        "Nous avons créé LëtzImpact parce que trop d'agences travaillent encore de façon ancienne. Certaines vendent de belles vidéos qui ne performent pas, tandis que d'autres cherchent la performance avec du contenu qui manque de professionnalisme. Notre travail réunit les deux, un contenu propre, professionnel et pensé pour performer.",
       founderRole: "Fondateur",
       coFounderRole: "Co fondateur",
       values: [
@@ -557,11 +557,11 @@ export const COPY = {
         },
         {
           q: "Qu'est ce qui vous rend vraiment différents?",
-          a: "Nous sommes deux fondateurs, pas une chaîne de gestionnaires de compte. La personne qui planifie votre contenu est aussi celle qui filme, monte et répond aux commentaires. C'est pour cela que votre compte sonne comme une marque, pas comme un robot.",
+          a: "Nous sommes une équipe dirigée par les fondateurs, pas une chaîne de gestionnaires de compte. La personne qui planifie votre contenu reste proche de celle qui filme, monte et répond aux commentaires. C'est pour cela que votre compte sonne comme une marque, pas comme un robot.",
         },
         {
           q: "Faites vous aussi des sites web?",
-          a: "Oui. C'est ce que vous regardez. Sites web, social media et tournages de contenu sont sous le même toit, c'est justement l'idée de Letzimpact.",
+          a: "Oui. C'est ce que vous regardez. Sites web, social media et tournages de contenu sont sous le même toit, c'est justement l'idée de LëtzImpact.",
         },
       ],
     },
@@ -600,17 +600,17 @@ export const COPY = {
       faq: "FAQ",
       openMenu: "Menü opmaachen",
       closeMenu: "Menü zoumaachen",
-      home: "Letzimpact Startsäit",
-      logoAlt: "Letzimpact Social Media Marketing",
+      home: "LëtzImpact Startsäit",
+      logoAlt: "LëtzImpact Social Media Marketing",
       whatsapp: "Kontaktéiert eis op WhatsApp",
       whatsappMessage:
-        "Moien Letzimpact, ech kommen iwwer Är Websäit a géif gär iwwer Social Media fir meng Mark schwätzen.",
+        "Moien LëtzImpact, ech kommen iwwer Är Websäit a géif gär iwwer Social Media fir meng Mark schwätzen.",
       talk: "Schwätze mir",
     },
     hero: {
       words: ["Social", "Media", "déi", "wierklech", "funktionéiert"],
       bodyPrefix: "Mir sinn",
-      body: "en Duo aus Lëtzebuerg, deen kuerz Videoe plangt, filmt a geréiert fir Marken, déi léiwer Opmierksamkeet opbauen ewéi se ze kafen. Strategie, Dréiaarbecht a Management ënner engem Daach, éierlech gefouert a pünktlech geliwwert.",
+      body: "eng lëtzebuergesch Firma mat jonken Talenter, déi verstoen, wéi Social Media a Marketing haut funktionéieren. Mir plangen, filmen a geréiere kuerz Videoe mat enger kloerer Strategie, engem professionelle Bild an der Disziplin, fir Opmierksamkeet a richteg Resultater ze verwandelen.",
       packagesCta: "Packagen ukucken",
       partners: "Eis Partner:",
     },
@@ -749,7 +749,7 @@ export const COPY = {
             "Performance Rapport all Mount",
           ],
           waMessage:
-            "Moien Letzimpact, ech interesséiere mech fir de Starter Package. Schwätze mir.",
+            "Moien LëtzImpact, ech interesséiere mech fir de Starter Package. Schwätze mir.",
         },
         {
           tag: "Performance Wuesstem",
@@ -765,7 +765,7 @@ export const COPY = {
             "Analyse all Mount a Wuesstem Ablécker",
           ],
           waMessage:
-            "Moien Letzimpact, ech kucken de Growth Package. Wéini kënne mir schwätzen?",
+            "Moien LëtzImpact, ech kucken de Growth Package. Wéini kënne mir schwätzen?",
         },
         {
           tag: "Komplett Marken Management",
@@ -781,16 +781,16 @@ export const COPY = {
             "Analyse an Optimiséierung all Woch",
           ],
           waMessage:
-            "Moien Letzimpact, den Authority Package passt bei eis. Loosse mir en Uruff festleeën.",
+            "Moien LëtzImpact, den Authority Package passt bei eis. Loosse mir en Uruff festleeën.",
         },
       ],
     },
     founders: {
-      label: "Mir zwee",
-      heading: "Zwee nonzéng Joer al Grënner déi Social Media féiere wéi e",
-      highlight: "richtege Betrib",
+      label: "Iwwer d'Grënner",
+      heading: "Jonk Grënner déi Social Media féiere wéi e",
+      highlight: "seriéise Betrib",
       intro:
-        "Mir hunn Letzimpact gestart, well vill Agencen zu Lëtzebuerg Social Media entweder wéi eng Niewesaach oder wéi eng Show behandelen. Mir maachen näischt dovun. Mir schwätze kloer, mir liwweren op Zäit, a mir behandelen Äre Konto wéi wann eise Ruff dovun ofhänkt, well bei eiser Gréisst ass dat esou.",
+        "Mir hunn LëtzImpact gegrënnt, well ze vill Agencen nach almodësch schaffen. Déi eng verkafe schéi Videoen, déi net performen, an déi aner sichen nëmmen no Performance mat Inhalt, dee net professionell wierkt. Mir bréngen déi zwou Säiten zesummen, propperen Inhalt, professionell presentéiert a gemaach fir ze performen.",
       founderRole: "Grënner",
       coFounderRole: "Matgrënner",
       values: [
@@ -841,11 +841,11 @@ export const COPY = {
         },
         {
           q: "Wat mécht Iech wierklech anescht?",
-          a: "Mir sinn zwee Grënner, net eng Kette vu Konto Manageren. Déi Persoun déi Ären Inhalt plangt, ass och déi Persoun déi filmt, schneit an op Kommentarer äntwert. Dofir kléngt Äre Konto wéi eng Mark, net wéi e Bot.",
+          a: "Mir sinn eng Equipe déi vun de Grënner geleet gëtt, net eng Kette vu Konto Manageren. Déi Persoun déi Ären Inhalt plangt, ass no bei där Persoun déi filmt, schneit an op Kommentarer äntwert. Dofir kléngt Äre Konto wéi eng Mark, net wéi e Bot.",
         },
         {
           q: "Maacht Dir och Websäiten?",
-          a: "Jo. Dat ass dat wat Dir grad kuckt. Websäiten, Social Media an Dréiaarbechte fir Inhalt sinn all ënner engem Daach, an dat ass de ganze Punkt vu Letzimpact.",
+          a: "Jo. Dat ass dat wat Dir grad kuckt. Websäiten, Social Media an Dréiaarbechte fir Inhalt sinn all ënner engem Daach, an dat ass de ganze Punkt vu LëtzImpact.",
         },
       ],
     },

@@ -1,4 +1,4 @@
-// Letzimpact — Neon Atelier
+// LëtzImpact — Neon Atelier
 // Services grid using glass cards on a dark canvas.
 // Tone: confident, slightly cocky, never corporate.
 

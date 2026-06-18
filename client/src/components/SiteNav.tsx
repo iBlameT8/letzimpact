@@ -1,4 +1,4 @@
-// Letzimpact — Neon Atelier
+// LëtzImpact — Neon Atelier
 // Floating glass navbar at the top. Smooth-scrolls to in-page sections,
 // shows a WhatsApp CTA, and collapses to a glass sheet on mobile.
 

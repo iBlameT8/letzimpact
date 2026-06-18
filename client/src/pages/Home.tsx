@@ -1,4 +1,4 @@
-// Letzimpact — Neon Atelier
+// LëtzImpact — Neon Atelier
 // Page composition. Style commitments enforced everywhere:
 // - Background: deep night #07060B; foreground off-white #EDEAF1
 // - Brand gradient: #EC12D8 → #A250E3 → #4CC9F0

@@ -1,4 +1,4 @@
-// Letzimpact — Neon Atelier
+// LëtzImpact — Neon Atelier
 // Persistent WhatsApp action button bottom right, with gradient halo and ping ring.
 
 import { motion } from "framer-motion";

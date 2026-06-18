@@ -1,4 +1,4 @@
-// Letzimpact — Neon Atelier
+// LëtzImpact — Neon Atelier
 // Founders section: editorial double portrait spread.
 
 import { motion } from "framer-motion";

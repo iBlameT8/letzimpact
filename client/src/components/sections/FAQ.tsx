@@ -1,4 +1,4 @@
-// Letzimpact — Neon Atelier
+// LëtzImpact — Neon Atelier
 // FAQ accordion. Tone: friendly direct, slightly playful, never robotic.
 
 import {

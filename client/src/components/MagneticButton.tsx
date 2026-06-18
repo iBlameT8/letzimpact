@@ -1,4 +1,4 @@
-// Letzimpact — Neon Atelier
+// LëtzImpact — Neon Atelier
 // A magnetic CTA button with gradient border + soft pull-toward-cursor effect.
 
 import { motion, useMotionValue, useSpring, useTransform } from "framer-motion";

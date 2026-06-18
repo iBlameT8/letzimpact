@@ -1,4 +1,4 @@
-// Letzimpact — Neon Atelier
+// LëtzImpact — Neon Atelier
 // THE centerpiece: 3 social media packages on a horizontal feel rail.
 // Middle card is the most picked option with a full gradient border.
 // Each CTA opens WhatsApp with a tailored prefilled message.

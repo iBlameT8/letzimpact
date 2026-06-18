@@ -1,4 +1,4 @@
-// Letzimpact — Neon Atelier
+// LëtzImpact — Neon Atelier
 // Hero: diagonal split, oversized headline left, animated gradient orb right.
 // Brand commitments: Space Grotesk display, off-white body, glass chips,
 // brand gradient (#EC12D8 → #A250E3 → #4CC9F0), magenta primary CTA.
@@ -13,6 +13,7 @@ import { useI18n } from "@/lib/i18n";
 type ClientLogo = { src: string; alt: string };
 const CLIENT_LOGOS: ClientLogo[] = [
   { src: "/partners/neteco.png", alt: "neteco" },
+  { src: "/partners/salonkee.png", alt: "Salonkee" },
   { src: "/partners/amhome.png", alt: "amhome" },
   { src: "/partners/sananny.png", alt: "Sananny" },
   { src: "/partners/emesa-construction.png", alt: "EMESA Construction" },
@@ -90,7 +91,7 @@ export function Hero() {
             className="mx-auto mt-5 max-w-xl text-center text-[15px] leading-relaxed text-white/70 sm:mt-7 sm:text-[17px]"
           >
             {copy.hero.bodyPrefix}{" "}
-            <span className="text-white">Letzimpact</span>, {copy.hero.body}
+            <span className="text-white">LëtzImpact</span>, {copy.hero.body}
           </motion.p>
 
           <motion.div

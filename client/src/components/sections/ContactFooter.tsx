@@ -1,4 +1,4 @@
-// Letzimpact — Neon Atelier
+// LëtzImpact — Neon Atelier
 // Final CTA and footer block. Big WhatsApp call to action, clean meta strip below.
 
 import { motion } from "framer-motion";
@@ -173,7 +173,7 @@ export function ContactFooter() {
 
         <div className="mt-14 flex flex-col items-start justify-between gap-3 border-t border-white/10 pt-6 font-mono-acc text-[11px] uppercase tracking-[0.18em] text-white/35 sm:flex-row sm:items-center">
           <div>
-            © {new Date().getFullYear()} Letzimpact · {copy.footer.made}
+            © {new Date().getFullYear()} LëtzImpact · {copy.footer.made}
           </div>
           <div>{copy.footer.version}</div>
         </div>

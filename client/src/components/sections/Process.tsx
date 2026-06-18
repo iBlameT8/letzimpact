@@ -1,4 +1,4 @@
-// Letzimpact — Neon Atelier
+// LëtzImpact — Neon Atelier
 // 5-step process timeline with scroll-driven gradient line.
 
 import { motion, useScroll, useTransform } from "framer-motion";
