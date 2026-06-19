@@ -10,6 +10,8 @@ export const BRAND = {
   whatsappNumber: "352621576556",
   whatsappMessage:
     "Hey LëtzImpact, I came from your website and I'd love to talk about social media for my brand.",
+  instagramUrl: "https://www.instagram.com/letzimpact_/",
+  tiktokUrl: "https://www.tiktok.com/@letzimpact",
   legacySite: "https://letzimpact.lu",
   location: "Luxembourg",
   founded: 2025,
