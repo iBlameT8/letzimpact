@@ -164,7 +164,7 @@ export const COPY = {
         "Every package is monthly, with no hidden tiers and no surprise upsells. Pricing is tailored on the call because brands are not all built the same, but the scope is exactly what you see here.",
       mostPicked: "Most picked",
       cta: "Let's grow",
-      note: "Not sure which one fits? Talk to us. Five minutes is enough.",
+      note: "Not sure where to start or need a custom package? Book a fifteen minute call and we will shape the perfect package for you.",
       items: [
         {
           tag: "Managed presence",
@@ -293,7 +293,7 @@ export const COPY = {
       sitemap: "Sitemap",
       reach: "Reach us",
       made: "Made in Luxembourg",
-      version: "v 2.0 · Neon Atelier",
+      impressum: "Impressum · LëtzImpact Agency",
     },
     notFound: {
       title: "Page not found",
@@ -448,7 +448,7 @@ export const COPY = {
         "Chaque offre est mensuelle, sans paliers cachés et sans ventes surprises. Le prix est adapté pendant l'appel, parce que toutes les marques ne se ressemblent pas, mais le scope est exactement celui que vous voyez ici.",
       mostPicked: "Le plus choisi",
       cta: "On développe",
-      note: "Vous ne savez pas laquelle choisir? Parlez nous. Cinq minutes suffisent.",
+      note: "Vous ne savez pas par où commencer ou vous avez besoin d'une offre spéciale? Réservons quinze minutes et construisons l'offre parfaite pour vous.",
       items: [
         {
           tag: "Présence gérée",
@@ -578,7 +578,7 @@ export const COPY = {
       sitemap: "Plan du site",
       reach: "Nous joindre",
       made: "Créé au Luxembourg",
-      version: "v 2.0 · Neon Atelier",
+      impressum: "Impressum · LëtzImpact Agency",
     },
     notFound: {
       title: "Page introuvable",
@@ -733,7 +733,7 @@ export const COPY = {
         "All Package leeft all Mount, ouni verstoppt Stufen an ouni Drock fir méi ze kafen. De Präis gëtt am Uruff ugepasst, well Marken net all d'selwecht gebaut sinn, mee den Ëmfang ass genee dat wat Dir hei gesitt.",
       mostPicked: "Am meeschte gewielt",
       cta: "Loosse mer wuessen",
-      note: "Net sécher wat passt? Schwätzt mat eis. Fënnef Minutte si genuch.",
+      note: "Net sécher wou Dir ufänke sollt oder braucht Dir e spezielle Package? Loosse mir fofzéng Minutten schwätzen an de perfekte Package fir Iech zesummestellen.",
       items: [
         {
           tag: "Geréiert Presenz",
@@ -862,7 +862,7 @@ export const COPY = {
       sitemap: "Sitemap",
       reach: "Kontakt",
       made: "Gemaach zu Lëtzebuerg",
-      version: "v 2.0 · Neon Atelier",
+      impressum: "Impressum · LëtzImpact Agency",
     },
     notFound: {
       title: "Säit net fonnt",

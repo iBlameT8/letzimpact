@@ -175,7 +175,14 @@ export function ContactFooter() {
           <div>
             © {new Date().getFullYear()} LëtzImpact · {copy.footer.made}
           </div>
-          <div>{copy.footer.version}</div>
+          <a
+            href="/legal/impressum-letzimpact-agency.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-white/45 transition-colors hover:text-white sm:mr-48 lg:mr-56"
+          >
+            {copy.footer.impressum}
+          </a>
         </div>
       </div>
     </footer>
