@@ -41,7 +41,7 @@ export const COPY = {
     hero: {
       words: ["Social", "media", "that", "actually", "works"],
       bodyPrefix: "We are",
-      body: "a Luxembourg company built by young talent that understands how social media and marketing work today. We plan, film and manage short form content with a clear strategy, a professional look and the discipline to turn attention into serious business.",
+      body: "a Luxembourg social media agency and marketing production company built by young talent that understands how brands grow today. We plan, film and manage Reels, TikToks and short form content with a clear strategy, a professional look and the discipline to turn attention into serious business.",
       packagesCta: "See the packages",
       partners: "Our partners:",
     },
@@ -51,7 +51,7 @@ export const COPY = {
       heading: "A few projects from the",
       highlight: "last few weeks.",
       intro:
-        "Six short cuts from app, real estate, construction, cleaning, interviews and café work. Same compact reel look, same clean style.",
+        "Six short cuts from app, real estate, construction, cleaning, interviews and café work in Luxembourg. Same compact reel look, same clean style, built for modern social media marketing.",
       play: "Play",
       pause: "Pause",
       reels: [
@@ -101,15 +101,15 @@ export const COPY = {
       items: [
         {
           title: "Short form content",
-          body: "Reels and TikToks built around a hook, a story and a reason to stop scrolling. Filmed by us, edited by us, posted by us.",
+          body: "Reels and TikToks built around a hook, a story and a reason to stop scrolling. Social media content production in Luxembourg, filmed by us, edited by us and prepared for Instagram, TikTok and ads.",
         },
         {
           title: "Account management",
-          body: "We handle the calendar, the captions, the comments and the DMs. You handle running your business.",
+          body: "We handle the calendar, captions, comments, DMs and posting rhythm for Instagram and TikTok. You handle running your business while your social media stays active.",
         },
         {
           title: "Strategy and positioning",
-          body: "A clear angle for your brand across every social media platform. What to say, who to say it to, and why anyone should care.",
+          body: "A clear marketing angle for your brand across every social media platform. What to say, who to say it to, why anyone should care and how the content supports real business goals.",
         },
         {
           title: "Performance and reporting",
@@ -117,11 +117,47 @@ export const COPY = {
         },
         {
           title: "Launches and campaigns",
-          body: "Product drops, openings and promos. Timed content sprints designed to make a moment, not just a post.",
+          body: "Product drops, openings, restaurant launches, campaigns and promos. Timed content sprints designed to make a moment, not just a post.",
         },
         {
           title: "Weekly check ins",
           body: "Fifteen minute calls. Real updates, real feedback, no slide decks pretending to be insights.",
+        },
+      ],
+    },
+    localSeo: {
+      label: "SEO focus / Luxembourg",
+      heading: "Built for businesses searching in",
+      highlight: "Luxembourg.",
+      intro:
+        "LëtzImpact is positioned for companies across Luxembourg that need a social media agency, marketing agency, filming agency or content production partner without old fashioned agency habits.",
+      keywordLabel: "Search focus",
+      keywords: [
+        "Social Media Agency Luxembourg",
+        "Social Media Agentur Luxemburg",
+        "agence social media Luxembourg",
+        "Marketing Agency Luxembourg",
+        "Video Production Luxembourg",
+        "Content Production Luxembourg",
+        "Reels production Luxembourg",
+        "TikTok marketing Luxembourg",
+      ],
+      cards: [
+        {
+          title: "For every local business type",
+          body: "Restaurants, architects, doctors, lawyers, gyms, cleaning companies, construction brands, real estate teams, apps and startups can all use sharper social media content.",
+        },
+        {
+          title: "Filming and content production",
+          body: "We plan and film short form video, Reels, TikToks, interviews, product cuts, launch campaigns and business content made for Luxembourg audiences.",
+        },
+        {
+          title: "Social media management",
+          body: "Strategy, captions, posting, community management and reporting stay connected, so the account looks professional and keeps moving every month.",
+        },
+        {
+          title: "Luxembourg wide service area",
+          body: "The focus is the whole country of Luxembourg, not one city. We can support brands from Luxembourg City to Esch, Differdange, Dudelange and beyond.",
         },
       ],
     },
@@ -260,7 +296,7 @@ export const COPY = {
         },
         {
           q: "Do you only work with brands in Luxembourg?",
-          a: "We are based in Luxembourg and most shoots happen here, but we work remotely with brands across the EU. As long as the calls happen and the shoots are organised, location is not a blocker.",
+          a: "We are based in Luxembourg and focus on Luxembourg businesses, from restaurants, architects and doctors to lawyers, cleaning companies, construction brands, apps and startups. Most shoots happen locally, and strategy or management can also be handled remotely when needed.",
         },
         {
           q: "How long until we see results?",
@@ -276,7 +312,7 @@ export const COPY = {
         },
         {
           q: "Do you also build websites?",
-          a: "Yes. That is what you are looking at. Websites, social media and content shoots all sit under the same roof, which is the whole point of LëtzImpact.",
+          a: "Yes. Websites, social media, content shoots and marketing strategy can sit under the same roof. That matters because the website, Instagram, TikTok and ads should all tell the same story.",
         },
       ],
     },
@@ -289,7 +325,7 @@ export const COPY = {
         "Fifteen minutes on WhatsApp, a few honest questions, a clear next step. No pitch deck, no pressure and no salesperson named Bryan.",
       emailPrefix: "or",
       blurb:
-        "Digital strategies. Real impact. We help brands grow through focused social media, content and strategy from Luxembourg.",
+        "Social media agency, marketing agency and content production from Luxembourg. We help local brands grow through strategy, Reels, TikToks, video production and focused social media management.",
       sitemap: "Sitemap",
       reach: "Reach us",
       made: "Made in Luxembourg",
@@ -325,7 +361,7 @@ export const COPY = {
     hero: {
       words: ["Social", "media", "qui", "fonctionne", "vraiment"],
       bodyPrefix: "Nous sommes",
-      body: "une entreprise luxembourgeoise portée par de jeunes talents qui comprennent le social media et le marketing d'aujourd'hui. Nous planifions, filmons et gérons du contenu court avec une stratégie claire, une image professionnelle et la rigueur nécessaire pour transformer l'attention en vrais résultats.",
+      body: "une agence social media et marketing production au Luxembourg, portée par de jeunes talents qui comprennent comment les marques grandissent aujourd'hui. Nous planifions, filmons et gérons des Reels, TikToks et contenus courts avec une stratégie claire, une image professionnelle et la rigueur nécessaire pour transformer l'attention en vrais résultats.",
       packagesCta: "Voir les offres",
       partners: "Nos partenaires:",
     },
@@ -406,6 +442,42 @@ export const COPY = {
         {
           title: "Points hebdomadaires",
           body: "Des appels de quinze minutes. De vraies nouvelles, de vrais retours, pas des présentations qui se font passer pour des insights.",
+        },
+      ],
+    },
+    localSeo: {
+      label: "SEO / Luxembourg",
+      heading: "Pensé pour les recherches au",
+      highlight: "Luxembourg.",
+      intro:
+        "LëtzImpact se positionne pour les entreprises au Luxembourg qui cherchent une agence social media, une agence marketing, une agence vidéo ou un partenaire de production de contenu moderne.",
+      keywordLabel: "Focus recherche",
+      keywords: [
+        "agence social media Luxembourg",
+        "agence marketing Luxembourg",
+        "marketing digital Luxembourg",
+        "Social Media Agency Luxembourg",
+        "Marketing Agentur Luxemburg",
+        "production vidéo Luxembourg",
+        "Content Production Luxembourg",
+        "Reels production Luxembourg",
+      ],
+      cards: [
+        {
+          title: "Pour tous les types d'entreprises",
+          body: "Restaurants, architectes, médecins, avocats, salles de sport, sociétés de nettoyage, construction, immobilier, apps et startups peuvent tous profiter d'un contenu social media plus fort.",
+        },
+        {
+          title: "Tournage et production de contenu",
+          body: "Nous planifions et filmons des vidéos courtes, Reels, TikToks, interviews, contenus produits, lancements et contenus business pour le marché luxembourgeois.",
+        },
+        {
+          title: "Gestion social media",
+          body: "Stratégie, captions, publication, community management et reporting restent connectés pour garder un compte professionnel et actif chaque mois.",
+        },
+        {
+          title: "Service sur tout le Luxembourg",
+          body: "Nous visons tout le pays, pas une seule ville. Nous pouvons accompagner des marques de Luxembourg-Ville à Esch, Differdange, Dudelange et au-delà.",
         },
       ],
     },
@@ -574,7 +646,7 @@ export const COPY = {
         "Quinze minutes sur WhatsApp, quelques questions honnêtes, une prochaine étape claire. Pas de pitch deck, pas de pression et pas de vendeur appelé Bryan.",
       emailPrefix: "ou",
       blurb:
-        "Stratégies digitales. Impact réel. Nous aidons les marques à grandir grâce au social media, au contenu et à la stratégie depuis le Luxembourg.",
+        "Agence social media, agence marketing et production de contenu au Luxembourg. Nous aidons les marques locales à grandir avec stratégie, Reels, TikToks, vidéo et gestion social media.",
       sitemap: "Plan du site",
       reach: "Nous joindre",
       made: "Créé au Luxembourg",
@@ -610,7 +682,7 @@ export const COPY = {
     hero: {
       words: ["Social", "Media", "déi", "wierklech", "funktionéiert"],
       bodyPrefix: "Mir sinn",
-      body: "eng lëtzebuergesch Firma mat jonken Talenter, déi verstoen, wéi Social Media a Marketing haut funktionéieren. Mir plangen, filmen a geréiere kuerz Videoe mat enger kloerer Strategie, engem professionelle Bild an der Disziplin, fir Opmierksamkeet a richteg Resultater ze verwandelen.",
+      body: "eng lëtzebuergesch Social Media a Marketing Production Agency mat jonken Talenter, déi verstoen, wéi Marken haut wuessen. Mir plangen, filmen a geréiere Reels, TikToks a kuerz Videoe mat enger kloerer Strategie, engem professionelle Bild an der Disziplin, fir Opmierksamkeet a richteg Resultater ze verwandelen.",
       packagesCta: "Packagen ukucken",
       partners: "Eis Partner:",
     },
@@ -691,6 +763,42 @@ export const COPY = {
         {
           title: "Uruff all Woch",
           body: "Uruff vu fofzéng Minutten. Richteg Neiegkeeten, richtege Feedback, keng Presentatiounen déi sech als Abléck ausginn.",
+        },
+      ],
+    },
+    localSeo: {
+      label: "SEO Fokus / Lëtzebuerg",
+      heading: "Gebaut fir Betriber déi zu",
+      highlight: "Lëtzebuerg sichen.",
+      intro:
+        "LëtzImpact positionéiert sech fir Betriber a ganz Lëtzebuerg, déi eng Social Media Agency, Marketing Agency, Filming Agency oder Content Production Partner sichen, ouni almoudesch Agency Gewunnechten.",
+      keywordLabel: "Sich Fokus",
+      keywords: [
+        "Social Media Agency Luxembourg",
+        "Social Media Agentur Luxemburg",
+        "agence social media Luxembourg",
+        "Marketing Agency Luxembourg",
+        "Marketing Agentur Luxemburg",
+        "Video Production Luxembourg",
+        "Content Production Luxembourg",
+        "TikTok marketing Luxembourg",
+      ],
+      cards: [
+        {
+          title: "Fir all lokal Business Typen",
+          body: "Restauranten, Architekten, Dokteren, Affekoten, Gyms, Botzfirmen, Bau, Immobilien, Apps a Startups kënne vun méi staarkem Social Media Content profitéieren.",
+        },
+        {
+          title: "Filming a Content Production",
+          body: "Mir plangen a filmen Short Form Video, Reels, TikToks, Interviewen, Produkt Cuts, Launch Campagnen a Business Content fir de Lëtzebuerger Marché.",
+        },
+        {
+          title: "Social Media Management",
+          body: "Strategie, Captions, Posting, Community Management a Reporting bleiwen zesummen, sou datt den Account professionell ausgesäit an all Mount beweegt.",
+        },
+        {
+          title: "Service a ganz Lëtzebuerg",
+          body: "De Fokus ass dat ganzt Land Lëtzebuerg, net nëmmen eng Stad. Mir kënnen Marken vu Lëtzebuerg Stad bis Esch, Déifferdeng, Diddeleng an doriwwer eraus begleeden.",
         },
       ],
     },
