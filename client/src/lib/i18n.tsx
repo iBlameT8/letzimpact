@@ -130,9 +130,14 @@ export const COPY = {
       heading: "Built for businesses searching in",
       highlight: "Luxembourg.",
       intro:
-        "LëtzImpact is positioned for companies across Luxembourg that need a social media agency, marketing agency, filming agency or content production partner without old fashioned agency habits.",
+        "LëtzImpact is positioned for companies across Luxembourg and Schifflange that need a social media agency, marketing agency, filming agency or content production partner without old fashioned agency habits. Google can also connect the brand through common searches such as LetzImpact, LetsImpact and LëtzImpact Agency.",
       keywordLabel: "Search focus",
       keywords: [
+        "LëtzImpact",
+        "LetzImpact",
+        "LetsImpact",
+        "LëtzImpact Schifflange",
+        "marketing agency Schifflange",
         "Social Media Agency Luxembourg",
         "Social Media Agentur Luxemburg",
         "agence social media Luxembourg",
@@ -450,9 +455,14 @@ export const COPY = {
       heading: "Pensé pour les recherches au",
       highlight: "Luxembourg.",
       intro:
-        "LëtzImpact se positionne pour les entreprises au Luxembourg qui cherchent une agence social media, une agence marketing, une agence vidéo ou un partenaire de production de contenu moderne.",
+        "LëtzImpact se positionne pour les entreprises au Luxembourg et à Schifflange qui cherchent une agence social media, une agence marketing, une agence vidéo ou un partenaire de production de contenu moderne. Google peut aussi relier la marque aux recherches courantes comme LetzImpact, LetsImpact et LëtzImpact Agency.",
       keywordLabel: "Focus recherche",
       keywords: [
+        "LëtzImpact",
+        "LetzImpact",
+        "LetsImpact",
+        "LëtzImpact Schifflange",
+        "agence marketing Schifflange",
         "agence social media Luxembourg",
         "agence marketing Luxembourg",
         "marketing digital Luxembourg",
@@ -477,7 +487,7 @@ export const COPY = {
         },
         {
           title: "Service sur tout le Luxembourg",
-          body: "Nous visons tout le pays, pas une seule ville. Nous pouvons accompagner des marques de Luxembourg-Ville à Esch, Differdange, Dudelange et au-delà.",
+          body: "Nous visons tout le pays, pas une seule ville. Notre Google Business Profile est basé à Schifflange, et nous accompagnons des marques de Luxembourg-Ville à Esch, Differdange, Dudelange et au-delà.",
         },
       ],
     },
@@ -771,9 +781,14 @@ export const COPY = {
       heading: "Gebaut fir Betriber déi zu",
       highlight: "Lëtzebuerg sichen.",
       intro:
-        "LëtzImpact positionéiert sech fir Betriber a ganz Lëtzebuerg, déi eng Social Media Agency, Marketing Agency, Filming Agency oder Content Production Partner sichen, ouni almoudesch Agency Gewunnechten.",
+        "LëtzImpact positionéiert sech fir Betriber a ganz Lëtzebuerg an zu Schëffleng, déi eng Social Media Agency, Marketing Agency, Filming Agency oder Content Production Partner sichen, ouni almoudesch Agency Gewunnechten. Google kann d’Mark och iwwer Sichweisen wéi LetzImpact, LetsImpact an LëtzImpact Agency verbannen.",
       keywordLabel: "Sich Fokus",
       keywords: [
+        "LëtzImpact",
+        "LetzImpact",
+        "LetsImpact",
+        "LëtzImpact Schifflange",
+        "marketing agency Schifflange",
         "Social Media Agency Luxembourg",
         "Social Media Agentur Luxemburg",
         "agence social media Luxembourg",
