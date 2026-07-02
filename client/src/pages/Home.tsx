@@ -13,7 +13,6 @@ import { ContactFooter } from "@/components/sections/ContactFooter";
 import { FAQ } from "@/components/sections/FAQ";
 import { Founders } from "@/components/sections/Founders";
 import { Hero, PartnerStrip } from "@/components/sections/Hero";
-import { LocalSEO } from "@/components/sections/LocalSEO";
 import { Packages } from "@/components/sections/Packages";
 import { Process } from "@/components/sections/Process";
 import { RecentWork } from "@/components/sections/RecentWork";
@@ -30,7 +29,6 @@ export default function Home() {
         <RecentWork />
         <PartnerStrip />
         <Services />
-        <LocalSEO />
         <Process />
         <Packages />
         <Founders />
