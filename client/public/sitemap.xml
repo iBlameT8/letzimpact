@@ -1,10 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://letzimpact.lu/</loc>
-    <lastmod>2026-06-20</lastmod>
+    <lastmod>2026-07-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://letzimpact.lu/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://letzimpact.lu/" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://letzimpact.lu/" />
+    <xhtml:link rel="alternate" hreflang="lb" href="https://letzimpact.lu/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://letzimpact.lu/" />
+    <image:image>
+      <image:loc>https://letzimpact.lu/brand/letzimpact-logo.png</image:loc>
+      <image:title>LëtzImpact Logo – Social Media Agency Luxembourg</image:title>
+      <image:caption>LëtzImpact social media agency and marketing production company in Luxembourg</image:caption>
+    </image:image>
   </url>
   <url>
     <loc>https://letzimpact.lu/legal/impressum-letzimpact-agency.pdf</loc>

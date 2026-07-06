@@ -1,4 +1,13 @@
 User-agent: *
 Allow: /
+Disallow: /api/
+
+# Crawl-delay for polite bots
+User-agent: AhrefsBot
+Crawl-delay: 1
+
+User-agent: SemrushBot
+Crawl-delay: 1
 
 Sitemap: https://letzimpact.lu/sitemap.xml
+Host: https://letzimpact.lu
