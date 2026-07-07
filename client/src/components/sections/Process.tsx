@@ -38,7 +38,7 @@ export function Process() {
             <div className="absolute bottom-2 left-[19px] top-2 w-px bg-white/10" />
             {/* gradient progress line */}
             <motion.div
-              style={{ height: lineHeight }}
+              style={{ height: lineHeight, willChange: "height", contain: "layout style" }}
               className="absolute left-[19px] top-2 w-px"
             >
               <div

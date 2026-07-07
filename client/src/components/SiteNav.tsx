@@ -78,7 +78,16 @@ export function SiteNav() {
   const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 24);
+    let ticking = false;
+    const onScroll = () => {
+      if (!ticking) {
+        ticking = true;
+        requestAnimationFrame(() => {
+          setScrolled(window.scrollY > 24);
+          ticking = false;
+        });
+      }
+    };
     onScroll();
     window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
@@ -102,8 +111,8 @@ export function SiteNav() {
         <div
           className={`mx-auto flex max-w-6xl items-center justify-between rounded-full py-1.5 pl-3 pr-2 transition-all duration-500 sm:py-2 sm:pl-4 sm:pr-3 ${
             scrolled
-              ? "bg-black/55 ring-1 ring-white/10 backdrop-blur-2xl"
-              : "bg-white/[0.03] ring-1 ring-white/5 backdrop-blur-md"
+              ? "bg-black/70 ring-1 ring-white/10 backdrop-blur-lg"
+              : "bg-black/30 ring-1 ring-white/5 backdrop-blur-sm"
           }`}
         >
           <Logo />

@@ -15,6 +15,10 @@ export function CursorGlow() {
     const mq = window.matchMedia("(pointer: fine)");
     if (!mq.matches) return;
 
+    // Also disable on low-power devices (mobile GPUs)
+    const prefersReduced = window.matchMedia("(prefers-reduced-motion: reduce)");
+    if (prefersReduced.matches) return;
+
     target.current = { x: window.innerWidth / 2, y: window.innerHeight / 2 };
     current.current = { ...target.current };
 
@@ -26,16 +30,17 @@ export function CursorGlow() {
     const tick = () => {
       const dx = target.current.x - current.current.x;
       const dy = target.current.y - current.current.y;
-      current.current.x += dx * 0.08;
-      current.current.y += dy * 0.08;
+      // Faster interpolation = fewer frames needed to settle
+      current.current.x += dx * 0.12;
+      current.current.y += dy * 0.12;
       const el = ref.current;
       if (el) {
-        el.style.transform = `translate3d(${current.current.x - 240}px, ${current.current.y - 240}px, 0)`;
+        el.style.transform = `translate3d(${current.current.x - 200}px, ${current.current.y - 200}px, 0)`;
       }
       raf.current = requestAnimationFrame(tick);
     };
 
-    window.addEventListener("pointermove", onMove);
+    window.addEventListener("pointermove", onMove, { passive: true });
     raf.current = requestAnimationFrame(tick);
     return () => {
       window.removeEventListener("pointermove", onMove);
@@ -47,10 +52,12 @@ export function CursorGlow() {
     <div
       ref={ref}
       aria-hidden
-      className="pointer-events-none fixed left-0 top-0 z-[1] hidden h-[480px] w-[480px] rounded-full opacity-60 blur-3xl mix-blend-screen [@media(pointer:fine)]:block"
+      className="pointer-events-none fixed left-0 top-0 z-[1] hidden h-[400px] w-[400px] rounded-full opacity-50 blur-2xl mix-blend-screen [@media(pointer:fine)]:block"
       style={{
         background:
-          "radial-gradient(closest-side, rgba(236,18,216,0.35), rgba(162,80,227,0.20) 45%, rgba(76,201,240,0.15) 70%, transparent 80%)",
+          "radial-gradient(closest-side, rgba(236,18,216,0.30), rgba(162,80,227,0.15) 50%, transparent 80%)",
+        willChange: "transform",
+        contain: "layout style paint",
       }}
     />
   );

@@ -1,0 +1,1018 @@
+{
+  "editus-business.lu": {
+    "total_visits": {
+      "ok": true,
+      "data": {
+        "meta": {
+          "request": {
+            "granularity": "Monthly",
+            "main_domain_only": false,
+            "mtd": false,
+            "show_verified": false,
+            "state": null,
+            "format": "json",
+            "domain": "editus-business.lu",
+            "start_date": "2025-12-01",
+            "end_date": "2026-05-31",
+            "country": "world"
+          },
+          "status": "Success",
+          "last_updated": "2026-05-31",
+          "device": "Total"
+        },
+        "visits": [
+          {
+            "date": "2025-12-01",
+            "visits": 3931.490225523666
+          },
+          {
+            "date": "2026-01-01",
+            "visits": 3785.1962292456656
+          },
+          {
+            "date": "2026-02-01",
+            "visits": 3016.2599018956084
+          },
+          {
+            "date": "2026-03-01",
+            "visits": 1770.0710381779452
+          },
+          {
+            "date": "2026-04-01",
+            "visits": 3682.144585240315
+          },
+          {
+            "date": "2026-05-01",
+            "visits": 3398.447659254235
+          }
+        ]
+      }
+    },
+    "global_rank": {
+      "ok": true,
+      "data": {
+        "meta": {
+          "request": {
+            "main_domain_only": false,
+            "show_verified": false,
+            "state": null,
+            "format": "json",
+            "domain": "editus-business.lu",
+            "start_date": "2025-12-01",
+            "end_date": "2026-05-31",
+            "country": "world"
+          },
+          "status": "Success",
+          "last_updated": "2026-05-31"
+        },
+        "global_rank": [
+          {
+            "date": "2025-12",
+            "global_rank": 5238059
+          },
+          {
+            "date": "2026-01",
+            "global_rank": 4536455
+          },
+          {
+            "date": "2026-02",
+            "global_rank": 6061691
+          },
+          {
+            "date": "2026-03",
+            "global_rank": 10714273
+          },
+          {
+            "date": "2026-04",
+            "global_rank": 5319726
+          },
+          {
+            "date": "2026-05",
+            "global_rank": 5951928
+          }
+        ]
+      }
+    },
+    "organic_keywords": {
+      "ok": true,
+      "data": {
+        "meta": {
+          "query": {
+            "limit": 20,
+            "offset": 0,
+            "asc": null,
+            "sort": null
+          },
+          "request": {
+            "branded_type": "all",
+            "keywords_filter_rules": [],
+            "format": "json",
+            "domain": "editus-business.lu",
+            "granularity": "monthly",
+            "country": "ww",
+            "start_date": "2026-03-01",
+            "end_date": "2026-05-31",
+            "traffic_source": "organic",
+            "web_source": "total",
+            "metrics": [
+              "clicks",
+              "traffic_share",
+              "competition",
+              "primary_intent",
+              "secondary_intent",
+              "position",
+              "serp_features",
+              "top_url",
+              "url_count"
+            ]
+          },
+          "status": "success",
+          "last_updated": "2026-05-31"
+        },
+        "data": [
+          {
+            "keyword": "editus",
+            "clicks": 211.8086213578534,
+            "traffic_share": 0.8835267719993908,
+            "competition": 0,
+            "primary_intent": "Navigational",
+            "secondary_intent": null,
+            "position": null,
+            "serp_features": [
+              "organic",
+              "organic_sitelinks",
+              "organic_expanded_sitelinks",
+              "images",
+              "related_searches",
+              "apps",
+              "related_questions"
+            ],
+            "top_url": "editus-business.lu",
+            "url_count": 7
+          },
+          {
+            "keyword": "editus luxembourg",
+            "clicks": 12.36557532114453,
+            "traffic_share": 0.05158107718829674,
+            "competition": null,
+            "primary_intent": null,
+            "secondary_intent": null,
+            "position": null,
+            "serp_features": [
+              "organic",
+              "organic_sitelinks",
+              "organic_expanded_sitelinks",
+              "related_searches",
+              "related_questions",
+              "images"
+            ],
+            "top_url": "editus-business.lu",
+            "url_count": 5
+          },
+          {
+            "keyword": "adult seo agency luxembourg",
+            "clicks": 5.576851404784767,
+            "traffic_share": 0.02326296959964165,
+            "competition": null,
+            "primary_intent": null,
+            "secondary_intent": null,
+            "position": null,
+            "serp_features": [],
+            "top_url": "editus-business.lu",
+            "url_count": 1
+          },
+          {
+            "keyword": "editus logo",
+            "clicks": 4.5094569762575,
+            "traffic_share": 0.01881049949790061,
+            "competition": null,
+            "primary_intent": null,
+            "secondary_intent": null,
+            "position": null,
+            "serp_features": [
+              "organic",
+              "images",
+              "related_searches",
+              "related_questions"
+            ],
+            "top_url": "editus-business.lu",
+            "url_count": 2
+          },
+          {
+            "keyword": "editusz",
+            "clicks": 4.348218299428083,
+            "traffic_share": 0.01813791739643902,
+            "competition": null,
+            "primary_intent": null,
+            "secondary_intent": null,
+            "position": null,
+            "serp_features": [
+              "organic_sitelinks",
+              "organic",
+              "organic_expanded_sitelinks",
+              "apps",
+              "related_searches",
+              "related_questions"
+            ],
+            "top_url": "editus-business.lu",
+            "url_count": 3
+          },
+          {
+            "keyword": "marketing agency luxembourg",
+            "clicks": 0.9872904529177514,
+            "traffic_share": 0.0041183288069208445,
+            "competition": null,
+            "primary_intent": null,
+            "secondary_intent": null,
+            "position": null,
+            "serp_features": [
+              "organic",
+              "related_searches",
+              "local_pack",
+              "paid"
+            ],
+            "top_url": "editus-business.lu",
+            "url_count": 1
+          },
+          {
+            "keyword": "site web store luxembourgeois",
+            "clicks": 0.09671779094347842,
+            "traffic_share": 0.0004034432455080752,
+            "competition": null,
+            "primary_intent": null,
+            "secondary_intent": null,
+            "position": null,
+            "serp_features": [
+              "organic",
+              "images",
+              "related_searches",
+              "related_questions",
+              "ai_overview",
+              "paid"
+            ],
+            "top_url": "editus-business.lu/creation-de-site-e-commerce",
+            "url_count": 1
+          },
+          {
+            "keyword": "editus emplois",
+            "clicks": 0.03811535056385394,
+            "traffic_share": 0.0001589922659022038,
+            "competition": null,
+            "primary_intent": null,
+            "secondary_intent": null,
+            "position": null,
+            "serp_features": [
+              "organic",
+              "related_searches",
+              "related_questions"
+            ],
+            "top_url": "editus-business.lu/notre-equipe",
+            "url_count": 1
+          },
+          {
+            "keyword": "editus annuaire téléphonique",
+            "clicks": 0.0,
+            "traffic_share": 0.0,
+            "competition": null,
+            "primary_intent": null,
+            "secondary_intent": null,
+            "position": null,
+            "serp_features": [
+              "organic",
+              "images",
+              "related_searches",
+              "related_questions"
+            ],
+            "top_url": "editus-business.lu",
+            "url_count": 1
+          }
+        ]
+      }
+    }
+  },
+  "bighousemarketing.lu": {
+    "total_visits": {
+      "ok": true,
+      "data": {
+        "meta": {
+          "request": {
+            "granularity": "Monthly",
+            "main_domain_only": false,
+            "mtd": false,
+            "show_verified": false,
+            "state": null,
+            "format": "json",
+            "domain": "bighousemarketing.lu",
+            "start_date": "2025-12-01",
+            "end_date": "2026-05-31",
+            "country": "world"
+          },
+          "status": "Success",
+          "last_updated": "2026-05-31",
+          "device": "Total"
+        },
+        "visits": [
+          {
+            "date": "2025-12-01",
+            "visits": 467.5171560686466
+          },
+          {
+            "date": "2026-01-01",
+            "visits": 0.0
+          },
+          {
+            "date": "2026-02-01",
+            "visits": 622.4639262962477
+          },
+          {
+            "date": "2026-03-01",
+            "visits": 234.55770494569288
+          },
+          {
+            "date": "2026-04-01",
+            "visits": 269.71633517928586
+          },
+          {
+            "date": "2026-05-01",
+            "visits": 164.08290911905902
+          }
+        ]
+      }
+    },
+    "global_rank": {
+      "ok": true,
+      "data": {
+        "code": "failed_precondition",
+        "message": "api call failed: internal: api call failed, status code: 404, body: {\"meta\":{\"status\":\"Error\",\"error_code\":401,\"error_message\":\"Data not found\"}}"
+      }
+    },
+    "organic_keywords": {
+      "ok": true,
+      "data": {
+        "meta": {
+          "query": {
+            "limit": 20,
+            "offset": 0,
+            "asc": null,
+            "sort": null
+          },
+          "request": {
+            "branded_type": "all",
+            "keywords_filter_rules": [],
+            "format": "json",
+            "domain": "bighousemarketing.lu",
+            "granularity": "monthly",
+            "country": "ww",
+            "start_date": "2026-03-01",
+            "end_date": "2026-05-31",
+            "traffic_source": "organic",
+            "web_source": "total",
+            "metrics": [
+              "clicks",
+              "traffic_share",
+              "competition",
+              "primary_intent",
+              "secondary_intent",
+              "position",
+              "serp_features",
+              "top_url",
+              "url_count"
+            ]
+          },
+          "status": "success",
+          "last_updated": "2026-05-31"
+        },
+        "data": [
+          {
+            "keyword": "big house marketing luxembourg",
+            "clicks": 211.31433841280403,
+            "traffic_share": 0.7284466056356314,
+            "competition": null,
+            "primary_intent": null,
+            "secondary_intent": null,
+            "position": null,
+            "serp_features": [],
+            "top_url": "bighousemarketing.lu",
+            "url_count": 1
+          },
+          {
+            "keyword": "social media company in luxembourg",
+            "clicks": 62.95754751546338,
+            "traffic_share": 0.21702839538125937,
+            "competition": null,
+            "primary_intent": null,
+            "secondary_intent": null,
+            "position": null,
+            "serp_features": [],
+            "top_url": "bighousemarketing.lu",
+            "url_count": 1
+          },
+          {
+            "keyword": "big house marketing",
+            "clicks": 15.744490952825071,
+            "traffic_share": 0.054274693701293085,
+            "competition": null,
+            "primary_intent": null,
+            "secondary_intent": null,
+            "position": null,
+            "serp_features": [],
+            "top_url": "bighousemarketing.lu",
+            "url_count": 1
+          },
+          {
+            "keyword": "big house agency",
+            "clicks": 0.0726108058147515,
+            "traffic_share": 0.00025030528181621385,
+            "competition": null,
+            "primary_intent": null,
+            "secondary_intent": null,
+            "position": null,
+            "serp_features": [
+              "organic",
+              "images"
+            ],
+            "top_url": "bighousemarketing.lu",
+            "url_count": 1
+          },
+          {
+            "keyword": "agence communication luxembourg",
+            "clicks": 0.0,
+            "traffic_share": 0.0,
+            "competition": null,
+            "primary_intent": null,
+            "secondary_intent": null,
+            "position": null,
+            "serp_features": [
+              "organic",
+              "related_searches",
+              "local_pack",
+              "paid"
+            ],
+            "top_url": "bighousemarketing.lu",
+            "url_count": 1
+          },
+          {
+            "keyword": "marketing agency luxembourg",
+            "clicks": 0.0,
+            "traffic_share": 0.0,
+            "competition": null,
+            "primary_intent": null,
+            "secondary_intent": null,
+            "position": null,
+            "serp_features": [
+              "organic",
+              "related_searches",
+              "local_pack",
+              "paid"
+            ],
+            "top_url": "bighousemarketing.lu",
+            "url_count": 1
+          }
+        ]
+      }
+    }
+  },
+  "neoagency.lu": {
+    "total_visits": {
+      "ok": true,
+      "data": {
+        "meta": {
+          "request": {
+            "granularity": "Monthly",
+            "main_domain_only": false,
+            "mtd": false,
+            "show_verified": false,
+            "state": null,
+            "format": "json",
+            "domain": "neoagency.lu",
+            "start_date": "2025-12-01",
+            "end_date": "2026-05-31",
+            "country": "world"
+          },
+          "status": "Success",
+          "last_updated": "2026-05-31",
+          "device": "Total"
+        },
+        "visits": [
+          {
+            "date": "2025-12-01",
+            "visits": 126.0204758751667
+          },
+          {
+            "date": "2026-01-01",
+            "visits": 0.0
+          },
+          {
+            "date": "2026-02-01",
+            "visits": 456.3459550552102
+          },
+          {
+            "date": "2026-03-01",
+            "visits": 1841.0264671299353
+          },
+          {
+            "date": "2026-04-01",
+            "visits": 1981.5525360119932
+          },
+          {
+            "date": "2026-05-01",
+            "visits": 299.52125082804076
+          }
+        ]
+      }
+    },
+    "global_rank": {
+      "ok": true,
+      "data": {
+        "meta": {
+          "request": {
+            "main_domain_only": false,
+            "show_verified": false,
+            "state": null,
+            "format": "json",
+            "domain": "neoagency.lu",
+            "start_date": "2025-12-01",
+            "end_date": "2026-05-31",
+            "country": "world"
+          },
+          "status": "Success",
+          "last_updated": "2026-05-31"
+        },
+        "global_rank": [
+          {
+            "date": "2025-12",
+            "global_rank": 0
+          },
+          {
+            "date": "2026-01",
+            "global_rank": 0
+          },
+          {
+            "date": "2026-02",
+            "global_rank": 0
+          },
+          {
+            "date": "2026-03",
+            "global_rank": 9873390
+          },
+          {
+            "date": "2026-04",
+            "global_rank": 6730212
+          },
+          {
+            "date": "2026-05",
+            "global_rank": 0
+          }
+        ]
+      }
+    },
+    "organic_keywords": {
+      "ok": true,
+      "data": {
+        "meta": {
+          "query": {
+            "limit": 20,
+            "offset": 0,
+            "asc": null,
+            "sort": null
+          },
+          "request": {
+            "branded_type": "all",
+            "keywords_filter_rules": [],
+            "format": "json",
+            "domain": "neoagency.lu",
+            "granularity": "monthly",
+            "country": "ww",
+            "start_date": "2026-03-01",
+            "end_date": "2026-05-31",
+            "traffic_source": "organic",
+            "web_source": "total",
+            "metrics": [
+              "clicks",
+              "traffic_share",
+              "competition",
+              "primary_intent",
+              "secondary_intent",
+              "position",
+              "serp_features",
+              "top_url",
+              "url_count"
+            ]
+          },
+          "status": "success",
+          "last_updated": "2026-05-31"
+        },
+        "data": [
+          {
+            "keyword": "neo agency",
+            "clicks": 260.75949704635764,
+            "traffic_share": 0.5223470172360697,
+            "competition": null,
+            "primary_intent": "Navigational",
+            "secondary_intent": null,
+            "position": null,
+            "serp_features": [
+              "video",
+              "organic",
+              "organic_sitelinks",
+              "organic_expanded_sitelinks",
+              "images",
+              "related_searches",
+              "related_questions"
+            ],
+            "top_url": "neoagency.lu",
+            "url_count": 8
+          },
+          {
+            "keyword": "social media company in luxembourg",
+            "clicks": 62.95754751546339,
+            "traffic_share": 0.12611501222275345,
+            "competition": null,
+            "primary_intent": null,
+            "secondary_intent": null,
+            "position": null,
+            "serp_features": [],
+            "top_url": "neoagency.lu",
+            "url_count": 1
+          },
+          {
+            "keyword": "loriane macaire",
+            "clicks": 48.0517632457236,
+            "traffic_share": 0.0962561114308152,
+            "competition": null,
+            "primary_intent": null,
+            "secondary_intent": null,
+            "position": null,
+            "serp_features": [],
+            "top_url": "neoagency.lu/notre-equipe",
+            "url_count": 1
+          },
+          {
+            "keyword": "neo agency sme package",
+            "clicks": 43.98365535910434,
+            "traffic_share": 0.08810697767177773,
+            "competition": null,
+            "primary_intent": null,
+            "secondary_intent": null,
+            "position": null,
+            "serp_features": [
+              "paid_sitelinks",
+              "paid"
+            ],
+            "top_url": "neoagency.lu/nos-solutions/package-sme-digital",
+            "url_count": 1
+          },
+          {
+            "keyword": "michael gollette",
+            "clicks": 36.0388224342927,
+            "traffic_share": 0.0721920835731114,
+            "competition": null,
+            "primary_intent": null,
+            "secondary_intent": null,
+            "position": null,
+            "serp_features": [],
+            "top_url": "neoagency.lu/notre-equipe",
+            "url_count": 1
+          },
+          {
+            "keyword": "sme package neo",
+            "clicks": 20.539237246635224,
+            "traffic_share": 0.041143695372968796,
+            "competition": null,
+            "primary_intent": null,
+            "secondary_intent": null,
+            "position": null,
+            "serp_features": [
+              "paid_sitelinks",
+              "paid"
+            ],
+            "top_url": "neoagency.lu/nos-solutions/sme-package",
+            "url_count": 1
+          },
+          {
+            "keyword": "website development agency in luxembourg",
+            "clicks": 16.604879404144537,
+            "traffic_share": 0.03326248641589294,
+            "competition": null,
+            "primary_intent": null,
+            "secondary_intent": null,
+            "position": null,
+            "serp_features": [],
+            "top_url": "neoagency.lu",
+            "url_count": 1
+          },
+          {
+            "keyword": "adult seo agency luxembourg",
+            "clicks": 5.576851404784767,
+            "traffic_share": 0.01117141170256295,
+            "competition": null,
+            "primary_intent": null,
+            "secondary_intent": null,
+            "position": null,
+            "serp_features": [],
+            "top_url": "neoagency.lu",
+            "url_count": 1
+          },
+          {
+            "keyword": "marketing agency luxembourg",
+            "clicks": 2.5759060535403275,
+            "traffic_share": 0.005159991712623686,
+            "competition": null,
+            "primary_intent": null,
+            "secondary_intent": null,
+            "position": null,
+            "serp_features": [
+              "organic",
+              "related_searches",
+              "local_pack",
+              "paid"
+            ],
+            "top_url": "neoagency.lu",
+            "url_count": 1
+          },
+          {
+            "keyword": "romain belli",
+            "clicks": 2.119241580635842,
+            "traffic_share": 0.004245212661424131,
+            "competition": null,
+            "primary_intent": null,
+            "secondary_intent": null,
+            "position": null,
+            "serp_features": [
+              "organic",
+              "images",
+              "related_questions"
+            ],
+            "top_url": "neoagency.lu/notre-equipe",
+            "url_count": 2
+          },
+          {
+            "keyword": "sme package",
+            "clicks": 0.0,
+            "traffic_share": 0.0,
+            "competition": null,
+            "primary_intent": null,
+            "secondary_intent": null,
+            "position": null,
+            "serp_features": [
+              "organic",
+              "related_searches",
+              "related_questions",
+              "paid_sitelinks",
+              "paid",
+              "ai_overview"
+            ],
+            "top_url": "neoagency.lu/nos-solutions/sme-package",
+            "url_count": 1
+          }
+        ]
+      }
+    }
+  },
+  "hype.lu": {
+    "total_visits": {
+      "ok": true,
+      "data": {
+        "meta": {
+          "request": {
+            "granularity": "Monthly",
+            "main_domain_only": false,
+            "mtd": false,
+            "show_verified": false,
+            "state": null,
+            "format": "json",
+            "domain": "hype.lu",
+            "start_date": "2025-12-01",
+            "end_date": "2026-05-31",
+            "country": "world"
+          },
+          "status": "Success",
+          "last_updated": "2026-05-31",
+          "device": "Total"
+        },
+        "visits": [
+          {
+            "date": "2025-12-01",
+            "visits": 0.0
+          },
+          {
+            "date": "2026-01-01",
+            "visits": 402.8020084843571
+          },
+          {
+            "date": "2026-02-01",
+            "visits": 969.4628136293603
+          },
+          {
+            "date": "2026-03-01",
+            "visits": 360.0663196196949
+          },
+          {
+            "date": "2026-04-01",
+            "visits": 0.0
+          },
+          {
+            "date": "2026-05-01",
+            "visits": 0.0
+          }
+        ]
+      }
+    },
+    "global_rank": {
+      "ok": true,
+      "data": {
+        "code": "failed_precondition",
+        "message": "api call failed: internal: api call failed, status code: 404, body: {\"meta\":{\"status\":\"Error\",\"error_code\":401,\"error_message\":\"Data not found\"}}"
+      }
+    },
+    "organic_keywords": {
+      "ok": true,
+      "data": {
+        "meta": {
+          "query": {
+            "limit": 20,
+            "offset": 0,
+            "asc": null,
+            "sort": null
+          },
+          "request": {
+            "branded_type": "all",
+            "keywords_filter_rules": [],
+            "format": "json",
+            "domain": "hype.lu",
+            "granularity": "monthly",
+            "country": "ww",
+            "start_date": "2026-03-01",
+            "end_date": "2026-05-31",
+            "traffic_source": "organic",
+            "web_source": "total",
+            "metrics": [
+              "clicks",
+              "traffic_share",
+              "competition",
+              "primary_intent",
+              "secondary_intent",
+              "position",
+              "serp_features",
+              "top_url",
+              "url_count"
+            ]
+          },
+          "status": "success",
+          "last_updated": "2026-05-31"
+        },
+        "data": [
+          {
+            "keyword": "social media company in luxembourg",
+            "clicks": 62.95754751546338,
+            "traffic_share": 0.6349546289094714,
+            "competition": null,
+            "primary_intent": null,
+            "secondary_intent": null,
+            "position": null,
+            "serp_features": [],
+            "top_url": "hype.lu",
+            "url_count": 1
+          },
+          {
+            "keyword": "social media agency in europe",
+            "clicks": 30.444984127827315,
+            "traffic_share": 0.30705109016978926,
+            "competition": null,
+            "primary_intent": null,
+            "secondary_intent": null,
+            "position": null,
+            "serp_features": [
+              "paid"
+            ],
+            "top_url": "hype.lu",
+            "url_count": 1
+          },
+          {
+            "keyword": "adult seo agency luxembourg",
+            "clicks": 5.576851404784767,
+            "traffic_share": 0.05624500562603139,
+            "competition": null,
+            "primary_intent": null,
+            "secondary_intent": null,
+            "position": null,
+            "serp_features": [],
+            "top_url": "hype.lu",
+            "url_count": 1
+          },
+          {
+            "keyword": "hype social",
+            "clicks": 0.1734455935431933,
+            "traffic_share": 0.0017492752947079395,
+            "competition": null,
+            "primary_intent": null,
+            "secondary_intent": null,
+            "position": null,
+            "serp_features": [
+              "organic",
+              "organic_sitelinks",
+              "organic_expanded_sitelinks",
+              "images",
+              "related_searches",
+              "related_questions",
+              "paid_sitelinks",
+              "ai_overview",
+              "paid"
+            ],
+            "top_url": "hype.lu",
+            "url_count": 1
+          },
+          {
+            "keyword": "hype ahence",
+            "clicks": 0.0,
+            "traffic_share": 0.0,
+            "competition": null,
+            "primary_intent": null,
+            "secondary_intent": null,
+            "position": null,
+            "serp_features": [
+              "organic",
+              "images",
+              "related_searches",
+              "related_questions"
+            ],
+            "top_url": "hype.lu",
+            "url_count": 1
+          },
+          {
+            "keyword": "marketing agency luxembourg",
+            "clicks": 0.0,
+            "traffic_share": 0.0,
+            "competition": null,
+            "primary_intent": null,
+            "secondary_intent": null,
+            "position": null,
+            "serp_features": [
+              "organic",
+              "related_searches",
+              "local_pack",
+              "paid"
+            ],
+            "top_url": "hype.lu",
+            "url_count": 1
+          }
+        ]
+      }
+    }
+  },
+  "letzimpact.lu": {
+    "total_visits": {
+      "ok": true,
+      "data": {
+        "code": "failed_precondition",
+        "message": "api call failed: internal: api call failed, status code: 404, body: {\"meta\":{\"status\":\"Error\",\"error_code\":401,\"error_message\":\"Data not found\"}}"
+      }
+    },
+    "global_rank": {
+      "ok": true,
+      "data": {
+        "code": "failed_precondition",
+        "message": "api call failed: internal: api call failed, status code: 404, body: {\"meta\":{\"status\":\"Error\",\"error_code\":401,\"error_message\":\"Data not found\"}}"
+      }
+    },
+    "organic_keywords": {
+      "ok": true,
+      "data": {
+        "meta": {
+          "query": {
+            "limit": 20,
+            "offset": 0,
+            "asc": null,
+            "sort": null
+          },
+          "request": {
+            "branded_type": "all",
+            "keywords_filter_rules": [],
+            "format": "json",
+            "domain": "letzimpact.lu",
+            "granularity": "monthly",
+            "country": "ww",
+            "start_date": "2026-03-01",
+            "end_date": "2026-05-31",
+            "traffic_source": "organic",
+            "web_source": "total",
+            "metrics": [
+              "clicks",
+              "traffic_share",
+              "competition",
+              "primary_intent",
+              "secondary_intent",
+              "position",
+              "serp_features",
+              "top_url",
+              "url_count"
+            ]
+          },
+          "status": "success",
+          "last_updated": "2026-05-31"
+        },
+        "data": []
+      }
+    }
+  }
+}
