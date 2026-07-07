@@ -120,11 +120,6 @@
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     overflow-x: hidden;
-    scroll-behavior: smooth;
-  }
-  html {
-    /* Promote root to own compositing layer for smoother scrolling */
-    -webkit-overflow-scrolling: touch;
   }
   body {
     @apply bg-background text-foreground;
@@ -258,8 +253,6 @@
     min-width: max-content;
     animation: marquee 38s linear infinite;
     will-change: transform;
-    contain: layout style;
-    backface-visibility: hidden;
   }
   @keyframes marquee {
     from {

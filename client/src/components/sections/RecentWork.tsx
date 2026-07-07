@@ -80,6 +80,7 @@ function ReelCard({
   });
 
   const [isPlaying, setIsPlaying] = useState(false);
+  const [isMuted, setIsMuted] = useState(true);
 
   // Pause videos when offscreen so a manually started reel does not keep running.
   useEffect(() => {
@@ -94,7 +95,7 @@ function ReelCard({
     if (!v) return;
 
     if (v.paused) {
-      v.muted = true;
+      v.muted = isMuted;
       const playPromise = v.play();
       if (playPromise && typeof playPromise.catch === "function") {
         playPromise.catch(() => setIsPlaying(false));
@@ -104,6 +105,15 @@ function ReelCard({
       v.pause();
       setIsPlaying(false);
     }
+  };
+
+  const toggleMute = (e: React.MouseEvent) => {
+    e.stopPropagation();
+    const v = videoRef.current;
+    if (!v) return;
+    const newMuted = !isMuted;
+    v.muted = newMuted;
+    setIsMuted(newMuted);
   };
 
   const haloBackgrounds = [
@@ -170,6 +180,30 @@ function ReelCard({
               />
             )}
           </button>
+
+          {/* Sound toggle button — small, bottom-right corner */}
+          {isPlaying && (
+            <button
+              type="button"
+              aria-label={isMuted ? "Unmute video" : "Mute video"}
+              onClick={toggleMute}
+              className="absolute bottom-14 right-2 z-20 flex h-8 w-8 items-center justify-center rounded-full border border-white/20 bg-black/60 text-white backdrop-blur-sm transition duration-200 hover:scale-110 hover:bg-black/80 focus:outline-none sm:h-9 sm:w-9"
+            >
+              {isMuted ? (
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="h-4 w-4 sm:h-[18px] sm:w-[18px]">
+                  <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5" />
+                  <line x1="23" y1="9" x2="17" y2="15" />
+                  <line x1="17" y1="9" x2="23" y2="15" />
+                </svg>
+              ) : (
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="h-4 w-4 sm:h-[18px] sm:w-[18px]">
+                  <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5" />
+                  <path d="M15.54 8.46a5 5 0 0 1 0 7.07" />
+                  <path d="M19.07 4.93a10 10 0 0 1 0 14.14" />
+                </svg>
+              )}
+            </button>
+          )}
 
           {/* gradient frame, subtle brand outline that brightens on hover */}
           <div

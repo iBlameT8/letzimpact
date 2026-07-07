@@ -47,16 +47,7 @@ export function FloatingWhatsApp() {
   const { copy } = useI18n();
 
   useEffect(() => {
-    let ticking = false;
-    const onScroll = () => {
-      if (!ticking) {
-        ticking = true;
-        requestAnimationFrame(() => {
-          setShow(window.scrollY > 600);
-          ticking = false;
-        });
-      }
-    };
+    const onScroll = () => setShow(window.scrollY > 600);
     onScroll();
     window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
