@@ -91,6 +91,18 @@ export const COPY = {
           description:
             "An interview style social cut with a calm interior look and a clear message.",
         },
+        {
+          brand: "GridX",
+          label: "Auto museum rally",
+          description:
+            "A high-energy rally video for GridX showcasing their auto museum event with dynamic car footage.",
+        },
+        {
+          brand: "GridX",
+          label: "Family Day festival",
+          description:
+            "A vibrant Family Day festival video for GridX capturing the energy and community spirit of the event.",
+        },
       ],
     },
     services: {
@@ -415,6 +427,18 @@ export const COPY = {
           label: "Interview client",
           description:
             "Un cut social en style interview avec une ambiance intérieure calme et un message clair.",
+        },
+        {
+          brand: "GridX",
+          label: "Rallye musée auto",
+          description:
+            "Une vidéo rallye dynamique pour GridX mettant en scène leur événement musée automobile avec des images de voitures percutantes.",
+        },
+        {
+          brand: "GridX",
+          label: "Festival Family Day",
+          description:
+            "Une vidéo vibrante du Family Day pour GridX capturant l'énergie et l'esprit communautaire de l'événement.",
         },
       ],
     },
@@ -741,6 +765,18 @@ export const COPY = {
           label: "Client Interview",
           description:
             "E Social Cut am Interview Stil mat enger roueger Atmosphär dobannen an engem klore Message.",
+        },
+        {
+          brand: "GridX",
+          label: "Auto Musee Rallye",
+          description:
+            "En dynamescht Rallye Video fir GridX dat hiert Auto Musee Event mat flotten Autobillder weist.",
+        },
+        {
+          brand: "GridX",
+          label: "Family Day Festival",
+          description:
+            "E lieweg Family Day Festival Video fir GridX dat d'Energie an de Communautéitsgeescht vum Event afänkt.",
         },
       ],
     },

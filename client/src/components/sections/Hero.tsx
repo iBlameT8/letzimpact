@@ -22,6 +22,7 @@ const CLIENT_LOGOS: ClientLogo[] = [
     alt: "ÄR Secherheet Security",
   },
   { src: "/partners/asad-gym.png", alt: "ASAD Gym" },
+  { src: "/partners/gridx.png", alt: "GridX" },
 ];
 
 const PARTNER_MARQUEE_COPIES = 5;
