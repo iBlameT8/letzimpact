@@ -1,20 +1,329 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 
   <head>
     <meta charset="UTF-8" />
     <meta
       name="viewport"
-      content="width=device-width, initial-scale=1.0, maximum-scale=1" />
-    <title>LëtzImpact</title>    
-    <!-- THIS IS THE START OF A COMMENT BLOCK, BLOCK TO BE DELETED: Google Fonts here, example:
+      content="width=device-width, initial-scale=1.0, maximum-scale=5, viewport-fit=cover" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/brand/favicon-32.png" />
+    <link rel="icon" type="image/png" sizes="512x512" href="/brand/favicon-512.png" />
+    <link rel="apple-touch-icon" href="/brand/apple-touch-icon.png" />
+    <link rel="canonical" href="https://letzimpact.lu/" />
+
+    <!-- hreflang: signal multilingual relevance for Luxembourg -->
+    <link rel="alternate" hreflang="en" href="https://letzimpact.lu/" />
+    <link rel="alternate" hreflang="fr" href="https://letzimpact.lu/" />
+    <link rel="alternate" hreflang="de" href="https://letzimpact.lu/" />
+    <link rel="alternate" hreflang="lb" href="https://letzimpact.lu/" />
+    <link rel="alternate" hreflang="x-default" href="https://letzimpact.lu/" />
+
+    <title>LëtzImpact | Social Media Agency Luxembourg – Marketing, Content & Video Production</title>
+    <meta name="description" content="LëtzImpact is the leading social media agency in Luxembourg. Based in Schifflange, we create Reels, TikToks, video content, marketing strategies and manage social media for businesses across Luxembourg. Agence social media et marketing au Luxembourg. Social Media Agentur Luxemburg." />
+    <meta name="keywords" content="LëtzImpact, LëtzImpact Luxembourg, LëtzImpact Schifflange, LetzImpact, LetzImpact Luxembourg, LetsImpact, Lets Impact, Lets Impact Luxembourg, Letz Impact, Lëtz Impact, LettsImpact, LëtzImpact Agency, LëtzImpact Agentur, Social Media Agency Luxembourg, social media company in Luxembourg, social media agency in Europe, marketing agency Luxembourg, agence social media Luxembourg, agence marketing Luxembourg, Social Media Agentur Luxemburg, Marketing Agentur Luxemburg, Marketing Firma Luxemburg, Production Firma Luxemburg, Content Production Luxembourg, Video Production Luxembourg, Filming Agency Luxembourg, Reels production Luxembourg, TikTok marketing Luxembourg, Instagram marketing Luxembourg, social media management Luxembourg, community management Luxembourg, content creation Luxembourg, short form video Luxembourg, digital marketing Luxembourg, publicité digitale Luxembourg, création de contenu Luxembourg, stratégie social media Luxembourg, gestion réseaux sociaux Luxembourg, Videoproduktion Luxemburg, Kurzvideos Luxemburg, Social Media Management Luxemburg, Marketingagentur Luxemburg, Werbeagentur Luxemburg, Digitalagentur Luxemburg, social media Schifflange, marketing Schifflange, agence Schifflange, best marketing agency Luxembourg, beste Marketingagentur Luxemburg, meilleure agence marketing Luxembourg" />
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+    <meta name="author" content="LëtzImpact Agency" />
+    <meta name="theme-color" content="#07060B" />
+    <meta name="geo.region" content="LU" />
+    <meta name="geo.placename" content="Schifflange" />
+    <meta name="geo.position" content="49.4748;5.9319" />
+    <meta name="ICBM" content="49.4748, 5.9319" />
+    <meta name="language" content="en, fr, de, lb" />
+
+    <!-- Meta Pixel Code -->
+    <script>
+      !function(f,b,e,v,n,t,s)
+      {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+      n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+      if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+      n.queue=[];t=b.createElement(e);t.async=!0;
+      t.src=v;s=b.getElementsByTagName(e)[0];
+      s.parentNode.insertBefore(t,s)}(window, document,'script',
+      'https://connect.facebook.net/en_US/fbevents.js');
+      fbq('init', '812229225220728');
+      fbq('track', 'PageView');
+    </script>
+    <!-- End Meta Pixel Code -->
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="en_LU" />
+    <meta property="og:locale:alternate" content="fr_LU" />
+    <meta property="og:locale:alternate" content="de_LU" />
+    <meta property="og:locale:alternate" content="lb_LU" />
+    <meta property="og:site_name" content="LëtzImpact" />
+    <meta property="og:title" content="LëtzImpact | Social Media Agency Luxembourg – Marketing & Content Production" />
+    <meta property="og:description" content="Luxembourg's social media and marketing production agency based in Schifflange. Reels, TikToks, content creation, video production, strategy and social media management for ambitious businesses." />
+    <meta property="og:url" content="https://letzimpact.lu/" />
+    <meta property="og:image" content="https://letzimpact.lu/brand/letzimpact-og.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="LëtzImpact – Social Media Agency Luxembourg" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="LëtzImpact | Social Media Agency Luxembourg" />
+    <meta name="twitter:description" content="Social media, marketing production, content creation and video production for ambitious businesses across Luxembourg." />
+    <meta name="twitter:image" content="https://letzimpact.lu/brand/letzimpact-og.png" />
+    <meta name="twitter:image:alt" content="LëtzImpact – Social Media Agency Luxembourg" />
+
+    <!-- Structured Data: JSON-LD -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "Organization",
+            "@id": "https://letzimpact.lu/#organization",
+            "name": "LëtzImpact",
+            "legalName": "LëtzImpact Agency",
+            "alternateName": [
+              "LetzImpact",
+              "LetsImpact",
+              "Lets Impact",
+              "Lëtz Impact",
+              "Letz Impact",
+              "LettsImpact",
+              "LëtzImpact Luxembourg",
+              "LetzImpact Luxembourg",
+              "LetsImpact Luxembourg",
+              "LëtzImpact Luxemburg",
+              "LëtzImpact Agentur",
+              "LëtzImpact Agency",
+              "Marketing Firma LëtzImpact",
+              "Production Firma LëtzImpact"
+            ],
+            "url": "https://letzimpact.lu/",
+            "logo": {
+              "@type": "ImageObject",
+              "url": "https://letzimpact.lu/brand/letzimpact-logo.png",
+              "width": 512,
+              "height": 512
+            },
+            "image": "https://letzimpact.lu/brand/letzimpact-og.png",
+            "email": "info@letzimpact.lu",
+            "telephone": "+352621576556",
+            "foundingDate": "2025",
+            "numberOfEmployees": { "@type": "QuantitativeValue", "minValue": 2, "maxValue": 10 },
+            "slogan": "Social media that actually works.",
+            "description": "LëtzImpact is a social media agency and marketing production company in Luxembourg, specializing in Reels, TikToks, video content, social media management and digital marketing for local businesses.",
+            "sameAs": [
+              "https://www.instagram.com/letzimpact_/",
+              "https://www.tiktok.com/@letzimpact",
+              "https://share.google/BYmBT5Mey19YNuy1C"
+            ],
+            "contactPoint": [
+              {
+                "@type": "ContactPoint",
+                "telephone": "+352621576556",
+                "contactType": "customer service",
+                "availableLanguage": ["English", "French", "German", "Luxembourgish"],
+                "areaServed": "LU"
+              }
+            ],
+            "founder": [
+              { "@type": "Person", "name": "Anas", "jobTitle": "Co-Founder" },
+              { "@type": "Person", "name": "Dzenan", "jobTitle": "Co-Founder" }
+            ]
+          },
+          {
+            "@type": ["ProfessionalService", "LocalBusiness", "MarketingAgency"],
+            "@id": "https://letzimpact.lu/#localbusiness",
+            "name": "LëtzImpact",
+            "alternateName": ["LetzImpact", "LetsImpact", "Lets Impact", "Lëtz Impact", "Letz Impact", "LettsImpact", "Marketing Firma LëtzImpact", "Production Firma LëtzImpact"],
+            "url": "https://letzimpact.lu/",
+            "image": "https://letzimpact.lu/brand/letzimpact-og.png",
+            "email": "info@letzimpact.lu",
+            "telephone": "+352621576556",
+            "address": {
+              "@type": "PostalAddress",
+              "streetAddress": "68 Rue de l'Église",
+              "postalCode": "3833",
+              "addressLocality": "Schifflange",
+              "addressRegion": "Esch-sur-Alzette",
+              "addressCountry": "LU"
+            },
+            "geo": {
+              "@type": "GeoCoordinates",
+              "latitude": 49.4748,
+              "longitude": 5.9319
+            },
+            "hasMap": "https://share.google/BYmBT5Mey19YNuy1C",
+            "priceRange": "€€",
+            "currenciesAccepted": "EUR",
+            "paymentAccepted": "Cash, Bank Transfer, Credit Card",
+            "openingHoursSpecification": [
+              {
+                "@type": "OpeningHoursSpecification",
+                "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+                "opens": "09:00",
+                "closes": "18:00"
+              }
+            ],
+            "areaServed": [
+              { "@type": "Country", "name": "Luxembourg" },
+              { "@type": "City", "name": "Schifflange" },
+              { "@type": "City", "name": "Esch-sur-Alzette" },
+              { "@type": "City", "name": "Luxembourg City" },
+              { "@type": "City", "name": "Differdange" },
+              { "@type": "City", "name": "Dudelange" },
+              { "@type": "City", "name": "Bettembourg" }
+            ],
+            "availableLanguage": ["English", "French", "German", "Luxembourgish"],
+            "knowsAbout": [
+              "Social Media Marketing",
+              "Social Media Management",
+              "Content Creation",
+              "Video Production",
+              "Instagram Reels",
+              "TikTok Marketing",
+              "Short Form Video Content",
+              "Digital Marketing Strategy",
+              "Community Management",
+              "Brand Strategy",
+              "Influencer Marketing",
+              "Facebook Ads",
+              "Instagram Ads",
+              "TikTok Ads",
+              "Google Ads",
+              "SEO Luxembourg",
+              "Publicité digitale",
+              "Création de contenu",
+              "Stratégie social media",
+              "Gestion des réseaux sociaux",
+              "Videoproduktion",
+              "Social Media Betreuung",
+              "Marketingstrategie",
+              "Werbekampagnen",
+              "Kurzvideos"
+            ],
+            "hasOfferCatalog": {
+              "@type": "OfferCatalog",
+              "name": "Social Media & Marketing Services",
+              "itemListElement": [
+                {
+                  "@type": "OfferCatalog",
+                  "name": "Social Media Services",
+                  "itemListElement": [
+                    { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Social Media Management Luxembourg", "description": "Full social media management including content planning, posting, community management and analytics for businesses in Luxembourg." } },
+                    { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Community Management", "description": "Active community engagement, comment management and audience growth strategies." } },
+                    { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Social Media Strategy", "description": "Custom social media strategies aligned with business goals for maximum impact in Luxembourg." } }
+                  ]
+                },
+                {
+                  "@type": "OfferCatalog",
+                  "name": "Content Production Services",
+                  "itemListElement": [
+                    { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Video Production Luxembourg", "description": "Professional video production for social media including Reels, TikToks, brand films and promotional videos." } },
+                    { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Instagram Reels Production", "description": "Creative short-form Reels content designed for engagement and growth on Instagram." } },
+                    { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "TikTok Content Creation", "description": "Trend-driven TikTok videos that build brand awareness and drive engagement." } },
+                    { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Content Creation Luxembourg", "description": "End-to-end content creation from concept to final edit for all social media platforms." } }
+                  ]
+                },
+                {
+                  "@type": "OfferCatalog",
+                  "name": "Marketing & Advertising Services",
+                  "itemListElement": [
+                    { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Digital Marketing Luxembourg", "description": "Comprehensive digital marketing solutions including paid ads, organic growth and performance marketing." } },
+                    { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Facebook & Instagram Ads", "description": "Targeted paid advertising campaigns on Meta platforms to generate leads and sales." } },
+                    { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Marketing Strategy Luxembourg", "description": "Data-driven marketing strategies tailored for the Luxembourg market." } }
+                  ]
+                }
+              ]
+            },
+            "parentOrganization": { "@id": "https://letzimpact.lu/#organization" },
+            "aggregateRating": {
+              "@type": "AggregateRating",
+              "ratingValue": "5.0",
+              "reviewCount": "12",
+              "bestRating": "5",
+              "worstRating": "1"
+            }
+          },
+          {
+            "@type": "WebSite",
+            "@id": "https://letzimpact.lu/#website",
+            "url": "https://letzimpact.lu/",
+            "name": "LëtzImpact",
+            "alternateName": ["LetzImpact", "LetsImpact", "Lets Impact"],
+            "publisher": { "@id": "https://letzimpact.lu/#organization" },
+            "inLanguage": ["en", "fr", "de", "lb"],
+            "potentialAction": {
+              "@type": "SearchAction",
+              "target": "https://letzimpact.lu/?q={search_term_string}",
+              "query-input": "required name=search_term_string"
+            }
+          },
+          {
+            "@type": "WebPage",
+            "@id": "https://letzimpact.lu/#webpage",
+            "url": "https://letzimpact.lu/",
+            "name": "LëtzImpact | Social Media Agency Luxembourg – Marketing, Content & Video Production",
+            "isPartOf": { "@id": "https://letzimpact.lu/#website" },
+            "about": { "@id": "https://letzimpact.lu/#organization" },
+            "description": "LëtzImpact is the leading social media agency in Luxembourg, offering content creation, video production, marketing strategy and social media management.",
+            "inLanguage": "en",
+            "breadcrumb": { "@id": "https://letzimpact.lu/#breadcrumb" }
+          },
+          {
+            "@type": "BreadcrumbList",
+            "@id": "https://letzimpact.lu/#breadcrumb",
+            "itemListElement": [
+              { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://letzimpact.lu/" }
+            ]
+          },
+          {
+            "@type": "FAQPage",
+            "@id": "https://letzimpact.lu/#faq",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "What does LëtzImpact do?",
+                "acceptedAnswer": { "@type": "Answer", "text": "LëtzImpact is a Luxembourg social media agency and marketing production agency based in Schifflange. The agency plans, films and manages short form content, Reels, TikToks, strategy, campaigns and social media management for local businesses across Luxembourg." }
+              },
+              {
+                "@type": "Question",
+                "name": "Do you work with businesses across Luxembourg?",
+                "acceptedAnswer": { "@type": "Answer", "text": "Yes. LëtzImpact works with businesses across all of Luxembourg, including restaurants, architects, doctors, lawyers, cleaning companies, construction companies, real estate brands, apps and startups in cities like Schifflange, Esch-sur-Alzette, Luxembourg City, Differdange, Dudelange and Bettembourg." }
+              },
+              {
+                "@type": "Question",
+                "name": "Can you create Instagram and TikTok content for my company?",
+                "acceptedAnswer": { "@type": "Answer", "text": "Yes. LëtzImpact creates Instagram Reels, TikToks and short form video content designed to look professional, fit the brand and support performance on social media platforms." }
+              },
+              {
+                "@type": "Question",
+                "name": "Was macht LëtzImpact?",
+                "acceptedAnswer": { "@type": "Answer", "text": "LëtzImpact ist eine Social Media Agentur und Marketing-Produktionsfirma in Luxemburg mit Sitz in Schifflange. Wir erstellen Reels, TikToks, Kurzvideos, entwickeln Strategien und betreuen Social Media für lokale Unternehmen in ganz Luxemburg." }
+              },
+              {
+                "@type": "Question",
+                "name": "Que fait LëtzImpact ?",
+                "acceptedAnswer": { "@type": "Answer", "text": "LëtzImpact est une agence social media et de production marketing au Luxembourg, basée à Schifflange. Nous créons des Reels, TikToks, vidéos courtes, développons des stratégies et gérons les réseaux sociaux pour les entreprises locales à travers le Luxembourg." }
+              },
+              {
+                "@type": "Question",
+                "name": "How much does social media management cost in Luxembourg?",
+                "acceptedAnswer": { "@type": "Answer", "text": "LëtzImpact offers flexible packages for social media management in Luxembourg starting from affordable monthly plans. Contact us via WhatsApp or email for a custom quote tailored to your business needs." }
+              },
+              {
+                "@type": "Question",
+                "name": "Which social media platforms does LëtzImpact manage?",
+                "acceptedAnswer": { "@type": "Answer", "text": "LëtzImpact manages Instagram, TikTok, Facebook, LinkedIn and other social media platforms. We specialize in short-form video content like Reels and TikToks that drive engagement and growth." }
+              }
+            ]
+          }
+        ]
+      }
+    </script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
-    THIS IS THE END OF A COMMENT BLOCK, BLOCK TO BE DELETED -->
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
   </head>
 
   <body>
+    <!-- Meta Pixel noscript fallback -->
+    <noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=812229225220728&ev=PageView&noscript=1" /></noscript>
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
     <script
