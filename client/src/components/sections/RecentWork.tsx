@@ -25,52 +25,52 @@ type ReelCopy = {
 
 const REEL_ASSETS: ReelAsset[] = [
   {
-    src: "/manus-storage/oasis_e80a48a4.mp4",
-    poster: "/manus-storage/oasis_38a87348.jpg",
-    offsetClass: "",
-    rotateClass: "",
+    src: "/videos/oasis.mp4",
+    poster: "/videos/posters/oasis.jpg",
+    offsetClass: "lg:-translate-y-5 xl:-translate-y-6",
+    rotateClass: "lg:-rotate-[1.4deg]",
   },
   {
-    src: "/manus-storage/amhome_f6a06623.mp4",
-    poster: "/manus-storage/amhome_fce26f92.jpg",
-    offsetClass: "",
-    rotateClass: "",
+    src: "/videos/amhome.mp4",
+    poster: "/videos/posters/amhome.jpg",
+    offsetClass: "lg:translate-y-4 xl:translate-y-5",
+    rotateClass: "lg:rotate-[0.8deg]",
   },
   {
-    src: "/manus-storage/salonkee_7afc0af9.mp4",
-    poster: "/manus-storage/salonkee_5c3f1b75.jpg",
-    offsetClass: "",
-    rotateClass: "",
+    src: "/videos/salonkee.mp4",
+    poster: "/videos/posters/salonkee.jpg",
+    offsetClass: "lg:-translate-y-2 xl:-translate-y-3",
+    rotateClass: "lg:rotate-[1.2deg]",
   },
   {
-    src: "/manus-storage/am-construction_f280d1ab.mp4",
-    poster: "/manus-storage/am-construction_0a8eab3a.jpg",
-    offsetClass: "",
-    rotateClass: "",
+    src: "/videos/am-construction.mp4",
+    poster: "/videos/posters/am-construction.jpg",
+    offsetClass: "lg:translate-y-6 xl:translate-y-7",
+    rotateClass: "lg:-rotate-[0.9deg]",
   },
   {
-    src: "/manus-storage/neteco-faq_dd87c246.mp4",
-    poster: "/manus-storage/neteco-faq_e552eaee.jpg",
-    offsetClass: "",
-    rotateClass: "",
+    src: "/videos/neteco-faq.mp4",
+    poster: "/videos/posters/neteco-faq.jpg",
+    offsetClass: "lg:-translate-y-4 xl:-translate-y-5",
+    rotateClass: "lg:rotate-[1.5deg]",
   },
   {
-    src: "/manus-storage/as_fc24247e.mp4",
-    poster: "/manus-storage/as_903db6a3.jpg",
-    offsetClass: "",
-    rotateClass: "",
+    src: "/videos/as.mp4",
+    poster: "/videos/posters/as.jpg",
+    offsetClass: "lg:translate-y-3 xl:translate-y-4",
+    rotateClass: "lg:-rotate-[1.1deg]",
   },
   {
-    src: "/manus-storage/gridx-rally_64f5aa8e.mp4",
-    poster: "/manus-storage/gridx-rally_457c988c.jpg",
-    offsetClass: "",
-    rotateClass: "",
+    src: "/videos/gridx-familyday.mp4",
+    poster: "/videos/posters/gridx-familyday.jpg",
+    offsetClass: "lg:-translate-y-3 xl:-translate-y-4",
+    rotateClass: "lg:rotate-[1.0deg]",
   },
   {
-    src: "/manus-storage/gridx-familyday_165380d9.mp4",
-    poster: "/manus-storage/gridx-familyday_f8a997e2.jpg",
-    offsetClass: "",
-    rotateClass: "",
+    src: "/videos/gridx-rally.mp4",
+    poster: "/videos/posters/gridx-rally.jpg",
+    offsetClass: "lg:translate-y-5 xl:translate-y-6",
+    rotateClass: "lg:-rotate-[1.3deg]",
   },
 ];
 
@@ -247,7 +247,7 @@ export function RecentWork() {
           </p>
         </div>
 
-        <div className="grid min-w-0 grid-cols-2 items-start gap-4 sm:grid-cols-2 sm:gap-5 md:grid-cols-4 lg:gap-5 xl:gap-6">
+        <div className="grid min-w-0 grid-cols-2 items-start gap-4 sm:grid-cols-3 sm:gap-5 lg:gap-6 xl:grid-cols-6 xl:gap-5">
           {REEL_ASSETS.map((asset, i) => (
             <ReelCard
               key={asset.src}

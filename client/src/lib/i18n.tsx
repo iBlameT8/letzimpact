@@ -51,7 +51,7 @@ export const COPY = {
       heading: "A few projects from the",
       highlight: "last few weeks.",
       intro:
-        "Six short cuts from app, real estate, construction, cleaning, interviews and café work in Luxembourg. Same compact reel look, same clean style, built for modern social media marketing.",
+        "Eight short cuts from app, real estate, construction, cleaning, interviews, café and event work in Luxembourg. Same compact reel look, same clean style, built for modern social media marketing.",
       play: "Play",
       pause: "Pause",
       reels: [
@@ -93,15 +93,15 @@ export const COPY = {
         },
         {
           brand: "GridX",
-          label: "Auto museum rally",
+          label: "Family Day · event recap",
           description:
-            "A high-energy rally video for GridX showcasing their auto museum event with dynamic car footage.",
+            "A Family Day event recap for GridX covering the activities and energy of the day.",
         },
         {
           brand: "GridX",
-          label: "Family Day festival",
+          label: "Car museum · venue tour",
           description:
-            "A vibrant Family Day festival video for GridX capturing the energy and community spirit of the event.",
+            "A short tour of the GridX car museum capturing the venue and its collection.",
         },
       ],
     },
@@ -388,7 +388,7 @@ export const COPY = {
       heading: "Quelques projets des",
       highlight: "dernières semaines.",
       intro:
-        "Six cuts courts autour d'une app, de l'immobilier, de la construction, du nettoyage, d'interviews et d'un café. Même format compact, même style propre.",
+        "Huit cuts courts autour d'une app, de l'immobilier, de la construction, du nettoyage, d'interviews, d'un café et d'événements. Même format compact, même style propre.",
       play: "Lire",
       pause: "Pause",
       reels: [
@@ -430,15 +430,15 @@ export const COPY = {
         },
         {
           brand: "GridX",
-          label: "Rallye musée auto",
+          label: "Family Day · récap événement",
           description:
-            "Une vidéo rallye dynamique pour GridX mettant en scène leur événement musée automobile avec des images de voitures percutantes.",
+            "Un récap du Family Day de GridX couvrant les activités et l'énergie de la journée.",
         },
         {
           brand: "GridX",
-          label: "Festival Family Day",
+          label: "Musée automobile · visite du lieu",
           description:
-            "Une vidéo vibrante du Family Day pour GridX capturant l'énergie et l'esprit communautaire de l'événement.",
+            "Une courte visite du musée automobile GridX capturant le lieu et sa collection.",
         },
       ],
     },
@@ -726,7 +726,7 @@ export const COPY = {
       heading: "E puer Projeten aus de",
       highlight: "leschte Wochen.",
       intro:
-        "Sechs kuerz Schnëtter aus App, Immobilie, Bau, Botzen, Interviewen a Café Aarbechten. Dat selwecht kompakt Reel Format, dee selwechte propperen Stil.",
+        "Aacht kuerz Schnëtter aus App, Immobilie, Bau, Botzen, Interviewen, Café an Event Aarbechten. Dat selwecht kompakt Reel Format, dee selwechte propperen Stil.",
       play: "Ofspillen",
       pause: "Paus",
       reels: [
@@ -768,15 +768,15 @@ export const COPY = {
         },
         {
           brand: "GridX",
-          label: "Auto Musee Rallye",
+          label: "Family Day · Event Recap",
           description:
-            "En dynamescht Rallye Video fir GridX dat hiert Auto Musee Event mat flotten Autobillder weist.",
+            "En Event Recap vum GridX Family Day mat den Aktivitéiten an der Energie vum Dag.",
         },
         {
           brand: "GridX",
-          label: "Family Day Festival",
+          label: "Automusée · Lieu Tour",
           description:
-            "E lieweg Family Day Festival Video fir GridX dat d'Energie an de Communautéitsgeescht vum Event afänkt.",
+            "E kuerze Tour vum GridX Automusée mat dem Lieu a senger Kollektioun.",
         },
       ],
     },
