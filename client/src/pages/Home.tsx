@@ -1,42 +1,25 @@
-// LëtzImpact — Neon Atelier
-// Page composition. Style commitments enforced everywhere:
-// - Background: deep night #07060B; foreground off-white #EDEAF1
-// - Brand gradient: #EC12D8 → #A250E3 → #4CC9F0
-// - Display font: Space Grotesk, body: Inter, mono accents: Space Mono
-// - Glass surfaces, magnetic buttons, ease [0.22, 1, 0.36, 1]
-// - Asymmetric layout, no purple-gradient spam, no Inter as display.
+import { Button } from "@/components/ui/button";
+import { Loader2 } from "lucide-react";
+import { Streamdown } from 'streamdown';
 
-import { CursorGlow } from "@/components/CursorGlow";
-import { FloatingWhatsApp } from "@/components/FloatingWhatsApp";
-import { SiteNav } from "@/components/SiteNav";
-import { ContactFooter } from "@/components/sections/ContactFooter";
-import { FAQ } from "@/components/sections/FAQ";
-import { Founders } from "@/components/sections/Founders";
-import { Hero, PartnerStrip } from "@/components/sections/Hero";
-import { Packages } from "@/components/sections/Packages";
-import { Process } from "@/components/sections/Process";
-import { RecentWork } from "@/components/sections/RecentWork";
-import { Services } from "@/components/sections/Services";
-
+/**
+ * All content in this page are only for example, replace with your own feature implementation
+ * When building pages, remember your instructions in Frontend Best Practices, Design Guide and Common Pitfalls
+ */
 export default function Home() {
+  // If theme is switchable in App.tsx, we can implement theme toggling like this:
+  // const { theme, toggleTheme } = useTheme();
+
   return (
-    <div className="relative isolate min-h-screen overflow-x-clip bg-[#07060B] text-[#EDEAF1] selection:bg-[#EC12D8]/40">
-      <CursorGlow />
-      <SiteNav />
-
-      <main className="relative">
-        <Hero />
-        <RecentWork />
-        <PartnerStrip />
-        <Services />
-        <Process />
-        <Packages />
-        <Founders />
-        <FAQ />
-        <ContactFooter />
+    <div className="min-h-screen flex flex-col">
+      <main>
+        {/* Example: lucide-react for icons */}
+        <Loader2 className="animate-spin" />
+        Example Page
+        {/* Example: Streamdown for markdown rendering */}
+        <Streamdown>Any **markdown** content</Streamdown>
+        <Button variant="default">Example Button</Button>
       </main>
-
-      <FloatingWhatsApp />
     </div>
   );
 }
