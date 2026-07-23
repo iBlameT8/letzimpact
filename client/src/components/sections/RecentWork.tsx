@@ -5,6 +5,9 @@
 // the partner strip. Reels stay poster-only until visitors choose to play them,
 // keeping the initial page load light. Playback remains muted and pauses when
 // offscreen to save CPU and mobile data.
+//
+// Layout: 2 cols on mobile, 4 cols on md+, 4 cols on xl — two rows of 4.
+// GridX videos (indices 6 & 7) are highlighted with a subtle brand accent.
 
 import { motion, useInView } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
@@ -15,6 +18,7 @@ type ReelAsset = {
   poster: string;
   offsetClass: string;
   rotateClass: string;
+  isGridX?: boolean;
 };
 
 type ReelCopy = {
@@ -27,50 +31,52 @@ const REEL_ASSETS: ReelAsset[] = [
   {
     src: "/videos/oasis.mp4",
     poster: "/videos/posters/oasis.jpg",
-    offsetClass: "lg:-translate-y-5 xl:-translate-y-6",
-    rotateClass: "lg:-rotate-[1.4deg]",
+    offsetClass: "md:-translate-y-4 xl:-translate-y-5",
+    rotateClass: "md:-rotate-[1.4deg]",
   },
   {
     src: "/videos/amhome.mp4",
     poster: "/videos/posters/amhome.jpg",
-    offsetClass: "lg:translate-y-4 xl:translate-y-5",
-    rotateClass: "lg:rotate-[0.8deg]",
+    offsetClass: "md:translate-y-3 xl:translate-y-4",
+    rotateClass: "md:rotate-[0.8deg]",
   },
   {
     src: "/videos/salonkee.mp4",
     poster: "/videos/posters/salonkee.jpg",
-    offsetClass: "lg:-translate-y-2 xl:-translate-y-3",
-    rotateClass: "lg:rotate-[1.2deg]",
+    offsetClass: "md:-translate-y-2 xl:-translate-y-3",
+    rotateClass: "md:rotate-[1.2deg]",
   },
   {
     src: "/videos/am-construction.mp4",
     poster: "/videos/posters/am-construction.jpg",
-    offsetClass: "lg:translate-y-6 xl:translate-y-7",
-    rotateClass: "lg:-rotate-[0.9deg]",
+    offsetClass: "md:translate-y-5 xl:translate-y-6",
+    rotateClass: "md:-rotate-[0.9deg]",
   },
   {
     src: "/videos/neteco-faq.mp4",
     poster: "/videos/posters/neteco-faq.jpg",
-    offsetClass: "lg:-translate-y-4 xl:-translate-y-5",
-    rotateClass: "lg:rotate-[1.5deg]",
+    offsetClass: "md:-translate-y-3 xl:-translate-y-4",
+    rotateClass: "md:rotate-[1.5deg]",
   },
   {
     src: "/videos/as.mp4",
     poster: "/videos/posters/as.jpg",
-    offsetClass: "lg:translate-y-3 xl:translate-y-4",
-    rotateClass: "lg:-rotate-[1.1deg]",
+    offsetClass: "md:translate-y-4 xl:translate-y-5",
+    rotateClass: "md:-rotate-[1.1deg]",
   },
   {
     src: "/videos/gridx-familyday.mp4",
     poster: "/videos/posters/gridx-familyday.jpg",
-    offsetClass: "lg:-translate-y-3 xl:-translate-y-4",
-    rotateClass: "lg:rotate-[1.0deg]",
+    offsetClass: "md:-translate-y-5 xl:-translate-y-6",
+    rotateClass: "md:rotate-[1.0deg]",
+    isGridX: true,
   },
   {
     src: "/videos/gridx-rally.mp4",
     poster: "/videos/posters/gridx-rally.jpg",
-    offsetClass: "lg:translate-y-5 xl:translate-y-6",
-    rotateClass: "lg:-rotate-[1.3deg]",
+    offsetClass: "md:translate-y-3 xl:translate-y-4",
+    rotateClass: "md:-rotate-[1.3deg]",
+    isGridX: true,
   },
 ];
 
@@ -124,6 +130,11 @@ function ReelCard({
     "radial-gradient(closest-side, rgba(162,80,227,0.28), transparent 70%)",
   ];
 
+  // GridX cards get a slightly stronger cyan halo
+  const halo = asset.isGridX
+    ? "radial-gradient(closest-side, rgba(76,201,240,0.38), transparent 70%)"
+    : haloBackgrounds[index % haloBackgrounds.length];
+
   return (
     <motion.div
       ref={containerRef}
@@ -141,11 +152,17 @@ function ReelCard({
       <div
         aria-hidden
         className="pointer-events-none absolute inset-0 -z-10 rounded-[24px] opacity-45 blur-2xl"
-        style={{ background: haloBackgrounds[index % haloBackgrounds.length] }}
+        style={{ background: halo }}
       />
 
       {/* Tile body */}
-      <div className="relative min-w-0 overflow-hidden rounded-[24px] bg-white/[0.04] ring-1 ring-white/10 backdrop-blur-md transition-transform duration-500 group-hover:-translate-y-1.5">
+      <div
+        className={`relative min-w-0 overflow-hidden rounded-[24px] bg-white/[0.04] backdrop-blur-md transition-transform duration-500 group-hover:-translate-y-1.5 ${
+          asset.isGridX
+            ? "ring-1 ring-[#4CC9F0]/30"
+            : "ring-1 ring-white/10"
+        }`}
+      >
         <div className="relative aspect-[9/16] w-full">
           <video
             ref={videoRef}
@@ -183,14 +200,14 @@ function ReelCard({
             )}
           </button>
 
-
           {/* gradient frame, subtle brand outline that brightens on hover */}
           <div
             aria-hidden
             className="pointer-events-none absolute inset-0 rounded-[24px] opacity-60 transition-opacity duration-300 group-hover:opacity-100"
             style={{
-              boxShadow:
-                "inset 0 0 0 1px rgba(255,255,255,0.08), inset 0 0 52px rgba(236,18,216,0.06)",
+              boxShadow: asset.isGridX
+                ? "inset 0 0 0 1px rgba(76,201,240,0.18), inset 0 0 52px rgba(76,201,240,0.08)"
+                : "inset 0 0 0 1px rgba(255,255,255,0.08), inset 0 0 52px rgba(236,18,216,0.06)",
             }}
           />
 
@@ -206,9 +223,11 @@ function ReelCard({
             </div>
             <span
               aria-hidden
-              className="relative inline-flex h-2 w-2 shrink-0 rounded-full bg-[#EC12D8]"
+              className={`relative inline-flex h-2 w-2 shrink-0 rounded-full ${asset.isGridX ? "bg-[#4CC9F0]" : "bg-[#EC12D8]"}`}
             >
-              <span className="absolute inset-0 animate-ping rounded-full bg-[#EC12D8] opacity-60" />
+              <span
+                className={`absolute inset-0 animate-ping rounded-full opacity-60 ${asset.isGridX ? "bg-[#4CC9F0]" : "bg-[#EC12D8]"}`}
+              />
             </span>
           </div>
         </div>
@@ -247,7 +266,13 @@ export function RecentWork() {
           </p>
         </div>
 
-        <div className="grid min-w-0 grid-cols-2 items-start gap-4 sm:grid-cols-3 sm:gap-5 lg:gap-6 xl:grid-cols-6 xl:gap-5">
+        {/*
+          Layout:
+          - Mobile (< md):  2 columns, all 8 videos
+          - Tablet (md–xl): 4 columns, 2 rows of 4
+          - Desktop (xl+):  4 columns, 2 rows of 4
+        */}
+        <div className="grid min-w-0 grid-cols-2 items-start gap-4 sm:gap-5 md:grid-cols-4 md:gap-5 xl:gap-6">
           {REEL_ASSETS.map((asset, i) => (
             <ReelCard
               key={asset.src}

@@ -51,7 +51,7 @@ export const COPY = {
       heading: "A few projects from the",
       highlight: "last few weeks.",
       intro:
-        "Eight short cuts from app, real estate, construction, cleaning, interviews, café and event work in Luxembourg. Same compact reel look, same clean style, built for modern social media marketing.",
+        "Eight short cuts from app, real estate, construction, cleaning, interviews, café and event work in Luxembourg, including two GridX productions. Same compact reel look, same clean style, built for modern social media marketing.",
       play: "Play",
       pause: "Pause",
       reels: [
@@ -93,15 +93,15 @@ export const COPY = {
         },
         {
           brand: "GridX",
-          label: "Family Day · event recap",
+          label: "WM · Family Day",
           description:
-            "A Family Day event recap for GridX covering the activities and energy of the day.",
+            "A full event recap of the GridX Family Day, capturing the atmosphere, activities and energy of the day.",
         },
         {
           brand: "GridX",
-          label: "Car museum · venue tour",
+          label: "Rally · Car Museum",
           description:
-            "A short tour of the GridX car museum capturing the venue and its collection.",
+            "A dynamic rally and car museum video for GridX, showcasing the venue, the collection and the excitement of the event.",
         },
       ],
     },
@@ -388,7 +388,7 @@ export const COPY = {
       heading: "Quelques projets des",
       highlight: "dernières semaines.",
       intro:
-        "Huit cuts courts autour d'une app, de l'immobilier, de la construction, du nettoyage, d'interviews, d'un café et d'événements. Même format compact, même style propre.",
+        "Huit cuts courts autour d'une app, de l'immobilier, de la construction, du nettoyage, d'interviews, d'un café et d'événements, dont deux productions GridX. Même format compact, même style propre.",
       play: "Lire",
       pause: "Pause",
       reels: [
@@ -430,15 +430,15 @@ export const COPY = {
         },
         {
           brand: "GridX",
-          label: "Family Day · récap événement",
+          label: "WM · Family Day",
           description:
-            "Un récap du Family Day de GridX couvrant les activités et l'énergie de la journée.",
+            "Un récap complet du Family Day de GridX, capturant l'ambiance, les activités et l'énergie de la journée.",
         },
         {
           brand: "GridX",
-          label: "Musée automobile · visite du lieu",
+          label: "Rally · Musée Auto",
           description:
-            "Une courte visite du musée automobile GridX capturant le lieu et sa collection.",
+            "Une vidéo rally et musée automobile pour GridX, mettant en valeur le lieu, la collection et l'excitation de l'événement.",
         },
       ],
     },
@@ -726,7 +726,7 @@ export const COPY = {
       heading: "E puer Projeten aus de",
       highlight: "leschte Wochen.",
       intro:
-        "Aacht kuerz Schnëtter aus App, Immobilie, Bau, Botzen, Interviewen, Café an Event Aarbechten. Dat selwecht kompakt Reel Format, dee selwechte propperen Stil.",
+        "Aacht kuerz Schnëtter aus App, Immobilie, Bau, Botzen, Interviewen, Café an Event Aarbechten, mat zwou GridX Produktiounen. Dat selwecht kompakt Reel Format, dee selwechte propperen Stil.",
       play: "Ofspillen",
       pause: "Paus",
       reels: [
@@ -768,15 +768,15 @@ export const COPY = {
         },
         {
           brand: "GridX",
-          label: "Family Day · Event Recap",
+          label: "WM · Family Day",
           description:
-            "En Event Recap vum GridX Family Day mat den Aktivitéiten an der Energie vum Dag.",
+            "En komplétte Event Recap vum GridX Family Day mat der Atmosphär, den Aktivitéiten an der Energie vum Dag.",
         },
         {
           brand: "GridX",
-          label: "Automusée · Lieu Tour",
+          label: "Rally · Automusée",
           description:
-            "E kuerze Tour vum GridX Automusée mat dem Lieu a senger Kollektioun.",
+            "E dynamescht Rally a Automusée Video fir GridX, mat dem Lieu, der Kollektioun an der Begeeschterung vum Event.",
         },
       ],
     },
