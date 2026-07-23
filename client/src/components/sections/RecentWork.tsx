@@ -6,12 +6,14 @@
 // keeping the initial page load light. Playback remains muted and pauses when
 // offscreen to save CPU and mobile data.
 //
-// Layout: 2 cols on mobile, 4 cols on md+, 4 cols on xl — two rows of 4.
-// GridX videos (indices 6 & 7) are highlighted with a subtle brand accent.
+// Layout: 2 cols on mobile, 4 cols on md+, 5 cols on xl — two rows.
+// GridX videos (indices 8 & 9) are highlighted with a subtle brand accent.
 
 import { motion, useInView } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
 import { useI18n } from "@/lib/i18n";
+
+const CDN = "https://files.manuscdn.com/user_upload_by_module/session_file/310519663425995922";
 
 type ReelAsset = {
   src: string;
@@ -29,51 +31,73 @@ type ReelCopy = {
 
 const REEL_ASSETS: ReelAsset[] = [
   {
-    src: "/manus-storage/oasis_e80a48a4.mp4",
-    poster: "/manus-storage/oasis_38a87348.jpg",
+    // Oasis – trend video
+    src: `${CDN}/ziwRhuyntQcSFpyO.mp4`,
+    poster: `${CDN}/ikicGjmjySCsStmF.jpg`,
     offsetClass: "md:-translate-y-4 xl:-translate-y-5",
     rotateClass: "md:-rotate-[1.4deg]",
   },
   {
-    src: "/manus-storage/amhome_f6a06623.mp4",
-    poster: "/manus-storage/amhome_fce26f92.jpg",
+    // AmHome – dynamic house tour
+    src: `${CDN}/tMuFkIrPogXzJLGZ.mp4`,
+    poster: `${CDN}/uiTejaoOpYIFQTFD.jpg`,
     offsetClass: "md:translate-y-3 xl:translate-y-4",
     rotateClass: "md:rotate-[0.8deg]",
   },
   {
-    src: "/manus-storage/salonkee_7afc0af9.mp4",
-    poster: "/manus-storage/salonkee_5c3f1b75.jpg",
+    // Salonkee – app booking
+    src: `${CDN}/qrFDnbJGiWMmXNhN.mp4`,
+    poster: `${CDN}/LODUGSOXNHPwExlV.jpg`,
     offsetClass: "md:-translate-y-2 xl:-translate-y-3",
     rotateClass: "md:rotate-[1.2deg]",
   },
   {
-    src: "/manus-storage/am-construction_f280d1ab.mp4",
-    poster: "/manus-storage/am-construction_0a8eab3a.jpg",
+    // AM Construction – construction reel
+    src: `${CDN}/PnuisqSAoXtrIvXX.mp4`,
+    poster: `${CDN}/SXeWfdxQMQkQmJbm.jpg`,
     offsetClass: "md:translate-y-5 xl:translate-y-6",
     rotateClass: "md:-rotate-[0.9deg]",
   },
   {
-    src: "/manus-storage/neteco-faq_dd87c246.mp4",
-    poster: "/manus-storage/neteco-faq_e552eaee.jpg",
+    // Neteco – FAQ with client
+    src: `${CDN}/xGtMOGaymfLofSTE.mp4`,
+    poster: `${CDN}/JOtClQTKIsXtYeXk.jpg`,
     offsetClass: "md:-translate-y-3 xl:-translate-y-4",
     rotateClass: "md:rotate-[1.5deg]",
   },
   {
-    src: "/manus-storage/as_fc24247e.mp4",
-    poster: "/manus-storage/as_903db6a3.jpg",
+    // AS Projects – architect presents renovation
+    src: `${CDN}/QTFZRBdsKAbglSTK.mp4`,
+    poster: `${CDN}/IGxJFLyAhqnnSRyZ.jpg`,
     offsetClass: "md:translate-y-4 xl:translate-y-5",
     rotateClass: "md:-rotate-[1.1deg]",
   },
   {
-    src: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663425995922/DbumpLvWmWelSoFG.mp4",
-    poster: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663425995922/CXhpDVYvYFTTzTlu.jpg",
+    // Box Event – event recap
+    src: `${CDN}/KQAQtmohjDaYykIq.mp4`,
+    poster: `${CDN}/dZPjeYYcpluwZdqg.jpg`,
+    offsetClass: "md:-translate-y-2 xl:-translate-y-3",
+    rotateClass: "md:rotate-[1.3deg]",
+  },
+  {
+    // Goldbuyer – gold value investment
+    src: `${CDN}/fBuvYZzYZvwOiynB.mp4`,
+    poster: `${CDN}/TVQsaaGoHZglMOBe.jpg`,
+    offsetClass: "md:translate-y-2 xl:translate-y-3",
+    rotateClass: "md:-rotate-[0.7deg]",
+  },
+  {
+    // GridX – WM Family Day
+    src: `${CDN}/DbumpLvWmWelSoFG.mp4`,
+    poster: `${CDN}/CXhpDVYvYFTTzTlu.jpg`,
     offsetClass: "md:-translate-y-5 xl:-translate-y-6",
     rotateClass: "md:rotate-[1.0deg]",
     isGridX: true,
   },
   {
-    src: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663425995922/qLKcfqjHGVWreAvM.mp4",
-    poster: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663425995922/GkQqVHENlrUWWSdq.jpg",
+    // GridX – Rally Car Museum
+    src: `${CDN}/qLKcfqjHGVWreAvM.mp4`,
+    poster: `${CDN}/GkQqVHENlrUWWSdq.jpg`,
     offsetClass: "md:translate-y-3 xl:translate-y-4",
     rotateClass: "md:-rotate-[1.3deg]",
     isGridX: true,
@@ -268,11 +292,11 @@ export function RecentWork() {
 
         {/*
           Layout:
-          - Mobile (< md):  2 columns, all 8 videos
-          - Tablet (md–xl): 4 columns, 2 rows of 4
-          - Desktop (xl+):  4 columns, 2 rows of 4
+          - Mobile (< md):  2 columns, all 10 videos (5 rows)
+          - Tablet (md–lg): 4 columns, rows of 4 + 4 + 2
+          - Desktop (xl+):  5 columns, 2 rows of 5
         */}
-        <div className="grid min-w-0 grid-cols-2 items-start gap-4 sm:gap-5 md:grid-cols-4 md:gap-5 xl:gap-6">
+        <div className="grid min-w-0 grid-cols-2 items-start gap-4 sm:gap-5 md:grid-cols-4 md:gap-5 xl:grid-cols-5 xl:gap-6">
           {REEL_ASSETS.map((asset, i) => (
             <ReelCard
               key={asset.src}

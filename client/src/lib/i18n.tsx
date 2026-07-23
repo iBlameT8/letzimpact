@@ -51,57 +51,69 @@ export const COPY = {
       heading: "A few projects from the",
       highlight: "last few weeks.",
       intro:
-        "Eight short cuts from app, real estate, construction, cleaning, interviews, café and event work in Luxembourg, including two GridX productions. Same compact reel look, same clean style, built for modern social media marketing.",
+        "Ten short cuts across café, real estate, construction, cleaning, architecture, events and investment in Luxembourg, including two GridX productions. Same compact reel format, same clean style — each video built with a clear marketing purpose.",
       play: "Play",
       pause: "Pause",
       reels: [
         {
           brand: "Oasis",
-          label: "Café product cut",
+          label: "Trend · Café",
           description:
-            "A short café clip for Oasis with a warm and clean food and drink look.",
+            "A trend-driven clip for Oasis Café. Short, visual and built to stop the scroll and bring people through the door.",
         },
         {
           brand: "AmHome",
-          label: "Real estate",
+          label: "House Tour · Real Estate",
           description:
-            "A real estate reel with calm movement and a premium room feeling.",
+            "A dynamic house tour for AmHome. Showcasing the space in motion to help buyers feel the property before they visit.",
         },
         {
           brand: "Salonkee",
-          label: "App salon booking",
+          label: "App · Salon Booking",
           description:
-            "Salonkee is a salon booking app, shown here as a short social cut.",
+            "A social cut for Salonkee's booking app. Showing the product in action to drive downloads and build trust.",
         },
         {
           brand: "AM Construction",
-          label: "Construction reel",
+          label: "Brand · Construction",
           description:
-            "A clip for AM Construction with a clear construction site look.",
+            "A brand reel for AM Construction. Putting the work on screen to attract new clients and show the quality of the build.",
         },
         {
           brand: "Neteco",
-          label: "Cleaning company FAQ",
+          label: "FAQ · Cleaning",
           description:
-            "A FAQ video for Neteco, a cleaning company, made for quick answers and a trustworthy first impression.",
+            "A FAQ video with a real client for Neteco. Answering objections on camera to build credibility and convert faster.",
         },
         {
-          brand: "AS",
-          label: "Client interview",
+          brand: "AS Projects",
+          label: "Renovation · Architecture",
           description:
-            "An interview style social cut with a calm interior look and a clear message.",
+            "The architect of AS Projects presents a completed renovation. Showing the design and the view to position the firm's expertise.",
+        },
+        {
+          brand: "Box Event",
+          label: "Event · Recap",
+          description:
+            "A full event recap for a boxing event. Capturing the energy and atmosphere to build hype for the next edition.",
+        },
+        {
+          brand: "Goldbuyer",
+          label: "Investment · Gold",
+          description:
+            "A value-driven video for Goldbuyer. Showing gold prices over time to educate the audience and motivate them to buy.",
         },
         {
           brand: "GridX",
           label: "WM · Family Day",
           description:
-            "A full event recap of the GridX Family Day, capturing the atmosphere, activities and energy of the day.",
+            "A full event recap of the GridX Family Day. Capturing the atmosphere and energy to strengthen the brand community.",
         },
         {
           brand: "GridX",
           label: "Rally · Car Museum",
           description:
-            "A dynamic rally and car museum video for GridX, showcasing the venue, the collection and the excitement of the event.",
+            "A rally and car museum video for GridX. Showcasing the venue and the collection to position GridX as a premium destination.",
         },
       ],
     },
@@ -388,57 +400,69 @@ export const COPY = {
       heading: "Quelques projets des",
       highlight: "dernières semaines.",
       intro:
-        "Huit cuts courts autour d'une app, de l'immobilier, de la construction, du nettoyage, d'interviews, d'un café et d'événements, dont deux productions GridX. Même format compact, même style propre.",
+        "Dix courts clips autour d'un café, de l'immobilier, de la construction, du nettoyage, de l'architecture, d'événements et de l'investissement, dont deux productions GridX. Même format compact, même style propre — chaque vidéo pensée avec un objectif marketing clair.",
       play: "Lire",
       pause: "Pause",
       reels: [
         {
           brand: "Oasis",
-          label: "Café produit",
+          label: "Trend · Café",
           description:
-            "Un court clip café pour Oasis avec un rendu food and drink chaleureux et propre.",
+            "Un clip tendance pour Oasis Café. Court, visuel et conçu pour stopper le scroll et attirer du monde.",
         },
         {
           brand: "AmHome",
-          label: "Immobilier",
+          label: "Visite · Immobilier",
           description:
-            "Un reel immobilier avec des mouvements calmes et une impression haut de gamme.",
+            "Une visite dynamique pour AmHome. Montrer le bien en mouvement pour que les acheteurs ressentent l'espace avant de visiter.",
         },
         {
           brand: "Salonkee",
-          label: "App réservation salon",
+          label: "App · Réservation Salon",
           description:
-            "Salonkee est une app de réservation pour salons, présentée ici sous forme de cut social court.",
+            "Un cut social pour l'app de réservation Salonkee. Montrer le produit en action pour générer des téléchargements et créer la confiance.",
         },
         {
           brand: "AM Construction",
-          label: "Reel construction",
+          label: "Marque · Construction",
           description:
-            "Un clip pour AM Construction avec une esthétique de chantier claire.",
+            "Un reel de marque pour AM Construction. Mettre le travail à l'écran pour attirer de nouveaux clients et montrer la qualité du chantier.",
         },
         {
           brand: "Neteco",
-          label: "Entreprise de nettoyage FAQ",
+          label: "FAQ · Nettoyage",
           description:
-            "Une vidéo FAQ pour Neteco, une entreprise de nettoyage, pensée pour des réponses rapides et une première impression fiable.",
+            "Une vidéo FAQ avec un vrai client pour Neteco. Répondre aux objections en caméra pour gagner en crédibilité et convertir plus vite.",
         },
         {
-          brand: "AS",
-          label: "Interview client",
+          brand: "AS Projects",
+          label: "Rénovation · Architecture",
           description:
-            "Un cut social en style interview avec une ambiance intérieure calme et un message clair.",
+            "L'architecte d'AS Projects présente une rénovation terminée. Montrer le design et la vue pour positionner l'expertise du cabinet.",
+        },
+        {
+          brand: "Box Event",
+          label: "Événement · Recap",
+          description:
+            "Un recap complet d'un événement de boxe. Capturer l'énergie et l'ambiance pour créer l'impatience de la prochaine édition.",
+        },
+        {
+          brand: "Goldbuyer",
+          label: "Investissement · Or",
+          description:
+            "Une vidéo axée valeur pour Goldbuyer. Montrer l'évolution du cours de l'or pour éduquer l'audience et l'inciter à acheter.",
         },
         {
           brand: "GridX",
           label: "WM · Family Day",
           description:
-            "Un récap complet du Family Day de GridX, capturant l'ambiance, les activités et l'énergie de la journée.",
+            "Un recap complet du Family Day de GridX. Capturer l'ambiance et l'énergie pour renforcer la communauté de la marque.",
         },
         {
           brand: "GridX",
           label: "Rally · Musée Auto",
           description:
-            "Une vidéo rally et musée automobile pour GridX, mettant en valeur le lieu, la collection et l'excitation de l'événement.",
+            "Une vidéo rally et musée auto pour GridX. Mettre en valeur le lieu et la collection pour positionner GridX comme destination premium.",
         },
       ],
     },
@@ -726,57 +750,69 @@ export const COPY = {
       heading: "E puer Projeten aus de",
       highlight: "leschte Wochen.",
       intro:
-        "Aacht kuerz Schnëtter aus App, Immobilie, Bau, Botzen, Interviewen, Café an Event Aarbechten, mat zwou GridX Produktiounen. Dat selwecht kompakt Reel Format, dee selwechte propperen Stil.",
+        "Zéng kuerz Schnëtter aus Café, Immobilien, Bau, Botzen, Architektur, Events an Investitioun, mat zwou GridX Produktiounen. Dat selwecht kompakt Format, dee selwechte proppere Stil — all Video mat engem klore Marketing Zil.",
       play: "Ofspillen",
       pause: "Paus",
       reels: [
         {
           brand: "Oasis",
-          label: "Café Produkt Cut",
+          label: "Trend · Café",
           description:
-            "E kuerze Café Clip fir Oasis mat engem waarmen a propperen Androck fir Iessen a Gedrénks.",
+            "E Trend Clip fir Oasis Café. Kuerz, visuell a gemaach fir de Scroll ze stoppen an d'Leit eranzezéien.",
         },
         {
           brand: "AmHome",
-          label: "Immobilien",
+          label: "House Tour · Immobilien",
           description:
-            "En Immobilien Reel mat rouege Beweegungen an engem héichwäertege Gefill am Raum.",
+            "Eng dynamesch House Tour fir AmHome. D'Proprietéit a Beweegung weisen, sou datt Käufer d'Raum spéiere können ier si kommen.",
         },
         {
           brand: "Salonkee",
-          label: "App Salon Reservatioun",
+          label: "App · Salon Reservatioun",
           description:
-            "Salonkee ass eng App fir Salon Reservatiounen, hei als kuerze Social Cut gewisen.",
+            "E Social Cut fir d'Salonkee Booking App. D'Produkt a Beweegung weisen fir Downloads ze generéieren an Vertraue ze schafen.",
         },
         {
           brand: "AM Construction",
-          label: "Bau Reel",
+          label: "Mark · Bau",
           description:
-            "E Clip fir AM Construction mat engem klore Baustelle Look.",
+            "E Mark Reel fir AM Construction. D'Aarbecht op de Bildschirm bréngen fir nei Clienten unzezéien a Qualitéit ze weisen.",
         },
         {
           brand: "Neteco",
-          label: "Botzfirma FAQ",
+          label: "FAQ · Botzen",
           description:
-            "E FAQ Video fir Neteco, eng Botzfirma, gemaach fir séier Äntwerten an en zouverlässegen éischten Androck.",
+            "E FAQ Video mat engem richtege Client fir Neteco. Objekiounen op Kamera beäntwerten fir Kredibilitéit ze bauen a méi séier ze konvertéieren.",
         },
         {
-          brand: "AS",
-          label: "Client Interview",
+          brand: "AS Projects",
+          label: "Renovatioun · Architektur",
           description:
-            "E Social Cut am Interview Stil mat enger roueger Atmosphär dobannen an engem klore Message.",
+            "D'Architektin vun AS Projects présentéiert eng fäerdeg Renovatioun. Design a Bléck weisen fir d'Expertise vun der Firma ze positionéieren.",
+        },
+        {
+          brand: "Box Event",
+          label: "Event · Recap",
+          description:
+            "En Event Recap fir e Boxevent. D'Energie an d'Atmosphär afangen fir Loscht op d'nächst Editioun ze maachen.",
+        },
+        {
+          brand: "Goldbuyer",
+          label: "Investitioun · Gold",
+          description:
+            "E Wäert-gedriwwene Video fir Goldbuyer. D'Goldpräisser iwwer d'Zäit weisen fir d'Publikum z'educéieren an zum Kafen ze motivéieren.",
         },
         {
           brand: "GridX",
           label: "WM · Family Day",
           description:
-            "En komplétte Event Recap vum GridX Family Day mat der Atmosphär, den Aktivitéiten an der Energie vum Dag.",
+            "En komplétte Event Recap vum GridX Family Day. Atmosphär an Energie afangen fir d'Mark Community ze stäerken.",
         },
         {
           brand: "GridX",
           label: "Rally · Automusée",
           description:
-            "E dynamescht Rally a Automusée Video fir GridX, mat dem Lieu, der Kollektioun an der Begeeschterung vum Event.",
+            "E Rally a Automusée Video fir GridX. Lieu a Kollektioun weisen fir GridX als Premium Destinatioun ze positionéieren.",
         },
       ],
     },
