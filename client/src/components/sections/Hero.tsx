@@ -22,6 +22,10 @@ const CLIENT_LOGOS: ClientLogo[] = [
     alt: "ÄR Secherheet Security",
   },
   { src: "/partners/asad-gym.png", alt: "ASAD Gym" },
+  {
+    src: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663909699797/DqQCXzJvAEPrbsEd.png",
+    alt: "Chalet au Gourmet",
+  },
   { src: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663425995922/zOAZiazHMmVsTznR.png", alt: "GridX" },
 ];
 

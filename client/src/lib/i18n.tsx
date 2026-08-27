@@ -51,15 +51,21 @@ export const COPY = {
       heading: "A few projects from the",
       highlight: "last few weeks.",
       intro:
-        "Ten short cuts across café, real estate, construction, cleaning, architecture, events and investment in Luxembourg, including two GridX productions. Same compact reel format, same clean style — each video built with a clear marketing purpose.",
+        "Eleven short cuts across gastronomy, real estate, construction, cleaning, architecture, events and investment in Luxembourg, including two GridX productions. Same compact reel format, same clean style — each video built with a clear marketing purpose.",
       play: "Play",
       pause: "Pause",
       reels: [
         {
-          brand: "Oasis",
-          label: "Trend · Café",
+          brand: "Chalet au Gourmet",
+          label: "Social · Gastronomy",
           description:
-            "A trend-driven clip for Oasis Café. Short, visual and built to stop the scroll and bring people through the door.",
+            "A short social reel for Chalet au Gourmet, created to put the restaurant's atmosphere and brand on screen.",
+        },
+        {
+          brand: "Chalet au Gourmet",
+          label: "Social · Gastronomy",
+          description:
+            "A second social cut for Chalet au Gourmet. Built in a clean vertical format for short-form channels.",
         },
         {
           brand: "AmHome",
@@ -400,15 +406,21 @@ export const COPY = {
       heading: "Quelques projets des",
       highlight: "dernières semaines.",
       intro:
-        "Dix courts clips autour d'un café, de l'immobilier, de la construction, du nettoyage, de l'architecture, d'événements et de l'investissement, dont deux productions GridX. Même format compact, même style propre — chaque vidéo pensée avec un objectif marketing clair.",
+        "Onze courts clips autour de la gastronomie, de l'immobilier, de la construction, du nettoyage, de l'architecture, d'événements et de l'investissement, dont deux productions GridX. Même format compact, même style propre — chaque vidéo pensée avec un objectif marketing clair.",
       play: "Lire",
       pause: "Pause",
       reels: [
         {
-          brand: "Oasis",
-          label: "Trend · Café",
+          brand: "Chalet au Gourmet",
+          label: "Social · Gastronomie",
           description:
-            "Un clip tendance pour Oasis Café. Court, visuel et conçu pour stopper le scroll et attirer du monde.",
+            "Un reel social pour Chalet au Gourmet, conçu pour mettre à l'écran l'ambiance et l'univers du restaurant.",
+        },
+        {
+          brand: "Chalet au Gourmet",
+          label: "Social · Gastronomie",
+          description:
+            "Un deuxième cut social pour Chalet au Gourmet. Un format vertical propre, pensé pour les contenus courts.",
         },
         {
           brand: "AmHome",
@@ -750,15 +762,21 @@ export const COPY = {
       heading: "E puer Projeten aus de",
       highlight: "leschte Wochen.",
       intro:
-        "Zéng kuerz Schnëtter aus Café, Immobilien, Bau, Botzen, Architektur, Events an Investitioun, mat zwou GridX Produktiounen. Dat selwecht kompakt Format, dee selwechte proppere Stil — all Video mat engem klore Marketing Zil.",
+        "Eelef kuerz Schnëtter aus Gastronomie, Immobilien, Bau, Botzen, Architektur, Events an Investitioun, mat zwou GridX Produktiounen. Dat selwecht kompakt Format, dee selwechte proppere Stil — all Video mat engem klore Marketing Zil.",
       play: "Ofspillen",
       pause: "Paus",
       reels: [
         {
-          brand: "Oasis",
-          label: "Trend · Café",
+          brand: "Chalet au Gourmet",
+          label: "Social · Gastronomie",
           description:
-            "E Trend Clip fir Oasis Café. Kuerz, visuell a gemaach fir de Scroll ze stoppen an d'Leit eranzezéien.",
+            "Ee Social Reel fir Chalet au Gourmet, gemaach fir d'Atmosphär an d'Mark vum Restaurant ze weisen.",
+        },
+        {
+          brand: "Chalet au Gourmet",
+          label: "Social · Gastronomie",
+          description:
+            "En zweete Social Cut fir Chalet au Gourmet. E proppert vertikaalt Format fir kuerz Content Channels.",
         },
         {
           brand: "AmHome",

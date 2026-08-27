@@ -31,11 +31,18 @@ type ReelCopy = {
 
 const REEL_ASSETS: ReelAsset[] = [
   {
-    // Oasis – trend video
-    src: `${CDN}/ziwRhuyntQcSFpyO.mp4`,
-    poster: `${CDN}/ikicGjmjySCsStmF.jpg`,
+    // Chalet au Gourmet – social reel 01
+    src: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663909699797/lYRQhRRYdmGlusgs.mp4",
+    poster: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663909699797/LBXuyQcEXBTmTVgk.jpg",
     offsetClass: "md:-translate-y-4 xl:-translate-y-5",
     rotateClass: "md:-rotate-[1.4deg]",
+  },
+  {
+    // Chalet au Gourmet – social reel 02
+    src: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663909699797/LVCZkeRUmGYXbXjf.mp4",
+    poster: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663909699797/EFEJuRYPJDWKgDDd.jpg",
+    offsetClass: "md:translate-y-3 xl:translate-y-4",
+    rotateClass: "md:rotate-[0.8deg]",
   },
   {
     // AmHome – dynamic house tour
@@ -292,9 +299,9 @@ export function RecentWork() {
 
         {/*
           Layout:
-          - Mobile (< md):  2 columns, all 10 videos (5 rows)
-          - Tablet (md–lg): 4 columns, rows of 4 + 4 + 2
-          - Desktop (xl+):  5 columns, 2 rows of 5
+          - Mobile (< md):  2 columns, all 11 videos
+          - Tablet (md–lg): 4 columns
+          - Desktop (xl+):  5 columns
         */}
         <div className="grid min-w-0 grid-cols-2 items-start gap-4 sm:gap-5 md:grid-cols-4 md:gap-5 xl:grid-cols-5 xl:gap-6">
           {REEL_ASSETS.map((asset, i) => (
