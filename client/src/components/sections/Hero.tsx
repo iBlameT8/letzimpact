@@ -23,10 +23,13 @@ const CLIENT_LOGOS: ClientLogo[] = [
   },
   { src: "/partners/asad-gym.png", alt: "ASAD Gym" },
   {
-    src: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663909699797/DqQCXzJvAEPrbsEd.png",
+    src: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663909699797/mroiPtrEhXzDVODY.png",
     alt: "Chalet au Gourmet",
   },
-  { src: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663425995922/zOAZiazHMmVsTznR.png", alt: "GridX" },
+  {
+    src: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663909699797/nIENoONBGkrXzlTc.png",
+    alt: "GridX",
+  },
 ];
 
 const PARTNER_MARQUEE_COPIES = 5;

@@ -46,43 +46,43 @@ const REEL_ASSETS: ReelAsset[] = [
   },
   {
     // AmHome – dynamic house tour
-    src: `${CDN}/tMuFkIrPogXzJLGZ.mp4`,
-    poster: `${CDN}/uiTejaoOpYIFQTFD.jpg`,
+    src: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663909699797/pnzRciDhQuyUqoPP.mp4",
+    poster: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663909699797/QntwULWBDgOSmEsT.jpg",
     offsetClass: "md:translate-y-3 xl:translate-y-4",
     rotateClass: "md:rotate-[0.8deg]",
   },
   {
     // Salonkee – app booking
-    src: `${CDN}/qrFDnbJGiWMmXNhN.mp4`,
-    poster: `${CDN}/LODUGSOXNHPwExlV.jpg`,
+    src: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663909699797/WGYaaQswtNsbWUwQ.mp4",
+    poster: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663909699797/pOBrHxscATbrGOus.jpg",
     offsetClass: "md:-translate-y-2 xl:-translate-y-3",
     rotateClass: "md:rotate-[1.2deg]",
   },
   {
     // AM Construction – construction reel
-    src: `${CDN}/PnuisqSAoXtrIvXX.mp4`,
-    poster: `${CDN}/SXeWfdxQMQkQmJbm.jpg`,
+    src: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663909699797/kAQQXSgmhiBPDZfi.mp4",
+    poster: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663909699797/DIFaelhBekOFdkmw.jpg",
     offsetClass: "md:translate-y-5 xl:translate-y-6",
     rotateClass: "md:-rotate-[0.9deg]",
   },
   {
     // Neteco – FAQ with client
-    src: `${CDN}/xGtMOGaymfLofSTE.mp4`,
-    poster: `${CDN}/JOtClQTKIsXtYeXk.jpg`,
+    src: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663909699797/sjeoedHEUTEjhGos.mp4",
+    poster: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663909699797/TRtddHQoqxUcsJbO.jpg",
     offsetClass: "md:-translate-y-3 xl:-translate-y-4",
     rotateClass: "md:rotate-[1.5deg]",
   },
   {
     // AS Projects – architect presents renovation
-    src: `${CDN}/QTFZRBdsKAbglSTK.mp4`,
-    poster: `${CDN}/IGxJFLyAhqnnSRyZ.jpg`,
+    src: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663909699797/RvrPdAOzkFMJugRH.mp4",
+    poster: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663909699797/ERmysKijwkmxlcgz.jpg",
     offsetClass: "md:translate-y-4 xl:translate-y-5",
     rotateClass: "md:-rotate-[1.1deg]",
   },
   {
     // Box Event – event recap
-    src: `${CDN}/KQAQtmohjDaYykIq.mp4`,
-    poster: `${CDN}/dZPjeYYcpluwZdqg.jpg`,
+    src: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663909699797/qcZzXqKDzADyKrTg.mp4",
+    poster: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663909699797/xMnfLTuxwelGJjFI.jpg",
     offsetClass: "md:-translate-y-2 xl:-translate-y-3",
     rotateClass: "md:rotate-[1.3deg]",
   },
@@ -95,16 +95,16 @@ const REEL_ASSETS: ReelAsset[] = [
   },
   {
     // GridX – WM Family Day
-    src: `${CDN}/DbumpLvWmWelSoFG.mp4`,
-    poster: `${CDN}/CXhpDVYvYFTTzTlu.jpg`,
+    src: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663909699797/wtkmcVMJKeMlTuXf.mp4",
+    poster: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663909699797/IHrUsiwEGmwgwIyA.jpg",
     offsetClass: "md:-translate-y-5 xl:-translate-y-6",
     rotateClass: "md:rotate-[1.0deg]",
     isGridX: true,
   },
   {
     // GridX – Rally Car Museum
-    src: `${CDN}/qLKcfqjHGVWreAvM.mp4`,
-    poster: `${CDN}/GkQqVHENlrUWWSdq.jpg`,
+    src: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663909699797/opTgQPUImZzojHeJ.mp4",
+    poster: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663909699797/QZZYYQVxCBhAdfjD.jpg",
     offsetClass: "md:translate-y-3 xl:translate-y-4",
     rotateClass: "md:-rotate-[1.3deg]",
     isGridX: true,

@@ -65,7 +65,7 @@ export const COPY = {
           brand: "Chalet au Gourmet",
           label: "Social · Gastronomy",
           description:
-            "A second social cut for Chalet au Gourmet. Built in a clean vertical format for short-form channels.",
+            "A food-tasting interview where Chalet au Gourmet customers taste the food and share their honest opinions.",
         },
         {
           brand: "AmHome",
@@ -420,7 +420,7 @@ export const COPY = {
           brand: "Chalet au Gourmet",
           label: "Social · Gastronomie",
           description:
-            "Un deuxième cut social pour Chalet au Gourmet. Un format vertical propre, pensé pour les contenus courts.",
+            "Une interview de dégustation où les clients de Chalet au Gourmet goûtent les plats et partagent leur avis.",
         },
         {
           brand: "AmHome",
@@ -776,7 +776,7 @@ export const COPY = {
           brand: "Chalet au Gourmet",
           label: "Social · Gastronomie",
           description:
-            "En zweete Social Cut fir Chalet au Gourmet. E proppert vertikaalt Format fir kuerz Content Channels.",
+            "En Interview zum Food Testing, bei deem d'Cliente vu Chalet au Gourmet d'Iessen schmaachen an hir Meenung deelen.",
         },
         {
           brand: "AmHome",
