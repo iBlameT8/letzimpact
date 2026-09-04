@@ -150,10 +150,33 @@ export const COPY = {
           body: "Product drops, openings, restaurant launches, campaigns and promos. Timed content sprints designed to make a moment, not just a post.",
         },
         {
-          title: "Weekly check ins",
-          body: "Fifteen minute calls. Real updates, real feedback, no slide decks pretending to be insights.",
+          title: "Digital design",
+          body: "Banners, branded workwear, stickers and vehicle wraps designed as one consistent brand system — from the first layout to a production-ready visual.",
         },
       ],
+    },
+    digitalDesign: {
+      label: "Digital design / selected applications",
+      heading: "Brands you can",
+      highlight: "see",
+      ending: "Before anyone reads a word.",
+      intro:
+        "From the first layout to the finished physical application, we design brand touchpoints that feel consistent, premium and unmistakably yours.",
+      services: ["Banners", "Workwear", "Stickers", "Vehicle wraps"],
+      projectLabel: "Client project",
+      projects: [
+        { discipline: "Banner · Workwear · Vehicle wrap" },
+        { discipline: "Banner · Vehicle wrap" },
+      ],
+      itemLabels: [
+        "Construction fence banner",
+        "Branded workwear",
+        "3D vehicle wrap",
+        "3D vehicle wrap",
+        "Construction fence banner",
+      ],
+      footer:
+        "Selected design applications · Concept, layout and production-ready execution by LëtzImpact",
     },
     localSeo: {
       label: "SEO focus / Luxembourg",
@@ -505,10 +528,33 @@ export const COPY = {
           body: "Sorties de produits, ouvertures et promos. Des sprints de contenu pensés pour créer un moment, pas juste un post.",
         },
         {
-          title: "Points hebdomadaires",
-          body: "Des appels de quinze minutes. De vraies nouvelles, de vrais retours, pas des présentations qui se font passer pour des insights.",
+          title: "Design digital",
+          body: "Bannières, vêtements professionnels, stickers et habillages de véhicules pensés comme un seul système de marque — du premier layout au visuel prêt à produire.",
         },
       ],
+    },
+    digitalDesign: {
+      label: "Design digital / applications sélectionnées",
+      heading: "Des marques que l'on",
+      highlight: "reconnaît",
+      ending: "Avant même de lire.",
+      intro:
+        "Du premier layout à l'application physique finale, nous concevons des supports de marque cohérents, premium et immédiatement reconnaissables.",
+      services: ["Bannières", "Textile", "Stickers", "Marquage véhicule"],
+      projectLabel: "Projet client",
+      projects: [
+        { discipline: "Bannière · Textile · Habillage véhicule" },
+        { discipline: "Bannière · Habillage véhicule" },
+      ],
+      itemLabels: [
+        "Bannière de chantier",
+        "Textile professionnel",
+        "Habillage véhicule 3D",
+        "Habillage véhicule 3D",
+        "Bannière de chantier",
+      ],
+      footer:
+        "Applications sélectionnées · Concept, layout et exécution prête à produire par LëtzImpact",
     },
     localSeo: {
       label: "SEO / Luxembourg",
@@ -644,8 +690,7 @@ export const COPY = {
     },
     founders: {
       label: "À propos des fondateurs",
-      heading:
-        "De jeunes fondateurs qui traitent le social media comme une",
+      heading: "De jeunes fondateurs qui traitent le social media comme une",
       highlight: "entreprise sérieuse",
       intro:
         "Nous avons créé LëtzImpact parce que trop d'agences travaillent encore de façon ancienne. Certaines vendent de belles vidéos qui ne performent pas, tandis que d'autres cherchent la performance avec du contenu qui manque de professionnalisme. Notre travail réunit les deux, un contenu propre, professionnel et pensé pour performer.",
@@ -861,10 +906,38 @@ export const COPY = {
           body: "Start vu Produkter, Ouverturen a Promotiounen. Kuerz geplangte Phasen fir Inhalt, déi e Moment maachen, net just e Post.",
         },
         {
-          title: "Uruff all Woch",
-          body: "Uruff vu fofzéng Minutten. Richteg Neiegkeeten, richtege Feedback, keng Presentatiounen déi sech als Abléck ausginn.",
+          title: "Digital Design",
+          body: "Banneren, Aarbechtskleedung, Stickeren a Gefierbeschrëftungen als ee konsequente Markesystem — vum éischte Layout bis zum produktiounsfäerdege Visual.",
         },
       ],
+    },
+    digitalDesign: {
+      label: "Digital Design / ausgewielten Uwendungen",
+      heading: "Marken, déi een",
+      highlight: "erkennt",
+      ending: "Ier een e Wuert liest.",
+      intro:
+        "Vum éischte Layout bis zur fäerdeger physescher Uwendung designe mir Markekontaktpunkten, déi konsequent, premium an direkt erkennbar sinn.",
+      services: [
+        "Banneren",
+        "Aarbechtskleedung",
+        "Stickeren",
+        "Gefierbeschrëftung",
+      ],
+      projectLabel: "Clientsprojet",
+      projects: [
+        { discipline: "Banner · Kleedung · Gefierbeschrëftung" },
+        { discipline: "Banner · Gefierbeschrëftung" },
+      ],
+      itemLabels: [
+        "Bauzaun-Banner",
+        "Markéiert Aarbechtskleedung",
+        "3D-Gefierbeschrëftung",
+        "3D-Gefierbeschrëftung",
+        "Bauzaun-Banner",
+      ],
+      footer:
+        "Ausgewielten Design-Uwendungen · Konzept, Layout a produktiounsfäerdeg Ëmsetzung vu LëtzImpact",
     },
     localSeo: {
       label: "SEO Fokus / Lëtzebuerg",

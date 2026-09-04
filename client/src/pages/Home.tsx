@@ -10,6 +10,7 @@ import { CursorGlow } from "@/components/CursorGlow";
 import { FloatingWhatsApp } from "@/components/FloatingWhatsApp";
 import { SiteNav } from "@/components/SiteNav";
 import { ContactFooter } from "@/components/sections/ContactFooter";
+import { DigitalDesign } from "@/components/sections/DigitalDesign";
 import { FAQ } from "@/components/sections/FAQ";
 import { Founders } from "@/components/sections/Founders";
 import { Hero, PartnerStrip } from "@/components/sections/Hero";
@@ -29,6 +30,7 @@ export default function Home() {
         <RecentWork />
         <PartnerStrip />
         <Services />
+        <DigitalDesign />
         <Process />
         <Packages />
         <Founders />

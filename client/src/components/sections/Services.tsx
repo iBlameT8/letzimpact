@@ -5,9 +5,9 @@
 import { motion } from "framer-motion";
 import {
   BarChart3,
-  Calendar,
   Camera,
   Megaphone,
+  PenTool,
   Rocket,
   Sparkles,
 } from "lucide-react";
@@ -28,7 +28,7 @@ const SERVICE_STYLE: { num: string; icon: LucideIcon; hue: string }[] = [
   { num: "03", icon: Sparkles, hue: "#4CC9F0" },
   { num: "04", icon: BarChart3, hue: "#EC12D8" },
   { num: "05", icon: Rocket, hue: "#A250E3" },
-  { num: "06", icon: Calendar, hue: "#4CC9F0" },
+  { num: "06", icon: PenTool, hue: "#4CC9F0" },
 ];
 
 export function Services() {
