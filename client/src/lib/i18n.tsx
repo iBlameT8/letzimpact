@@ -162,12 +162,6 @@ export const COPY = {
       ending: "Before anyone reads a word.",
       intro:
         "Visual systems designed to move from screen to street — clean, consistent and ready to be seen.",
-      notes: [
-        "made for movement",
-        "front + back, one clear system",
-        "built to be read at a glance",
-        "one identity, every surface",
-      ],
     },
     localSeo: {
       label: "SEO focus / Luxembourg",
@@ -531,12 +525,6 @@ export const COPY = {
       ending: "Avant même de lire.",
       intro:
         "Des systèmes visuels pensés pour passer de l'écran à la rue — propres, cohérents et immédiatement visibles.",
-      notes: [
-        "conçu pour le mouvement",
-        "recto + verso, un seul système",
-        "lisible en un seul regard",
-        "une identité sur chaque support",
-      ],
     },
     localSeo: {
       label: "SEO / Luxembourg",
@@ -900,12 +888,6 @@ export const COPY = {
       ending: "Ier een e Wuert liest.",
       intro:
         "Visuell Systemer, déi vum Ecran op d'Strooss funktionéieren — propper, konsequent an direkt sichtbar.",
-      notes: [
-        "fir Beweegung entworf",
-        "vir + hannen, ee klore System",
-        "op ee Bléck liesbar",
-        "eng Identitéit op all Fläch",
-      ],
     },
     localSeo: {
       label: "SEO Fokus / Lëtzebuerg",
