@@ -156,27 +156,18 @@ export const COPY = {
       ],
     },
     digitalDesign: {
-      label: "Digital design / selected applications",
+      label: "Digital design",
       heading: "Brands you can",
       highlight: "see",
       ending: "Before anyone reads a word.",
       intro:
-        "From the first layout to the finished physical application, we design brand touchpoints that feel consistent, premium and unmistakably yours.",
-      services: ["Banners", "Workwear", "Stickers", "Vehicle wraps"],
-      projectLabel: "Client project",
-      projects: [
-        { discipline: "Banner · Workwear · Vehicle wrap" },
-        { discipline: "Banner · Vehicle wrap" },
+        "Visual systems designed to move from screen to street — clean, consistent and ready to be seen.",
+      notes: [
+        "made for movement",
+        "front + back, one clear system",
+        "built to be read at a glance",
+        "one identity, every surface",
       ],
-      itemLabels: [
-        "Construction fence banner",
-        "Branded workwear",
-        "3D vehicle wrap",
-        "3D vehicle wrap",
-        "Construction fence banner",
-      ],
-      footer:
-        "Selected design applications · Concept, layout and production-ready execution by LëtzImpact",
     },
     localSeo: {
       label: "SEO focus / Luxembourg",
@@ -534,27 +525,18 @@ export const COPY = {
       ],
     },
     digitalDesign: {
-      label: "Design digital / applications sélectionnées",
+      label: "Design digital",
       heading: "Des marques que l'on",
       highlight: "reconnaît",
       ending: "Avant même de lire.",
       intro:
-        "Du premier layout à l'application physique finale, nous concevons des supports de marque cohérents, premium et immédiatement reconnaissables.",
-      services: ["Bannières", "Textile", "Stickers", "Marquage véhicule"],
-      projectLabel: "Projet client",
-      projects: [
-        { discipline: "Bannière · Textile · Habillage véhicule" },
-        { discipline: "Bannière · Habillage véhicule" },
+        "Des systèmes visuels pensés pour passer de l'écran à la rue — propres, cohérents et immédiatement visibles.",
+      notes: [
+        "conçu pour le mouvement",
+        "recto + verso, un seul système",
+        "lisible en un seul regard",
+        "une identité sur chaque support",
       ],
-      itemLabels: [
-        "Bannière de chantier",
-        "Textile professionnel",
-        "Habillage véhicule 3D",
-        "Habillage véhicule 3D",
-        "Bannière de chantier",
-      ],
-      footer:
-        "Applications sélectionnées · Concept, layout et exécution prête à produire par LëtzImpact",
     },
     localSeo: {
       label: "SEO / Luxembourg",
@@ -912,32 +894,18 @@ export const COPY = {
       ],
     },
     digitalDesign: {
-      label: "Digital Design / ausgewielten Uwendungen",
+      label: "Digital Design",
       heading: "Marken, déi een",
       highlight: "erkennt",
       ending: "Ier een e Wuert liest.",
       intro:
-        "Vum éischte Layout bis zur fäerdeger physescher Uwendung designe mir Markekontaktpunkten, déi konsequent, premium an direkt erkennbar sinn.",
-      services: [
-        "Banneren",
-        "Aarbechtskleedung",
-        "Stickeren",
-        "Gefierbeschrëftung",
+        "Visuell Systemer, déi vum Ecran op d'Strooss funktionéieren — propper, konsequent an direkt sichtbar.",
+      notes: [
+        "fir Beweegung entworf",
+        "vir + hannen, ee klore System",
+        "op ee Bléck liesbar",
+        "eng Identitéit op all Fläch",
       ],
-      projectLabel: "Clientsprojet",
-      projects: [
-        { discipline: "Banner · Kleedung · Gefierbeschrëftung" },
-        { discipline: "Banner · Gefierbeschrëftung" },
-      ],
-      itemLabels: [
-        "Bauzaun-Banner",
-        "Markéiert Aarbechtskleedung",
-        "3D-Gefierbeschrëftung",
-        "3D-Gefierbeschrëftung",
-        "Bauzaun-Banner",
-      ],
-      footer:
-        "Ausgewielten Design-Uwendungen · Konzept, Layout a produktiounsfäerdeg Ëmsetzung vu LëtzImpact",
     },
     localSeo: {
       label: "SEO Fokus / Lëtzebuerg",
