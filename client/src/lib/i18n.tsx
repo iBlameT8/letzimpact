@@ -296,13 +296,12 @@ export const COPY = {
       ],
     },
     founders: {
-      label: "About the founders",
-      heading: "Young founders treating social media like a",
+      label: "About the founder",
+      heading: "A young founder treating social media like a",
       highlight: "serious business",
       intro:
         "We built LëtzImpact because too many agencies still work in an old fashioned way. Some sell beautiful videos that do not perform, while others chase performance with content that looks unprofessional. Our work is built to do both, create content that looks sharp, stays professional and is made to perform.",
       founderRole: "Founder",
-      coFounderRole: "Co founder",
       values: [
         {
           k: "Clear strategy",
@@ -659,13 +658,12 @@ export const COPY = {
       ],
     },
     founders: {
-      label: "À propos des fondateurs",
-      heading: "De jeunes fondateurs qui traitent le social media comme une",
+      label: "À propos du fondateur",
+      heading: "Un jeune fondateur qui traite le social media comme une",
       highlight: "entreprise sérieuse",
       intro:
         "Nous avons créé LëtzImpact parce que trop d'agences travaillent encore de façon ancienne. Certaines vendent de belles vidéos qui ne performent pas, tandis que d'autres cherchent la performance avec du contenu qui manque de professionnalisme. Notre travail réunit les deux, un contenu propre, professionnel et pensé pour performer.",
       founderRole: "Fondateur",
-      coFounderRole: "Co fondateur",
       values: [
         {
           k: "Stratégie claire",
@@ -1022,13 +1020,12 @@ export const COPY = {
       ],
     },
     founders: {
-      label: "Iwwer d'Grënner",
-      heading: "Jonk Grënner déi Social Media féiere wéi e",
+      label: "Iwwer de Grënner",
+      heading: "E jonke Grënner dee Social Media féiert wéi e",
       highlight: "seriéise Betrib",
       intro:
         "Mir hunn LëtzImpact gegrënnt, well ze vill Agencen nach almodësch schaffen. Déi eng verkafe schéi Videoen, déi net performen, an déi aner sichen nëmmen no Performance mat Inhalt, dee net professionell wierkt. Mir bréngen déi zwou Säiten zesummen, propperen Inhalt, professionell presentéiert a gemaach fir ze performen.",
       founderRole: "Grënner",
-      coFounderRole: "Matgrënner",
       values: [
         {
           k: "Kloer Strategie",

@@ -1,12 +1,11 @@
 // LëtzImpact — Neon Atelier
-// Founders section: editorial double portrait spread.
+// Founder section: editorial portrait profile.
 
 import { motion } from "framer-motion";
 import { SectionLabel } from "@/components/sections/Services";
 import { useI18n } from "@/lib/i18n";
 
 const ANAS = "/founders/anas-ourabi.jpg";
-const DZENAN = "/founders/dzenan-skoko.png";
 
 export function Founders() {
   const { copy } = useI18n();
@@ -30,18 +29,12 @@ export function Founders() {
           </p>
         </div>
 
-        {/* Founder pair */}
-        <div className="mt-12 grid items-stretch gap-5 sm:mt-16 sm:gap-6 md:grid-cols-2">
+        {/* Founder profile */}
+        <div className="mt-12 max-w-xl sm:mt-16">
           <FounderCard
             img={ANAS}
-            name="Anas Ourabi"
+            name="Anas Urabi"
             role={copy.founders.founderRole}
-            offset
-          />
-          <FounderCard
-            img={DZENAN}
-            name="Dzenan Skoko"
-            role={copy.founders.coFounderRole}
           />
         </div>
 
