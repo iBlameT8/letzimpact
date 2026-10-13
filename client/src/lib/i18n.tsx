@@ -301,7 +301,7 @@ export const COPY = {
       highlight: "serious business",
       intro:
         "We built LëtzImpact because too many agencies still work in an old fashioned way. Some sell beautiful videos that do not perform, while others chase performance with content that looks unprofessional. Our work is built to do both, create content that looks sharp, stays professional and is made to perform.",
-      founderRole: "Founder",
+      founderRole: "CEO",
       values: [
         {
           k: "Clear strategy",
@@ -663,7 +663,7 @@ export const COPY = {
       highlight: "entreprise sérieuse",
       intro:
         "Nous avons créé LëtzImpact parce que trop d'agences travaillent encore de façon ancienne. Certaines vendent de belles vidéos qui ne performent pas, tandis que d'autres cherchent la performance avec du contenu qui manque de professionnalisme. Notre travail réunit les deux, un contenu propre, professionnel et pensé pour performer.",
-      founderRole: "Fondateur",
+      founderRole: "CEO",
       values: [
         {
           k: "Stratégie claire",
@@ -1025,7 +1025,7 @@ export const COPY = {
       highlight: "seriéise Betrib",
       intro:
         "Mir hunn LëtzImpact gegrënnt, well ze vill Agencen nach almodësch schaffen. Déi eng verkafe schéi Videoen, déi net performen, an déi aner sichen nëmmen no Performance mat Inhalt, dee net professionell wierkt. Mir bréngen déi zwou Säiten zesummen, propperen Inhalt, professionell presentéiert a gemaach fir ze performen.",
-      founderRole: "Grënner",
+      founderRole: "CEO",
       values: [
         {
           k: "Kloer Strategie",

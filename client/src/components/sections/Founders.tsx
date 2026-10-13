@@ -33,8 +33,8 @@ export function Founders() {
         <div className="mt-12 max-w-xl sm:mt-16">
           <FounderCard
             img={ANAS}
-            name="Anas Urabi"
-            role={copy.founders.founderRole}
+            name="Anas Ourabi"
+            role="CEO"
           />
         </div>
 
