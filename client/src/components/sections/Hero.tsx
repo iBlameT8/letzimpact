@@ -30,6 +30,7 @@ const CLIENT_LOGOS: ClientLogo[] = [
     src: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663909699797/nIENoONBGkrXzlTc.png",
     alt: "GridX",
   },
+  { src: "/partners/ramen-shifu.png", alt: "Ramen Shifu" },
 ];
 
 const PARTNER_MARQUEE_COPIES = 5;
@@ -220,7 +221,7 @@ function VideoBackdrop() {
             loop
             playsInline
             preload="auto"
-            className={`${clip.featured ? "h-[40%]" : "h-[25%]"} w-auto self-center justify-self-center rounded-xl object-cover ring-1 ring-white/10 sm:rounded-2xl ${clip.className}`}
+            className={`h-[30%] w-auto self-center justify-self-center rounded-xl object-cover ring-1 ring-white/10 sm:rounded-2xl ${clip.className}`}
           />
         ))}
       </div>
