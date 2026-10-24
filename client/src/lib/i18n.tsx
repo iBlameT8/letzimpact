@@ -50,7 +50,7 @@ export const COPY = {
       heading: "A few projects from the",
       highlight: "last few weeks.",
       intro:
-        "Fourteen short cuts across gastronomy, real estate, construction, cleaning, architecture, events, investment and hospitality in Luxembourg. Same compact reel format, same clean style — each video built with a clear marketing purpose.",
+        "Sixteen short cuts across gastronomy, real estate, construction, cleaning, architecture, events, investment and hospitality in Luxembourg. Same compact reel format, same clean style — each video built with a clear marketing purpose.",
       play: "Play",
       pause: "Pause",
       reels: [
@@ -137,6 +137,18 @@ export const COPY = {
           label: "Campaign · Restaurant",
           description:
             "A campaign film built around the restaurant's place, food and atmosphere to make the visit feel real before people arrive.",
+        },
+        {
+          brand: "Foodstand",
+          label: "Advertising · Street Food",
+          description:
+            "An unexpected advertising cut for a foodstand, made to stop the scroll and make the offer feel immediate.",
+        },
+        {
+          brand: "Architecture",
+          label: "Organic · Content",
+          description:
+            "Organic content for an architect, showing the work and point of view in a natural, credible way.",
         },
       ],
     },
@@ -434,7 +446,7 @@ export const COPY = {
       heading: "Quelques projets des",
       highlight: "dernières semaines.",
       intro:
-        "Quatorze courts clips autour de la gastronomie, de l'immobilier, de la construction, du nettoyage, de l'architecture, d'événements, de l'investissement et de l'hospitalité au Luxembourg. Même format compact, même style propre — chaque vidéo pensée avec un objectif marketing clair.",
+        "Seize courts clips autour de la gastronomie, de l'immobilier, de la construction, du nettoyage, de l'architecture, d'événements, de l'investissement et de l'hospitalité au Luxembourg. Même format compact, même style propre — chaque vidéo pensée avec un objectif marketing clair.",
       play: "Lire",
       pause: "Pause",
       reels: [
@@ -521,6 +533,18 @@ export const COPY = {
           label: "Campagne · Restaurant",
           description:
             "Un film de campagne autour du lieu, de la cuisine et de l'atmosphère du restaurant pour donner envie de venir.",
+        },
+        {
+          brand: "Foodstand",
+          label: "Publicité · Street Food",
+          description:
+            "Une publicité inattendue pour un foodstand, conçue pour arrêter le scroll et rendre l'offre immédiate.",
+        },
+        {
+          brand: "Architecture",
+          label: "Organique · Contenu",
+          description:
+            "Du contenu organique pour un architecte, qui présente le travail et le point de vue de façon naturelle et crédible.",
         },
       ],
     },
@@ -818,7 +842,7 @@ export const COPY = {
       heading: "E puer Projeten aus de",
       highlight: "leschte Wochen.",
       intro:
-        "Véierzéng kuerz Schnëtter aus Gastronomie, Immobilien, Bau, Botzen, Architektur, Events, Investitioun an Hospitality, mat engem klore Marketing Zil fir all Video.",
+        "Sechzéng kuerz Schnëtter aus Gastronomie, Immobilien, Bau, Botzen, Architektur, Events, Investitioun an Hospitality, mat engem klore Marketing Zil fir all Video.",
       play: "Ofspillen",
       pause: "Paus",
       reels: [
@@ -905,6 +929,18 @@ export const COPY = {
           label: "Campagne · Restaurant",
           description:
             "E Campagnefilm iwwer d'Plaz, d'Iessen an d'Atmosphär vum Restaurant, fir Loscht op de Besuch ze maachen.",
+        },
+        {
+          brand: "Foodstand",
+          label: "Reklamm · Street Food",
+          description:
+            "Eng onerwaart Reklamm fir e Foodstand, gemaach fir beim Scrollen ze stoppen an d'Offer direkt ze weisen.",
+        },
+        {
+          brand: "Architektur",
+          label: "Organesch · Inhalt",
+          description:
+            "Organeschen Inhalt fir en Architekt, deen d'Aarbecht an d'Perspektiv natierlech a glaubwürdeg weist.",
         },
       ],
     },

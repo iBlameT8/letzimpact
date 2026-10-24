@@ -130,6 +130,20 @@ const REEL_ASSETS: ReelAsset[] = [
     offsetClass: "md:-translate-y-2 xl:-translate-y-3",
     rotateClass: "md:rotate-[1.2deg]",
   },
+  {
+    // Foodstand – unexpected advertising cut
+    src: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663909699797/oOXDxIQbqKkBLyiO.mp4",
+    poster: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663909699797/TmjspQUNanpBcHtf.jpg",
+    offsetClass: "md:translate-y-3 xl:translate-y-4",
+    rotateClass: "md:-rotate-[1.1deg]",
+  },
+  {
+    // Architect – organic content
+    src: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663909699797/FgcpVPORRVrDHNMP.mp4",
+    poster: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663909699797/mzdAAwslIckwyXTz.jpg",
+    offsetClass: "md:-translate-y-3 xl:-translate-y-4",
+    rotateClass: "md:rotate-[0.9deg]",
+  },
 ];
 
 function ReelCard({

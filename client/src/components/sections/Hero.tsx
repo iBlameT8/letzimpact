@@ -191,11 +191,11 @@ function VideoBackdrop() {
     },
     {
       src: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663909699797/LVCZkeRUmGYXbXjf.mp4",
-      className: "col-start-4 row-start-1 rotate-[-2deg]",
+      className: "col-start-8 row-start-1 rotate-[-2deg]",
     },
     {
       src: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663909699797/kAQQXSgmhiBPDZfi.mp4",
-      className: "col-start-4 row-start-2 rotate-[2deg]",
+      className: "col-start-8 row-start-2 rotate-[2deg]",
       featured: true,
     },
     {
@@ -207,13 +207,22 @@ function VideoBackdrop() {
       src: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663909699797/lYRQhRRYdmGlusgs.mp4",
       className: "col-start-5 row-start-2 rotate-[-3deg]",
     },
+    {
+      src: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663909699797/oOXDxIQbqKkBLyiO.mp4",
+      className: "col-start-4 row-start-1 rotate-[2deg]",
+    },
+    {
+      src: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663909699797/FgcpVPORRVrDHNMP.mp4",
+      className: "col-start-4 row-start-2 rotate-[-2deg]",
+      featured: true,
+    },
   ];
 
   return (
     <div aria-hidden className="pointer-events-none absolute inset-0 -z-10 hidden overflow-hidden opacity-[0.22] sm:block">
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,transparent_15%,#07060B_78%)]" />
       <div className="absolute inset-0 bg-gradient-to-b from-[#07060B]/35 via-[#07060B]/45 to-[#07060B]/90" />
-      <div className="absolute inset-0 grid grid-cols-7 grid-rows-2 gap-5 p-8 blur-[0.2px] lg:gap-7 lg:p-14">
+      <div className="absolute inset-0 grid grid-cols-8 grid-rows-2 gap-5 p-8 blur-[0.2px] lg:gap-7 lg:p-14">
         {clips.map(clip => (
           <video
             key={clip.src}
