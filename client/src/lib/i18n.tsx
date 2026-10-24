@@ -167,8 +167,8 @@ export const COPY = {
           body: "Product drops, openings, restaurant launches, campaigns and promos. Timed content sprints designed to make a moment, not just a post.",
         },
         {
-          title: "Digital design",
-          body: "Banners, branded workwear, stickers and vehicle wraps designed as one consistent brand system — from the first layout to a production-ready visual.",
+          title: "Websites & digital design",
+          body: "Websites, landing pages, banners, branded workwear, stickers and vehicle wraps designed as one clear, consistent brand system.",
         },
       ],
     },
@@ -314,10 +314,10 @@ export const COPY = {
     },
     founders: {
       label: "About the founder",
-      heading: "A young founder treating social media like a",
-      highlight: "serious business",
+      heading: "The person behind the work",
+      highlight: "and the standard",
       intro:
-        "We built LëtzImpact because too many agencies still work in an old fashioned way. Some sell beautiful videos that do not perform, while others chase performance with content that looks unprofessional. Our work is built to do both, create content that looks sharp, stays professional and is made to perform.",
+        "Anas Ourabi leads LëtzImpact with a clear focus on thoughtful strategy, strong creative direction and work that delivers for clients.",
       founderRole: "CEO",
       values: [
         {
@@ -546,8 +546,8 @@ export const COPY = {
           body: "Sorties de produits, ouvertures et promos. Des sprints de contenu pensés pour créer un moment, pas juste un post.",
         },
         {
-          title: "Design digital",
-          body: "Bannières, vêtements professionnels, stickers et habillages de véhicules pensés comme un seul système de marque — du premier layout au visuel prêt à produire.",
+          title: "Sites web & design digital",
+          body: "Sites web, landing pages, bannières, vêtements professionnels, stickers et habillages de véhicules réunis dans un système de marque cohérent.",
         },
       ],
     },
@@ -693,10 +693,10 @@ export const COPY = {
     },
     founders: {
       label: "À propos du fondateur",
-      heading: "Un jeune fondateur qui traite le social media comme une",
-      highlight: "entreprise sérieuse",
+      heading: "La personne derrière le travail",
+      highlight: "et le standard",
       intro:
-        "Nous avons créé LëtzImpact parce que trop d'agences travaillent encore de façon ancienne. Certaines vendent de belles vidéos qui ne performent pas, tandis que d'autres cherchent la performance avec du contenu qui manque de professionnalisme. Notre travail réunit les deux, un contenu propre, professionnel et pensé pour performer.",
+        "Anas Ourabi dirige LëtzImpact avec une approche claire : une stratégie réfléchie, une direction créative forte et un travail qui produit des résultats pour les clients.",
       founderRole: "CEO",
       values: [
         {
@@ -925,8 +925,8 @@ export const COPY = {
           body: "Start vu Produkter, Ouverturen a Promotiounen. Kuerz geplangte Phasen fir Inhalt, déi e Moment maachen, net just e Post.",
         },
         {
-          title: "Digital Design",
-          body: "Banneren, Aarbechtskleedung, Stickeren a Gefierbeschrëftungen als ee konsequente Markesystem — vum éischte Layout bis zum produktiounsfäerdege Visual.",
+          title: "Websäiten & Digital Design",
+          body: "Websäiten, Landingpages, Banneren, Aarbechtskleedung, Stickeren a Gefierbeschrëftungen als ee kloert a konsequent Markesystem.",
         },
       ],
     },
@@ -1072,10 +1072,10 @@ export const COPY = {
     },
     founders: {
       label: "Iwwer de Grënner",
-      heading: "E jonke Grënner dee Social Media féiert wéi e",
-      highlight: "seriéise Betrib",
+      heading: "Déi Persoun hannert der Aarbecht",
+      highlight: "an dem Standard",
       intro:
-        "Mir hunn LëtzImpact gegrënnt, well ze vill Agencen nach almodësch schaffen. Déi eng verkafe schéi Videoen, déi net performen, an déi aner sichen nëmmen no Performance mat Inhalt, dee net professionell wierkt. Mir bréngen déi zwou Säiten zesummen, propperen Inhalt, professionell presentéiert a gemaach fir ze performen.",
+        "Den Anas Ourabi féiert LëtzImpact mat engem klore Fokus op duerchduechte Strategie, staark kreativ Direktioun an Aarbecht, déi fir d'Clienten Resultater bréngt.",
       founderRole: "CEO",
       values: [
         {

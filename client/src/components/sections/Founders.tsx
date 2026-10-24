@@ -19,17 +19,9 @@ export function Founders() {
         <div className="mx-auto grid max-w-6xl gap-12 lg:grid-cols-12 lg:items-center lg:gap-16">
           <div className="lg:col-span-6 lg:flex lg:flex-col lg:justify-center">
             <SectionLabel num="04" label={copy.founders.label} />
-            <h2 className="mt-5 font-display text-[34px] font-bold leading-[1.05] tracking-tight sm:text-5xl lg:text-6xl">
-              {copy.founders.heading}{" "}
-              <span className="text-gradient">{copy.founders.highlight}</span>.
-            </h2>
-            <p className="mt-6 max-w-xl text-[15px] leading-relaxed text-white/65 sm:text-[16px]">
+            <p className="mt-6 max-w-lg text-[17px] leading-relaxed text-white/70 sm:text-lg">
               {copy.founders.intro}
             </p>
-            <div className="mt-8 flex items-center gap-3 text-white/45">
-              <span className="h-px w-12 bg-gradient-to-r from-[#EC12D8] to-[#4CC9F0]" />
-              <span className="font-mono-acc text-[10px] uppercase tracking-[0.2em]">Founder · CEO</span>
-            </div>
           </div>
           <div className="lg:col-span-6">
             <FounderCard img={ANAS} name="Anas Ourabi" role="Founder · CEO" />
