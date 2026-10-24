@@ -1,6 +1,5 @@
 // LëtzImpact — Neon Atelier
-// Floating glass navbar at the top. Smooth-scrolls to in-page sections,
-// shows a WhatsApp CTA, and collapses to a glass sheet on mobile.
+// Floating glass navbar for the multi-page LëtzImpact site.
 
 import { AnimatePresence, motion } from "framer-motion";
 import { Menu, X } from "lucide-react";
@@ -8,13 +7,6 @@ import { useEffect, useState } from "react";
 import { MagneticButton } from "@/components/MagneticButton";
 import { BRAND, NAV_LINKS, waLink } from "@/lib/brand";
 import { LANGUAGES, useI18n, type Language } from "@/lib/i18n";
-
-function smoothScrollTo(id: string) {
-  const el = document.getElementById(id);
-  if (!el) return;
-  const y = el.getBoundingClientRect().top + window.scrollY - 80;
-  window.scrollTo({ top: y, behavior: "smooth" });
-}
 
 const LOGO_SRC = "/brand/letzimpact-logo.png";
 
@@ -24,11 +16,7 @@ function Logo({ size = "md" }: { size?: "sm" | "md" }) {
 
   return (
     <a
-      href="#top"
-      onClick={e => {
-        e.preventDefault();
-        window.scrollTo({ top: 0, behavior: "smooth" });
-      }}
+      href="/"
       aria-label={copy.nav.home}
       className="group flex items-center"
     >
@@ -110,13 +98,13 @@ export function SiteNav() {
 
           <nav className="hidden items-center gap-1 md:flex">
             {NAV_LINKS.map(l => (
-              <button
+              <a
                 key={l.id}
-                onClick={() => smoothScrollTo(l.id)}
+                href={l.href}
                 className="rounded-full px-3.5 py-2 text-[13px] font-medium text-white/70 transition-colors hover:bg-white/[0.06] hover:text-white"
               >
                 {copy.nav[l.key]}
-              </button>
+              </a>
             ))}
           </nav>
 
@@ -186,25 +174,23 @@ export function SiteNav() {
               </div>
               <div className="mt-8 flex flex-col gap-1 sm:mt-10 sm:gap-2">
                 {NAV_LINKS.map((l, i) => (
-                  <motion.button
+                  <motion.a
                     key={l.id}
+                    href={l.href}
                     initial={{ opacity: 0, x: -20 }}
                     animate={{ opacity: 1, x: 0 }}
                     transition={{
                       delay: 0.1 + i * 0.05,
                       ease: [0.22, 1, 0.36, 1],
                     }}
-                    onClick={() => {
-                      smoothScrollTo(l.id);
-                      setOpen(false);
-                    }}
+                    onClick={() => setOpen(false)}
                     className="flex items-center justify-between border-b border-white/10 py-4 text-left font-display text-2xl font-semibold tracking-tight sm:py-5 sm:text-3xl"
                   >
                     {copy.nav[l.key]}
                     <span className="font-mono-acc text-xs text-white/35">
                       0{i + 1}
                     </span>
-                  </motion.button>
+                  </motion.a>
                 ))}
               </div>
               <div className="mt-auto flex flex-col gap-3">

@@ -71,6 +71,7 @@ export function Hero() {
             "radial-gradient(60% 50% at 80% 20%, rgba(162,80,227,0.22), transparent 60%), radial-gradient(40% 40% at 10% 80%, rgba(76,201,240,0.18), transparent 60%), radial-gradient(50% 40% at 50% 0%, rgba(236,18,216,0.12), transparent 70%)",
         }}
       />
+      <VideoBackdrop />
       <GridLines />
 
       <div className="container">
@@ -137,6 +138,34 @@ export function Hero() {
         </div>
       </div>
     </section>
+  );
+}
+
+function VideoBackdrop() {
+  const clips = [
+    "https://files.manuscdn.com/user_upload_by_module/session_file/310519663909699797/lYRQhRRYdmGlusgs.mp4",
+    "https://files.manuscdn.com/user_upload_by_module/session_file/310519663909699797/pnzRciDhQuyUqoPP.mp4",
+    "https://files.manuscdn.com/user_upload_by_module/session_file/310519663909699797/wtkmcVMJKeMlTuXf.mp4",
+  ];
+
+  return (
+    <div aria-hidden className="pointer-events-none absolute inset-0 -z-10 overflow-hidden opacity-[0.22]">
+      <div className="absolute inset-0 bg-gradient-to-b from-[#07060B]/25 via-[#07060B]/75 to-[#07060B]" />
+      <div className="absolute -right-16 top-20 grid w-[min(58vw,720px)] grid-cols-3 gap-4 blur-[0.2px] sm:gap-6">
+        {clips.map((src, index) => (
+          <video
+            key={src}
+            src={src}
+            autoPlay
+            muted
+            loop
+            playsInline
+            preload="metadata"
+            className={`aspect-[9/16] w-full rounded-2xl object-cover ring-1 ring-white/10 ${index === 1 ? "mt-14" : index === 2 ? "-mt-8" : "mt-5"}`}
+          />
+        ))}
+      </div>
+    </div>
   );
 }
 

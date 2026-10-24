@@ -121,21 +121,10 @@ export function ContactFooter() {
                 {NAV_LINKS.map(l => (
                   <li key={l.id}>
                     <a
-                      href={`#${l.id}`}
-                      onClick={e => {
-                        e.preventDefault();
-                        const el = document.getElementById(l.id);
-                        if (el) {
-                          const y =
-                            el.getBoundingClientRect().top +
-                            window.scrollY -
-                            80;
-                          window.scrollTo({ top: y, behavior: "smooth" });
-                        }
-                      }}
+                      href={l.href}
                       className="text-white/70 transition-colors hover:text-white"
                     >
-                      {copy.nav[l.id]}
+                      {copy.nav[l.key]}
                     </a>
                   </li>
                 ))}

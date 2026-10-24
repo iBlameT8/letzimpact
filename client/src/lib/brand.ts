@@ -21,9 +21,8 @@ export const waLink = (message: string = BRAND.whatsappMessage): string =>
   `https://wa.me/${BRAND.whatsappNumber}?text=${encodeURIComponent(message)}`;
 
 export const NAV_LINKS = [
-  { id: "services", key: "services" },
-  { id: "process", key: "process" },
-  { id: "packages", key: "packages" },
-  { id: "founders", key: "founders" },
-  { id: "faq", key: "faq" },
+  { id: "services", key: "services", href: "/services" },
+  { id: "recent-work", key: "results", href: "/results" },
+  { id: "founders", key: "founders", href: "/about" },
+  { id: "contact", key: "contact", href: "/contact" },
 ] as const;
