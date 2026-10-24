@@ -220,7 +220,7 @@ function VideoBackdrop() {
             loop
             playsInline
             preload="auto"
-            className={`${clip.featured ? "h-[34%]" : "h-[28%]"} w-auto self-center justify-self-center rounded-xl object-cover ring-1 ring-white/10 sm:rounded-2xl ${clip.className}`}
+            className={`${clip.featured ? "h-[40%]" : "h-[25%]"} w-auto self-center justify-self-center rounded-xl object-cover ring-1 ring-white/10 sm:rounded-2xl ${clip.className}`}
           />
         ))}
       </div>

@@ -75,7 +75,7 @@ function FounderCard({
           }}
         />
       </div>
-      <div className="flex flex-1 flex-col justify-center pt-4 sm:pt-5">
+      <div className="flex w-full max-w-[440px] flex-1 flex-col justify-center pt-4 sm:pt-5 lg:ml-auto">
         <div>
           <h3 className="font-display text-2xl font-semibold tracking-tight sm:text-3xl">
             {name}
