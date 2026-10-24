@@ -109,6 +109,27 @@ const REEL_ASSETS: ReelAsset[] = [
     rotateClass: "md:-rotate-[1.3deg]",
     isGridX: true,
   },
+  {
+    // Ramen Shifu – educational ingredients video
+    src: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663909699797/CHECtiFEQIwhhVyx.mov",
+    poster: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663909699797/dQjwLlkZvkcWCuUQ.jpg",
+    offsetClass: "md:-translate-y-3 xl:-translate-y-4",
+    rotateClass: "md:rotate-[0.9deg]",
+  },
+  {
+    // Ramen Shifu – chef and dish video
+    src: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663909699797/jLSAWAPTtWQXmaww.mov",
+    poster: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663909699797/NLTuSGvZaVsFYRTj.jpg",
+    offsetClass: "md:translate-y-4 xl:translate-y-5",
+    rotateClass: "md:-rotate-[1deg]",
+  },
+  {
+    // Ramen Shifu – restaurant campaign film
+    src: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663909699797/FfwVbxALqkzdtUOI.mov",
+    poster: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663909699797/fLFAoAWIkpCdaeUM.jpg",
+    offsetClass: "md:-translate-y-2 xl:-translate-y-3",
+    rotateClass: "md:rotate-[1.2deg]",
+  },
 ];
 
 function ReelCard({

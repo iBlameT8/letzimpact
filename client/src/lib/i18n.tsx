@@ -50,7 +50,7 @@ export const COPY = {
       heading: "A few projects from the",
       highlight: "last few weeks.",
       intro:
-        "Eleven short cuts across gastronomy, real estate, construction, cleaning, architecture, events and investment in Luxembourg, including two GridX productions. Same compact reel format, same clean style — each video built with a clear marketing purpose.",
+        "Fourteen short cuts across gastronomy, real estate, construction, cleaning, architecture, events, investment and hospitality in Luxembourg. Same compact reel format, same clean style — each video built with a clear marketing purpose.",
       play: "Play",
       pause: "Pause",
       reels: [
@@ -119,6 +119,24 @@ export const COPY = {
           label: "Rally · Car Museum",
           description:
             "A rally and car museum video for GridX. Showcasing the venue and the collection to position GridX as a premium destination.",
+        },
+        {
+          brand: "Ramen Shifu",
+          label: "Education · Ingredients",
+          description:
+            "An educational food video designed to earn attention by teaching viewers something useful about the ingredients behind the dish.",
+        },
+        {
+          brand: "Ramen Shifu",
+          label: "Chef · Dish",
+          description:
+            "A chef-led piece that brings the person, craft and finished dish closer to the audience.",
+        },
+        {
+          brand: "Ramen Shifu",
+          label: "Campaign · Restaurant",
+          description:
+            "A campaign film built around the restaurant's place, food and atmosphere to make the visit feel real before people arrive.",
         },
       ],
     },
@@ -411,7 +429,7 @@ export const COPY = {
       heading: "Quelques projets des",
       highlight: "dernières semaines.",
       intro:
-        "Onze courts clips autour de la gastronomie, de l'immobilier, de la construction, du nettoyage, de l'architecture, d'événements et de l'investissement, dont deux productions GridX. Même format compact, même style propre — chaque vidéo pensée avec un objectif marketing clair.",
+        "Quatorze courts clips autour de la gastronomie, de l'immobilier, de la construction, du nettoyage, de l'architecture, d'événements, de l'investissement et de l'hospitalité au Luxembourg. Même format compact, même style propre — chaque vidéo pensée avec un objectif marketing clair.",
       play: "Lire",
       pause: "Pause",
       reels: [
@@ -480,6 +498,24 @@ export const COPY = {
           label: "Rally · Musée Auto",
           description:
             "Une vidéo rally et musée auto pour GridX. Mettre en valeur le lieu et la collection pour positionner GridX comme destination premium.",
+        },
+        {
+          brand: "Ramen Shifu",
+          label: "Éducation · Ingrédients",
+          description:
+            "Une vidéo éducative conçue pour attirer l'attention en apprenant quelque chose d'utile sur les ingrédients du plat.",
+        },
+        {
+          brand: "Ramen Shifu",
+          label: "Chef · Plat",
+          description:
+            "Un contenu avec le chef qui rapproche le public de la personne, du savoir-faire et du plat terminé.",
+        },
+        {
+          brand: "Ramen Shifu",
+          label: "Campagne · Restaurant",
+          description:
+            "Un film de campagne autour du lieu, de la cuisine et de l'atmosphère du restaurant pour donner envie de venir.",
         },
       ],
     },
@@ -772,7 +808,7 @@ export const COPY = {
       heading: "E puer Projeten aus de",
       highlight: "leschte Wochen.",
       intro:
-        "Eelef kuerz Schnëtter aus Gastronomie, Immobilien, Bau, Botzen, Architektur, Events an Investitioun, mat zwou GridX Produktiounen. Dat selwecht kompakt Format, dee selwechte proppere Stil — all Video mat engem klore Marketing Zil.",
+        "Véierzéng kuerz Schnëtter aus Gastronomie, Immobilien, Bau, Botzen, Architektur, Events, Investitioun an Hospitality, mat engem klore Marketing Zil fir all Video.",
       play: "Ofspillen",
       pause: "Paus",
       reels: [
@@ -841,6 +877,24 @@ export const COPY = {
           label: "Rally · Automusée",
           description:
             "E Rally a Automusée Video fir GridX. Lieu a Kollektioun weisen fir GridX als Premium Destinatioun ze positionéieren.",
+        },
+        {
+          brand: "Ramen Shifu",
+          label: "Educatioun · Zutaten",
+          description:
+            "En edukative Food Video, dee mat nëtzlechen Informatiounen iwwer d'Zutaten Opmierksamkeet schaaft.",
+        },
+        {
+          brand: "Ramen Shifu",
+          label: "Chef · Plat",
+          description:
+            "E Video mam Chef, deen d'Persoun, d'Handwierk an de fäerdege Plat méi no un d'Publikum bréngt.",
+        },
+        {
+          brand: "Ramen Shifu",
+          label: "Campagne · Restaurant",
+          description:
+            "E Campagnefilm iwwer d'Plaz, d'Iessen an d'Atmosphär vum Restaurant, fir Loscht op de Besuch ze maachen.",
         },
       ],
     },

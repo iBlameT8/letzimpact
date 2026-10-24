@@ -2,7 +2,7 @@
 // Persistent social action buttons bottom right, with gradient halo and matching pill design.
 
 import { motion } from "framer-motion";
-import { type ComponentType, type SVGProps, useEffect, useState } from "react";
+import { type ComponentType, type SVGProps } from "react";
 import { WhatsAppGlyph } from "@/components/SiteNav";
 import { BRAND, waLink } from "@/lib/brand";
 import { useI18n } from "@/lib/i18n";
@@ -43,15 +43,7 @@ function TikTokGlyph(props: SVGProps<SVGSVGElement>) {
 }
 
 export function FloatingWhatsApp() {
-  const [show, setShow] = useState(false);
   const { copy } = useI18n();
-
-  useEffect(() => {
-    const onScroll = () => setShow(window.scrollY > 600);
-    onScroll();
-    window.addEventListener("scroll", onScroll, { passive: true });
-    return () => window.removeEventListener("scroll", onScroll);
-  }, []);
 
   const socialActions: SocialAction[] = [
     {
@@ -84,12 +76,7 @@ export function FloatingWhatsApp() {
   return (
     <motion.div
       initial={false}
-      animate={{
-        opacity: show ? 1 : 0,
-        y: show ? 0 : 16,
-        pointerEvents: show ? "auto" : "none",
-      }}
-      transition={{ duration: 0.4, ease: [0.22, 1, 0.36, 1] }}
+      animate={{ opacity: 1, y: 0 }}
       className="fixed right-4 z-40 flex flex-col items-end gap-3 sm:right-7"
       style={{ bottom: "max(1.25rem, env(safe-area-inset-bottom))" }}
     >
