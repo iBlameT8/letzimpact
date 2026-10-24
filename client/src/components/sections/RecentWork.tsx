@@ -31,7 +31,7 @@ type ReelCopy = {
 
 const REEL_ASSETS: ReelAsset[] = [
   {
-    // Foodstand – unexpected advertising cut
+    // Chalet au Gourmet – unexpected advertising cut
     src: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663909699797/oOXDxIQbqKkBLyiO.mp4",
     poster: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663909699797/TmjspQUNanpBcHtf.jpg",
     offsetClass: "md:translate-y-3 xl:translate-y-4",
@@ -99,13 +99,6 @@ const REEL_ASSETS: ReelAsset[] = [
     poster: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663909699797/xMnfLTuxwelGJjFI.jpg",
     offsetClass: "md:-translate-y-2 xl:-translate-y-3",
     rotateClass: "md:rotate-[1.3deg]",
-  },
-  {
-    // Goldbuyer – gold value investment
-    src: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663909699797/lYRQhRRYdmGlusgs.mp4",
-    poster: `${CDN}/TVQsaaGoHZglMOBe.jpg`,
-    offsetClass: "md:translate-y-2 xl:translate-y-3",
-    rotateClass: "md:-rotate-[0.7deg]",
   },
   {
     // GridX – WM Family Day

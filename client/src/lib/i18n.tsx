@@ -50,21 +50,21 @@ export const COPY = {
       heading: "A few projects from the",
       highlight: "last few weeks.",
       intro:
-        "Sixteen short cuts across gastronomy, real estate, construction, cleaning, architecture, events, investment and hospitality in Luxembourg. Same compact reel format, same clean style — each video built with a clear marketing purpose.",
+        "Fifteen short cuts across gastronomy, real estate, construction, cleaning, architecture, events and hospitality in Luxembourg. Same compact reel format, same clean style — each video built with a clear marketing purpose.",
       play: "Play",
       pause: "Pause",
       reels: [
         {
-          brand: "Foodstand",
-          label: "Advertising · Street Food",
+          brand: "Chalet au Gourmet",
+          label: "Advertising · Restaurant",
           description:
-            "An unexpected advertising cut for a foodstand, made to stop the scroll and make the offer feel immediate.",
+            "An unexpected advertising cut for Chalet au Gourmet, made to stop the scroll and make the restaurant feel immediate.",
         },
         {
-          brand: "Architecture",
+          brand: "Chalet au Gourmet",
           label: "Organic · Content",
           description:
-            "Organic content for an architect, showing the work and point of view in a natural, credible way.",
+            "Organic content for Chalet au Gourmet, showing the restaurant's offer and atmosphere in a natural, credible way.",
         },
         {
           brand: "Chalet au Gourmet",
@@ -113,12 +113,6 @@ export const COPY = {
           label: "Event · Recap",
           description:
             "A full event recap for a boxing event. Capturing the energy and atmosphere to build hype for the next edition.",
-        },
-        {
-          brand: "Goldbuyer",
-          label: "Investment · Gold",
-          description:
-            "A value-driven video for Goldbuyer. Showing gold prices over time to educate the audience and motivate them to buy.",
         },
         {
           brand: "GridX",
@@ -446,21 +440,21 @@ export const COPY = {
       heading: "Quelques projets des",
       highlight: "dernières semaines.",
       intro:
-        "Seize courts clips autour de la gastronomie, de l'immobilier, de la construction, du nettoyage, de l'architecture, d'événements, de l'investissement et de l'hospitalité au Luxembourg. Même format compact, même style propre — chaque vidéo pensée avec un objectif marketing clair.",
+        "Quinze courts clips autour de la gastronomie, de l'immobilier, de la construction, du nettoyage, de l'architecture, d'événements et de l'hospitalité au Luxembourg. Même format compact, même style propre — chaque vidéo pensée avec un objectif marketing clair.",
       play: "Lire",
       pause: "Pause",
       reels: [
         {
-          brand: "Foodstand",
-          label: "Publicité · Street Food",
+          brand: "Chalet au Gourmet",
+          label: "Publicité · Restaurant",
           description:
-            "Une publicité inattendue pour un foodstand, conçue pour arrêter le scroll et rendre l'offre immédiate.",
+            "Une publicité inattendue pour Chalet au Gourmet, conçue pour arrêter le scroll et mettre le restaurant au premier plan.",
         },
         {
-          brand: "Architecture",
+          brand: "Chalet au Gourmet",
           label: "Organique · Contenu",
           description:
-            "Du contenu organique pour un architecte, qui présente le travail et le point de vue de façon naturelle et crédible.",
+            "Du contenu organique pour Chalet au Gourmet, qui présente l'offre et l'atmosphère du restaurant de façon naturelle et crédible.",
         },
         {
           brand: "Chalet au Gourmet",
@@ -509,12 +503,6 @@ export const COPY = {
           label: "Événement · Recap",
           description:
             "Un recap complet d'un événement de boxe. Capturer l'énergie et l'ambiance pour créer l'impatience de la prochaine édition.",
-        },
-        {
-          brand: "Goldbuyer",
-          label: "Investissement · Or",
-          description:
-            "Une vidéo axée valeur pour Goldbuyer. Montrer l'évolution du cours de l'or pour éduquer l'audience et l'inciter à acheter.",
         },
         {
           brand: "GridX",
@@ -842,21 +830,21 @@ export const COPY = {
       heading: "E puer Projeten aus de",
       highlight: "leschte Wochen.",
       intro:
-        "Sechzéng kuerz Schnëtter aus Gastronomie, Immobilien, Bau, Botzen, Architektur, Events, Investitioun an Hospitality, mat engem klore Marketing Zil fir all Video.",
+        "Fofzéng kuerz Schnëtter aus Gastronomie, Immobilien, Bau, Botzen, Architektur, Events an Hospitality, mat engem klore Marketing Zil fir all Video.",
       play: "Ofspillen",
       pause: "Paus",
       reels: [
         {
-          brand: "Foodstand",
-          label: "Reklamm · Street Food",
+          brand: "Chalet au Gourmet",
+          label: "Reklamm · Restaurant",
           description:
-            "Eng onerwaart Reklamm fir e Foodstand, gemaach fir beim Scrollen ze stoppen an d'Offer direkt ze weisen.",
+            "Eng onerwaart Reklamm fir Chalet au Gourmet, gemaach fir beim Scrollen ze stoppen an de Restaurant direkt ze weisen.",
         },
         {
-          brand: "Architektur",
+          brand: "Chalet au Gourmet",
           label: "Organesch · Inhalt",
           description:
-            "Organeschen Inhalt fir en Architekt, deen d'Aarbecht an d'Perspektiv natierlech a glaubwürdeg weist.",
+            "Organeschen Inhalt fir Chalet au Gourmet, deen d'Offer an d'Atmosphär vum Restaurant natierlech a glaubwürdeg weist.",
         },
         {
           brand: "Chalet au Gourmet",
@@ -905,12 +893,6 @@ export const COPY = {
           label: "Event · Recap",
           description:
             "En Event Recap fir e Boxevent. D'Energie an d'Atmosphär afangen fir Loscht op d'nächst Editioun ze maachen.",
-        },
-        {
-          brand: "Goldbuyer",
-          label: "Investitioun · Gold",
-          description:
-            "E Wäert-gedriwwene Video fir Goldbuyer. D'Goldpräisser iwwer d'Zäit weisen fir d'Publikum z'educéieren an zum Kafen ze motivéieren.",
         },
         {
           brand: "GridX",
