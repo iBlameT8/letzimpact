@@ -143,25 +143,47 @@ export function Hero() {
 
 function VideoBackdrop() {
   const clips = [
-    "https://files.manuscdn.com/user_upload_by_module/session_file/310519663909699797/lYRQhRRYdmGlusgs.mp4",
-    "https://files.manuscdn.com/user_upload_by_module/session_file/310519663909699797/pnzRciDhQuyUqoPP.mp4",
-    "https://files.manuscdn.com/user_upload_by_module/session_file/310519663909699797/wtkmcVMJKeMlTuXf.mp4",
+    {
+      src: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663909699797/lYRQhRRYdmGlusgs.mp4",
+      className: "left-[3%] top-[26%] w-20 rotate-[-8deg] sm:w-28 lg:w-40",
+    },
+    {
+      src: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663909699797/pnzRciDhQuyUqoPP.mp4",
+      className: "right-[6%] top-[16%] w-24 rotate-[7deg] sm:w-32 lg:w-44",
+    },
+    {
+      src: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663909699797/wtkmcVMJKeMlTuXf.mp4",
+      className: "bottom-[14%] left-[10%] w-24 rotate-[6deg] sm:w-32 lg:w-44",
+    },
+    {
+      src: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663909699797/WGYaaQswtNsbWUwQ.mp4",
+      className: "bottom-[8%] right-[13%] w-20 rotate-[-7deg] sm:w-28 lg:w-40",
+    },
+    {
+      src: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663909699797/qcZzXqKDzADyKrTg.mp4",
+      className: "left-[18%] top-[10%] hidden w-16 rotate-[4deg] sm:block sm:w-24 lg:w-32",
+    },
+    {
+      src: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663909699797/RvrPdAOzkFMJugRH.mp4",
+      className: "right-[22%] bottom-[14%] hidden w-16 rotate-[-4deg] sm:block sm:w-24 lg:w-32",
+    },
   ];
 
   return (
-    <div aria-hidden className="pointer-events-none absolute inset-0 -z-10 overflow-hidden opacity-[0.22]">
-      <div className="absolute inset-0 bg-gradient-to-b from-[#07060B]/25 via-[#07060B]/75 to-[#07060B]" />
-      <div className="absolute -right-16 top-20 grid w-[min(58vw,720px)] grid-cols-3 gap-4 blur-[0.2px] sm:gap-6">
-        {clips.map((src, index) => (
+    <div aria-hidden className="pointer-events-none absolute inset-0 -z-10 overflow-hidden opacity-[0.30]">
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,transparent_15%,#07060B_78%)]" />
+      <div className="absolute inset-0 bg-gradient-to-b from-[#07060B]/35 via-[#07060B]/45 to-[#07060B]/90" />
+      <div className="absolute inset-0 blur-[0.2px]">
+        {clips.map(clip => (
           <video
-            key={src}
-            src={src}
+            key={clip.src}
+            src={clip.src}
             autoPlay
             muted
             loop
             playsInline
             preload="metadata"
-            className={`aspect-[9/16] w-full rounded-2xl object-cover ring-1 ring-white/10 ${index === 1 ? "mt-14" : index === 2 ? "-mt-8" : "mt-5"}`}
+            className={`absolute aspect-[9/16] rounded-xl object-cover ring-1 ring-white/10 sm:rounded-2xl ${clip.className}`}
           />
         ))}
       </div>

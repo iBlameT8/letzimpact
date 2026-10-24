@@ -10,14 +10,7 @@ import { CursorGlow } from "@/components/CursorGlow";
 import { FloatingWhatsApp } from "@/components/FloatingWhatsApp";
 import { SiteNav } from "@/components/SiteNav";
 import { ContactFooter } from "@/components/sections/ContactFooter";
-import { DigitalDesign } from "@/components/sections/DigitalDesign";
-import { FAQ } from "@/components/sections/FAQ";
-import { Founders } from "@/components/sections/Founders";
 import { Hero, PartnerStrip } from "@/components/sections/Hero";
-import { Packages } from "@/components/sections/Packages";
-import { Process } from "@/components/sections/Process";
-import { RecentWork } from "@/components/sections/RecentWork";
-import { Services } from "@/components/sections/Services";
 
 export default function Home() {
   return (
@@ -27,14 +20,7 @@ export default function Home() {
 
       <main className="relative">
         <Hero />
-        <RecentWork />
         <PartnerStrip />
-        <Services />
-        <DigitalDesign />
-        <Process />
-        <Packages />
-        <Founders />
-        <FAQ />
         <ContactFooter />
       </main>
 
