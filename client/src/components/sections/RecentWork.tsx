@@ -88,7 +88,7 @@ const REEL_ASSETS: ReelAsset[] = [
   },
   {
     // Goldbuyer – gold value investment
-    src: `${CDN}/fBuvYZzYZvwOiynB.mp4`,
+    src: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663909699797/lYRQhRRYdmGlusgs.mp4",
     poster: `${CDN}/TVQsaaGoHZglMOBe.jpg`,
     offsetClass: "md:translate-y-2 xl:translate-y-3",
     rotateClass: "md:-rotate-[0.7deg]",
