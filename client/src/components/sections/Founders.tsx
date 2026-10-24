@@ -28,7 +28,7 @@ export function Founders() {
             </p>
           </div>
           <div className="lg:col-span-5">
-            <FounderCard img={ANAS} name="Anas Ourabi" role="CEO" />
+            <FounderCard img={ANAS} name="Anas Ourabi" role="Founder · CEO" />
           </div>
         </div>
 
@@ -76,11 +76,11 @@ function FounderCard({
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: "-100px" }}
       transition={{ duration: 0.85, ease: [0.22, 1, 0.36, 1] }}
-      className={`group relative flex h-full flex-col overflow-hidden rounded-3xl bg-white/[0.03] ring-1 ring-white/10 lg:flex-row ${
+      className={`group relative flex h-full flex-col lg:flex-row ${
         offset ? "lg:translate-y-8" : ""
       }`}
     >
-      <div className="relative aspect-[4/5] w-full shrink-0 overflow-hidden lg:order-2 lg:aspect-auto lg:w-[44%]">
+      <div className="relative aspect-[4/5] w-full shrink-0 overflow-hidden rounded-3xl lg:order-2 lg:aspect-auto lg:w-[52%]">
         <img
           src={img}
           alt={`${name}, ${role}`}
@@ -96,20 +96,15 @@ function FounderCard({
               "linear-gradient(180deg, transparent 50%, rgba(7,6,11,0.85) 100%)",
           }}
         />
-        {/* corner meta */}
-        <div className="absolute left-5 top-5 flex items-center gap-2 rounded-full bg-black/40 px-3 py-1.5 font-mono-acc text-[11px] uppercase tracking-[0.18em] text-white/85 ring-1 ring-white/15 backdrop-blur">
-          <span className="h-1.5 w-1.5 rounded-full bg-[#EC12D8]" />
-          {role}
-        </div>
       </div>
-      <div className="order-2 flex flex-1 flex-col justify-center p-5 sm:p-7 lg:order-1 lg:p-10">
-        <div className="flex items-baseline justify-between gap-4">
+      <div className="order-2 flex flex-1 flex-col justify-center py-6 pr-6 sm:py-8 sm:pr-8 lg:order-1 lg:pr-10">
+        <div>
           <h3 className="font-display text-2xl font-semibold tracking-tight sm:text-3xl">
             {name}
           </h3>
-          <span className="font-mono-acc text-[11px] uppercase tracking-[0.18em] text-white/40">
-            LU
-          </span>
+          <p className="mt-2 font-mono-acc text-[11px] uppercase tracking-[0.18em] text-white/45">
+            {role}
+          </p>
         </div>
       </div>
     </motion.article>

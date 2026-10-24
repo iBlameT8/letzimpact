@@ -149,15 +149,15 @@ function VideoBackdrop() {
     },
     {
       src: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663909699797/pnzRciDhQuyUqoPP.mp4",
-      className: "col-start-4 row-start-1",
+      className: "col-start-5 row-start-1",
     },
     {
       src: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663909699797/wtkmcVMJKeMlTuXf.mp4",
-      className: "col-start-2 row-start-3 row-span-2",
+      className: "col-start-2 row-start-2 scale-[1.08]",
     },
     {
       src: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663909699797/WGYaaQswtNsbWUwQ.mp4",
-      className: "col-start-4 row-start-3",
+      className: "col-start-4 row-start-2",
     },
     {
       src: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663909699797/qcZzXqKDzADyKrTg.mp4",
@@ -165,31 +165,31 @@ function VideoBackdrop() {
     },
     {
       src: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663909699797/RvrPdAOzkFMJugRH.mp4",
-      className: "col-start-3 row-start-1",
+      className: "col-start-5 row-start-2",
     },
     {
       src: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663909699797/gwwdAWzrIaTIYzCY.mp4",
-      className: "col-start-4 row-start-2 row-span-2",
+      className: "col-start-2 row-start-1 scale-[1.08]",
     },
     {
       src: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663909699797/ySlHyzNZcGqifHeI.mp4",
-      className: "col-start-3 row-start-3 row-span-2",
+      className: "col-start-4 row-start-1 scale-[1.08]",
     },
     {
       src: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663909699797/XfghqZIgkWGduhGc.mp4",
-      className: "col-start-1 row-start-3 row-span-2",
+      className: "col-start-3 row-start-2 scale-[1.08]",
     },
     {
       src: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663909699797/opTgQPUImZzojHeJ.mp4",
-      className: "col-start-2 row-start-1 row-span-2",
+      className: "col-start-3 row-start-1 scale-[1.08]",
     },
   ];
 
   return (
-    <div aria-hidden className="pointer-events-none absolute inset-0 -z-10 hidden overflow-hidden opacity-[0.28] sm:block">
+    <div aria-hidden className="pointer-events-none absolute inset-0 -z-10 hidden overflow-hidden opacity-[0.22] sm:block">
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,transparent_15%,#07060B_78%)]" />
       <div className="absolute inset-0 bg-gradient-to-b from-[#07060B]/35 via-[#07060B]/45 to-[#07060B]/90" />
-      <div className="absolute inset-0 grid grid-cols-4 grid-rows-4 gap-5 p-6 blur-[0.2px] lg:gap-8 lg:p-12">
+      <div className="absolute inset-0 grid grid-cols-5 grid-rows-2 gap-6 p-10 blur-[0.2px] lg:gap-8 lg:p-16">
         {clips.map(clip => (
           <video
             key={clip.src}
