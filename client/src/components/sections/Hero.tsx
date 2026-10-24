@@ -168,15 +168,15 @@ function VideoBackdrop() {
       className: "right-[22%] bottom-[14%] hidden w-16 rotate-[-4deg] sm:block sm:w-24 lg:w-32",
     },
     {
-      src: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663909699797/CHECtiFEQIwhhVyx.mov",
+      src: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663909699797/gwwdAWzrIaTIYzCY.mp4",
       className: "left-[27%] bottom-[7%] hidden w-16 rotate-[-5deg] sm:block sm:w-24 lg:w-32",
     },
     {
-      src: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663909699797/jLSAWAPTtWQXmaww.mov",
+      src: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663909699797/ySlHyzNZcGqifHeI.mp4",
       className: "right-[29%] top-[8%] hidden w-16 rotate-[5deg] sm:block sm:w-24 lg:w-32",
     },
     {
-      src: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663909699797/FfwVbxALqkzdtUOI.mov",
+      src: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663909699797/XfghqZIgkWGduhGc.mp4",
       className: "left-[42%] bottom-[3%] hidden w-14 rotate-[3deg] sm:block sm:w-20 lg:w-28",
     },
   ];
