@@ -9,10 +9,10 @@ import {
 
 export type Language = "en" | "fr" | "lb";
 
-export const LANGUAGES: { code: Language; short: string; label: string }[] = [
-  { code: "en", short: "EN", label: "English" },
-  { code: "fr", short: "FR", label: "Français" },
-  { code: "lb", short: "LU", label: "Lëtzebuergesch" },
+export const LANGUAGES: { code: Language; short: string; label: string; flag: string }[] = [
+  { code: "en", short: "EN", label: "English", flag: "🇬🇧" },
+  { code: "fr", short: "FR", label: "Français", flag: "🇫🇷" },
+  { code: "lb", short: "LU", label: "Lëtzebuergesch", flag: "🇱🇺" },
 ];
 
 const STORAGE_KEY = "letzimpact-language";
@@ -141,6 +141,11 @@ export const COPY = {
       ],
     },
     services: {
+      pageEyebrow: "Capabilities / 02",
+      pageTitle: "Everything your brand needs to",
+      pageHighlight: "move forward.",
+      pageIntro:
+        "From strategy and content to websites, digital design and ongoing social media management, we build the system behind consistent attention.",
       label: "What we actually do",
       heading: "Six things, done",
       highlight: "properly",
@@ -520,6 +525,11 @@ export const COPY = {
       ],
     },
     services: {
+      pageEyebrow: "Expertise / 02",
+      pageTitle: "Tout ce qu'il faut à votre marque pour",
+      pageHighlight: "avancer.",
+      pageIntro:
+        "De la stratégie et du contenu aux sites web, au design digital et à la gestion social media, nous construisons le système qui fait durer l'attention.",
       label: "Ce que nous faisons vraiment",
       heading: "Six choses, faites",
       highlight: "correctement",
@@ -899,6 +909,11 @@ export const COPY = {
       ],
     },
     services: {
+      pageEyebrow: "Fäegkeeten / 02",
+      pageTitle: "Alles wat Är Mark brauch fir",
+      pageHighlight: "virunzekommen.",
+      pageIntro:
+        "Vun Strategie an Inhalt bis zu Websäiten, Digital Design a Social Media Management: Mir bauen de System hannert dauerhafter Opmierksamkeet.",
       label: "Wat mir wierklech maachen",
       heading: "Sechs Saachen, richteg",
       highlight: "gemaach",

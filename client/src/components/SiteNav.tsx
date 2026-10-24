@@ -46,13 +46,15 @@ function LanguageSwitcher({ className = "" }: { className?: string }) {
             type="button"
             onClick={() => setLanguage(item.code as Language)}
             aria-pressed={active}
-            className={`rounded-full px-2.5 py-1.5 font-mono-acc text-[10px] font-semibold tracking-[0.14em] transition sm:px-3 ${
+            aria-label={item.label}
+            title={item.label}
+            className={`grid h-8 w-8 place-items-center rounded-full text-[17px] leading-none transition ${
               active
                 ? "bg-white text-[#07060B]"
                 : "text-white/60 hover:bg-white/[0.06] hover:text-white"
             }`}
           >
-            {item.short}
+            <span aria-hidden>{item.flag}</span>
           </button>
         );
       })}

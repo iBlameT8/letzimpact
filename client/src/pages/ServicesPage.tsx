@@ -3,12 +3,15 @@ import { Packages } from "@/components/sections/Packages";
 import { Process } from "@/components/sections/Process";
 import { Services } from "@/components/sections/Services";
 import { PageFrame, PageIntro } from "@/components/PageFrame";
+import { useI18n } from "@/lib/i18n";
 
 export default function ServicesPage() {
+  const { copy } = useI18n();
+
   return (
     <PageFrame>
-      <PageIntro eyebrow="Capabilities / 02" title="Everything your brand needs to" highlight="move forward.">
-        From strategy and content to websites, digital design and ongoing social media management, we build the system behind consistent attention.
+      <PageIntro eyebrow={copy.services.pageEyebrow} title={copy.services.pageTitle} highlight={copy.services.pageHighlight}>
+        {copy.services.pageIntro}
       </PageIntro>
       <Services />
       <DigitalDesign />
