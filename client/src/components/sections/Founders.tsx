@@ -32,28 +32,6 @@ export function Founders() {
           </div>
         </div>
 
-        {/* Values strip */}
-        <motion.div
-          initial={{ opacity: 0, y: 24 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-80px" }}
-          transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
-          className="mt-12 grid grid-cols-2 gap-px overflow-hidden rounded-2xl bg-white/10 ring-1 ring-white/10 sm:mt-16 lg:grid-cols-4"
-        >
-          {copy.founders.values.map(v => (
-            <div
-              key={v.k}
-              className="bg-[#0A0911] p-5 transition-colors hover:bg-[#0E0C18] sm:p-6"
-            >
-              <div className="font-display text-lg font-semibold tracking-tight">
-                {v.k}
-              </div>
-              <p className="mt-2 text-[14px] leading-relaxed text-white/60">
-                {v.v}
-              </p>
-            </div>
-          ))}
-        </motion.div>
       </div>
     </section>
   );
