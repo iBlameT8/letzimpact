@@ -17,7 +17,7 @@ export function Founders() {
     >
       <div className="container">
         <div className="grid gap-8 lg:grid-cols-12 lg:items-stretch">
-          <div className="lg:col-span-7 lg:flex lg:flex-col lg:justify-center">
+          <div className="lg:col-span-6 lg:flex lg:flex-col lg:justify-center">
             <SectionLabel num="04" label={copy.founders.label} />
             <h2 className="mt-5 font-display text-[34px] font-bold leading-[1.05] tracking-tight sm:text-5xl lg:text-6xl">
               {copy.founders.heading}{" "}
@@ -27,7 +27,7 @@ export function Founders() {
               {copy.founders.intro}
             </p>
           </div>
-          <div className="lg:col-span-5">
+          <div className="lg:col-span-6">
             <FounderCard img={ANAS} name="Anas Ourabi" role="Founder · CEO" />
           </div>
         </div>
@@ -76,11 +76,11 @@ function FounderCard({
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: "-100px" }}
       transition={{ duration: 0.85, ease: [0.22, 1, 0.36, 1] }}
-      className={`group relative flex h-full flex-col lg:flex-row ${
+      className={`group relative flex h-full flex-col ${
         offset ? "lg:translate-y-8" : ""
       }`}
     >
-      <div className="relative aspect-[4/5] w-full shrink-0 overflow-hidden rounded-3xl lg:order-2 lg:aspect-auto lg:w-[52%]">
+      <div className="relative aspect-[4/5] w-full shrink-0 overflow-hidden rounded-3xl lg:aspect-[4/4.5]">
         <img
           src={img}
           alt={`${name}, ${role}`}
@@ -97,7 +97,7 @@ function FounderCard({
           }}
         />
       </div>
-      <div className="order-2 flex flex-1 flex-col justify-center py-6 pr-6 sm:py-8 sm:pr-8 lg:order-1 lg:pr-10">
+      <div className="flex flex-1 flex-col justify-center pt-4 sm:pt-5">
         <div>
           <h3 className="font-display text-2xl font-semibold tracking-tight sm:text-3xl">
             {name}

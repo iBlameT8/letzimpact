@@ -153,7 +153,8 @@ function VideoBackdrop() {
     },
     {
       src: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663909699797/wtkmcVMJKeMlTuXf.mp4",
-      className: "col-start-2 row-start-2 scale-[1.08]",
+      className: "col-start-2 row-start-2",
+      featured: true,
     },
     {
       src: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663909699797/WGYaaQswtNsbWUwQ.mp4",
@@ -169,19 +170,23 @@ function VideoBackdrop() {
     },
     {
       src: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663909699797/gwwdAWzrIaTIYzCY.mp4",
-      className: "col-start-2 row-start-1 scale-[1.08]",
+      className: "col-start-2 row-start-1",
+      featured: true,
     },
     {
       src: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663909699797/ySlHyzNZcGqifHeI.mp4",
-      className: "col-start-4 row-start-1 scale-[1.08]",
+      className: "col-start-4 row-start-1",
+      featured: true,
     },
     {
       src: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663909699797/XfghqZIgkWGduhGc.mp4",
-      className: "col-start-3 row-start-2 scale-[1.08]",
+      className: "col-start-3 row-start-2",
+      featured: true,
     },
     {
       src: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663909699797/opTgQPUImZzojHeJ.mp4",
-      className: "col-start-3 row-start-1 scale-[1.08]",
+      className: "col-start-3 row-start-1",
+      featured: true,
     },
   ];
 
@@ -199,7 +204,7 @@ function VideoBackdrop() {
             loop
             playsInline
             preload="metadata"
-            className={`h-full min-h-0 w-full rounded-xl object-cover ring-1 ring-white/10 sm:rounded-2xl ${clip.className}`}
+            className={`${clip.featured ? "h-[68%]" : "h-[56%]"} w-auto self-center justify-self-center rounded-xl object-cover ring-1 ring-white/10 sm:rounded-2xl ${clip.className}`}
           />
         ))}
       </div>
