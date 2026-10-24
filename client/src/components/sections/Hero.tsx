@@ -145,51 +145,51 @@ function VideoBackdrop() {
   const clips = [
     {
       src: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663909699797/lYRQhRRYdmGlusgs.mp4",
-      className: "left-[3%] top-[48%] w-16 rotate-[-8deg] sm:w-24 lg:w-32",
+      className: "col-start-1 row-start-1",
     },
     {
       src: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663909699797/pnzRciDhQuyUqoPP.mp4",
-      className: "right-[4%] top-[51%] w-16 rotate-[7deg] sm:w-24 lg:w-32",
+      className: "col-start-4 row-start-1",
     },
     {
       src: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663909699797/wtkmcVMJKeMlTuXf.mp4",
-      className: "left-[10%] bottom-[7%] w-20 rotate-[6deg] sm:w-28 lg:w-36",
+      className: "col-start-2 row-start-3 row-span-2",
     },
     {
       src: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663909699797/WGYaaQswtNsbWUwQ.mp4",
-      className: "right-[10%] bottom-[6%] w-20 rotate-[-7deg] sm:w-28 lg:w-36",
+      className: "col-start-4 row-start-3",
     },
     {
       src: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663909699797/qcZzXqKDzADyKrTg.mp4",
-      className: "left-[26%] top-[52%] hidden w-14 rotate-[4deg] sm:block sm:w-20 lg:w-28",
+      className: "col-start-1 row-start-2",
     },
     {
       src: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663909699797/RvrPdAOzkFMJugRH.mp4",
-      className: "right-[25%] top-[49%] hidden w-14 rotate-[-4deg] sm:block sm:w-20 lg:w-28",
+      className: "col-start-3 row-start-1",
     },
     {
       src: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663909699797/gwwdAWzrIaTIYzCY.mp4",
-      className: "left-[17%] bottom-[11%] hidden w-24 rotate-[-5deg] sm:block sm:w-36 lg:w-48",
+      className: "col-start-4 row-start-2 row-span-2",
     },
     {
       src: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663909699797/ySlHyzNZcGqifHeI.mp4",
-      className: "right-[18%] top-[12%] hidden w-24 rotate-[5deg] sm:block sm:w-36 lg:w-48",
+      className: "col-start-3 row-start-3 row-span-2",
     },
     {
       src: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663909699797/XfghqZIgkWGduhGc.mp4",
-      className: "left-[43%] bottom-[6%] hidden w-20 rotate-[3deg] sm:block sm:w-28 lg:w-36",
+      className: "col-start-1 row-start-3 row-span-2",
     },
     {
       src: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663909699797/opTgQPUImZzojHeJ.mp4",
-      className: "right-[8%] bottom-[16%] hidden w-24 rotate-[-4deg] sm:block sm:w-36 lg:w-48",
+      className: "col-start-2 row-start-1 row-span-2",
     },
   ];
 
   return (
-    <div aria-hidden className="pointer-events-none absolute inset-0 -z-10 overflow-hidden opacity-[0.30]">
+    <div aria-hidden className="pointer-events-none absolute inset-0 -z-10 hidden overflow-hidden opacity-[0.28] sm:block">
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,transparent_15%,#07060B_78%)]" />
       <div className="absolute inset-0 bg-gradient-to-b from-[#07060B]/35 via-[#07060B]/45 to-[#07060B]/90" />
-      <div className="absolute inset-0 blur-[0.2px]">
+      <div className="absolute inset-0 grid grid-cols-4 grid-rows-4 gap-5 p-6 blur-[0.2px] lg:gap-8 lg:p-12">
         {clips.map(clip => (
           <video
             key={clip.src}
@@ -199,7 +199,7 @@ function VideoBackdrop() {
             loop
             playsInline
             preload="metadata"
-            className={`absolute aspect-[9/16] rounded-xl object-cover ring-1 ring-white/10 sm:rounded-2xl ${clip.className}`}
+            className={`h-full min-h-0 w-full rounded-xl object-cover ring-1 ring-white/10 sm:rounded-2xl ${clip.className}`}
           />
         ))}
       </div>

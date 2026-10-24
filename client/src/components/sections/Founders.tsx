@@ -16,26 +16,20 @@ export function Founders() {
       className="relative isolate overflow-hidden py-20 sm:py-28 lg:py-36"
     >
       <div className="container">
-        <div className="grid gap-10 lg:grid-cols-12 lg:items-end">
-          <div className="lg:col-span-7">
+        <div className="grid gap-8 lg:grid-cols-12 lg:items-stretch">
+          <div className="lg:col-span-7 lg:flex lg:flex-col lg:justify-center">
             <SectionLabel num="04" label={copy.founders.label} />
             <h2 className="mt-5 font-display text-[34px] font-bold leading-[1.05] tracking-tight sm:text-5xl lg:text-6xl">
               {copy.founders.heading}{" "}
               <span className="text-gradient">{copy.founders.highlight}</span>.
             </h2>
+            <p className="mt-6 max-w-xl text-[15px] leading-relaxed text-white/65 sm:text-[16px]">
+              {copy.founders.intro}
+            </p>
           </div>
-          <p className="text-[15px] leading-relaxed text-white/65 sm:text-[16px] lg:col-span-5">
-            {copy.founders.intro}
-          </p>
-        </div>
-
-        {/* Founder profile */}
-        <div className="mt-10 max-w-3xl sm:mt-14">
-          <FounderCard
-            img={ANAS}
-            name="Anas Ourabi"
-            role="CEO"
-          />
+          <div className="lg:col-span-5">
+            <FounderCard img={ANAS} name="Anas Ourabi" role="CEO" />
+          </div>
         </div>
 
         {/* Values strip */}
