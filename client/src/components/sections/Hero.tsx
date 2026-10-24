@@ -219,7 +219,7 @@ function VideoBackdrop() {
             muted
             loop
             playsInline
-            preload="metadata"
+            preload="auto"
             className={`${clip.featured ? "h-[34%]" : "h-[28%]"} w-auto self-center justify-self-center rounded-xl object-cover ring-1 ring-white/10 sm:rounded-2xl ${clip.className}`}
           />
         ))}

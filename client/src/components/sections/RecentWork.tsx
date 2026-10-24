@@ -223,7 +223,7 @@ function ReelCard({
             muted
             loop
             playsInline
-            preload="none"
+            preload="metadata"
             onPlay={() => setIsPlaying(true)}
             onPause={() => setIsPlaying(false)}
             className="h-full w-full object-cover"
