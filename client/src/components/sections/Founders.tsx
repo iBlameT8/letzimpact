@@ -30,7 +30,7 @@ export function Founders() {
         </div>
 
         {/* Founder profile */}
-        <div className="mt-12 max-w-xl sm:mt-16">
+        <div className="mt-10 max-w-3xl sm:mt-14">
           <FounderCard
             img={ANAS}
             name="Anas Ourabi"
@@ -82,11 +82,11 @@ function FounderCard({
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: "-100px" }}
       transition={{ duration: 0.85, ease: [0.22, 1, 0.36, 1] }}
-      className={`group relative flex h-full flex-col overflow-hidden rounded-3xl bg-white/[0.03] ring-1 ring-white/10 ${
+      className={`group relative flex h-full flex-col overflow-hidden rounded-3xl bg-white/[0.03] ring-1 ring-white/10 lg:flex-row ${
         offset ? "lg:translate-y-8" : ""
       }`}
     >
-      <div className="relative aspect-[4/5] w-full overflow-hidden">
+      <div className="relative aspect-[4/5] w-full shrink-0 overflow-hidden lg:order-2 lg:aspect-auto lg:w-[44%]">
         <img
           src={img}
           alt={`${name}, ${role}`}
@@ -108,7 +108,7 @@ function FounderCard({
           {role}
         </div>
       </div>
-      <div className="flex flex-1 flex-col p-5 sm:p-7">
+      <div className="order-2 flex flex-1 flex-col justify-center p-5 sm:p-7 lg:order-1 lg:p-10">
         <div className="flex items-baseline justify-between gap-4">
           <h3 className="font-display text-2xl font-semibold tracking-tight sm:text-3xl">
             {name}
