@@ -80,7 +80,7 @@ function FounderCard({
         offset ? "lg:translate-y-8" : ""
       }`}
     >
-      <div className="relative aspect-[4/5] w-full shrink-0 overflow-hidden rounded-3xl lg:aspect-[4/4.5]">
+      <div className="relative aspect-[4/5] w-full max-w-[360px] shrink-0 overflow-hidden rounded-3xl lg:ml-auto lg:aspect-[4/5]">
         <img
           src={img}
           alt={`${name}, ${role}`}

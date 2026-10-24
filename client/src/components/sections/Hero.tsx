@@ -145,47 +145,47 @@ function VideoBackdrop() {
   const clips = [
     {
       src: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663909699797/lYRQhRRYdmGlusgs.mp4",
-      className: "col-start-1 row-start-1",
+      className: "col-start-1 row-start-1 rotate-[-4deg]",
     },
     {
       src: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663909699797/pnzRciDhQuyUqoPP.mp4",
-      className: "col-start-5 row-start-1",
+      className: "col-start-5 row-start-1 rotate-[4deg]",
     },
     {
       src: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663909699797/wtkmcVMJKeMlTuXf.mp4",
-      className: "col-start-2 row-start-2",
+      className: "col-start-2 row-start-2 rotate-[3deg]",
       featured: true,
     },
     {
       src: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663909699797/WGYaaQswtNsbWUwQ.mp4",
-      className: "col-start-4 row-start-2",
+      className: "col-start-4 row-start-2 rotate-[-3deg]",
     },
     {
       src: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663909699797/qcZzXqKDzADyKrTg.mp4",
-      className: "col-start-1 row-start-2",
+      className: "col-start-1 row-start-2 rotate-[2deg]",
     },
     {
       src: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663909699797/RvrPdAOzkFMJugRH.mp4",
-      className: "col-start-5 row-start-2",
+      className: "col-start-5 row-start-2 rotate-[-2deg]",
     },
     {
       src: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663909699797/gwwdAWzrIaTIYzCY.mp4",
-      className: "col-start-2 row-start-1",
+      className: "col-start-2 row-start-1 rotate-[-3deg]",
       featured: true,
     },
     {
       src: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663909699797/ySlHyzNZcGqifHeI.mp4",
-      className: "col-start-4 row-start-1",
+      className: "col-start-4 row-start-1 rotate-[3deg]",
       featured: true,
     },
     {
       src: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663909699797/XfghqZIgkWGduhGc.mp4",
-      className: "col-start-3 row-start-2",
+      className: "col-start-3 row-start-2 rotate-[-2deg]",
       featured: true,
     },
     {
       src: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663909699797/opTgQPUImZzojHeJ.mp4",
-      className: "col-start-3 row-start-1",
+      className: "col-start-3 row-start-1 rotate-[2deg]",
       featured: true,
     },
   ];
@@ -204,7 +204,7 @@ function VideoBackdrop() {
             loop
             playsInline
             preload="metadata"
-            className={`${clip.featured ? "h-[68%]" : "h-[56%]"} w-auto self-center justify-self-center rounded-xl object-cover ring-1 ring-white/10 sm:rounded-2xl ${clip.className}`}
+            className={`${clip.featured ? "h-[34%]" : "h-[28%]"} w-auto self-center justify-self-center rounded-xl object-cover ring-1 ring-white/10 sm:rounded-2xl ${clip.className}`}
           />
         ))}
       </div>
