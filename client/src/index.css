@@ -194,29 +194,15 @@
 
 @media (min-width: 640px) {
   .hero-mobile-video {
-    position: static !important;
-    left: auto !important;
-    bottom: auto !important;
-    grid-column: auto !important;
-    grid-row: auto !important;
-    width: calc(100% - 8px) !important;
-    min-width: 0;
-    max-width: none;
+    position: absolute !important;
+    bottom: -30% !important;
+    width: 10vw !important;
+    min-width: 120px;
+    max-width: 190px;
     height: auto !important;
     aspect-ratio: auto;
     object-fit: contain;
-    animation: hero-video-grid-rise 6s ease-in-out infinite alternate;
-    align-self: center;
-    justify-self: center;
-  }
-
-  @keyframes hero-video-grid-rise {
-    from {
-      transform: translateY(34px);
-    }
-    to {
-      transform: translateY(-34px);
-    }
+    animation: hero-video-rise 42s linear infinite;
   }
 }
 
