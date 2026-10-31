@@ -196,9 +196,9 @@
   .hero-mobile-video {
     position: absolute !important;
     bottom: -30% !important;
-    width: 12.35vw !important;
-    min-width: 100px;
-    max-width: 200px;
+    width: 5.1vw !important;
+    min-width: 0;
+    max-width: 110px;
     height: auto !important;
     aspect-ratio: auto;
     object-fit: contain;
