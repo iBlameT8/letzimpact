@@ -194,7 +194,7 @@
 
 @media (min-width: 640px) {
   .hero-mobile-video {
-    width: 12% !important;
+    width: 9% !important;
     height: auto !important;
     aspect-ratio: 16 / 9;
     object-fit: cover;
@@ -208,31 +208,24 @@
     animation-duration: 19s;
   }
 
-  .hero-mobile-video:nth-child(3n + 1) {
-    left: 3%;
-    animation-delay: -2s;
+  .hero-mobile-video:nth-child(5n + 1) {
+    left: 3% !important;
   }
 
-  .hero-mobile-video:nth-child(3n + 2) {
-    left: 37%;
-    animation-delay: -9s;
+  .hero-mobile-video:nth-child(5n + 2) {
+    left: 22% !important;
   }
 
-  .hero-mobile-video:nth-child(3n) {
-    left: 70%;
-    animation-delay: -15s;
+  .hero-mobile-video:nth-child(5n + 3) {
+    left: 41% !important;
   }
 
-  .hero-mobile-video:nth-child(4n + 1) {
-    left: 12%;
-  }
-
-  .hero-mobile-video:nth-child(4n + 2) {
-    left: 55%;
+  .hero-mobile-video:nth-child(5n + 4) {
+    left: 60% !important;
   }
 
   .hero-mobile-video:nth-child(5n) {
-    left: 76%;
+    left: 79% !important;
   }
 
 }
