@@ -132,8 +132,8 @@ const REEL_ASSETS: ReelAsset[] = [
   },
   {
     // Ramen Shifu – restaurant campaign film
-    src: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663909699797/XfghqZIgkWGduhGc.mp4",
-    poster: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663909699797/fLFAoAWIkpCdaeUM.jpg",
+    src: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663909699797/EfoWelopvDlxAjTj.mp4",
+    poster: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663909699797/PCvZbANtwnBURzbC.jpg",
     offsetClass: "md:-translate-y-2 xl:-translate-y-3",
     rotateClass: "md:rotate-[1.2deg]",
   },
