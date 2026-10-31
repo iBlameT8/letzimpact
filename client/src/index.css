@@ -192,6 +192,15 @@
   }
 }
 
+@media (min-width: 640px) {
+  .hero-mobile-video {
+    width: 12% !important;
+    height: auto !important;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+  }
+}
+
 @media (max-width: 639px) {
   .hero-mobile-video {
     bottom: -34% !important;
