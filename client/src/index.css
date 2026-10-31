@@ -205,18 +205,17 @@
     height: auto !important;
     aspect-ratio: auto;
     object-fit: contain;
-    animation: hero-video-grid-drift 7s ease-in-out infinite;
+    animation: hero-video-grid-rise 6s ease-in-out infinite alternate;
     align-self: center;
     justify-self: center;
   }
 
-  @keyframes hero-video-grid-drift {
-    0%,
-    100% {
-      transform: translateY(8px);
+  @keyframes hero-video-grid-rise {
+    from {
+      transform: translateY(34px);
     }
-    50% {
-      transform: translateY(-8px);
+    to {
+      transform: translateY(-34px);
     }
   }
 }
