@@ -194,12 +194,30 @@
 
 @media (min-width: 640px) {
   .hero-mobile-video {
-    width: 14vw !important;
-    min-width: 130px;
-    max-width: 220px;
-    height: min(26vw, 380px) !important;
-    aspect-ratio: 9 / 16;
-    object-fit: cover;
+    position: static !important;
+    left: auto !important;
+    bottom: auto !important;
+    grid-column: auto !important;
+    grid-row: auto !important;
+    width: calc(100% - 8px) !important;
+    min-width: 0;
+    max-width: none;
+    height: auto !important;
+    aspect-ratio: auto;
+    object-fit: contain;
+    animation: hero-video-grid-drift 7s ease-in-out infinite;
+    align-self: center;
+    justify-self: center;
+  }
+
+  @keyframes hero-video-grid-drift {
+    0%,
+    100% {
+      transform: translateY(8px);
+    }
+    50% {
+      transform: translateY(-8px);
+    }
   }
 }
 

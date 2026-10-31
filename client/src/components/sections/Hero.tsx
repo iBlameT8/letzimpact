@@ -222,7 +222,7 @@ function VideoBackdrop() {
     <div aria-hidden className="pointer-events-none absolute inset-0 -z-10 block overflow-hidden opacity-[0.18] sm:opacity-[0.22]">
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,transparent_15%,#07060B_78%)]" />
       <div className="absolute inset-0 bg-gradient-to-b from-[#07060B]/35 via-[#07060B]/45 to-[#07060B]/90" />
-      <div className="absolute inset-0 grid grid-cols-3 grid-rows-6 gap-3 p-4 blur-[0.2px] sm:grid-cols-8 sm:grid-rows-2 sm:gap-5 sm:p-8 lg:gap-7 lg:p-14">
+      <div className="absolute inset-0 grid grid-cols-3 grid-rows-6 gap-3 p-4 blur-[0.2px] sm:grid-cols-9 sm:grid-rows-2 sm:gap-5 sm:p-8 lg:gap-7 lg:p-14">
         {clips.map((clip, index) => (
           <video
             key={clip.src}
