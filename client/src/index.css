@@ -194,7 +194,7 @@
 
 @media (min-width: 640px) {
   .hero-mobile-video {
-    width: 9% !important;
+    width: 15% !important;
     height: auto !important;
     aspect-ratio: 16 / 9;
     object-fit: cover;
