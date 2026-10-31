@@ -231,8 +231,11 @@ function VideoBackdrop() {
             muted
             loop
             playsInline
+            controls={false}
+            disablePictureInPicture
+            controlsList="nodownload noplaybackrate"
             preload="auto"
-            className={`h-[30%] w-auto max-sm:col-auto max-sm:row-auto max-sm:w-[82%] max-sm:rotate-0 self-center justify-self-center rounded-xl object-cover ring-1 ring-white/10 sm:rounded-2xl ${clip.className}`}
+            className={`hero-mobile-video h-[30%] w-auto max-sm:col-auto max-sm:row-auto max-sm:w-[82%] max-sm:rotate-0 self-center justify-self-center rounded-xl object-cover ring-1 ring-white/10 sm:rounded-2xl ${clip.className}`}
           />
         ))}
       </div>
