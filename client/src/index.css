@@ -158,21 +158,45 @@
   }
 }
 
-@media (max-width: 639px) {
-  .hero-mobile-video::-webkit-media-controls,
-  .hero-mobile-video::-webkit-media-controls-panel,
-  .hero-mobile-video::-webkit-media-controls-start-playback-button {
-    display: none !important;
-    -webkit-appearance: none !important;
-  }
+/* Floating hero reels: the same calm bottom-to-top motion is used on every viewport. */
+.hero-mobile-video {
+  position: absolute !important;
+  bottom: -30% !important;
+  width: 13% !important;
+  height: auto !important;
+  animation: hero-video-rise 24s linear infinite;
+  will-change: transform;
+}
 
+.hero-mobile-video::-webkit-media-controls,
+.hero-mobile-video::-webkit-media-controls-panel,
+.hero-mobile-video::-webkit-media-controls-start-playback-button {
+  display: none !important;
+  -webkit-appearance: none !important;
+}
+
+@keyframes hero-video-rise {
+  0% {
+    transform: translate3d(0, 0, 0) rotate(-2deg);
+    opacity: 0;
+  }
+  10% {
+    opacity: 0.9;
+  }
+  86% {
+    opacity: 0.9;
+  }
+  100% {
+    transform: translate3d(0, -145vh, 0) rotate(2deg);
+    opacity: 0;
+  }
+}
+
+@media (max-width: 639px) {
   .hero-mobile-video {
-    position: absolute !important;
     bottom: -34% !important;
     width: 19% !important;
-    height: auto !important;
-    animation: hero-video-rise 19s linear infinite;
-    will-change: transform;
+    animation-duration: 19s;
   }
 
   .hero-mobile-video:nth-child(3n + 1) {
@@ -202,22 +226,6 @@
     left: 76%;
   }
 
-  @keyframes hero-video-rise {
-    0% {
-      transform: translate3d(0, 0, 0) rotate(-2deg);
-      opacity: 0;
-    }
-    10% {
-      opacity: 0.9;
-    }
-    86% {
-      opacity: 0.9;
-    }
-    100% {
-      transform: translate3d(0, -145vh, 0) rotate(2deg);
-      opacity: 0;
-    }
-  }
 }
 
 @layer components {
