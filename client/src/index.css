@@ -196,8 +196,8 @@
   .hero-mobile-video {
     width: 15% !important;
     height: auto !important;
-    aspect-ratio: 16 / 9;
-    object-fit: cover;
+    aspect-ratio: auto;
+    object-fit: contain;
   }
 }
 
