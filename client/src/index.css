@@ -162,7 +162,7 @@
   .hero-mobile-video {
     position: absolute !important;
     bottom: -34% !important;
-    width: 27% !important;
+    width: 19% !important;
     height: auto !important;
     animation: hero-video-rise 19s linear infinite;
     will-change: transform;

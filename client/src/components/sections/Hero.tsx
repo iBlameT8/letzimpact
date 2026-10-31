@@ -223,7 +223,7 @@ function VideoBackdrop() {
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,transparent_15%,#07060B_78%)]" />
       <div className="absolute inset-0 bg-gradient-to-b from-[#07060B]/35 via-[#07060B]/45 to-[#07060B]/90" />
       <div className="absolute inset-0 grid grid-cols-3 grid-rows-6 gap-3 p-4 blur-[0.2px] sm:grid-cols-8 sm:grid-rows-2 sm:gap-5 sm:p-8 lg:gap-7 lg:p-14">
-        {clips.map(clip => (
+        {clips.map((clip, index) => (
           <video
             key={clip.src}
             src={clip.src}
@@ -235,6 +235,13 @@ function VideoBackdrop() {
             disablePictureInPicture
             controlsList="nodownload noplaybackrate"
             preload="auto"
+            onCanPlay={event => {
+              event.currentTarget.play().catch(() => undefined);
+            }}
+            style={{
+              left: `${[2, 21, 40, 59, 78][index % 5]}%`,
+              animationDelay: `-${(index * 3.7) % 28}s`,
+            }}
             className={`hero-mobile-video h-[30%] w-auto max-sm:col-auto max-sm:row-auto max-sm:w-[82%] max-sm:rotate-0 self-center justify-self-center rounded-xl object-cover ring-1 ring-white/10 sm:rounded-2xl ${clip.className}`}
           />
         ))}
