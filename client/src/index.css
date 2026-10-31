@@ -164,7 +164,7 @@
   bottom: -30% !important;
   width: 13% !important;
   height: auto !important;
-  animation: hero-video-rise 24s linear infinite;
+  animation: hero-video-rise 42s linear infinite;
   will-change: transform;
 }
 
@@ -194,10 +194,12 @@
 
 @media (min-width: 640px) {
   .hero-mobile-video {
-    width: 15% !important;
-    height: auto !important;
-    aspect-ratio: auto;
-    object-fit: contain;
+    width: 14vw !important;
+    min-width: 130px;
+    max-width: 220px;
+    height: min(26vw, 380px) !important;
+    aspect-ratio: 9 / 16;
+    object-fit: cover;
   }
 }
 
