@@ -159,6 +159,13 @@
 }
 
 @media (max-width: 639px) {
+  .hero-mobile-video::-webkit-media-controls,
+  .hero-mobile-video::-webkit-media-controls-panel,
+  .hero-mobile-video::-webkit-media-controls-start-playback-button {
+    display: none !important;
+    -webkit-appearance: none !important;
+  }
+
   .hero-mobile-video {
     position: absolute !important;
     bottom: -34% !important;

@@ -235,7 +235,12 @@ function VideoBackdrop() {
             disablePictureInPicture
             controlsList="nodownload noplaybackrate"
             preload="auto"
+            onLoadedData={event => {
+              event.currentTarget.muted = true;
+              event.currentTarget.play().catch(() => undefined);
+            }}
             onCanPlay={event => {
+              event.currentTarget.muted = true;
               event.currentTarget.play().catch(() => undefined);
             }}
             style={{
