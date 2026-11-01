@@ -7,9 +7,9 @@ import { waLink } from "@/lib/brand";
 import { useI18n } from "@/lib/i18n";
 
 const RESULTS_PAGE_COPY = {
-  en: { eyebrow: "Selected work / 01", title: "Work that earns", highlight: "attention.", next: "Next project", cta: "Your brand could be the next case study." },
-  fr: { eyebrow: "Projets choisis / 01", title: "Un travail qui mérite", highlight: "l'attention.", next: "Prochain projet", cta: "Votre marque pourrait être notre prochain cas client." },
-  lb: { eyebrow: "Ausgewielte Projeten / 01", title: "Aarbecht déi", highlight: "Opmierksamkeet verdéngt.", next: "Nächste Projet", cta: "Deng Mark kéint eisen nächste Case ginn." },
+  en: { eyebrow: "Results / proof", title: "Our results", highlight: "speak for themselves.", next: "Start a project", cta: "Fill out the form — we reply within 3 hours." },
+  fr: { eyebrow: "Résultats / preuves", title: "Nos résultats", highlight: "parlent d'eux-mêmes.", next: "Démarrer un projet", cta: "Remplissez le formulaire — réponse sous 3 heures." },
+  lb: { eyebrow: "Resultater / Beweiser", title: "Eis Resultater", highlight: "schwätze fir sech.", next: "Start e Projet", cta: "Fëll de Formulaire aus – Äntwert bannent 3 Stonnen." },
 } as const;
 
 export default function Results() {

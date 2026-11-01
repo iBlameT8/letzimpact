@@ -4,6 +4,7 @@ import { useI18n } from "@/lib/i18n";
 type Metric = {
   value: number;
   suffix: string;
+  prefix?: string;
   label: string;
   note: string;
 };
@@ -15,7 +16,7 @@ const COPY = {
     metrics: [
       { value: 8, suffix: "M+", label: "Views generated", note: "We put your brand in front of more people." },
       { value: 330, suffix: "K+", label: "People reached in Luxembourg", note: "Your future customers are already seeing the work." },
-      { value: 2, suffix: "+", label: "Years in social media marketing", note: "We build momentum, not just one lucky moment." },
+      { value: 100, suffix: "%", prefix: "", label: "Made in Luxembourg", note: "Strategy, production and creative direction from Luxembourg." },
     ],
   },
   fr: {
@@ -24,7 +25,7 @@ const COPY = {
     metrics: [
       { value: 8, suffix: " M+", label: "Vues générées", note: "Nous plaçons votre marque devant plus de personnes." },
       { value: 330, suffix: " K+", label: "Personnes touchées au Luxembourg", note: "Vos futurs clients voient déjà votre marque." },
-      { value: 2, suffix: "+", label: "Ans en marketing des réseaux sociaux", note: "Nous construisons une vraie dynamique dans le temps." },
+      { value: 100, suffix: " %", prefix: "", label: "Made in Luxembourg", note: "Stratégie, production et direction créative depuis le Luxembourg." },
     ],
   },
   lb: {
@@ -33,7 +34,7 @@ const COPY = {
     metrics: [
       { value: 8, suffix: " Mio.+", label: "Views generéiert", note: "Mir bréngen deng Mark virun d'Ae vu méi Leit." },
       { value: 330, suffix: " Tsd.+", label: "Leit zu Lëtzebuerg erreecht", note: "Deng zukünfteg Cliente gesinn deng Mark schonn." },
-      { value: 2, suffix: "+", label: "Joer am Social Media Marketing", note: "Mir bauen op, net just ee Moment." },
+      { value: 100, suffix: "%", prefix: "", label: "Made in Lëtzebuerg", note: "Strategie, Produktioun a kreativ Direktioun aus Lëtzebuerg." },
     ],
   },
 } as const;
@@ -58,7 +59,7 @@ function Counter({ metric, active }: { metric: Metric; active: boolean }) {
     <div className="relative px-5 py-5 text-center sm:px-7 sm:py-7">
       <div className="pointer-events-none absolute inset-x-10 top-1/2 h-20 -translate-y-1/2 rounded-full bg-[#EC12D8]/10 blur-3xl" />
       <div className="relative font-display text-4xl font-bold tracking-tight text-gradient sm:text-5xl lg:text-6xl">
-        +{count}{metric.suffix}
+        {metric.prefix ?? "+"}{count}{metric.suffix}
       </div>
       <div className="relative mt-3 text-sm font-medium text-white/85">{metric.label}</div>
       <div className="relative mx-auto mt-2 max-w-[18rem] text-xs leading-relaxed text-white/45">{metric.note}</div>
