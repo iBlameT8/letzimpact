@@ -244,8 +244,8 @@ function VideoBackdrop() {
               event.currentTarget.play().catch(() => undefined);
             }}
             style={{
-              left: `${[0, 8.1, 16.2, 24.3, 32.4, 40.5, 48.6, 56.7, 64.8, 72.9, 81, 89.1][[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 0, 2, 5, 7, 9, 11][index]]}%`,
-              animationDelay: `-${([0, 5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 55][[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 0, 2, 5, 7, 9, 11][index]] + (index >= 12 ? 30 : 0)) % 60}s`,
+              left: `${[0, 11.1, 22.2, 33.3, 44.4, 55.5, 66.6, 77.7, 88.8][index % 9]}%`,
+              animationDelay: `-${((index % 9) * 6.67 + Math.floor(index / 9) * 30) % 60}s`,
             }}
             className={`hero-mobile-video h-[30%] w-auto max-sm:col-auto max-sm:row-auto max-sm:w-[82%] max-sm:rotate-0 self-center justify-self-center rounded-xl object-cover ring-1 ring-white/10 sm:rounded-2xl ${clip.className}`}
           />
