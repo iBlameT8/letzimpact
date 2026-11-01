@@ -202,7 +202,7 @@
     height: auto !important;
     aspect-ratio: auto;
     object-fit: contain;
-    animation: hero-video-lane-cycle 84s linear infinite;
+    animation: hero-video-lane-cycle 60s linear infinite;
   }
 
   @keyframes hero-video-lane-cycle {
@@ -218,7 +218,7 @@
       transform: translateY(-30vh);
       opacity: 0.82;
     }
-    42% {
+    45% {
       transform: translateY(-145vh);
       opacity: 0;
     }
