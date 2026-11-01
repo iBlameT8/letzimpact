@@ -75,9 +75,9 @@ export function ResultsInsights() {
       <div className="grid items-center gap-8 rounded-[28px] border border-white/10 bg-white/[0.035] p-6 backdrop-blur-xl sm:p-10 lg:grid-cols-[1.15fr_.85fr] lg:p-14">
         <div className="flex justify-center lg:justify-start">
           <img
-            src="/luxembourg_exact_neon.svg"
-            alt="Luxembourg"
-            className={`w-[min(72vw,300px)] transition-all duration-1000 sm:w-[min(42vw,300px)] ${active ? "scale-100 opacity-100" : "scale-95 opacity-0"}`}
+            src={active ? "/luxembourg_reach_animated.svg" : undefined}
+            alt="Luxembourg reach spreading across the country"
+            className={`w-[min(72vw,320px)] transition-all duration-1000 sm:w-[min(42vw,320px)] ${active ? "scale-100 opacity-100" : "scale-95 opacity-0"}`}
           />
         </div>
         <div>
