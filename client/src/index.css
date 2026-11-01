@@ -429,4 +429,25 @@
     mask-composite: exclude;
     pointer-events: none;
   }
+
+  .chart-line-ready {
+    stroke-dasharray: 900;
+    stroke-dashoffset: 900;
+  }
+  .chart-line-in {
+    stroke-dasharray: 900;
+    stroke-dashoffset: 900;
+    animation: chart-draw 1.8s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+  }
+  .chart-area-in {
+    transform-origin: center bottom;
+    animation: chart-area 1.8s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+  }
+  @keyframes chart-draw {
+    to { stroke-dashoffset: 0; }
+  }
+  @keyframes chart-area {
+    from { opacity: 0; transform: scaleY(0.08); }
+    to { opacity: 1; transform: scaleY(1); }
+  }
 }

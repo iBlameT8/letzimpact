@@ -11,6 +11,7 @@ import { FloatingWhatsApp } from "@/components/FloatingWhatsApp";
 import { SiteNav } from "@/components/SiteNav";
 import { ContactFooter } from "@/components/sections/ContactFooter";
 import { Hero, PartnerStrip } from "@/components/sections/Hero";
+import { ProofMetrics } from "@/components/sections/ProofMetrics";
 
 export default function Home() {
   return (
@@ -20,6 +21,7 @@ export default function Home() {
 
       <main className="relative">
         <Hero />
+        <ProofMetrics />
         <PartnerStrip />
         <ContactFooter />
       </main>
