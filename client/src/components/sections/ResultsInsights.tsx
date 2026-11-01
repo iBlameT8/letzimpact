@@ -7,25 +7,25 @@ const COPY = {
   en: {
     metricsEyebrow: "The numbers behind the work",
     metrics: [
-      { value: 330, suffix: "K+", label: "People reached in Luxembourg" },
-      { value: 8, suffix: "M+", label: "Views generated" },
-      { value: 1000, suffix: "+", label: "Videos produced" },
+      { value: 330, suffix: "K", label: "People reached in Luxembourg" },
+      { value: 8, suffix: "M", label: "Views generated" },
+      { value: 1000, suffix: "", label: "Videos produced" },
     ],
   },
   fr: {
     metricsEyebrow: "Les chiffres derrière le travail",
     metrics: [
-      { value: 330, suffix: " K+", label: "Personnes touchées au Luxembourg" },
-      { value: 8, suffix: " M+", label: "Vues générées" },
-      { value: 1000, suffix: "+", label: "Vidéos produites" },
+      { value: 330, suffix: " K", label: "Personnes touchées au Luxembourg" },
+      { value: 8, suffix: " M", label: "Vues générées" },
+      { value: 1000, suffix: "", label: "Vidéos produites" },
     ],
   },
   lb: {
     metricsEyebrow: "D'Zuelen hannert der Aarbecht",
     metrics: [
-      { value: 330, suffix: " Tsd.+", label: "Leit zu Lëtzebuerg erreecht" },
-      { value: 8, suffix: " Mio.+", label: "Vue generéiert" },
-      { value: 1000, suffix: "+", label: "Videoen produzéiert" },
+      { value: 330, suffix: " Tsd.", label: "Leit zu Lëtzebuerg erreecht" },
+      { value: 8, suffix: " Mio.", label: "Vue generéiert" },
+      { value: 1000, suffix: "", label: "Videoen produzéiert" },
     ],
   },
 } as const;

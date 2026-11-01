@@ -14,8 +14,8 @@ const COPY = {
     eyebrow: "Proof, not promises",
     claim: "Real results. No empty promises.",
     metrics: [
-      { value: 8, suffix: "M+", label: "Views generated", note: "We put your brand in front of more people." },
-      { value: 330, suffix: "K+", label: "People reached in Luxembourg", note: "Your future customers are already seeing the work." },
+      { value: 8, suffix: "M", label: "Views generated", note: "We put your brand in front of more people." },
+      { value: 330, suffix: "K", label: "People reached in Luxembourg", note: "Your future customers are already seeing the work." },
       { value: 100, suffix: "%", prefix: "", label: "Made in Luxembourg", note: "Strategy, production and creative direction from Luxembourg." },
     ],
   },
@@ -23,8 +23,8 @@ const COPY = {
     eyebrow: "Des preuves, pas des promesses",
     claim: "De vrais résultats. Pas de promesses vides.",
     metrics: [
-      { value: 8, suffix: " M+", label: "Vues générées", note: "Nous plaçons votre marque devant plus de personnes." },
-      { value: 330, suffix: " K+", label: "Personnes touchées au Luxembourg", note: "Vos futurs clients voient déjà votre marque." },
+      { value: 8, suffix: " M", label: "Vues générées", note: "Nous plaçons votre marque devant plus de personnes." },
+      { value: 330, suffix: " K", label: "Personnes touchées au Luxembourg", note: "Vos futurs clients voient déjà votre marque." },
       { value: 100, suffix: " %", prefix: "", label: "Made in Luxembourg", note: "Stratégie, production et direction créative depuis le Luxembourg." },
     ],
   },
@@ -32,8 +32,8 @@ const COPY = {
     eyebrow: "Beweiser, keng Verspriechen",
     claim: "Echt Resultater, keng eidel Verspriechen.",
     metrics: [
-      { value: 8, suffix: " Mio.+", label: "Views generéiert", note: "Mir bréngen deng Mark virun d'Ae vu méi Leit." },
-      { value: 330, suffix: " Tsd.+", label: "Leit zu Lëtzebuerg erreecht", note: "Deng zukünfteg Cliente gesinn deng Mark schonn." },
+      { value: 8, suffix: " Mio.", label: "Views generéiert", note: "Mir bréngen deng Mark virun d'Ae vu méi Leit." },
+      { value: 330, suffix: " Tsd.", label: "Leit zu Lëtzebuerg erreecht", note: "Deng zukünfteg Cliente gesinn deng Mark schonn." },
       { value: 100, suffix: "%", prefix: "", label: "Made in Lëtzebuerg", note: "Strategie, Produktioun a kreativ Direktioun aus Lëtzebuerg." },
     ],
   },
