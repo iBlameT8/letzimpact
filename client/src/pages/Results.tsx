@@ -7,9 +7,9 @@ import { waLink } from "@/lib/brand";
 import { useI18n } from "@/lib/i18n";
 
 const RESULTS_PAGE_COPY = {
-  en: { eyebrow: "Results / proof", title: "Our results", highlight: "speak for themselves.", next: "Start a project", cta: "Fill out the form — we reply within 3 hours." },
-  fr: { eyebrow: "Résultats / preuves", title: "Nos résultats", highlight: "parlent d'eux-mêmes.", next: "Démarrer un projet", cta: "Remplissez le formulaire — réponse sous 3 heures." },
-  lb: { eyebrow: "Resultater / Beweiser", title: "Eis Resultater", highlight: "schwätze fir sech.", next: "Start e Projet", cta: "Fëll de Formulaire aus – Äntwert bannent 3 Stonnen." },
+  en: { eyebrow: "Results / proof", title: "Our results", highlight: "speak for themselves.", next: "Start a project", cta: "Send us a message on WhatsApp — we reply within 3 hours." },
+  fr: { eyebrow: "Résultats / preuves", title: "Nos résultats", highlight: "parlent d'eux-mêmes.", next: "Démarrer un projet", cta: "Envoyez-nous un message sur WhatsApp — réponse sous 3 heures." },
+  lb: { eyebrow: "Resultater / Beweiser", title: "Eis Resultater", highlight: "schwätze fir sech.", next: "Start e Projet", cta: "Schreif eis op WhatsApp – mir äntweren bannent 3 Stonnen." },
 } as const;
 
 export default function Results() {
