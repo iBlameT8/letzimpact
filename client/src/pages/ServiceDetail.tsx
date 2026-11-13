@@ -113,7 +113,7 @@ export function ServiceDetail({ service }: { service: Service }) {
       <PageIntro eyebrow={service.eyebrow} title={service.title} highlight={service.highlight}>
         {service.description}
       </PageIntro>
-      <main className={`container pb-24 ${service.slug === "social-media-production-luxembourg" ? "-mt-12 sm:-mt-16 lg:-mt-20" : ""}`}>
+      <main className={`container pb-24 ${service.slug === "social-media-production-luxembourg" ? "-mt-16 sm:-mt-20 lg:-mt-28" : ""}`}>
         <div className="grid gap-12 lg:grid-cols-[1.15fr_0.85fr] lg:gap-20">
           <div>
             <h2 className="font-display text-3xl font-bold leading-tight tracking-tight sm:text-5xl">Built around a clear <span className="text-gradient">purpose.</span></h2>
