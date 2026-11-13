@@ -24,13 +24,14 @@ export default function ServicesPage() {
                 <span className="font-mono-acc text-[11px] tracking-[0.2em] text-[#EC12D8]">0{index + 1}</span>
                 <span className="rounded-full border border-white/15 px-3 py-1 font-mono-acc text-[9px] uppercase tracking-[0.15em] text-white/50">Service</span>
               </div>
-              <div className={service.slug === "social-media-production-luxembourg" || service.slug === "design-luxembourg" ? "mt-8 grid grid-cols-[minmax(0,1fr)_132px] items-center gap-3 sm:grid-cols-[minmax(0,1fr)_160px]" : "mt-12"}>
+              <div className={service.slug === "social-media-production-luxembourg" || service.slug === "design-luxembourg" || service.slug === "website-design-luxembourg" ? "mt-8 grid grid-cols-[minmax(0,1fr)_132px] items-center gap-3 sm:grid-cols-[minmax(0,1fr)_160px]" : "mt-12"}>
                 <div>
                   <h2 className="max-w-sm font-display text-3xl font-bold leading-[1.02] tracking-tight sm:text-4xl">{service.title} <span className="text-gradient">{service.highlight}</span></h2>
                   <p className="mt-5 max-w-lg text-[15px] leading-relaxed text-white/60">{service.description}</p>
                 </div>
                 {service.slug === "social-media-production-luxembourg" && <ProductionCardDeck />}
                 {service.slug === "design-luxembourg" && <DesignCardVisual />}
+                {service.slug === "website-design-luxembourg" && <WebsiteCardVisual />}
               </div>
               <Link href={`/services/${service.slug}`} className="mt-8 inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-[#EC12D8] via-[#A250E3] to-[#4CC9F0] px-5 py-3 text-sm font-semibold text-white shadow-[0_8px_30px_rgba(162,80,227,0.22)] transition hover:scale-[1.02]">
                 Explore this service <ArrowUpRight className="h-4 w-4" />
@@ -64,6 +65,14 @@ function DesignCardVisual() {
   return (
     <div className="flex h-[112px] w-[132px] items-center justify-end sm:h-[132px] sm:w-[160px]" aria-label="EMESA vehicle branding example">
       <img src="/services/emesa-van.png" alt="EMESA orange branded construction van" className="h-auto w-full object-contain drop-shadow-[0_14px_18px_rgba(0,0,0,0.35)]" />
+    </div>
+  );
+}
+
+function WebsiteCardVisual() {
+  return (
+    <div className="flex h-[112px] w-[132px] items-center justify-end sm:h-[132px] sm:w-[160px]" aria-label="EMESA website design example">
+      <img src="/services/emesa-laptop.png" alt="EMESA website shown on a laptop" className="h-auto w-full object-contain drop-shadow-[0_14px_18px_rgba(0,0,0,0.35)]" />
     </div>
   );
 }
