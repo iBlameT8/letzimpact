@@ -191,6 +191,19 @@ export const COPY = {
       intro:
         "Visual systems designed to move from screen to street — clean, consistent and ready to be seen.",
     },
+    campaignCaseStudy: {
+      label: "A real campaign / Meta ads",
+      heading: "Budget turned into",
+      highlight: "bookings.",
+      intro: "We create, launch and manage your advertising campaigns from A to Z: offer, local targeting, content creation and daily optimisation. You set the budget — we turn it into customers.",
+      reservations: "reservations / month",
+      budget: "ad budget",
+      costPerReservation: "cost per reservation",
+      returnLabel: "approx. return",
+      caseStudy: "A concrete example. For a restaurant, with a €1,200 Meta advertising budget, our campaign generated 160 reservations directly through the website in one month — through advertising alone, without counting organic traffic. That is around 5 additional reservations per day, at a cost of €7.50 per reservation, when one table is worth around €80 on average. An approximate 10× return on investment.",
+      resultNote: "Result from a campaign managed by our team.",
+      cta: "Want a campaign with a clear commercial objective? Let’s build it.",
+    },
     localSeo: {
       label: "SEO focus / Luxembourg",
       heading: "Built for businesses searching in",
@@ -581,6 +594,19 @@ export const COPY = {
       intro:
         "Des systèmes visuels pensés pour passer de l'écran à la rue — propres, cohérents et immédiatement visibles.",
     },
+    campaignCaseStudy: {
+      label: "Une vraie campagne / Publicité Meta",
+      heading: "Un budget transformé en",
+      highlight: "réservations.",
+      intro: "Nous créons, lançons et pilotons vos campagnes publicitaires de A à Z : offre, ciblage local, création du contenu et optimisation au quotidien. Vous fixez le budget — nous le transformons en clients.",
+      reservations: "réservations / mois",
+      budget: "budget publicitaire",
+      costPerReservation: "coût par réservation",
+      returnLabel: "retour estimé",
+      caseStudy: "Un exemple concret. Pour un restaurant, avec 1 200 € de budget publicitaire Meta, notre campagne a généré 160 réservations directement via le site, en un seul mois — uniquement grâce à la publicité, sans compter le trafic organique. Soit environ 5 réservations de plus par jour, pour un coût de 7,50 € par réservation, quand une table rapporte en moyenne environ 80 €. Un retour d’environ 10× sur l’investissement.",
+      resultNote: "Résultat issu d’une campagne menée par notre équipe.",
+      cta: "Vous voulez une campagne avec un objectif commercial clair ? Construisons-la.",
+    },
     localSeo: {
       label: "SEO / Luxembourg",
       heading: "Pensé pour les recherches au",
@@ -970,6 +996,19 @@ export const COPY = {
       ending: "Ier een e Wuert liest.",
       intro:
         "Visuell Systemer, déi vum Ecran op d'Strooss funktionéieren — propper, konsequent an direkt sichtbar.",
+    },
+    campaignCaseStudy: {
+      label: "Eng richteg Campagne / Meta-Reklamm",
+      heading: "Budget gëtt zu",
+      highlight: "Reservatiounen.",
+      intro: "Mir kreéieren, lancéieren a steieren deng Reklammcampagnen vun A bis Z: Offer, lokalen Targeting, Content-Produktioun an deeglech Optimisatioun. Du setz de Budget — mir maachen doraus Clienten.",
+      reservations: "Reservatiounen / Mount",
+      budget: "Reklammbudget",
+      costPerReservation: "Käschte pro Reservatioun",
+      returnLabel: "ongeféier Rendement",
+      caseStudy: "E konkret Beispill. Fir e Restaurant huet eng Campagne mat 1.200 € Meta-Reklammbudget an engem eenzege Mount 160 Reservatiounen direkt iwwer d'Websäit bruecht — nëmmen duerch Reklamm, ouni den organesche Traffic matzerechnen. Dat sinn ongeféier 5 zousätzlech Reservatiounen den Dag, bei Käschte vun 7,50 € pro Reservatioun, wann een Dësch am Duerchschnëtt ronn 80 € bréngt. Dat entsprécht ongeféier engem 10× Rendement op d'Investitioun.",
+      resultNote: "Resultat vun enger Campagne, déi vun eisem Team geleet gouf.",
+      cta: "Du wëlls eng Campagne mat engem kloere kommerziellen Zil? Loosse mer se zesumme bauen.",
     },
     localSeo: {
       label: "SEO Fokus / Lëtzebuerg",
