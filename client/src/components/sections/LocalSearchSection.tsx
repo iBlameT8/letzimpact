@@ -4,7 +4,7 @@ const COPY = {
   en: {
     label: "Local expertise / Luxembourg",
     title: "A marketing partner for businesses in Luxembourg.",
-    intro: "LëtzImpact is a social media marketing agency, marketing production company and digital design studio based in Schifflange. We work with businesses across Luxembourg, from strategy and content production to paid social campaigns, websites and brand visuals.",
+    intro: "LëtzImpact is a social media marketing agency, marketing production company and digital design studio based in Mamer. We work with businesses across Luxembourg, from strategy and content production to paid social campaigns, websites and brand visuals.",
     cards: [
       ["Social media marketing Luxembourg", "Strategy, Reels, TikToks, community management and monthly content systems for brands that want consistent visibility."],
       ["Marketing agency Luxembourg", "A practical marketing partner for restaurants, real estate, construction, services and local companies that need attention to become enquiries."],
@@ -15,7 +15,7 @@ const COPY = {
   fr: {
     label: "Expertise locale / Luxembourg",
     title: "Une agence marketing pour les entreprises au Luxembourg.",
-    intro: "LëtzImpact est une agence social media, une agence de marketing et un studio de design digital basé à Schifflange. Nous accompagnons les entreprises au Luxembourg avec stratégie, contenu, publicité et identité visuelle.",
+    intro: "LëtzImpact est une agence social media, une agence de marketing et un studio de design digital basé à Mamer. Nous accompagnons les entreprises au Luxembourg avec stratégie, contenu, publicité et identité visuelle.",
     cards: [
       ["Agence social media Luxembourg", "Stratégie, Reels, TikToks et gestion des réseaux sociaux pour rester visible chaque mois."],
       ["Agence marketing Luxembourg", "Un partenaire concret pour les restaurants, l'immobilier, la construction et les entreprises locales."],

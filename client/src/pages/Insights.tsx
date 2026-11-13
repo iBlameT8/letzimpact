@@ -12,7 +12,7 @@ const articles = [
       "Social media marketing in Luxembourg works best when it is treated as a repeatable business system, not as a collection of random posts. A local brand needs a clear audience, a recognisable point of view and content that gives people a reason to stop, understand and act.",
       "For most local businesses, the useful starting point is a small set of recurring formats: a short educational video, a proof or testimonial piece, a product or service demonstration and a direct offer. This creates enough variety without losing the visual identity of the company.",
       "Reels and TikToks are especially useful when the first seconds answer a real question or show a real outcome. Filming locally also matters. Luxembourg audiences recognise local places, accents, teams and situations, which makes the content more credible than generic stock footage.",
-      "A good monthly system connects content production with the next business goal. That might be more restaurant bookings, more property enquiries, more applications or more people discovering a service in Luxembourg City, Esch-sur-Alzette, Schifflange or another local area.",
+      "A good monthly system connects content production with the next business goal. That might be more restaurant bookings, more property enquiries, more applications or more people discovering a service in Luxembourg City, Mamer, Esch-sur-Alzette or another local area.",
     ],
   },
   {
