@@ -238,11 +238,11 @@ function CampaignCaseStudy() {
 
 function WebsiteShowcase() {
   return (
-    <section className="mb-16 overflow-hidden rounded-[28px] border border-white/10 bg-gradient-to-br from-[#8ee7ff]/10 via-[#a88cff]/[0.08] to-[#ec12d8]/10 px-4 py-6 sm:px-8 sm:py-9" aria-label="Website examples">
-      <div className="grid items-end gap-3 sm:grid-cols-3 sm:gap-5">
-        <img src="/services/website-barber.png" alt="Gentleman Barber website example" className="h-auto w-full object-contain drop-shadow-[0_18px_30px_rgba(142,231,255,0.16)] transition duration-500 hover:-translate-y-2" />
-        <img src="/services/website-emesa.png" alt="EMESA website example" className="h-auto w-full object-contain drop-shadow-[0_18px_30px_rgba(168,140,255,0.18)] transition duration-500 hover:-translate-y-2 sm:-translate-y-5" />
-        <img src="/services/website-sams.png" alt="Sam's Cars website example" className="h-auto w-full object-contain drop-shadow-[0_18px_30px_rgba(236,18,216,0.14)] transition duration-500 hover:-translate-y-2" />
+    <section className="mb-16 overflow-hidden rounded-[28px] border border-white/10 bg-gradient-to-br from-[#8ee7ff]/10 via-[#a88cff]/[0.08] to-[#ec12d8]/10 px-3 py-5 sm:px-8 sm:py-8" aria-label="Website examples">
+      <div className="relative mx-auto flex min-h-[230px] max-w-6xl items-center justify-center sm:min-h-[380px]">
+        <img src="/services/website-barber.png" alt="Gentleman Barber website example" className="absolute left-[-12%] z-0 w-[54%] -rotate-6 opacity-65 drop-shadow-[0_18px_30px_rgba(142,231,255,0.16)] transition duration-500 hover:-translate-y-2 sm:left-[-2%] sm:w-[47%]" />
+        <img src="/services/website-sams-original.jpg" alt="Sam's Cars website example" className="absolute right-[-12%] z-0 w-[54%] rotate-6 opacity-65 drop-shadow-[0_18px_30px_rgba(236,18,216,0.14)] transition duration-500 hover:-translate-y-2 sm:right-[-2%] sm:w-[47%]" />
+        <img src="/services/website-emesa.png" alt="EMESA website example" className="relative z-10 w-[78%] max-w-[760px] drop-shadow-[0_24px_42px_rgba(168,140,255,0.26)] transition duration-500 hover:-translate-y-2 sm:w-[72%]" />
       </div>
     </section>
   );
