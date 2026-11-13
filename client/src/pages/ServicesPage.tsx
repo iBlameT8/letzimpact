@@ -24,7 +24,7 @@ export default function ServicesPage() {
                 <span className="font-mono-acc text-[11px] tracking-[0.2em] text-[#EC12D8]">0{index + 1}</span>
                 <span className="rounded-full border border-white/15 px-3 py-1 font-mono-acc text-[9px] uppercase tracking-[0.15em] text-white/50">Service</span>
               </div>
-              <div className={service.slug === "campaign-management-luxembourg" ? "mt-8 grid grid-cols-[minmax(0,1fr)_170px] items-center gap-3 sm:grid-cols-[minmax(0,1fr)_200px]" : service.slug === "social-media-production-luxembourg" || service.slug === "design-luxembourg" || service.slug === "website-design-luxembourg" ? "mt-8 grid grid-cols-[minmax(0,1fr)_132px] items-center gap-3 sm:grid-cols-[minmax(0,1fr)_160px]" : "mt-12"}>
+              <div className={service.slug === "campaign-management-luxembourg" ? "mt-8 grid grid-cols-[minmax(0,1fr)_190px] items-center gap-3 sm:grid-cols-[minmax(0,1fr)_230px]" : service.slug === "social-media-production-luxembourg" || service.slug === "design-luxembourg" || service.slug === "website-design-luxembourg" ? "mt-8 grid grid-cols-[minmax(0,1fr)_132px] items-center gap-3 sm:grid-cols-[minmax(0,1fr)_160px]" : "mt-12"}>
                 <div>
                   <h2 className="max-w-sm font-display text-3xl font-bold leading-[1.02] tracking-tight sm:text-4xl">{service.title} <span className="text-gradient">{service.highlight}</span></h2>
                   <p className="mt-5 max-w-lg text-[15px] leading-relaxed text-white/60">{service.description}</p>
@@ -80,8 +80,8 @@ function WebsiteCardVisual() {
 
 function CampaignCardVisual() {
   return (
-    <div className="flex h-[190px] w-[170px] items-center justify-end sm:h-[230px] sm:w-[200px]" aria-label="Campaign performance result visual">
-      <img src="/services/campaign-result-badge.png" alt="Campaign performance result visual" className="h-full w-auto max-w-full object-contain drop-shadow-[0_14px_18px_rgba(0,0,0,0.3)]" />
+    <div className="flex h-[160px] w-[190px] items-center justify-end sm:h-[185px] sm:w-[230px]" aria-label="Campaign performance result visual">
+      <img src="/services/campaign-result-badge.png" alt="Campaign performance result visual" className="h-auto w-full object-contain drop-shadow-[0_14px_18px_rgba(0,0,0,0.3)]" />
     </div>
   );
 }
