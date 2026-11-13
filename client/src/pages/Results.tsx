@@ -5,6 +5,7 @@ import { RecentWork } from "@/components/sections/RecentWork";
 import { ResultsInsights } from "@/components/sections/ResultsInsights";
 import { waLink } from "@/lib/brand";
 import { useI18n } from "@/lib/i18n";
+import { SEOHead } from "@/components/SEOHead";
 
 const RESULTS_PAGE_COPY = {
   en: { eyebrow: "Results / proof", title: "Our results", highlight: "speak for themselves.", next: "Start a project", cta: "Send us a message on WhatsApp — we reply within 3 hours." },
@@ -18,6 +19,7 @@ export default function Results() {
 
   return (
     <PageFrame>
+      <SEOHead title="Marketing Results & Video Portfolio Luxembourg | LëtzImpact" description="See social media campaigns, Reels, TikToks and video production created by LëtzImpact for businesses in Luxembourg." path="/results" />
       <PageIntro eyebrow={pageCopy.eyebrow} title={pageCopy.title} highlight={pageCopy.highlight}>
         {copy.recentWork.intro}
       </PageIntro>

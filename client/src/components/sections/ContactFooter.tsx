@@ -128,6 +128,11 @@ export function ContactFooter() {
                     </a>
                   </li>
                 ))}
+                <li>
+                  <a href="/insights" className="text-white/70 transition-colors hover:text-white">
+                    Insights
+                  </a>
+                </li>
               </ul>
             </div>
 

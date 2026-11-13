@@ -10,6 +10,13 @@ import { Route, Switch } from "wouter";
 import ErrorBoundary from "./components/ErrorBoundary";
 import { ThemeProvider } from "./contexts/ThemeContext";
 import Home from "./pages/Home";
+import Insights, { InsightArticle } from "./pages/Insights";
+import { useRoute } from "wouter";
+
+function InsightsRoute() {
+  const [, params] = useRoute<{ slug: string }>("/insights/:slug");
+  return params?.slug ? <InsightArticle slug={params.slug} /> : <Insights />;
+}
 
 function Router() {
   return (
@@ -19,6 +26,8 @@ function Router() {
       <Route path={"/services"} component={ServicesPage} />
       <Route path={"/about"} component={About} />
       <Route path={"/contact"} component={Contact} />
+      <Route path={"/insights"} component={Insights} />
+      <Route path={"/insights/:slug"} component={InsightsRoute} />
       <Route path={"/404"} component={NotFound} />
       {/* Final fallback route */}
       <Route component={NotFound} />

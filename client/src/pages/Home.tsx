@@ -12,6 +12,8 @@ import { SiteNav } from "@/components/SiteNav";
 import { ContactFooter } from "@/components/sections/ContactFooter";
 import { Hero, PartnerStrip } from "@/components/sections/Hero";
 import { ProofMetrics } from "@/components/sections/ProofMetrics";
+import { LocalSearchSection } from "@/components/sections/LocalSearchSection";
+import { SEOHead } from "@/components/SEOHead";
 
 export default function Home() {
   return (
@@ -20,9 +22,11 @@ export default function Home() {
       <SiteNav />
 
       <main className="relative">
+        <SEOHead title="Social Media Marketing & Marketing Agency Luxembourg | LëtzImpact" description="LëtzImpact is a social media marketing agency and marketing production company in Luxembourg. We create Reels, TikToks, digital advertising, websites and brand content for local businesses." />
         <Hero />
         <ProofMetrics />
         <PartnerStrip />
+        <LocalSearchSection />
         <ContactFooter />
       </main>
 
