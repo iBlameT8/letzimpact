@@ -11,6 +11,7 @@ import ErrorBoundary from "./components/ErrorBoundary";
 import { ThemeProvider } from "./contexts/ThemeContext";
 import Home from "./pages/Home";
 import Insights, { InsightArticle } from "./pages/Insights";
+import { ServiceDetailRoute } from "./pages/ServiceDetail";
 import { useRoute } from "wouter";
 
 function InsightsRoute() {
@@ -23,6 +24,7 @@ function Router() {
     <Switch>
       <Route path={"/"} component={Home} />
       <Route path={"/results"} component={Results} />
+      <Route path={"/services/:slug"} component={ServiceDetailRoute} />
       <Route path={"/services"} component={ServicesPage} />
       <Route path={"/about"} component={About} />
       <Route path={"/contact"} component={Contact} />
