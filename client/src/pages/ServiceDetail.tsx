@@ -190,10 +190,10 @@ function CampaignCaseStudy() {
     <section className="mb-16" aria-labelledby="campaign-results">
       <div className="font-mono-acc text-[10px] uppercase tracking-[0.2em] text-[#EC12D8]">{content.label}</div>
       <div className="mt-5 grid gap-5 lg:grid-cols-[1.15fr_0.85fr] lg:gap-8">
-        <div className="rounded-[26px] border border-white/10 bg-white/[0.035] p-5 sm:p-7">
+        <div className="relative overflow-hidden px-1 py-2 sm:px-3 sm:py-5">
           <div className="grid gap-3 sm:grid-cols-[1.15fr_0.85fr]">
-            <div className="flex min-h-[190px] flex-col justify-center rounded-2xl bg-black/20 px-5 py-5 sm:min-h-[245px]">
-              <div className="text-gradient font-display text-7xl font-bold leading-none sm:text-8xl">+{values.reservations}</div>
+            <div className="flex min-h-[190px] flex-col justify-center px-2 py-5 sm:min-h-[245px] sm:px-4">
+              <div className="bg-gradient-to-r from-[#9eeaff] via-[#d6b7ff] to-[#b7caff] bg-clip-text font-display text-7xl font-bold leading-none text-transparent sm:text-8xl">+{values.reservations}</div>
               <div className="mt-4 max-w-[220px] text-lg font-semibold text-white sm:text-xl">{content.reservations}</div>
               <div className="mt-2 text-sm text-white/45">{content.daily}: ~{values.daily}</div>
             </div>
@@ -204,7 +204,7 @@ function CampaignCaseStudy() {
               <AnimatedMetric value={`~${values.table} €`} label={content.tableValue} />
             </div>
           </div>
-          <div className="mt-6 rounded-2xl border border-white/10 bg-gradient-to-r from-[#ec12d8]/10 via-[#a250e3]/10 to-[#4cc9f0]/10 px-4 py-4">
+          <div className="mt-6 px-2 py-3 sm:px-4">
             <div className="flex items-end justify-between gap-4">
               <div>
                 <div className="font-mono-acc text-[10px] uppercase tracking-[0.16em] text-white/65">{content.performance}</div>
@@ -212,9 +212,9 @@ function CampaignCaseStudy() {
               </div>
               <div className="font-mono-acc text-[9px] text-white/45">{content.strong}</div>
             </div>
-            <div className="mt-4 flex h-16 items-end gap-2 sm:h-20">
+            <div className="mt-4 flex h-1 items-center gap-1 opacity-55">
               {[30, 44, 58, 74, 92].map(height => (
-                <div key={height} className="h-full flex-1 rounded-t-md bg-gradient-to-t from-[#ec12d8] via-[#a250e3] to-[#4cc9f0] opacity-90" style={{ height: `${height}%` }} aria-hidden="true" />
+                <div key={height} className="h-full flex-1 rounded-full bg-gradient-to-r from-[#9eeaff] to-[#d6b7ff]" style={{ opacity: height / 100 }} aria-hidden="true" />
               ))}
             </div>
             <div className="mt-2 flex justify-between font-mono-acc text-[9px] text-white/40"><span>{content.weak}</span><span>{content.strong}</span></div>
@@ -235,8 +235,8 @@ function CampaignCaseStudy() {
 
 function AnimatedMetric({ value, label }: { value: string; label: string }) {
   return (
-    <div className="flex min-h-[82px] flex-col justify-center rounded-2xl border border-white/10 bg-black/20 px-4 py-3">
-      <div className="text-gradient font-display text-2xl font-bold sm:text-3xl">{value}</div>
+    <div className="flex min-h-[70px] flex-col justify-center px-2 py-2">
+      <div className="bg-gradient-to-r from-[#9eeaff] via-[#d6b7ff] to-[#b7caff] bg-clip-text font-display text-2xl font-bold text-transparent sm:text-3xl">{value}</div>
       <div className="mt-1 text-[10px] leading-tight text-white/45">{label}</div>
     </div>
   );
