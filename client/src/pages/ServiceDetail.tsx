@@ -24,10 +24,10 @@ type Service = {
 const PRODUCTION_WORK = [
   {
     brand: "GridX",
-    label: "Event / brand film",
-    description: "A dynamic event film built to capture atmosphere, energy and the brand experience.",
-    src: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663909699797/wtkmcVMJKeMlTuXf.mp4",
-    poster: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663909699797/IHrUsiwEGmwgwIyA.jpg",
+    label: "Interview / XTaste",
+    description: "A conversational GridX piece that puts a real voice and the XTaste experience at the centre.",
+    src: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663909699797/opTgQPUImZzojHeJ.mp4",
+    poster: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663909699797/QZZYYQVxCBhAdfjD.jpg",
   },
   {
     brand: "Ramen Shifu",
@@ -42,13 +42,6 @@ const PRODUCTION_WORK = [
     description: "A short advertising cut made to stop the scroll and make the offer immediate.",
     src: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663909699797/oOXDxIQbqKkBLyiO.mp4",
     poster: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663909699797/TmjspQUNanpBcHtf.jpg",
-  },
-  {
-    brand: "Ramen Shifu",
-    label: "Education / ingredients",
-    description: "An educational food reel designed to earn attention by teaching something useful.",
-    src: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663909699797/gwwdAWzrIaTIYzCY.mp4",
-    poster: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663909699797/dQjwLlkZvkcWCuUQ.jpg",
   },
 ] as const;
 
@@ -120,7 +113,7 @@ export function ServiceDetail({ service }: { service: Service }) {
       <PageIntro eyebrow={service.eyebrow} title={service.title} highlight={service.highlight}>
         {service.description}
       </PageIntro>
-      <main className="container pb-24">
+      <main className={`container pb-24 ${service.slug === "social-media-production-luxembourg" ? "-mt-12 sm:-mt-16 lg:-mt-20" : ""}`}>
         <div className="grid gap-12 lg:grid-cols-[1.15fr_0.85fr] lg:gap-20">
           <div>
             <h2 className="font-display text-3xl font-bold leading-tight tracking-tight sm:text-5xl">Built around a clear <span className="text-gradient">purpose.</span></h2>
@@ -156,9 +149,9 @@ export function ServiceDetail({ service }: { service: Service }) {
 
 function CompactProductionRail() {
   return (
-    <div className="mb-10" aria-labelledby="selected-production-work">
+    <div className="mb-6" aria-labelledby="selected-production-work">
       <div id="selected-production-work" className="mb-3 font-mono-acc text-[10px] uppercase tracking-[0.18em] text-[#4CC9F0]">Selected work / recent production</div>
-      <div className="grid grid-cols-4 gap-2">
+      <div className="grid grid-cols-3 gap-2">
         {PRODUCTION_WORK.map(work => (
           <article key={`${work.brand}-${work.label}`} className="group min-w-0 overflow-hidden rounded-[12px] border border-white/10 bg-white/[0.025]">
             <video className="aspect-[9/16] w-full object-cover transition duration-500 group-hover:scale-[1.03]" src={work.src} poster={work.poster} controls playsInline preload="metadata" aria-label={`${work.brand} ${work.label}`} />
