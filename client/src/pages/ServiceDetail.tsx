@@ -21,6 +21,30 @@ type Service = {
   outcome: string;
 };
 
+const PRODUCTION_WORK = [
+  {
+    brand: "GridX",
+    label: "Event / brand film",
+    description: "A dynamic event film built to capture atmosphere, energy and the brand experience.",
+    src: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663909699797/wtkmcVMJKeMlTuXf.mp4",
+    poster: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663909699797/IHrUsiwEGmwgwIyA.jpg",
+  },
+  {
+    brand: "Ramen Shifu",
+    label: "Campaign / restaurant",
+    description: "A campaign film designed to make the restaurant, food and atmosphere feel real before the visit.",
+    src: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663909699797/EfoWelopvDlxAjTj.mp4",
+    poster: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663909699797/PCvZbANtwnBURzbC.jpg",
+  },
+  {
+    brand: "Chalet au Gourmet",
+    label: "Advertising / restaurant",
+    description: "A short advertising cut made to stop the scroll and make the offer immediate.",
+    src: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663909699797/oOXDxIQbqKkBLyiO.mp4",
+    poster: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663909699797/TmjspQUNanpBcHtf.jpg",
+  },
+] as const;
+
 export const SERVICE_PILLARS: Service[] = [
   {
     slug: "campaign-management-luxembourg",
@@ -113,6 +137,27 @@ export function ServiceDetail({ service }: { service: Service }) {
             </MagneticButton>
           </aside>
         </div>
+        {service.slug === "social-media-production-luxembourg" && (
+          <section className="mt-24 border-t border-white/10 pt-12" aria-labelledby="selected-production-work">
+            <div className="max-w-2xl">
+              <div className="font-mono-acc text-[10px] uppercase tracking-[0.22em] text-[#4CC9F0]">Selected work / recent production</div>
+              <h2 id="selected-production-work" className="mt-4 font-display text-3xl font-bold leading-tight tracking-tight sm:text-5xl">Three brands. Three different <span className="text-gradient">reasons to watch.</span></h2>
+              <p className="mt-5 text-[15px] leading-relaxed text-white/60">The format changes with the objective: event energy for GridX, atmosphere for Ramen Shifu and a direct advertising cut for Chalet au Gourmet.</p>
+            </div>
+            <div className="mt-10 grid gap-5 md:grid-cols-3">
+              {PRODUCTION_WORK.map(work => (
+                <article key={work.brand} className="overflow-hidden rounded-[24px] border border-white/10 bg-white/[0.03]">
+                  <video className="aspect-[9/16] w-full object-cover" src={work.src} poster={work.poster} controls playsInline preload="metadata" aria-label={`${work.brand} ${work.label}`} />
+                  <div className="p-5">
+                    <div className="font-display text-lg font-semibold">{work.brand}</div>
+                    <div className="mt-1 font-mono-acc text-[10px] uppercase tracking-[0.16em] text-[#EC12D8]">{work.label}</div>
+                    <p className="mt-3 text-sm leading-relaxed text-white/55">{work.description}</p>
+                  </div>
+                </article>
+              ))}
+            </div>
+          </section>
+        )}
         <div className="mt-20 flex flex-wrap items-center gap-5 border-t border-white/10 pt-8">
           <Link href="/results" className="text-sm font-semibold text-white underline decoration-[#EC12D8] underline-offset-4">See our results</Link>
           <Link href="/services" className="text-sm text-white/55 transition hover:text-white">Back to all services</Link>
