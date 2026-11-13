@@ -43,6 +43,13 @@ const PRODUCTION_WORK = [
     src: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663909699797/oOXDxIQbqKkBLyiO.mp4",
     poster: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663909699797/TmjspQUNanpBcHtf.jpg",
   },
+  {
+    brand: "Ramen Shifu",
+    label: "Education / ingredients",
+    description: "An educational food reel designed to earn attention by teaching something useful.",
+    src: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663909699797/gwwdAWzrIaTIYzCY.mp4",
+    poster: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663909699797/dQjwLlkZvkcWCuUQ.jpg",
+  },
 ] as const;
 
 export const SERVICE_PILLARS: Service[] = [
@@ -113,6 +120,7 @@ export function ServiceDetail({ service }: { service: Service }) {
       <PageIntro eyebrow={service.eyebrow} title={service.title} highlight={service.highlight}>
         {service.description}
       </PageIntro>
+      {service.slug === "social-media-production-luxembourg" && <CompactProductionShowcase />}
       <main className="container pb-24">
         <div className="grid gap-12 lg:grid-cols-[1.15fr_0.85fr] lg:gap-20">
           <div>
@@ -137,32 +145,35 @@ export function ServiceDetail({ service }: { service: Service }) {
             </MagneticButton>
           </aside>
         </div>
-        {service.slug === "social-media-production-luxembourg" && (
-          <section className="mt-24 border-t border-white/10 pt-12" aria-labelledby="selected-production-work">
-            <div className="max-w-2xl">
-              <div className="font-mono-acc text-[10px] uppercase tracking-[0.22em] text-[#4CC9F0]">Selected work / recent production</div>
-              <h2 id="selected-production-work" className="mt-4 font-display text-3xl font-bold leading-tight tracking-tight sm:text-5xl">Three brands. Three different <span className="text-gradient">reasons to watch.</span></h2>
-              <p className="mt-5 text-[15px] leading-relaxed text-white/60">The format changes with the objective: event energy for GridX, atmosphere for Ramen Shifu and a direct advertising cut for Chalet au Gourmet.</p>
-            </div>
-            <div className="mt-10 grid gap-5 md:grid-cols-3">
-              {PRODUCTION_WORK.map(work => (
-                <article key={work.brand} className="overflow-hidden rounded-[24px] border border-white/10 bg-white/[0.03]">
-                  <video className="aspect-[9/16] w-full object-cover" src={work.src} poster={work.poster} controls playsInline preload="metadata" aria-label={`${work.brand} ${work.label}`} />
-                  <div className="p-5">
-                    <div className="font-display text-lg font-semibold">{work.brand}</div>
-                    <div className="mt-1 font-mono-acc text-[10px] uppercase tracking-[0.16em] text-[#EC12D8]">{work.label}</div>
-                    <p className="mt-3 text-sm leading-relaxed text-white/55">{work.description}</p>
-                  </div>
-                </article>
-              ))}
-            </div>
-          </section>
-        )}
         <div className="mt-20 flex flex-wrap items-center gap-5 border-t border-white/10 pt-8">
           <Link href="/results" className="text-sm font-semibold text-white underline decoration-[#EC12D8] underline-offset-4">See our results</Link>
           <Link href="/services" className="text-sm text-white/55 transition hover:text-white">Back to all services</Link>
         </div>
       </main>
     </PageFrame>
+  );
+}
+
+function CompactProductionShowcase() {
+  return (
+    <section className="container -mt-8 pb-12 sm:-mt-12 sm:pb-16" aria-labelledby="selected-production-work">
+      <div className="ml-auto max-w-4xl rounded-[28px] border border-white/10 bg-white/[0.025] p-4 backdrop-blur-sm sm:p-5">
+        <div className="grid gap-5 md:grid-cols-[0.72fr_1.28fr] md:items-center">
+          <div className="px-2 sm:px-3">
+            <div className="font-mono-acc text-[10px] uppercase tracking-[0.22em] text-[#4CC9F0]">Selected work / recent production</div>
+            <h2 id="selected-production-work" className="mt-3 font-display text-2xl font-bold leading-tight tracking-tight sm:text-3xl">Small cuts. <span className="text-gradient">Real purpose.</span></h2>
+            <p className="mt-3 text-sm leading-relaxed text-white/55">A quick look at how we turn different brand goals into content people want to watch.</p>
+          </div>
+          <div className="grid grid-cols-4 gap-2 sm:gap-3">
+            {PRODUCTION_WORK.map(work => (
+              <article key={`${work.brand}-${work.label}`} className="group min-w-0 overflow-hidden rounded-[16px] border border-white/10 bg-black/20">
+                <video className="aspect-[9/16] w-full object-cover transition duration-500 group-hover:scale-[1.03]" src={work.src} poster={work.poster} controls playsInline preload="metadata" aria-label={`${work.brand} ${work.label}`} />
+                <div className="truncate px-2 py-2 font-mono-acc text-[8px] uppercase tracking-[0.08em] text-white/65 sm:text-[9px]">{work.brand}</div>
+              </article>
+            ))}
+          </div>
+        </div>
+      </div>
+    </section>
   );
 }
