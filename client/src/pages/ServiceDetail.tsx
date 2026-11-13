@@ -242,7 +242,7 @@ function WebsiteShowcase() {
       <div className="mx-auto grid max-w-6xl grid-cols-1 items-center gap-5 sm:grid-cols-3 sm:gap-4">
         <img src="/services/website-barber.png" alt="Gentleman Barber website example" className="mx-auto w-full drop-shadow-[0_18px_30px_rgba(142,231,255,0.16)] transition duration-500 hover:-translate-y-2 sm:w-[92%] sm:translate-y-5" />
         <img src="/services/website-emesa.png" alt="EMESA website example" className="mx-auto w-full drop-shadow-[0_24px_42px_rgba(168,140,255,0.26)] transition duration-500 hover:-translate-y-2 sm:scale-[1.08] sm:-translate-y-2" />
-        <img src="/services/website-sams.png" alt="Sam's Cars website example" className="mx-auto w-full drop-shadow-[0_18px_30px_rgba(236,18,216,0.14)] transition duration-500 hover:-translate-y-2 sm:w-[92%] sm:translate-y-5" />
+        <img src="/services/website-sams-latest.png" alt="Sam's Cars website example" className="mx-auto w-full drop-shadow-[0_18px_30px_rgba(236,18,216,0.14)] transition duration-500 hover:-translate-y-2 sm:w-[92%] sm:translate-y-5" />
       </div>
     </section>
   );
