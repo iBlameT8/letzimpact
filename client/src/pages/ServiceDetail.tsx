@@ -110,14 +110,15 @@ export function ServiceDetailRoute() {
 
 export function ServiceDetail({ service }: { service: Service }) {
   const { copy } = useI18n();
+  const campaignCopy = service.slug === "campaign-management-luxembourg" ? copy.campaignCaseStudy : null;
   return (
     <PageFrame>
       <SEOHead title={service.seoTitle} description={service.seoDescription} path={`/services/${service.slug}`} />
       {service.slug === "campaign-management-luxembourg" ? (
         <header className="container pt-10 pb-8 sm:pt-16 sm:pb-10">
-          <div className="font-mono-acc text-[10px] uppercase tracking-[0.2em] text-[#EC12D8]">{service.eyebrow}</div>
-          <h1 className="mt-4 max-w-3xl font-display text-4xl font-bold leading-[1.02] tracking-tight sm:text-6xl">{service.title} <span className="text-gradient">{service.highlight}</span></h1>
-          <p className="mt-5 max-w-2xl text-[16px] leading-relaxed text-white/60">{service.description}</p>
+          <div className="font-mono-acc text-[10px] uppercase tracking-[0.2em] text-[#EC12D8]">{campaignCopy?.label ?? service.eyebrow}</div>
+          <h1 className="mt-4 max-w-3xl font-display text-4xl font-bold leading-[1.02] tracking-tight sm:text-6xl">{campaignCopy?.heading ?? service.title} <span className="text-gradient">{campaignCopy?.highlight ?? service.highlight}</span></h1>
+          <p className="mt-5 max-w-2xl text-[16px] leading-relaxed text-white/60">{campaignCopy?.intro ?? service.description}</p>
         </header>
       ) : (
         <PageIntro eyebrow={service.eyebrow} title={service.title} highlight={service.highlight}>
@@ -128,31 +129,31 @@ export function ServiceDetail({ service }: { service: Service }) {
         {service.slug === "campaign-management-luxembourg" && <CampaignCaseStudy />}
         <div className="grid gap-12 lg:grid-cols-[1.15fr_0.85fr] lg:gap-20">
           <div>
-            <h2 className="font-display text-3xl font-bold leading-tight tracking-tight sm:text-5xl">Built around a clear <span className="text-gradient">purpose.</span></h2>
-            <p className="mt-6 text-[17px] leading-[1.8] text-white/65">{service.intro}</p>
+            <h2 className="font-display text-3xl font-bold leading-tight tracking-tight sm:text-5xl">{campaignCopy?.detailHeading ?? "Built around a clear"} <span className="text-gradient">{campaignCopy?.detailHighlight ?? "purpose."}</span></h2>
+            <p className="mt-6 text-[17px] leading-[1.8] text-white/65">{campaignCopy?.intro ?? service.intro}</p>
             <div className="mt-10 border-t border-white/10 pt-7">
-              <h3 className="font-mono-acc text-[11px] uppercase tracking-[0.2em] text-white/45">What we handle</h3>
+              <h3 className="font-mono-acc text-[11px] uppercase tracking-[0.2em] text-white/45">{campaignCopy?.handleLabel ?? "What we handle"}</h3>
               <ul className="mt-5 space-y-4">
-                {service.bullets.map(item => <li key={item} className="flex gap-3 text-[15px] leading-relaxed text-white/75"><Check className="mt-0.5 h-5 w-5 shrink-0 text-[#4CC9F0]" />{item}</li>)}
+                {(campaignCopy?.handle ?? service.bullets).map(item => <li key={item} className="flex gap-3 text-[15px] leading-relaxed text-white/75"><Check className="mt-0.5 h-5 w-5 shrink-0 text-[#4CC9F0]" />{item}</li>)}
               </ul>
             </div>
           </div>
           <aside className={service.slug === "social-media-production-luxembourg" ? "self-start" : "self-start rounded-3xl border border-white/10 bg-white/[0.035] p-7 sm:p-9"}>
             {service.slug === "social-media-production-luxembourg" && <CompactProductionRail />}
-            <div className="font-mono-acc text-[10px] uppercase tracking-[0.2em] text-[#EC12D8]">Who it is for</div>
-            <p className="mt-4 text-[16px] leading-relaxed text-white/70">{service.audience}</p>
+            <div className="font-mono-acc text-[10px] uppercase tracking-[0.2em] text-[#EC12D8]">{campaignCopy?.audienceLabel ?? "Who it is for"}</div>
+            <p className="mt-4 text-[16px] leading-relaxed text-white/70">{campaignCopy?.audience ?? service.audience}</p>
             <div className="mt-8 border-t border-white/10 pt-7">
-              <div className="font-mono-acc text-[10px] uppercase tracking-[0.2em] text-[#4CC9F0]">The outcome</div>
-              <p className="mt-4 text-[15px] leading-relaxed text-white/60">{service.outcome}</p>
+              <div className="font-mono-acc text-[10px] uppercase tracking-[0.2em] text-[#4CC9F0]">{campaignCopy?.outcomeLabel ?? "The outcome"}</div>
+              <p className="mt-4 text-[15px] leading-relaxed text-white/60">{campaignCopy?.outcome ?? service.outcome}</p>
             </div>
             <MagneticButton href={waLink(`Hi ${BRAND.name}, I would like to talk about ${service.title.toLowerCase()} ${service.highlight}`)} target="_blank" rel="noopener noreferrer" className="mt-8 w-full justify-center">
-              Start a conversation <ArrowUpRight className="h-4 w-4" />
+              {campaignCopy?.conversation ?? "Start a conversation"} <ArrowUpRight className="h-4 w-4" />
             </MagneticButton>
           </aside>
         </div>
         <div className="mt-20 flex flex-wrap items-center gap-5 border-t border-white/10 pt-8">
-          <Link href="/results" className="text-sm font-semibold text-white underline decoration-[#EC12D8] underline-offset-4">See our results</Link>
-          <Link href="/services" className="text-sm text-white/55 transition hover:text-white">Back to all services</Link>
+          <Link href="/results" className="text-sm font-semibold text-white underline decoration-[#EC12D8] underline-offset-4">{campaignCopy?.seeResults ?? "See our results"}</Link>
+          <Link href="/services" className="text-sm text-white/55 transition hover:text-white">{campaignCopy?.backServices ?? "Back to all services"}</Link>
         </div>
       </main>
     </PageFrame>
@@ -202,6 +203,21 @@ function CampaignCaseStudy() {
               <AnimatedMetric value={`${values.returnValue}×`} label={content.returnValue} />
               <AnimatedMetric value={`~${values.table} €`} label={content.tableValue} />
             </div>
+          </div>
+          <div className="mt-6 rounded-2xl border border-white/10 bg-gradient-to-r from-[#ec12d8]/10 via-[#a250e3]/10 to-[#4cc9f0]/10 px-4 py-4">
+            <div className="flex items-end justify-between gap-4">
+              <div>
+                <div className="font-mono-acc text-[10px] uppercase tracking-[0.16em] text-white/65">{content.performance}</div>
+                <div className="mt-1 text-sm font-semibold text-white">{content.growth}</div>
+              </div>
+              <div className="font-mono-acc text-[9px] text-white/45">{content.strong}</div>
+            </div>
+            <div className="mt-4 flex h-16 items-end gap-2 sm:h-20">
+              {[30, 44, 58, 74, 92].map(height => (
+                <div key={height} className="h-full flex-1 rounded-t-md bg-gradient-to-t from-[#ec12d8] via-[#a250e3] to-[#4cc9f0] opacity-90" style={{ height: `${height}%` }} aria-hidden="true" />
+              ))}
+            </div>
+            <div className="mt-2 flex justify-between font-mono-acc text-[9px] text-white/40"><span>{content.weak}</span><span>{content.strong}</span></div>
           </div>
         </div>
         <div className="flex items-center rounded-[26px] border border-white/10 bg-gradient-to-br from-[#ec12d8]/10 via-white/[0.03] to-[#4cc9f0]/10 p-6 sm:p-8">
