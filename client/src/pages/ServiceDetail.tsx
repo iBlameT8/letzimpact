@@ -111,14 +111,16 @@ export function ServiceDetailRoute() {
 export function ServiceDetail({ service }: { service: Service }) {
   const { copy } = useI18n();
   const campaignCopy = service.slug === "campaign-management-luxembourg" ? copy.campaignCaseStudy : null;
+  const websiteCopy = service.slug === "website-design-luxembourg" ? copy.websiteCaseStudy : null;
+  const serviceCopy = campaignCopy ?? websiteCopy;
   return (
     <PageFrame>
       <SEOHead title={service.seoTitle} description={service.seoDescription} path={`/services/${service.slug}`} />
       {service.slug === "campaign-management-luxembourg" ? (
         <header className="container pt-10 pb-8 sm:pt-16 sm:pb-10">
-          <div className="font-mono-acc text-[10px] uppercase tracking-[0.2em] text-[#EC12D8]">{campaignCopy?.label ?? service.eyebrow}</div>
-          <h1 className="mt-4 max-w-3xl font-display text-4xl font-bold leading-[1.02] tracking-tight sm:text-6xl">{campaignCopy?.heading ?? service.title} <span className="text-gradient">{campaignCopy?.highlight ?? service.highlight}</span></h1>
-          <p className="mt-5 max-w-2xl text-[16px] leading-relaxed text-white/60">{campaignCopy?.intro ?? service.description}</p>
+          <div className="font-mono-acc text-[10px] uppercase tracking-[0.2em] text-[#EC12D8]">{serviceCopy?.label ?? service.eyebrow}</div>
+          <h1 className="mt-4 max-w-3xl font-display text-4xl font-bold leading-[1.02] tracking-tight sm:text-6xl">{serviceCopy?.heading ?? service.title} <span className="text-gradient">{serviceCopy?.highlight ?? service.highlight}</span></h1>
+          <p className="mt-5 max-w-2xl text-[16px] leading-relaxed text-white/60">{serviceCopy?.intro ?? service.description}</p>
         </header>
       ) : (
         <PageIntro eyebrow={service.eyebrow} title={service.title} highlight={service.highlight}>
@@ -127,33 +129,34 @@ export function ServiceDetail({ service }: { service: Service }) {
       )}
       <main className={`container pb-24 ${service.slug === "social-media-production-luxembourg" ? "-mt-16 sm:-mt-20 lg:-mt-28" : ""}`}>
         {service.slug === "campaign-management-luxembourg" && <CampaignCaseStudy />}
+        {service.slug === "website-design-luxembourg" && <WebsiteShowcase />}
         <div className="grid gap-12 lg:grid-cols-[1.15fr_0.85fr] lg:gap-20">
           <div>
-            <h2 className="font-display text-3xl font-bold leading-tight tracking-tight sm:text-5xl">{campaignCopy?.detailHeading ?? "Built around a clear"} <span className="text-gradient">{campaignCopy?.detailHighlight ?? "purpose."}</span></h2>
-            <p className="mt-6 text-[17px] leading-[1.8] text-white/65">{campaignCopy?.intro ?? service.intro}</p>
+            <h2 className="font-display text-3xl font-bold leading-tight tracking-tight sm:text-5xl">{serviceCopy?.detailHeading ?? "Built around a clear"} <span className="text-gradient">{serviceCopy?.detailHighlight ?? "purpose."}</span></h2>
+            <p className="mt-6 text-[17px] leading-[1.8] text-white/65">{serviceCopy?.intro ?? service.intro}</p>
             <div className="mt-10 border-t border-white/10 pt-7">
-              <h3 className="font-mono-acc text-[11px] uppercase tracking-[0.2em] text-white/45">{campaignCopy?.handleLabel ?? "What we handle"}</h3>
+              <h3 className="font-mono-acc text-[11px] uppercase tracking-[0.2em] text-white/45">{serviceCopy?.handleLabel ?? "What we handle"}</h3>
               <ul className="mt-5 space-y-4">
-                {(campaignCopy?.handle ?? service.bullets).map(item => <li key={item} className="flex gap-3 text-[15px] leading-relaxed text-white/75"><Check className="mt-0.5 h-5 w-5 shrink-0 text-[#4CC9F0]" />{item}</li>)}
+                {(serviceCopy?.handle ?? service.bullets).map(item => <li key={item} className="flex gap-3 text-[15px] leading-relaxed text-white/75"><Check className="mt-0.5 h-5 w-5 shrink-0 text-[#4CC9F0]" />{item}</li>)}
               </ul>
             </div>
           </div>
           <aside className={service.slug === "social-media-production-luxembourg" ? "self-start" : "self-start rounded-3xl border border-white/10 bg-white/[0.035] p-7 sm:p-9"}>
             {service.slug === "social-media-production-luxembourg" && <CompactProductionRail />}
-            <div className="font-mono-acc text-[10px] uppercase tracking-[0.2em] text-[#EC12D8]">{campaignCopy?.audienceLabel ?? "Who it is for"}</div>
-            <p className="mt-4 text-[16px] leading-relaxed text-white/70">{campaignCopy?.audience ?? service.audience}</p>
+            <div className="font-mono-acc text-[10px] uppercase tracking-[0.2em] text-[#EC12D8]">{serviceCopy?.audienceLabel ?? "Who it is for"}</div>
+            <p className="mt-4 text-[16px] leading-relaxed text-white/70">{serviceCopy?.audience ?? service.audience}</p>
             <div className="mt-8 border-t border-white/10 pt-7">
-              <div className="font-mono-acc text-[10px] uppercase tracking-[0.2em] text-[#4CC9F0]">{campaignCopy?.outcomeLabel ?? "The outcome"}</div>
-              <p className="mt-4 text-[15px] leading-relaxed text-white/60">{campaignCopy?.outcome ?? service.outcome}</p>
+              <div className="font-mono-acc text-[10px] uppercase tracking-[0.2em] text-[#4CC9F0]">{serviceCopy?.outcomeLabel ?? "The outcome"}</div>
+              <p className="mt-4 text-[15px] leading-relaxed text-white/60">{serviceCopy?.outcome ?? service.outcome}</p>
             </div>
             <MagneticButton href={waLink(`Hi ${BRAND.name}, I would like to talk about ${service.title.toLowerCase()} ${service.highlight}`)} target="_blank" rel="noopener noreferrer" className="mt-8 w-full justify-center">
-              {campaignCopy?.conversation ?? "Start a conversation"} <ArrowUpRight className="h-4 w-4" />
+              {serviceCopy?.conversation ?? "Start a conversation"} <ArrowUpRight className="h-4 w-4" />
             </MagneticButton>
           </aside>
         </div>
         <div className="mt-20 flex flex-wrap items-center gap-5 border-t border-white/10 pt-8">
-          <Link href="/results" className="text-sm font-semibold text-white underline decoration-[#EC12D8] underline-offset-4">{campaignCopy?.seeResults ?? "See our results"}</Link>
-          <Link href="/services" className="text-sm text-white/55 transition hover:text-white">{campaignCopy?.backServices ?? "Back to all services"}</Link>
+          <Link href="/results" className="text-sm font-semibold text-white underline decoration-[#EC12D8] underline-offset-4">{serviceCopy?.seeResults ?? "See our results"}</Link>
+          <Link href="/services" className="text-sm text-white/55 transition hover:text-white">{serviceCopy?.backServices ?? "Back to all services"}</Link>
         </div>
       </main>
     </PageFrame>
@@ -228,6 +231,18 @@ function CampaignCaseStudy() {
         <p className="mt-4 text-[16px] leading-[1.85] text-white/75">{content.caseStudy}</p>
         <p className="mt-4 font-mono-acc text-[10px] uppercase tracking-[0.16em] text-white/40">{content.resultNote}</p>
         <p className="mt-5 text-lg font-semibold text-white">{content.cta}</p>
+      </div>
+    </section>
+  );
+}
+
+function WebsiteShowcase() {
+  return (
+    <section className="mb-16 overflow-hidden rounded-[28px] border border-white/10 bg-gradient-to-br from-[#8ee7ff]/10 via-[#a88cff]/[0.08] to-[#ec12d8]/10 px-4 py-6 sm:px-8 sm:py-9" aria-label="Website examples">
+      <div className="grid items-end gap-3 sm:grid-cols-3 sm:gap-5">
+        <img src="/services/website-barber.png" alt="Gentleman Barber website example" className="h-auto w-full object-contain drop-shadow-[0_18px_30px_rgba(142,231,255,0.16)] transition duration-500 hover:-translate-y-2" />
+        <img src="/services/website-emesa.png" alt="EMESA website example" className="h-auto w-full object-contain drop-shadow-[0_18px_30px_rgba(168,140,255,0.18)] transition duration-500 hover:-translate-y-2 sm:-translate-y-5" />
+        <img src="/services/website-sams.png" alt="Sam's Cars website example" className="h-auto w-full object-contain drop-shadow-[0_18px_30px_rgba(236,18,216,0.14)] transition duration-500 hover:-translate-y-2" />
       </div>
     </section>
   );
