@@ -1,5 +1,4 @@
 import { ArrowUpRight, Check } from "lucide-react";
-import { useEffect, useState } from "react";
 import { Link, useRoute } from "wouter";
 import { MagneticButton } from "@/components/MagneticButton";
 import { PageFrame, PageIntro } from "@/components/PageFrame";
@@ -154,60 +153,21 @@ export function ServiceDetail({ service }: { service: Service }) {
 function CampaignCaseStudy() {
   const { copy } = useI18n();
   const content = copy.campaignCaseStudy;
-  const [values, setValues] = useState({ reservations: 0, budget: 0, cost: 0, returnValue: 0 });
-
-  useEffect(() => {
-    const started = performance.now();
-    const duration = 1500;
-    let frame = 0;
-    const tick = (now: number) => {
-      const progress = Math.min(1, (now - started) / duration);
-      const eased = 1 - Math.pow(1 - progress, 3);
-      setValues({
-        reservations: Math.round(160 * eased),
-        budget: Math.round(1200 * eased),
-        cost: Number((7.5 * eased).toFixed(2)),
-        returnValue: Math.round(10 * eased),
-      });
-      if (progress < 1) frame = requestAnimationFrame(tick);
-    };
-    frame = requestAnimationFrame(tick);
-    return () => cancelAnimationFrame(frame);
-  }, []);
 
   return (
-    <section className="mb-20 overflow-hidden rounded-[30px] border border-white/10 bg-white/[0.035] p-5 sm:p-8 lg:p-10" aria-labelledby="campaign-case-study">
-      <div className="grid items-center gap-8 lg:grid-cols-[minmax(0,1.05fr)_minmax(300px,0.95fr)] lg:gap-12">
-        <div>
-          <div className="font-mono-acc text-[10px] uppercase tracking-[0.2em] text-[#EC12D8]">{content.label}</div>
-          <h2 id="campaign-case-study" className="mt-4 max-w-xl font-display text-3xl font-bold leading-[1.02] tracking-tight sm:text-5xl">{content.heading} <span className="text-gradient">{content.highlight}</span></h2>
-          <p className="mt-5 max-w-xl text-[16px] leading-[1.8] text-white/65">{content.intro}</p>
-          <div className="mt-8 grid grid-cols-2 gap-3 sm:grid-cols-4">
-            <Metric value={`+${values.reservations}`} label={content.reservations} />
-            <Metric value={`${values.budget.toLocaleString("de-DE")} €`} label={content.budget} />
-            <Metric value={`${values.cost.toFixed(2).replace(".", ",")} €`} label={content.costPerReservation} />
-            <Metric value={`${values.returnValue}×`} label={content.returnLabel} />
-          </div>
-        </div>
-        <div className="flex justify-center lg:justify-end">
-          <img src="/services/result-anim.png" alt="Meta campaign performance results" className="h-auto w-full max-w-[620px] object-contain" />
-        </div>
+    <section className="mb-20" aria-labelledby="campaign-case-study">
+      <div className="font-mono-acc text-[10px] uppercase tracking-[0.2em] text-[#EC12D8]">{content.label}</div>
+      <h2 id="campaign-case-study" className="mt-4 max-w-2xl font-display text-3xl font-bold leading-[1.02] tracking-tight sm:text-5xl">{content.heading} <span className="text-gradient">{content.highlight}</span></h2>
+      <div className="mt-7 flex justify-center lg:justify-start">
+        <img src="/services/result-anim.png" alt="Meta campaign performance results" className="h-auto w-full max-w-[1040px] object-contain" />
       </div>
-      <div className="mt-8 border-t border-white/10 pt-7">
-        <p className="max-w-4xl text-[16px] leading-[1.85] text-white/75">{content.caseStudy}</p>
+      <div className="mt-6 max-w-4xl">
+        <p className="text-[16px] leading-[1.85] text-white/75">{content.intro}</p>
+        <p className="mt-4 text-[16px] leading-[1.85] text-white/75">{content.caseStudy}</p>
         <p className="mt-4 font-mono-acc text-[10px] uppercase tracking-[0.16em] text-white/40">{content.resultNote}</p>
         <p className="mt-5 text-lg font-semibold text-white">{content.cta}</p>
       </div>
     </section>
-  );
-}
-
-function Metric({ value, label }: { value: string; label: string }) {
-  return (
-    <div className="rounded-2xl border border-white/10 bg-black/20 px-3 py-4">
-      <div className="text-gradient font-display text-2xl font-bold sm:text-3xl">{value}</div>
-      <div className="mt-2 text-[10px] leading-tight text-white/45">{label}</div>
-    </div>
   );
 }
 
