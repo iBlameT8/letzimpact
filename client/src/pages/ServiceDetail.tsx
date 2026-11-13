@@ -1,4 +1,5 @@
 import { ArrowUpRight, Check } from "lucide-react";
+import { useEffect, useState } from "react";
 import { Link, useRoute } from "wouter";
 import { MagneticButton } from "@/components/MagneticButton";
 import { PageFrame, PageIntro } from "@/components/PageFrame";
@@ -112,9 +113,17 @@ export function ServiceDetail({ service }: { service: Service }) {
   return (
     <PageFrame>
       <SEOHead title={service.seoTitle} description={service.seoDescription} path={`/services/${service.slug}`} />
-      <PageIntro eyebrow={service.eyebrow} title={service.title} highlight={service.highlight}>
-        {service.description}
-      </PageIntro>
+      {service.slug === "campaign-management-luxembourg" ? (
+        <header className="container pt-10 pb-8 sm:pt-16 sm:pb-10">
+          <div className="font-mono-acc text-[10px] uppercase tracking-[0.2em] text-[#EC12D8]">{service.eyebrow}</div>
+          <h1 className="mt-4 max-w-3xl font-display text-4xl font-bold leading-[1.02] tracking-tight sm:text-6xl">{service.title} <span className="text-gradient">{service.highlight}</span></h1>
+          <p className="mt-5 max-w-2xl text-[16px] leading-relaxed text-white/60">{service.description}</p>
+        </header>
+      ) : (
+        <PageIntro eyebrow={service.eyebrow} title={service.title} highlight={service.highlight}>
+          {service.description}
+        </PageIntro>
+      )}
       <main className={`container pb-24 ${service.slug === "social-media-production-luxembourg" ? "-mt-16 sm:-mt-20 lg:-mt-28" : ""}`}>
         {service.slug === "campaign-management-luxembourg" && <CampaignCaseStudy />}
         <div className="grid gap-12 lg:grid-cols-[1.15fr_0.85fr] lg:gap-20">
@@ -154,20 +163,66 @@ function CampaignCaseStudy() {
   const { copy } = useI18n();
   const content = copy.campaignCaseStudy;
 
+  const [values, setValues] = useState({ reservations: 0, daily: 0, budget: 0, cost: 0, returnValue: 0, table: 0 });
+  useEffect(() => {
+    const started = performance.now();
+    const duration = 1600;
+    let frame = 0;
+    const tick = (now: number) => {
+      const progress = Math.min(1, (now - started) / duration);
+      const eased = 1 - Math.pow(1 - progress, 3);
+      setValues({
+        reservations: Math.round(160 * eased),
+        daily: Math.round(5 * eased),
+        budget: Math.round(1200 * eased),
+        cost: Number((7.5 * eased).toFixed(2)),
+        returnValue: Math.round(10 * eased),
+        table: Math.round(80 * eased),
+      });
+      if (progress < 1) frame = requestAnimationFrame(tick);
+    };
+    frame = requestAnimationFrame(tick);
+    return () => cancelAnimationFrame(frame);
+  }, []);
+
   return (
-    <section className="mb-20" aria-labelledby="campaign-case-study">
+    <section className="mb-16" aria-labelledby="campaign-results">
       <div className="font-mono-acc text-[10px] uppercase tracking-[0.2em] text-[#EC12D8]">{content.label}</div>
-      <h2 id="campaign-case-study" className="mt-4 max-w-2xl font-display text-3xl font-bold leading-[1.02] tracking-tight sm:text-5xl">{content.heading} <span className="text-gradient">{content.highlight}</span></h2>
-      <div className="mt-7 flex justify-center lg:justify-start">
-        <img src="/services/result-anim.png" alt="Meta campaign performance results" className="h-auto w-full max-w-[1040px] object-contain" />
+      <div className="mt-5 grid gap-5 lg:grid-cols-[1.15fr_0.85fr] lg:gap-8">
+        <div className="rounded-[26px] border border-white/10 bg-white/[0.035] p-5 sm:p-7">
+          <div className="grid gap-3 sm:grid-cols-[1.15fr_0.85fr]">
+            <div className="flex min-h-[190px] flex-col justify-center rounded-2xl bg-black/20 px-5 py-5 sm:min-h-[245px]">
+              <div className="text-gradient font-display text-7xl font-bold leading-none sm:text-8xl">+{values.reservations}</div>
+              <div className="mt-4 max-w-[220px] text-lg font-semibold text-white sm:text-xl">{content.reservations}</div>
+              <div className="mt-2 text-sm text-white/45">{content.daily}: ~{values.daily}</div>
+            </div>
+            <div className="grid grid-cols-2 gap-3 sm:grid-cols-1">
+              <AnimatedMetric value={`${values.budget.toLocaleString("de-DE")} €`} label={content.budgetValue} />
+              <AnimatedMetric value={`${values.cost.toFixed(2).replace(".", ",")} €`} label={content.costValue} />
+              <AnimatedMetric value={`${values.returnValue}×`} label={content.returnValue} />
+              <AnimatedMetric value={`~${values.table} €`} label={content.tableValue} />
+            </div>
+          </div>
+        </div>
+        <div className="flex items-center rounded-[26px] border border-white/10 bg-gradient-to-br from-[#ec12d8]/10 via-white/[0.03] to-[#4cc9f0]/10 p-6 sm:p-8">
+          <p id="campaign-results" className="text-[16px] leading-[1.85] text-white/75">{content.intro}</p>
+        </div>
       </div>
       <div className="mt-6 max-w-4xl">
-        <p className="text-[16px] leading-[1.85] text-white/75">{content.intro}</p>
         <p className="mt-4 text-[16px] leading-[1.85] text-white/75">{content.caseStudy}</p>
         <p className="mt-4 font-mono-acc text-[10px] uppercase tracking-[0.16em] text-white/40">{content.resultNote}</p>
         <p className="mt-5 text-lg font-semibold text-white">{content.cta}</p>
       </div>
     </section>
+  );
+}
+
+function AnimatedMetric({ value, label }: { value: string; label: string }) {
+  return (
+    <div className="flex min-h-[82px] flex-col justify-center rounded-2xl border border-white/10 bg-black/20 px-4 py-3">
+      <div className="text-gradient font-display text-2xl font-bold sm:text-3xl">{value}</div>
+      <div className="mt-1 text-[10px] leading-tight text-white/45">{label}</div>
+    </div>
   );
 }
 
