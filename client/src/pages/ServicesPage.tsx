@@ -24,8 +24,13 @@ export default function ServicesPage() {
                 <span className="font-mono-acc text-[11px] tracking-[0.2em] text-[#EC12D8]">0{index + 1}</span>
                 <span className="rounded-full border border-white/15 px-3 py-1 font-mono-acc text-[9px] uppercase tracking-[0.15em] text-white/50">Service</span>
               </div>
-              <h2 className="mt-12 max-w-sm font-display text-3xl font-bold leading-[1.02] tracking-tight sm:text-4xl">{service.title} <span className="text-gradient">{service.highlight}</span></h2>
-              <p className="mt-5 max-w-lg text-[15px] leading-relaxed text-white/60">{service.description}</p>
+              <div className={service.slug === "social-media-production-luxembourg" ? "mt-8 grid grid-cols-[minmax(0,1fr)_112px] items-center gap-4 sm:grid-cols-[minmax(0,1fr)_132px]" : "mt-12"}>
+                <div>
+                  <h2 className="max-w-sm font-display text-3xl font-bold leading-[1.02] tracking-tight sm:text-4xl">{service.title} <span className="text-gradient">{service.highlight}</span></h2>
+                  <p className="mt-5 max-w-lg text-[15px] leading-relaxed text-white/60">{service.description}</p>
+                </div>
+                {service.slug === "social-media-production-luxembourg" && <ProductionCardDeck />}
+              </div>
               <Link href={`/services/${service.slug}`} className="mt-8 inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-[#EC12D8] via-[#A250E3] to-[#4CC9F0] px-5 py-3 text-sm font-semibold text-white shadow-[0_8px_30px_rgba(162,80,227,0.22)] transition hover:scale-[1.02]">
                 Explore this service <ArrowUpRight className="h-4 w-4" />
               </Link>
@@ -41,5 +46,15 @@ export default function ServicesPage() {
         </section>
       </main>
     </PageFrame>
+  );
+}
+
+function ProductionCardDeck() {
+  return (
+    <div className="relative h-[142px] w-[112px] shrink-0 sm:h-[166px] sm:w-[132px]" aria-label="Selected production examples">
+      <img src="/services/production-chalet.png" alt="Chalet au Gourmet social production" className="absolute right-0 top-1 h-[126px] w-[70px] rounded-[10px] object-cover shadow-[0_12px_28px_rgba(0,0,0,0.35)] sm:h-[150px] sm:w-[84px]" />
+      <img src="/services/production-gridx.png" alt="GridX social production" className="absolute left-1/2 top-0 z-10 h-[132px] w-[74px] -translate-x-1/2 -rotate-[4deg] rounded-[10px] object-cover shadow-[0_14px_30px_rgba(0,0,0,0.42)] sm:h-[158px] sm:w-[88px]" />
+      <img src="/services/production-ramen.png" alt="Ramen Shifu social production" className="absolute left-0 top-3 z-20 h-[126px] w-[70px] rotate-[5deg] rounded-[10px] object-cover shadow-[0_12px_28px_rgba(0,0,0,0.35)] sm:h-[150px] sm:w-[84px]" />
+    </div>
   );
 }
