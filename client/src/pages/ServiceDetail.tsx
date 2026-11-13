@@ -120,7 +120,6 @@ export function ServiceDetail({ service }: { service: Service }) {
       <PageIntro eyebrow={service.eyebrow} title={service.title} highlight={service.highlight}>
         {service.description}
       </PageIntro>
-      {service.slug === "social-media-production-luxembourg" && <CompactProductionShowcase />}
       <main className="container pb-24">
         <div className="grid gap-12 lg:grid-cols-[1.15fr_0.85fr] lg:gap-20">
           <div>
@@ -133,9 +132,10 @@ export function ServiceDetail({ service }: { service: Service }) {
               </ul>
             </div>
           </div>
-          <aside className="self-start rounded-3xl border border-white/10 bg-white/[0.035] p-7 sm:p-9">
+          <aside className={service.slug === "social-media-production-luxembourg" ? "self-start" : "self-start rounded-3xl border border-white/10 bg-white/[0.035] p-7 sm:p-9"}>
+            {service.slug === "social-media-production-luxembourg" && <CompactProductionRail />}
             <div className="font-mono-acc text-[10px] uppercase tracking-[0.2em] text-[#EC12D8]">Who it is for</div>
-            <p className="mt-5 text-[17px] leading-relaxed text-white/75">{service.audience}</p>
+            <p className="mt-4 text-[16px] leading-relaxed text-white/70">{service.audience}</p>
             <div className="mt-8 border-t border-white/10 pt-7">
               <div className="font-mono-acc text-[10px] uppercase tracking-[0.2em] text-[#4CC9F0]">The outcome</div>
               <p className="mt-4 text-[15px] leading-relaxed text-white/60">{service.outcome}</p>
@@ -154,26 +154,18 @@ export function ServiceDetail({ service }: { service: Service }) {
   );
 }
 
-function CompactProductionShowcase() {
+function CompactProductionRail() {
   return (
-    <section className="container -mt-8 pb-12 sm:-mt-12 sm:pb-16" aria-labelledby="selected-production-work">
-      <div className="ml-auto max-w-4xl rounded-[28px] border border-white/10 bg-white/[0.025] p-4 backdrop-blur-sm sm:p-5">
-        <div className="grid gap-5 md:grid-cols-[0.72fr_1.28fr] md:items-center">
-          <div className="px-2 sm:px-3">
-            <div className="font-mono-acc text-[10px] uppercase tracking-[0.22em] text-[#4CC9F0]">Selected work / recent production</div>
-            <h2 id="selected-production-work" className="mt-3 font-display text-2xl font-bold leading-tight tracking-tight sm:text-3xl">Small cuts. <span className="text-gradient">Real purpose.</span></h2>
-            <p className="mt-3 text-sm leading-relaxed text-white/55">A quick look at how we turn different brand goals into content people want to watch.</p>
-          </div>
-          <div className="grid grid-cols-4 gap-2 sm:gap-3">
-            {PRODUCTION_WORK.map(work => (
-              <article key={`${work.brand}-${work.label}`} className="group min-w-0 overflow-hidden rounded-[16px] border border-white/10 bg-black/20">
-                <video className="aspect-[9/16] w-full object-cover transition duration-500 group-hover:scale-[1.03]" src={work.src} poster={work.poster} controls playsInline preload="metadata" aria-label={`${work.brand} ${work.label}`} />
-                <div className="truncate px-2 py-2 font-mono-acc text-[8px] uppercase tracking-[0.08em] text-white/65 sm:text-[9px]">{work.brand}</div>
-              </article>
-            ))}
-          </div>
-        </div>
+    <div className="mb-10" aria-labelledby="selected-production-work">
+      <div id="selected-production-work" className="mb-3 font-mono-acc text-[10px] uppercase tracking-[0.18em] text-[#4CC9F0]">Selected work / recent production</div>
+      <div className="grid grid-cols-4 gap-2">
+        {PRODUCTION_WORK.map(work => (
+          <article key={`${work.brand}-${work.label}`} className="group min-w-0 overflow-hidden rounded-[12px] border border-white/10 bg-white/[0.025]">
+            <video className="aspect-[9/16] w-full object-cover transition duration-500 group-hover:scale-[1.03]" src={work.src} poster={work.poster} controls playsInline preload="metadata" aria-label={`${work.brand} ${work.label}`} />
+            <div className="truncate px-1.5 py-1.5 font-mono-acc text-[8px] uppercase tracking-[0.05em] text-white/60">{work.brand}</div>
+          </article>
+        ))}
       </div>
-    </section>
+    </div>
   );
 }
