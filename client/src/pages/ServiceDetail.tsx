@@ -240,9 +240,9 @@ function WebsiteShowcase() {
   return (
     <section className="mb-16 rounded-[28px] border border-white/10 bg-gradient-to-br from-[#8ee7ff]/10 via-[#a88cff]/[0.08] to-[#ec12d8]/10 px-3 py-5 sm:px-8 sm:py-8" aria-label="Website examples">
       <div className="mx-auto grid w-full max-w-6xl min-w-0 grid-cols-1 items-end gap-5 sm:grid-cols-3 sm:gap-4">
-        <div className="flex min-w-0 items-end justify-center"><img src="/services/website-barber.png" alt="Gentleman Barber website example" className="block aspect-[16/10] h-auto w-full min-w-0 object-fill drop-shadow-[0_18px_30px_rgba(142,231,255,0.16)] transition duration-500 hover:-translate-y-2" /></div>
-        <div className="flex min-w-0 items-end justify-center"><img src="/services/website-emesa.png" alt="EMESA website example" className="block aspect-[16/10] h-auto w-full min-w-0 object-fill drop-shadow-[0_24px_42px_rgba(168,140,255,0.26)] transition duration-500 hover:-translate-y-2" /></div>
-        <div className="flex min-w-0 items-end justify-center"><img src="/services/website-sams-frame.png" alt="Sam's Cars website example" className="block aspect-[16/10] h-auto w-full min-w-0 object-fill drop-shadow-[0_18px_30px_rgba(236,18,216,0.14)] transition duration-500 hover:-translate-y-2" /></div>
+        <div className="flex min-w-0 items-end justify-center"><img src="/services/website-barber.png" alt="Gentleman Barber website example" className="block aspect-[5/3] h-auto w-full min-w-0 object-fill drop-shadow-[0_18px_30px_rgba(142,231,255,0.16)] transition duration-500 hover:-translate-y-2" /></div>
+        <div className="flex min-w-0 items-end justify-center"><img src="/services/website-emesa.png" alt="EMESA website example" className="block aspect-[5/3] h-auto w-full min-w-0 object-fill drop-shadow-[0_24px_42px_rgba(168,140,255,0.26)] transition duration-500 hover:-translate-y-2" /></div>
+        <div className="flex min-w-0 items-end justify-center"><img src="/services/website-sams-visible.png" alt="Sam's Cars website example" className="block aspect-[5/3] h-auto w-full min-w-0 object-fill drop-shadow-[0_18px_30px_rgba(236,18,216,0.14)] transition duration-500 hover:-translate-y-2" /></div>
       </div>
     </section>
   );
